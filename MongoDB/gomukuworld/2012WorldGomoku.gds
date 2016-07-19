@@ -1,0 +1,716 @@
+moves="f9 h7 j9 h5 g7 h6 h8 f6 g6 g5"
+Theimer vs Asplund [ 0:1 ] 
+moves="h15 h1 g15 h12 f12 g11 g10 f10 e9 i13 j14 i11 h11 i12 i10 j9 j12 j10 k9 h8 i15 j15 f15 e15 j8 i7 g9 g7 i9 h7 f7 h9 h6 k7 j7 g6 f5 f6 e11 g13 e10 e8 f13 e12 d10 f8 c9 b8 g12 e14 d9 f9 f11"
+Sandstrom vs Maltell [ 1:0 ] 
+moves="l9 i10 k12 l12 j10 k9 h11 i12 h9 i8 i11 h8 j11 k11 j12 j13 h10"
+Jonsson vs Nyberg [ 1:0 ] 
+moves="b6 d7 b5 f6 b7 b4 d6 e5 d4 e7 e6 g5 d8 g7 c6 a6 c7 h8 i9 h7 f7 h4"
+Theimer vs Sandstrom [ 0:1 ] 
+moves="l11 j10 h10 h8 k11 j11 j12 l10 k12 k10 m10 j13 m11 m12 n10"
+Jonsson vs Maltell [ 1:0 ] 
+moves="l9 i10 k12 m10 l12 m12 k9 k10 j9 m9 m11 l10 j10 k11 j12"
+Asplund vs Nyberg [ 1:0 ] 
+moves="h8 g5 l7 k8 f4 h5 i5 i7 j7 j8 k9 l8 m8 k6 f8 g9 f6 f5 e5 g7 g8 e8 g3 d6 h4 f2 j4 i3 k3 h6 l4 k4 k7 j6 i1"
+Asplund vs Sandstrom [ 1:0 ] 
+moves="h8 i9 j10 h7 i10 h10 j8 j9 k9 l8 l10 m11 g11 h12 g9"
+Jonsson vs Theimer [ 1:0 ] 
+moves="l11 j10 h10 i12 i11 j12 j11 k11 k12 i10 l10 l9 i9 j8 j9 i8 g9 h9 f8 e7 h8 f10 g11 g10 f11 h11 j13 j7 k6 m10 k8 g12 f12 e13 f13 e10 e8 d8 d10 e11 e12 d11 c11 e9 c12 c13 d12 b12 c9 c7 b6 f7 c8 c10 d7 e6 g8 g5 f6 e5 f4 f5 d5 h5 i5 g4 g3 h3 i2 h4 h6 j4 i4 i6 f3 j5 j6 h2 h1 i3 k5 j2 i7"
+Nyberg vs Maltell [ 1:0 ] 
+moves="d6 f4 h6 f8 g8 g6 h7 i6 f7 h9 d7 d5 i9 g4 g7 e7 h5 h4 i4 g2"
+Nyberg vs Sandstrom [ 0:1 ] 
+moves="b7 d8 b6 c6 d7 e7 c9 c8 f8 e9 f10 f9 g9 e11 e10 g10 h11 i11 i8 h8 j9 i10 g6 h7 f6 h6 h9 k9 j10 j8 i7 h5 h4 i6 j5 g4 f3 k8 j7 k6 k7 j4 j6 i5 k3 e5 g5 i3 k5 l4 i2 k11 l11 k10 k12 i13 i14 j13 j12 h13"
+Theimer vs Maltell [ 0:1 ] 
+moves="f9 h7 j9 f10 e8 g10 e10 g7 g9 e9 f7 f8 h6 d9 g11 i9 j10 j8 k7 i6 g8 k8 i8 e6 d10 h11 l8 m9 e5 l10 j7 m7 m8 l11 j12 j11 k11 l13 l12 k12 i10 j13 m13 n14 i14 m14 n15 k14"
+Jonsson vs Asplund [ 0:1 ] 
+moves="g2 h2 i2 h6 g5 g4 i6 j5 j4 f7 i5 i4 h4 e6 f5 e5 e7 f6 d6 h9"
+Jonsson vs Sandstrom [ 0:1 ] 
+moves="h10 j10 l11 i12 h12 g11 h11 h9 j9 i10 g8 i8 i9 j7 k6 l9 k8 l6 k10 l7 k7 k9 l8 j6 j4 k4 f8 g9 f11 f9 k12 j13 k11 j11 j12 i13 k13 k14 l14 i11 i14 e9 d9 m12 n10 m11 m9 o11 n8"
+Asplund vs Maltell [ 1:0 ] 
+moves="b6 d7 b5 b7 e7 d8 d6 e6 c5 f8 c8 e5 d4 e3 e4 c4 d2 b3 d5 d3 c3 e9 f9 d10 c11 f10 g11 e11 e10 h8 g9 g8 e8 h9 g7 i8 j8 g10 f11 d9 d11 i10"
+Theimer vs Nyberg [ 0:1 ] 
+moves="m12 i12 j10 l11 i13 j11 k11 k12 l12 m13 j12 h14 h13 j13 i14 i9 h9 h10 g11 g10 f9 l13 i10 k13 n13 h11 k14 e10 f10 h12 e9 f8 d9 g9 e7 d8 k7 m9 m8 k9 l9 l7 i5 h6 f7 e6 g8 g7 m10 j7 i6 j5 j8 i4 h4 j6 k6"
+Rybka vs Kolouchová [ 0,5:0,5 ] 
+moves="h10 h8 j6 i5 h7 g7 j8 g5 f6 h6 f8 f4 e3 g4 g6 h4 i4 h5 f5 j4 k3 k5 j5 h2 h3 i3 l6 g1"
+Kosař vs Kopecký [ 0:1 ] 
+moves="j10 i12 m12 l11 h12 i11 i10 h10 j12 j13 h11 j9 i8 k12 m10 k10 k13 l9 m8 k9"
+Kopecký vs Rybka [ 0:1 ] 
+moves="l10 j11 i13 h9 i10 i11 h11 j9 k9 l11 j12 k11 m11 j8 j10 m10 i8 j7 h12 i12 h10 k10 f10"
+Brdková vs Kolouch [ 1:0 ] 
+moves="a8 o8 a9 d8 l9 e9 f10 f8 g7 e8 g8 e7 e10 d7 e6 d6 g9 d9 g10 d10"
+Hlahůlek vs Kosař [ 0:1 ] 
+moves="h8 i11 d9 f9 h11 h10 g9 f10 f11 g11 e10 g12 h12 e8 i9 g7 i8 j8 j9 k9 h6 h7 i6 i7 j7 k6 k8 f7 e7 h5 g6 f6 f8 l10 m11 l7 l8 d6 m10 l9 m12 m9 h9 g10 l11 k10 n9 k12 k11 n11 l12 j10 k13 j14 c6 e5 c7 d4 c3 c5 d5 e4 e3 k4 j5 j4 c8 b7 c9 c10 i3 i4 h4 l4 m4 k3 k5 j2 m5 l5 l3 k2"
+Purkrábek vs Kostlivý [ 0,5:0,5 ] 
+moves="h8 j9 m10 k9 i9 j10 j8 k8 k7 h10 i10 i11 h12 j12 k13 l9 l11 n9 m9 m8"
+Tesařík vs Laube [ 0:1 ] 
+moves="h8 j9 m10 g7 j7 g9 g8 i8 h7 i6 h6 h9 i9 h10 k7 l7 j10 k11 k8 i11 j12 k9 k10 l10 l9 n11 j11 i12 j6 l8 j4 j5 k5 l4 l6 m7 h4 h5 k4 k6 i4 g4"
+Kolouchová vs Laube [ 0:1 ] 
+moves="h8 g7 e11 g9 f7 f8 h10 h11 f9 e10 h6 h7 g6 j8 h5 i4 f6 e6 f4 g5 f3"
+Hanzl vs Kolouch [ 1:0 ] 
+moves="b5 b4 e2 e5 f6 e7 e6 d6 f8 f7 d7 c8 f4 g4 h6 g7 g5 i7 h7 i6 e8 c6 c4"
+Háša vs Brdková [ 1:0 ] 
+moves="c5 d3 g2 f5 e4 h5 f3 d5 f7 g7 e5 e3 h6 i8 j7 i9 j10 j9 k9 i11 i10 g9 g6 h10 f8 g11 j8 f12 e13 j12 k13 g10 g8 g12 g13 h12 i12 e12 d12 h9 f11 f9"
+Turečková vs Tesařík [ 0:1 ] 
+moves="c5 d3 g2 g5 g6 f7 f6 e6 d5 f5 i5 i6 j7 j5 h7 k7 h9 h8 d7 d8 g10 i8 f9 e8 g9 e9 g8 g7 e10 d11 h10"
+Tesařík vs Háša [ 1:0 ] 
+moves="h4 k3 m4 j6 k6 l5 j5 i4 h5 h6 i6 j7 g5 i5 j4 f6 h2 i3 i2 g2 g7 g6 e6 h3 j3 h7 i8 i9 j8 k7 l7 k8 k9 l10 j10 i11 h10 f10 e9 f8 f9 e8 g8 f7 d9 c9 e12 e11 h9 g9 g10 f11 i10 k10 j11 k12 j12 j9 j13"
+Kolouchová vs Brdková [ 1:0 ] 
+moves="h4 k3 m4 j6 k5 j5 j4 i3 k6 k7 j8 i6 h7 h5 i5 g6 f7 j3 h3 l3 m3 l5 m2 m6 k4 k2 i4 g4 j7 g7 g5 j9 m5 m1 h9 g8 g9 f9 i10 h10 i12 i9 h6 f3 e2 k9 m9 k11 j10 k10 k8 k12 k13 i8 l11 i13 g11 e11 e8 e7 m10 l9 m8 m11 l6 n8 d11"
+Němec vs Rybka [ 0,5:0,5 ] 
+moves="c3 d2 g2 f5 g5 g6 f6 e4 h7 h4 g4 i7 j5 i6 j6 k6 i8 h8 j9 j8 k10 l11 k9 l9 k8 k11 j10 i10 j11 i11 i12 j12 l10 m10 h13 g14 j13 k13 h10 h11 f11 e10 f12 f13 e12 g12 e14 g10 g11 e13 e7 d8 d6 e5 e3 d3 c2 c5 k5 j4 l4 l5 m3 n2 k3 m5 d10 c9 d13 c12 c11 d11 f8"
+Kostlivý vs Turečková [ 1:0 ] 
+moves="c3 e2 h2 f6 f5 h5 g4 e6 g6 g5 e4 d3 d5 c6 e7 d6 b6 i8 i9 j8 k8 j7 i7 h9 g10 j5 j6 h7 h8 k5 i5 g8 i6 k6 l5 i4 h3 i10 f7 j11 k12 j9 j10 k10"
+Hanzl vs Laube [ 0:1 ] 
+moves="f3 g3 i2 h5 f5 f6 e4 g6 d5 c6 e5 g5 g2 h1 e6 e7 e2 e3 f2 h2 c2 d2 d3 b1 b5 c5 c4 a6 f1"
+Purkrábek vs Kosař [ 1:0 ] 
+moves="k2 m3 n5 j5 k4 k5 j6 j3 i5 k7 h6 j4 l6 k6 l7 j9 k9 l8 g7 i8 i7 j8 h8 j10 j7 h7 k10 f6 f8 e9 j11 i11 i12 h13 k12 k11 h9 i10 f10 g9 f9 f11 h11 g10 h12"
+Háša vs Němec [ 1:0 ] 
+moves="k2 m3 n5 k5 l4 l3 j5 j3 i3 j2 l7 j7 k6 m8 m6 k8 l6 k3 n3 l8 n6 j6 o6"
+Kostlivý vs Hlahůlek [ 1:0 ] 
+moves="k2 m3 n5 j4 k5 k6 i4 h5 h6 i7 j7 j9 i2 j3 j2 l2 g5 i6 i5 h4 g3 g4 e3 f3 e2 e5 d4 c5 d5 d3 g8 h9 i9 m6 l6 m4 m5 l5 k4 n3 o2 k3 l3 f8 j8 k7 h10 i10"
+Němec vs Kopecký [ 0,5:0,5 ] 
+moves="m2 k2 i3 j5 j6 k5 i6 k6 i4 i5 l5 h6 k4 j3 j4 h4 h5 j7 l7 l6 j8 i9 m6 k8 h9 g7 f7 h8 m4 l4 m5 m3 j10 f8 e9 g8 e8 g6 n7 o8 m7 m8 k7 o7 g9 e3 g5 e5 f6 e4 e2 d3 f3 g4 f5 f4 d4 e7 e6 l8 n8 g10 d9 f9 e10 c10 c8 b7 f11 g12 e11 e12 d11 g11 d10 g13 g14 d8 b9 d7 c9"
+Hanzl vs Purkrábek [ 1:0 ] 
+moves="k14 l14 m11 j11 i11 k9 i12 i10 k12 l12 h12 g10 k11 k13 j12 g12 i13 h14 i14 i15 j13 l11 l10 m9 j9 l15 l13 h10 f10 j10 k10 g11 g13 g8 g9 h9 f7 h8 h7 i8 f14 e15 f13 h13 f11 f12 f8 f9 i9 k8 j8 j7 k6 d7 e8 d9 i4 d11 d10 h5 i6 h6 j5 h3 h4 k4 l7 m8 l6 i5 l8 l9 m6 j6 n6 o6 m5 k7 l4"
+Purkrábek vs Barchanski [ 1:0 ] 
+moves="m12 i12 j10 l12 j12 j9 m10 m11 k8 l9 k9 k10 j11 i11 i8 h8 i10 h9 h10 i6 l8 j8 j6 i5 k5 m7 l4 m3 m5 l5 j4 k4 i3 h2 j3 j5 h7 g6 f6 g5 g4 f4 f5 h3 i7 l7 i4 f9"
+Rybka vs Laube [ 0:1 ] 
+moves="m12 i12 j10 j9 k8 k10 i8 h8 l9 l8 m10 n11 l12 m11 i9 i7 k11 m13 g9 j7 k12 j12 k7 h10 j13 l11 h9 f9 e8 g8 h7 f12 f11 g12 h12 e12 c12 f13 g13 i11 g11 i13 i10"
+Hanzl vs Rybka [ 0,5:0,5 ] 
+moves="c11 c10 c8 e8 e9 d10 d9 e10 f10 g11 e6 d7 c6 c7 d5 f7 g7 g9 f9 c9 b7 e4 b8 b10 a10 h10 b6 b5 d6 f6 a6"
+Kolouchová vs Hlahůlek [ 1:0 ] 
+moves="h10 h8 j6 j8 i9 i6 g8 h6 i7 h5 h7 i5 g7 j7 g4 k8 l9 k6 h9 i8 l8 l5 m4 k5 j5 k7 k9 k4"
+Turečková vs Kosař [ 0:1 ] 
+moves="h10 h8 j6 j8 i8 j10 i9 i11 k9 i6 k7 k6 g9 j5 j9 h9 m9 l9 l8 i5 n10"
+Kostlivý vs Kosař [ 1:0 ] 
+moves="h8 i11 d9 g9 h10 j10 f8 k9 h12 h9 i9 j7 j8 l8 m7 g11 g10 h11 j11 k8 e10 f10 f11 c8 g12 h13 e12 d12 e11"
+Rybka vs Purkrábek [ 1:0 ] 
+moves="h8 g7 e11 i7 g6 i8 i6 j7 h7 h9 k6 j5 j8 j6 i5 g10 f11 g9 g11 d11 f9 e10 f12 f10 h10 i9 d10 g13 h12 i11 i10 e12 f13 j9 k9 e13 j4 i4 k5 k3 m7 l6 l8 j10 k11 k8 j12 i13 i12 g12 k12 l12 k10 k13 l9 h13 j13 m11 n10 m8 m10 l11 h3 f5 c9 b8 e7 f6 f4 e5 d5 d4 c3 c5 e3 d2 f3 j14 i15 c6 b6 c8 c7 d7 e6 c4"
+Turečková vs Hanzl [ 0,5:0,5 ] 
+moves="j7 h9 f6 k8 i10 i11 i9 k9 j10 h10 k7 g9 h8 g7 f8 g8 g10 h7 g5 f9 e10 i6 j5 f7 e7 h4 l7 i7 e6 i4 i5 h5 d8 c9 e8 e9 d6 g6 j3 e4 f5 g4 f4 f3 e2 h3 h6 h1 h2 c8 c5"
+Tesařík vs Hanzl [ 1:0 ] 
+moves="e6 g4 i4 h6 g2 j5 i7 g7 g5 e5 h8 j6 i6 i5 j4 f6 f7 f4 e4 g3"
+Kolouch vs Kodytek [ 0:1 ] 
+moves="b5 b4 e2 e5 f6 e4 e6 d6 f4 d5 f5 f3 c6 d7 d8 e7 c5 e9 c4 d3 d4 c7 f7 f8 g9 d10 c11 b10 b8 e10 c10 d9 c8 c9 f9 g10 e11 d11 h9 h8 g8 i10 h6 g5 e3 f2 i6 g6 j5 h7 k6 j6 l7 i4 m8 n9 k8 i5 h4 j9 l9 j7 k10 n7 i12 j11 l8 a9 b9 g2 h1 a7 b7 b6 l10 g4 l11"
+Brdková vs Kosař [ 1:0 ] 
+moves="b5 b4 e2 e5 c4 d3 d5 f7 e4 f3 f4 h6 f6 h4 h3 g7 h7 f8 i5 e9 d10 g9 g4 d4 f5 e6 g8 e7 e8 h10 d6 i11"
+Hlahůlek vs Brdková [ 0:1 ] 
+moves="b5 c3 e2 f5 e6 e4 f3 h4 g6 h5 g5 g7 d4 h6 h3 h8"
+Barchanski vs Kosař [ 0:1 ] 
+moves="c5 d3 g2 e6 f6 g5 h5 e3 f4 e5 e4 f3 c3 h3 g3 g4 d7 f8 e9 d9 f10 g10 g11 d8 e8 f9 i7 e10 h8 g9 h7 h6 j7 g7 k7 l7 i5 j6 i8 i6 k6 l5 k8"
+Kopecký vs Háša [ 1:0 ] 
+moves="c5 d3 g2 e6 f5 g5 f7 h7 f6 f4 e3 d4 d6 f8 g6 e8 h8 i6 g7 i9 g8 g4 h4 h5 j7 e2 f3 c4"
+Barchanski vs Háša [ 0:1 ] 
+moves="e5 h5 i4 i6 h7 g7 g4 j4 h6 e4 k5 g3 j6 i7 i9 h8 j8 j9 k7 l6 k8"
+Barchanski vs Kolouch [ 1:0 ] 
+moves="l5 l6 l8 k5 j6 j4 i3 k3 k4 m6 m7 k7 j8 k9 j7 j9 i8 k6 k8 m8 h8"
+Purkrábek vs Hlahůlek [ 1:0 ] 
+moves="h4 k3 m4 j7 k7 i5 j5 k8 i6 h7 j4 k4 l6 j6 m5"
+Kolouchová vs Tesařík [ 1:0 ] 
+moves="h4 k3 m4 j6 k6 j7 i7 h6 j5 i4 g6 g8 i5 k8 i6 i8 h8 f6 f5 g3 e4 d3 e6 e5 g4 h3 f3 h5 d5 c6 l5 k4 l7 k5 i3 d7 e8 c7 d4 f4 d6 c9 c10 e7 f7 d9 b3 c4 d8 f9 g9 e10 d11 b7"
+Kolouchová vs Němec [ 0:1 ] 
+moves="h4 k3 m4 j6 k5 l5 i6 h5 g6 f6 h7 i8 g8 f9 g7 g5 e7 d7 f7 i7 h9 i10 h10 i11 i9 h8 e8 e9 d9 c10 g9 g10 d6 f8 e4 e6 f5 d3 f4 g4 f3 g3 g2 d5 i2 f2"
+Kostlivý vs Němec [ 0:1 ] 
+moves="h4 k3 m4 j6 k5 i4 i6 j7 j8 l7 j5 l5 l6 k7 m7 j4 h7 g8 h6 h5 i7 k9 i8 i10 g6"
+Laube vs Němec [ 1:0 ] 
+moves="c3 d2 g2 f5 e4 d5 e6 e5 g5 f6 f4 g4 h8 i7 j8 k8 j5 k6 j7 j6 l6 k5 k7 i9 j10 h9 i10 l8 m7 k10 l11 k12 j9 j11 i12 g10 f11 g12 g11 e11 e9 f10 d10 d12 c13 e12 f12 e13 e14 k11 k9 c11 b10 k13 k14 i13 j12 g13 h13 d6 c5 d4 d3 d7 d8 e8 f9"
+Kodytek vs Turečková [ 0,5:0,5 ] 
+moves="c3 d2 g2 h2 i2 g5 f4 e5 f6 f5 h5 d3 d5 e4 c2 g4 g6 e6 d7 e7 e3 e8"
+Turečková vs Kopecký [ 0:1 ] 
+moves="d3 f3 e3 e5 g5 h6 g7 g8 d6 e7 g9 h8 e8 h7 h9 i8 j8 i6"
+Kodytek vs Brdková [ 0:1 ] 
+moves="f3 g3 i2 h5 f5 f6 g6 h7 h4 i4 e4 d5 e6 e5 d7 c8 f4 d4 g7 g8 h9 i6 j5 f8 e8 d3 f2 f1 d6 b5 c6 b6 c5 g10 e10 d8 e7 e9 c7 f7 b7 a7 g11 j9 k8 k10 i8 m8 j11 i12 l5 k6 j6 j4 l8 i5 i7 k5 k4 j3 l6 l7 j8 h8 h6 g5 i9 c3 b2 i10 h10 f12 j13 h11 j12 j14 l10 k11 k9"
+Tesařík vs Brdková [ 1:0 ] 
+moves="g3 h3 i3 g6 i5 h4 h5 j5 k6 i6 k4 k5 f5 g5 g8 h9 f8 h8 g7 h6 f6 f7 i7 h10 h7 g11 h11 g10 g12 i9 j7 k7 j8 f11 e12 f10 e10 f12"
+Purkrábek vs Laube [ 0:1 ] 
+moves="g3 h3 i3 g5 h6 i5 f5 h7 i6 g6 f7 e6 f6 f8 k5 j4 g8 h9 h8 g7 k8 j7 j6 i7 k7 k6 i8 j8 e9 f10 f12 g12 c9 d10 d9 b9 e10 e8 c8 b7 j10 k11 i11 k9 j12 h10 e7 e12 b10 d8 l10 m10 i12 j11 l12 k12 l11 l13 i10 i9 j9 l7"
+Rybka vs Rejšek [ 0,5:0,5 ] 
+moves="g3 h3 i3 i5 h6 g6 f7 e7 f5 f6 d8 d6 e6 g8 g7 j5 i7 h7 i6 k6 i4 l5 k5 i8 j7 f8"
+Kostlivý vs Háša [ 0:1 ] 
+moves="g3 h2 k2 i4 h5 h6 i5 j5 k6 j7 j8 k7 g7 f6 g6 g5 h4 j6 f2 e1 i7 h8 g10 g8 e8 f7 f9 h11 e9 h9 e6 e7 d7 c6 d9 g9 h10 i10 j11 d10 d8 c8 c7 b6 f5 e4 d6 d5 f4"
+Tesařík vs Rejšek [ 1:0 ] 
+moves="g3 h2 k2 j4 j5 i5 h6 i6 i4 h5 g4 g5 k6 l7 e5 h3 f6 f4 e6 g7 d6 g6 e8 g9 g8 e7 d7 c6 c8"
+Rejšek vs Kolouch [ 1:0 ] 
+moves="b2 d2 f3 f6 e5 d5 f7 e8 d6 e7 e9 f10 h5 g4 g5 i5 h9 g8 h6 h8 i8 i7 g9 f9 h3 h2 h7 h4 g6 f5 g3 i3 i4 j3 k6 f8 d8 f12 f11 j5 j6 i6 k5 k7 j9 k10 h11 g11 i10 g12 h12 i9 h13 h10 e13 j10 g7 e12 d4 c5"
+Háša vs Laube [ 0,5:0,5 ] 
+moves="f2 g2 i2 i5 f5 g4 f4 f3 h5 g6 f7 g5 g3 f6 g7 e4 d5 e7"
+Kodytek vs Němec [ 0:1 ] 
+moves="k2 m3 n5 k6 l5 k4 j6 j5 l3 m4 l4 l6 l2 l1 j2 i2 m5 k3 k5 o5 h7 h8 g6 f5 g4 g7 f6 i4 l7 i5 h6 i6 i3 g5 h5 i8 i7 i10 h3 h4 j8 g10 h9 h10 j10 j9 k9 l10 i11 f10 e10 h12 g11 h11 g12 h13 h14 e8 f9 d11 k11 k10 l12 m13 m11 l11 m12 n10 m10 l8 j12 k12 j14 i14"
+Kopecký vs Rejšek [ 0,5:0,5 ] 
+moves="k2 m3 n5 j5 j6 k6 i4 i5 k5 l3 k4 j4 k3 k1 i7 h8 g7 g6 f5 h7 h9 i10 j9 k9 f4 f6 g5 h6 e6 d5 g4 h4 h5 h3 k8 l7 f9 e8 g9 i9 f11 d9 g10 i8 g11 g8 f8 f7 c10 i11 i12"
+Hanzl vs Kostlivý [ 1:0 ] 
+moves="k2 m3 n5 j4 k5 k6 l7 m6 m4 l3 j3 i7 i6 h5 n7 j7 k7 l6 n6 n8 h7 g8 k10 g6 m7 o7 l8 k9 l9 m8 l10"
+Kolouchová vs Kopecký [ 1:0 ] 
+moves="g9 f10 d12 f11 f12 g12 e10 e9 h11 h10 d8 d11 f7 g7 h6 i9 j10 j8 k7 i8 i7 j7 j6 h8 g8 h9 g10 k6 l5 l9 l8 i5 f6 k8 i6 g6 f9 h7 e8"
+Tóth vs Drabos [ 1:0 ] 
+moves="h8 h10 e7 i10 g8 i8 g9 g7 i7 f10 e10 g10 j10 f11 h9 f9 f8 e8 h11 h6 k9 i9 g11 i11 i12 h5 d7 h4 h3 d6 e6 f5 j6 k5 e5 j4 i4 k6 i3 e4 f7 d5 f3 i5 k3 k7 j7 l5 j5 l6 j8 l7 m11 l10 l3 j3 m6 n4 k4 g6 h7 m8 n8 d3 c2 b7 k13 l12 j13 i13 l11 k11 j12 l8 l4 m5 o3 m10 k14 l15 m12 n13 g14 j11 g12 c6 a8 n5 o5 h12"
+Ménesi vs Tóth [ 0,5:0,5 ] 
+moves="h8 i9 k5 j8 j9 i7 k7 h7 h6 i5 i6 k6 i11 f5 f7 g6 e4 g3 g4 f3 f2 h3 i3 e5 d6 l7 l8 l5 j5 h10 k10 j7 i8 k11 f8 g5 h5 d5 c5 e7 i12 j11 g11 f10 g10 g8 i14 i10 j13 k12 h9 h11 h13 g9 g7 l13 m14 g12 i13 i15 g13 f13 k13"
+Dupszki vs Ménesi [ 1:0 ] 
+moves="c4 d3 e2 f4 e5 f5 e4 e3 f3 d5 g5 f6 f8 e6 g6 g4 d7 g8 h9 f9 h10 h8 e10 g10 d10 g7 g9 i11 c10 b10 d9 d6 e8 f7 d8 d11 c8 b8 b7 o1 a6"
+Ménesi vs Mosóczi [ 1:0 ] 
+moves="c3 e7 d5 d4 e8 f5 f6 g6 e4 c6 h7 g8 g9 g4 h8 g7 g5 h6 f9 h9 f7 f8 i5 d10 e9 f10 k5 j6 k6 j5 k8 k4 j4 k7 j9 d7 d9 c9 c10 b11 e6 c5 b3 c4 e11 b10 f11 h11 e10 o1 e12"
+Ménesi vs Mosóczi [ 1:0 ] 
+moves="c3 e7 d5 d4 e8 f5 g6 g8 f7 d9 f3 g4 c6 e4 c4 c5 e3 d3 h5 i4 e6 b3 f9 g10 f6 d6 f8 f10 h6 i6 h8"
+Hegedűs vs Drabos [ 1:0 ] 
+moves="c3 c4 d3 e5 e6 g6 h5 f4 g4 i6 f5 d7 i7 f9 e8 g9 f3 g3 h2 h6 k6 g8 g5 h7 j5 e10"
+Ménesi vs Hegedűs [ 0:1 ] 
+moves="d3 e4 f4 g5 e6 f6 e7 d6 g8 e9 f9 f7 e10 d11 g10 f10 h11 e8 g11 g9 i11 f11 i12 j13 i10 i13 j9 g12 i8 i9 h7 i6 k10 l11 g6"
+Dupszki vs Mosóczi [ 1:0 ] 
+moves="e3 d7 i4 h3 e6 f4 g6 f7 e7 d6 e5 e4 d4 f6 f5 g5 i7 i8 j6 k5 k7 j7 h9 h8 j8 k9 i6"
+Hegedűs vs Ménesi [ 1:0 ] 
+moves="g9 f10 d12 h9 e10 g8 f11 i10 j11 g12 h11 i8 f8 i11 i9 j10 k9 h7 j9 i6 f9 h6 h10 e6 f7 g6 f6 f5 e4 k6 j6 j7 g10 l5"
+Ménesi vs Tóth [ 0:1 ] 
+moves="h8 h13 m6 i11 k6 h10 j6 i6 g9 i7 j8 h11 h12 j11 k11 i14"
+Drabos vs Ménesi [ 0:1 ] 
+moves="h8 h9 l7 i10 g8 i8 g10 g9 i9 j10 f9 k10 h10 h7 j9 f10 e8 d7 e11 f12 e10 e9 d11 c12 d8 f8 f11 g11 d9 g12 b11 c11 c10 f7 a12"
+Ménesi vs Ménesi [ 1:0 ] 
+moves="h8 g7 f6 h6 g5 f8 e9 e7 g9 i7 i5 f5 f7 f9 e6 d5 g8 i10 g6 g10 e8 h5 f10 e11 c7 d8 d9 c10 d6 c6 g3 h4 h3 f3 f4 e5 g4 g2 e4 h11 g12 f11 i11 e12 d13 d11 o1 g11"
+Mosóczi vs Tóth [ 0:1 ] 
+moves="h7 h8 h3 i8 i9 g8 f8 g10 h9 g9 g11 h11 j8 h10 f10 h12 g7 f9 i12 i7 j5 i5 i4 k6 h4 j4 h5 h6 k5 k3 l2 g2 g4 i6 g6 f7 k2 j3 h2"
+Ménesi vs Drabos [ 1:0 ] 
+moves="j7 j6 f9 i8 k7 h7 g6 h8 i7 h6 h5 k8 j8 l7 j9 i9 g4 i4 g5 g3 f5 e5 d7 e6 e8"
+Dupszki vs Hegedűs [ 1:0 ] 
+moves="c3 e7 d5 d4 e8 c6 f6 f5 g8 f7 g7 h8 g6 g5 f9 g10 i6 j5 h6 o1 e6"
+Hegedűs vs Mosóczi [ 1:0 ] 
+moves="c3 e7 d5 d4 f6 f5 e6 d6 c5 f7 e4 c6 d7 h6 g8 h5 f8 g5 e5 i7 e3 e2 h7 j8 a15 k9"
+Mosóczi vs Drabos [ 0:1 ] 
+moves="d3 e4 f4 g5 e6 d7 g7 f6 e7 g9 h9 d5 f9 f3 g2 e5 f5 g8 i8 d8 d6 g10 g11 i7 j9 h8 j6 f10 e11 j8 k9 k7 i11 h11 l8"
+Dupszki vs Ménesi [ 1:0 ] 
+moves="f3 e4 d4 g5 g6 f7 f8 e7 f6 e5 e6 h6 d7 d6 i7 i8 c8 f5 h5 d10 f10 f9 e12 e11 c7 c9 f12 e9 d9 f11 d11 f13 h11 j10 b8 c5 d5 b10 j7 i6 i9 h7 g8 j8 k10"
+Dupszki vs Tóth [ 0,5:0,5 ] 
+moves="j2 l3 m5 j4 j5 l6 k5 l5 l4 k3 i5 j6 k6 i4 g6 j3 i3 g5 h7 k4 m6 f5 g4 l8 l7 m7 h8 k9 j10 i2 h1 m3 n3 i7 j8"
+Dupszki vs Drabos [ 1:0 ] 
+moves="h1 h15 i1 h4 i5 j5 i4 i3 g5 g6 h7 i7 j8 h9 g9 f8 e8 i10 e10 e9 h11 g10 f11 j10 h10 g7"
+Hegedűs vs Tóth [ 0:1 ] 
+moves="h8 j9 f6 i9 h9 h10 j8 i10 i11 k8 h11 k10 j10 k9 k11 l9 m9 j11 m8 i8 l11 i6 i7 j7"
+Kosztyła vs Majksner [ 0:1 ] 
+moves="h8 j10 e5 k9 h5 h9 f5 g5 j9 h6 i7 f6 e7 e6 g6 f7 i8 h7 g8 f8 i6"
+Załuska vs Mirme [ 1:0 ] 
+moves="h8 h10 l9 i7 j8 i8 i9 j10 k10 k9 l8 l7 m8 n7 l11 l10 m10 n11 m9 m11 k7"
+Żukowski vs Tarasiński [ 1:0 ] 
+moves="f2 h2 j3 i5 h6 g6 f7 h7 i8 j5 k5 f5 g5 g4 f4 e3 j8 i7 k8 h8 k7 k6 l6"
+Kozimor vs Majczyk [ 1:0 ] 
+moves="h4 i4 l5 g4 l3 j5 i6 g6 l6 l4 h5 h3 k6 j6 j7 m4 k4 f5 e6 g2 f1 g3 g5 f3 k8 l9 k5 k7 k2 k3 d3 f4 f2 j2 i1 l8 m9 i8 h7 m6 m5 j4 j3 i2 j1 g8 f8 g7 e7 f6"
+Harmasz vs Wojtasiński [ 0:1 ] 
+moves="l10 m9 n6 j10 k7 j8 j9 l7 i8 h7 k6 l5 h9 i9 l6 m6 i6 k8 h8 j6 g8 k4 j3 n5 o4 m5 k5 j4 i4 k2 l3 m8 m7 m3 m4 f7 j7 g10 i5 i7 i3 i2 h3 k3 f3 g3 h5"
+Zajk vs Gorzecki [ 1:0 ] 
+moves="h8 h9 h4 e5 c7 i9 f7 i7 e7 g7 i8 j8 k9 k7 l6 j7 h7 j9 j10 g5 g6 h5 f5 e4 f6 f8 h6 e6 i6 j6 j5 f9 g9 k4 l8 m7 l7 l9 g11 h11 f10 e9 d10 g10 e8 c10 c9 b8 d8 b10 d7"
+Zajk vs Wojtasiński [ 1:0 ] 
+moves="h8 h9 l7 e10 f11 f10 e9 g8 f9 i10 j11 i7 j7 i9 i11 j8 g11 h11 k9 g6 g7 j9"
+Majksner vs Żukowski [ 0:1 ] 
+moves="e2 i2 j1 h5 i6 g6 f5 f7 e8 j6 i4 i7 h8 j7 h7 j5 j4 g5 f4 i5 k5 g3"
+Załuska vs Harmasz [ 0:1 ] 
+moves="k2 l3 n5 k5 j5 j3 i3 i4 l4 m5 k7 n3 m6 l7 h7 i6 i9 j8 h8 g7 k10 i8 k9 k8 h9 i5 i7 k3 m3 h6 j4 j9 j10 h10 k11 l12 l8 m7 m9 n10 i10 k12 l10"
+Gorzecki vs Częstochowska [ 1:0 ] 
+moves="c3 d2 b5 e5 f5 g6 d3 c4 e6 d7 g7 h5 f7 f8 i7 h7 h8 i9 j6 k5 i5 i6 k7 h4 g9 f10 i4 f3 g4 h3 h6 h2"
+Mirme vs Majczyk [ 0:1 ] 
+moves="l6 l5 m4 j6 j5 k7 i5 k4 k8 h5 g6 h8 i7 i6 g4 g7 f5 e4 i9 i10 h6 e6 e7 h9 g8 j11 g5 f4 h10 i11 g11 f12 k9 j8 j12 e12 g12 e11 e10 l11 k11 k12 l13 g13 d10 f10 d8"
+Tarasiński vs Kozimor [ 1:0 ] 
+moves="c5 d3 g2 e5 f5 g4 h4 f6 g7 h6 g6 h7 h5 j5 i6 i7 e3 j6 j8 l7 k5 k8 f2 d4 h2 i2 h3 h1 i3"
+Zajk vs Mirme [ 1:0 ] 
+moves="f9 h8 j11 g10 h9 g9 g8 i10 e10 d11 i7 h7 j10 j9 h11 i11 i12 h13 l12 j12 h10 k11 l10 l9 k10 e11 f10 f12 d10 g13 f13 c11 f11 c10 c8 b11 a11 d9 e8 f8 b9 f14 d7 h12 e15 g12"
+Częstochowska vs Harmasz [ 0:1 ] 
+moves="l6 l5 m4 j6 j7 k7 i5 h6 i6 h5 i7 i8 h7 g8 f8 f7 h9 h10 i4 i3 k4 l3 k8 l8 e9 g11 i11 i9 j8 d9 e8 d10 e11 e10 f10 d12"
+Tamioła vs Tarasiński [ 0:1 ] 
+moves="g7 h8 i9 g9 f10 f8 h10 g10 g11 f12 i7 k7 i8 i10 h7 f7 j9 g6 k9 l9 j8 h6 j11 j10 h12 i13 h11 i11 h13"
+Kozimor vs Kosztyła [ 1:0 ] 
+moves="c4 d4 e4 e6 f6 g6 d7 c7 f3 e3 g5 h5 e8 c6 f9 d6 b6 f8 g10 h11 e10 c9 c5 e9 d11 c12 d10 c10 c8 f11 h4 e7 g9 g11 f10 h10 d9 d8 d12 d13 e11 h8 c13"
+Majczyk vs Majksner [ 1:0 ] 
+moves="h8 f6 l12 g5 e6 h4 i3 h5 h6 f5 e5 f4 f3 i4 j4 f7 g6 f8"
+Załuska vs Wojtasiński [ 0:1 ] 
+moves="g6 h6 d4 e7 h8 f8 g7 g5 f6 e5 f4 f5 d5 h3"
+Gorzecki vs Żukowski [ 0:1 ] 
+moves="g3 h3 i3 d4 c6 g5 f5 e6 h6 g7 g8 i6 j7 i8 i9 j5 h7 i4 k6 d5 h9 h8 j9 k9 j8 j10 g11"
+Zajk vs Harmasz [ 1:0 ] 
+moves="h8 h9 h4 h3 k6 j6 k5 l5 g7 i3 i9 j10 k7 k8 j8 h10 i7 h7 h6 g5 i5"
+Wojtasiński vs Majczyk [ 1:0 ] 
+moves="f8 h10 j8 h12 i7 i11 k9 h6 i9 j12 k13 h11 h9 j9 l12 l10 k11 j10 i10 j11 j13 k10 i12 i8 h7 g13 f14 g11 f11 g12 g14 m10 n10 m11 m13 h14 h13 f10"
+Kozimor vs Żukowski [ 0:1 ] 
+moves="l10 m9 n6 j10 k7 j8 l7 m7 j9 k8 m8 k6 i8 h7 i11 h9 h10 j11 g9 f8 k12 i12 k10 j12 l11 m12 j13 m10 k13"
+Gorzecki vs Tarasiński [ 1:0 ] 
+moves="m3 m4 n5 l6 k6 j7 k5 l4 l7 m6 k4 k7 l3 j5 k3"
+Mirme vs Częstochowska [ 1:0 ] 
+moves="h8 i11 d9 i10 i9 j10 k10 k9 h12 j11 j12 l11 k11 k12 l13 n9 m10 l9 m9 l8 m7 l10 l12 l7"
+Kosztyła vs Tamioła [ 0:1 ] 
+moves="h8 i9 i12 i7 j7 j8 k9 g8 i6 g9 k8 l9 h6 h9"
+Załuska vs Majksner [ 0:1 ] 
+moves="c3 d2 b5 e5 g5 f7 g7 g4 e7 f4 e4 h4 g6 f5 f6 e6 h3 g8 d5 g3 h2 f2 j6 i6"
+Mirme vs Harmasz [ 0:1 ] 
+moves="h8 g7 i7 h9 g9 f10 j6 k5 j8 j9 h6 k9 i9 i10 h10 g11 k7 l6 l8 i5 f8 e7 j7 h7 i6 g6 i8 k8 g8"
+Kosztyła vs Sowa [ 1:0 ] 
+moves="h8 j10 e5 f10 h5 f5 g7 f6 f7 h7 e6 e8 d5 g8 e4 e3 f4 f9 c4"
+Załuska vs Częstochowska [ 1:0 ] 
+moves="c4 d4 e4 f7 d7 c6 f6 g5 h5 h8 g4 f3 h7 g6 i4 h6 i7 i6 h3 h4 j3 k6 j6 i3 k2 l1 f5 e6 i2 j1 j2 h2 l5"
+Gorzecki vs Majczyk [ 1:0 ] 
+moves="l6 l5 m4 i6 i7 k7 j6 k5 j5 j7 k8 m6 h8 h9 i8 j8 g7 g8 f7 f6 e7 h7 e10 e9 d9 c10 d6"
+Tarasiński vs Majksner [ 1:0 ] 
+moves="c5 d3 g2 e3 f3 f6 g5 h5 e6 d5 i4 j5 g4 g3 f5 h3 g7 f8 h7 g6 d7 c8 f9 h4 h6 h2 h1 f4 e5 e8 f7 e7 g8 e10 h9 i10 i9 e9 e11 h10 g9 j9 g10"
+Zajk vs Kozimor [ 1:0 ] 
+moves="h8 i11 d9 f6 h14 i10 f10 g9 f8 f11 g11 h12 g13 i9 i8 g8 h9 h7 g10 g12 f12 d10 h10 j7 e9 e10 f9 i7 g7 j9 h11 i12 i13 h13 i14 j11"
+Wojtasiński vs Żukowski [ 0:1 ] 
+moves="e6 i5 h4 h7 f8 i8 h8 h9 j7 j9 g6 i9 g9 i10 i7 k10 l11 j10 h10 j11 j12 k12 i11"
+Sowa vs Częstochowska [ 1:0 ] 
+moves="g7 h8 i9 i7 g9 h9 h10 f8 g8 g10 f11 g11 e10 f9 d9 g12 e8 f7 f6 e7 d10 d11 d6 g6 c8 b7 c7 e5 c10 c9 b10"
+Majczyk vs Kosztyła [ 1:0 ] 
+moves="f8 h10 j8 h12 i7 i11 k9 h6 i9 j12 k13 i12 k12 i13 i10 j10 i8 i6 g8 h8 h9 j11 j9 g9 l9"
+Kozimor vs Załuska [ 1:0 ] 
+moves="c5 d3 g2 e6 f4 g5 g6 f7 d5 e5 e7 f8 f9 f3 i6 h7 g10 e3 g3 h6 i5 i7 h8 j7 g7 k7 l7 h9 h11 i12 d8 d9 i10 h10 j8 j9 e11 g9 c9 b10 b8 d10 e8 d7 e9 e10 c8 a8 c7 c6 b6"
+Zajk vs Żukowski [ 1:0 ] 
+moves="h4 k5 e8 h6 i7 j4 i5 j6 i6 i4 j7 h7 k8 h5 i8 i9 l8 j8 h9 g10 l6 l7 j3 f6 j10 i11 k10 m10 k9 k7 j11 i10 i12"
+Majksner vs Mirme [ 1:0 ] 
+moves="f6 h8 h11 e6 f9 e8 f8 f7 e7 g9 g6 g5 i7 d5 c4 f5 e5 g4 h3 h4 d4 c3 i6 j6 g3 i3 i4 j5 j7 i5 h5 k7 l8 k8 k6 l5 m5 j8 h9 i9 h10 j2 k1 j3 j4 m6 i8 g10 k4 h12 g12 k11 j10 k9 k10 l10 f11 j9"
+Harmasz vs Gorzecki [ 0:1 ] 
+moves="e11 h12 k11 j10 k9 i12 k10 k12 j12 i13 i11 j13 k13 h10 h11 g11 f10 l11 i14 j7 j8 j14 k15 i7 k7 k8 i6 g9 g12 f13 g8 f9 e9 e12 d11 f11 d13 j11 f12 d10 f7 h9 i10 h6 h8 e8 j5 k4 g5 f5 g4 g6 e4 f4 h4 i5 f3 g3 g2 h1 i3 j2 d5 c6 e2 h5 e6 c4 f6 e7 e5"
+Tarasiński vs Wojtasiński [ 1:0 ] 
+moves="j2 m3 n6 k6 k5 j5 i6 l7 m8 j7 j6 l5 m4 l6 l4 k7 m5 k3 m7 m6 k4 i4 h3 j4 n4 o4 n5 n7 i7 h8 h9 i10 j10 g6 h5 g7 h6 h4 g5 j8 i8 e5 f6 f3 f4 e3 e4 f8 k11 g9 j9 k9 e9 e7 d6 f10 g10 k10 k8 d9 e11 f7 f11 e12 d7 d5 j12 c5 b5 c3 d3 c4"
+Kozimor vs Wojtasiński [ 0:1 ] 
+moves="h4 i4 l5 j6 i6 j7 j8 j5 j3 i7 l7 h8 g9 l8 g7 h9 h10 g10 i8 k7 m9 f8 g6 g5 l4 h7 h5 h3 g2 l3 j11 j12 m6 n7 l11 k10 k11 m11 k8 n5 i10 j9 l13 j13 l12 l14 d8 f11 h11 i11 e6 d6 d5 e4 c4 f7 c5 e5 c3 c2 f2 h2 e3"
+Harmasz vs Żukowski [ 1:0 ] 
+moves="k7 h7 e6 h5 i6 j7 j5 i8 i5 g4 g3 i3 j3 j4 k5 f4 e4 e5 h4 j6 k6 k8 l5 m5 k4"
+Kosztyła vs Częstochowska [ 1:0 ] 
+moves="h8 i11 g4 i10 h7 j11 h9 h6 j9 i9"
+Majksner vs Gorzecki [ 0:1 ] 
+moves="c5 d3 g2 e6 f4 e4 f5 f7 f2"
+Zajk vs Tarasiński [ 1:0 ] 
+moves="l6 l5 m4 j8 h7 i6 i5 i8 h8 j7 h9 h6 j6 g9 j10 h10 i9 k11 k9 l9 k8 i11 j12 j11 h11 k5 m8 m6 f6 g7 f8 f7 g5 h4 h3 e8 d9 d7 e7 d5 c6 c9 d4 c5 e5 e6 f3 c4 b3 g8"
+Harmasz vs Tarasiński [ 0:1 ] 
+moves="c5 d3 g2 g5 f4 f5 e4 d4 h5 h4 d6 e7 f6 e6 d7 d5 g8 h8 f9 e8 e9 d9 f10 g11 e10 d11 g10 h10 f12 f11 e11 c10 f7 f8 d12 g9 i11 e12 f13 g13 i10 i12 j9 h7 h9 j11 k8 l7 j7 i6 k9 k10 i8"
+Zajk vs Majczyk [ 1:0 ] 
+moves="c4 d4 e4 e6 f6 g6 e8 d8 d7 c7 f9 g10 e9 e10 g5 f4 h4 i3 h5 i5 i6 g8 f3"
+Majczyk vs Załuska [ 1:0 ] 
+moves="f6 h8 j8 h6 h7 i8 j6 j7 f8 f7 h9 h10 d8 e7 e9 f9 d10 c11 c9 e8 e11 f12 c7 f10 d6 b8 b6 a5 c6 e6 c8"
+Mirme vs Kosztyła [ 1:0 ] 
+moves="e11 h12 k11 g9 j12 g11 j11 g10 g12 i13 j14 j10 i11 l11 e9 h10 i10 i9 j8 g7 g8 h8 f6 h9"
+Wojtasiński vs Gorzecki [ 0:1 ] 
+moves="m4 l4 j3 k6 k5 l6 j6 i5 l3 i4 k2 n5 j5"
+Kozimor vs Majksner [ 1:0 ] 
+moves="k10 h6 j7 h7 h8 g7 i5 g9 f9 e7 f7 f8 d6 g8 g6 e9 d10 d8 e8 g11 g10 f10"
+Częstochowska vs Żukowski [ 0:1 ] 
+moves="l10 m8 n6 j10 j8 k9 l8 l9 k10 h9 j9 i11 i8 h7 h8 k8 i6 i7 k7 j6 l5 m5 k4 m6 m7 l7 k6 m4 h5 k5 m3 g9 g4 f3 f7 h12 g13 e9 f8 g8 f9 f10 g11 f5 g6 j3 e8"
+Gorzecki vs Kozimor [ 1:0 ] 
+moves="h8 h9 l10 g7 i10 g9 j10 k10 i9 g10 g8 i8 j7 k11 j9 j8 l9 l7 k12 l11 f9 e10 i11 h12 f11 g12 g11 h11 f12 f13 d10 e11 e12 e7 f8 f10 f7 e13 i13 i12 d12 h13 h10 g14"
+Tarasiński vs Majczyk [ 0:1 ] 
+moves="f6 h8 h11 h6 h7 i7 j8 i5 i6 j5 k5 j4 g7 j3 j6 h3 i3 i4 k6 k2 h5 l2 k3 j2 j1 m2"
+Kosztyła vs Harmasz [ 0:1 ] 
+moves="i3 h3 g3 d4 c6 g5 h5 f4 e5 e3"
+Załuska vs Zajk [ 0:1 ] 
+moves="h8 h9 h4 j6 j5 i6 h6 i5 h5 h7 h3 h2 i4 k6 g4 j4 g5 g6 f4 e3 e4"
+Wojtasiński vs Częstochowska [ 1:0 ] 
+moves="h8 j9 m9 j6 i12 j7 j8 i8 h7 h9 k6 i9"
+Mirme vs Żukowski [ 0:1 ] 
+moves="h8 h10 k7 e7 f10 g9 f8 f9 h9 e8 d7 e9 e10 f6 d9 d8 g5 i8 k6 g11 k5 k4 h6 i9 k9 k8 i7 j8 f12"
+Nipoti vs Tóth [ 1:0 ] 
+moves="h8 i11 d9 d8 c6 f7 f6 g7 h7 h6 e9 f9 c8 e6 e10 f11 e11 f10 f8 e8 c7 c5 c9 c10 d10 b8 c11 b12 e13 e12 d12"
+Purkrábek vs Eged [ 1:0 ] 
+moves="j12 k8 f10 l9 h10 j7 i6 j9 i10 g10 i8 i9 k9 l7 g9 f8 i7 h8 j8 l10 l8 j10 k11 m8 k10 m6 n5 k13 i5 i4 j5 f6 g7 g5 k4 l3 f7 h7 e7 e9 h12 i12 h11 h13 m7 k6 n6 o5 n4 o10 n9 n3 l5 j4 j6 h4 h5 k5 i3 d9 g4 d7 h3 g3 g8 h9 d10 e6 c8 d6 g6 b9 c9 b6 d8 c6"
+Nipoti vs Tóth [ 0:1 ] 
+moves="c5 d3 g2 a15 o15 d4 f4 g3 e6 e5 f7 d5 d6 f6 g7 c3 b2 d2 d1 e3 f3 a3 b3 b4 e7 e1 a5 e4 e2 c4 a4 h7 g6"
+Zajk vs Mosóczi [ 1:0 ] 
+moves="j7 j6 f9 h8 k5 g7 i9 h6 f8 g6 i6 h7 h5 g4 g5 h9 h10 f7 e7 g9 i5 j5 g8"
+Hegedűs vs Nykl [ 1:0 ] 
+moves="j7 h9 f6 k6 l8 j8 i9 h8 h6 g8 i8 i6 h7 g6 g7 f7 i10 i7 i11 i12 j10 k9 h10 l10 m11 f10 g9 f8 k10 g10 l11 j9 k11"
+Tesařík vs Ménesi [ 1:0 ] 
+moves="h8 j8 m8 k10 k9 j10 i10 h9 j7 l7 g9 g7 g12 g11 f10 e11 f11 f12 e10 h13 h10 g10 f8 e7 g8"
+Żukowski vs Fűri [ 1:0 ] 
+moves="h8 i9 k5 j10 m5 h10 j5 i5 j8 i8 i7 j6 k9 h6 k7 i10 l6 n4 k8 k6 k10 k11 l5 n5 n8"
+Tóth vs Tamioła [ 1:0 ] 
+moves="h8 h9 h4 k10 i10 k8 k7 m8 j8 l9 j11 j7 m10 k6 l5 l7 j5 l8"
+Sapszon vs Nowakowski [ 0:1 ] 
+moves="d5 i7 h4 i6 g5 f6 f5 h5 e6 g4 j7 e5 i8 h9 h8 j8 d7 k9 l10 d6 e8 g8 c6 f9 h7 e4 c8 b9 c7 c5 e7 a7 f7 b7 g6 j9 c10"
+Tamioła vs Nipoti [ 1:0 ] 
+moves="c3 d4 e5 g6 h5 g4 g7 g5 h6 g3 g2 h4 i3 j4 f4 f8 h8 i9 e7 h7 i6 k6 i4 i5 j6 j9 i8 k9 l9 k8 k7 l7 m6 g9 h9 m8 n9 e6 d7 f7 f9 h11 i10 j11 j10 f11 h10 g10 g11 c10 e10 c6 d6 c7 c8 e12 c12 d11 f13 e4 d5 d9"
+Brdková vs Jonsson [ 0,5:0,5 ] 
+moves="g3 h3 i3 g5 h5 i6 j6 k7 g7 j5 k4 l7 i7 k5 i4 g6 h7 f7 h6 h4 h8 h9 f6 e5 f8 e9 g9 f10 h10 i11 g11"
+Harmasz vs Háša [ 1:0 ] 
+moves="b2 d2 f3 e5 g5 g4 e6 f7 f8 g7 h7 i8 g9 e7 d7 f9 h8 f10 k7 j6 j5 h5 k6 k8 i4 h3 j8 i6 j7 i7 i9 h10 k5"
+Dupszki vs Laube [ 1:0 ] 
+moves="k2 l3 m5 k5 i6 k7 k6 j6 i7 i5 h4 j4 j3 m7 l6 j8 j7 i8 h8 h5 j5 h7 j9 l7 g7 f6 g6 k11 m9 k9 k10 h10 g11 i11 j12 j10 l8 f9 g10 e10 g5 g8 d11 g9"
+Rybka vs Poltaratskiy [ 0:1 ] 
+moves="h8 h10 e7 d8 d11 f9 g10 f11 f10 g9 i9 j10 i11 d9 e9 e10 c8 i10 k10 h9 k8 l9 i6 j8 j11 h11 h13 j7 i13 i12 f13 g13 d7 f7 e6 f5 e5 e8 f6 g7 b9 a10 c10 e12 g6 h6 c6"
+Zajk vs Ménesi [ 1:0 ] 
+moves="h9 f8 j11 g8 h8 h7 f9 g7 g9 e9 h6 i7 f7 e8 d8 j7 k7 i6 i9 j9 j8 h10 k8 g4 i8 l8 k5 j5 k4 k6 l6 m5 h3 f4 h4 h2 g3 i5 f3 i3 i4 k11 i12 j13 g12 e10 e11 f12 g11 g10 f10 d12 h13 g14 h12 i10 k10 l9 d10 d7 e6 g6 g5 d5 d4 m13 k13 i14 l11 j12 l10 l12 n14 m7 k9 n10"
+Żukowski vs Dupszki [ 0,5:0,5 ] 
+moves="f11 j2 k8 j5 i8 k5 h9 j7 j8 h8 i5 i7 j6 k7 l7 k4 i6 j4 m6 k6 k3 n5 l5 l6 i3 i4 l4 h4"
+Harmasz vs Laube [ 0:1 ] 
+moves="h15 h1 g15 h11 g11 g12 h12 i10 j9 f10 i11 f11 f14 g13 k15 g10 e10 f13 e14 f9"
+Sapszon vs Poltaratskiy [ 0:1 ] 
+moves="f6 g6 c4 d4 e6 d5 f5 e7 d7 g4 c6 c7 f8 f9 g7 h6 d10 d9 h8 i9 e11 c11 c10 b10 b9 c8 e12"
+Żukowski vs Laube [ 1:0 ] 
+moves="c6 l9 f11 g11 g14 h10 f12 f10 h12 g12 g10 h9 i9 h8 h7 i7 g9 j8 k9 j6 i8 j9 j10 i11 j5 l6 i6 g8 k8 j11 i10 l7 l8 m7"
+Dupszki vs Háša [ 0:1 ] 
+moves="c6 l9 f11 e11 c13 g10 f9 g8 g9 f10 e8 h9 d7 b5 h10 e7 d9 c8 c10 f7 e6 d8 c9 e9 g11 f12 f13 g13 h14 c12 i11 j12 h13 h11 b11 a12 g12 e10 i14 j15 i8 i12 j11 i7 e12 d11 h6 j9 k9 j6 k14 j14 k7 j8 j7 k5 l4 i4 h4 h5 g6 j5 i5 l7 k6 k8 i10 m6 n5 l8 l5 m4 l10 c5 b6 d6 f8 j4 i3 m10 m8 m11 l12 l11 k11 j10 j2 g5 l3 l6 k3 m7 n8 m5 m3 j3 e4 h7 g7 f3"
+Ménesi vs Brdková [ 0,5:0,5 ] 
+moves="j7 h9 f6 g7 i8 g8 g6 h7 i6 h6 h5 g4 i5"
+Nipoti vs Tamioła [ 1:0 ] 
+moves="j7 h9 f6 i9 g6 h6 f7 k9 j9 j8 i7 h7 h10 h5 h8 h4 h3 f8 e9 i5 j4 j6 k7 g3 f2 f10 e6 e5 f5 d7 k5 l6 k6 k4 l7 m7 k8"
+Tesařík vs Jonsson [ 1:0 ] 
+moves="h7 i9 h4 g9 j6 j9 k9 k8 i7 k7 j8 h6 l7 g7 l6 h8 l10 m11 l8 l9 j10 m7 j4 j5 k6 m6 i4 k4 g3 h9 f9 i3 f4 g4 e5 d6 f5 i5 h12 i11 f3 f6 g6 e4 c5 g5 l5"
+Rybka vs Hegedűs [ 1:0 ] 
+moves="h7 i9 h4 g9 i6 f9 j9 g10 i8 g6 e8 f10 g8 f8"
+Purkrábek vs Tóth [ 0:1 ] 
+moves="d7 d6 d4 f5 g6 f4 e5 f6 f7 e8 e7 g7 e3 e4 f2 c5 i5 i4 h8 h9 j6 h4 g4 i7 j8 j7 k7 k6 i8 k8 j5 l6 l9 j9 i10 h10 i12 i11 j12 l10 j11 k10 k12 h12 m10 m12 j13 l11 n13 j14 g11 l13 k14 h11 h13 g13 f14 l5 l4 k9 j10 g9"
+Hegedűs vs Nowakowski [ 0,5:0,5 ] 
+moves="h8 i9 j10 h10 g11 i7 i11 k9 l9 j8 l10 h6 g5 i6 i8 j6 k6 j7 j5 k7 l6 l7 h7 m7"
+Mosóczi vs Jonsson [ 0:1 ] 
+moves="h8 h10 k7 j6 i7 j7 j8 k8 i6 h6 g7 i8 g10 g9 f6 e5 e8 e7 f8 f9 d8 g8 d10 e10 d11 d9 j10 i9 c11 e9 c9 c8 f11 e11 e12 d13 f13 c10 f12 f14 h12"
+Nykl vs Nowakowski [ 0,5:0,5 ] 
+moves="c5 d3 g2 e6 f4 g5 g6 d5 f7 h5 d6 f8 e5 g3 c7 b8 d7 e7 i5 d9 e9 f6 h4 f10 i4 g4 i6 i7 j5 h3 k4 f3 e3 j3 i3 i2 f5 h7 j4 l4 k5 j6 l6"
+Zajk vs Tesařík [ 1:0 ] 
+moves="h4 g7 l5 l4 f9 g6 i5 j6 i7 h5 i6 i8 g5 i4 f7 f6 h8 j5 j4 h3"
+Tamioła vs Tóth [ 0:1 ] 
+moves="c3 c4 d3 e5 e6 g6 f8 d7 h5 i7 g7 h6 i6 j8 k9 j7 j9 h9 k7 e4"
+Eged vs Nipoti [ 0:1 ] 
+moves="c3 d4 e4 f5 c6 d5 e7 e6 d7 f7 c4 c5 e5 e3 f2 d2 d6 f4 g5 f6 f8 f3"
+Mosóczi vs Brdková [ 0:1 ] 
+moves="g3 h3 i3 i5 g5 f4 h6 f6 f7 g8 i7 h7 j6 j5 i6 k6 i4 k5 h5 g6 i8 k8 k7 i9 j9 j10 g10 h8 g7 f11 h11 i12 k11 f12 g12 f13 k9 j8 f10 g13 i11 j11 h13 h10 g11 e9 e11 k12 i10 l9 l11 m8 k10 m12 l8 n10 n11 m11 l12 d7 e6 d11 c10 d8 e10 d10 d9 b11 b12 d5 d6 k3 l5 m5 m6 k4 k2 e4 j3 l1 c6 l4 n6 l7 n9 g4 h4 f5 d3 j1 i2 i1"
+Fűri vs Harmasz [ 0:1 ] 
+moves="i3 j3 l3 i6 j7 g6 j4 h7 k5 l6 j6 i8 j8 j5 j9 j10 g8 i9"
+Poltaratskiy vs Nykl [ 0:1 ] 
+moves="h2 f3 d2 g5 f5 e6 d5 g6 f6 g7 g4 e7 e8 g9 g8 f8 d6 h6 d4 d3 e9 h7 d7 d8 i7 g3 h3 h10 i11 h8 h9 i5"
+Fűri vs Háša [ 0:1 ] 
+moves="k2 l3 m5 k7 h5 i4 i6 j7 k6 h6 l7 j6 j8 j4 k3 k4 h4 l5"
+Sapszon vs Rybka [ 0:1 ] 
+moves="h8 h10 k7 j6 g10 i6 k6 k8 j7 i8 i5 l7 g7 h7 i9 f6 g6 g8 f9 j9 i10 l8 l5 l9 l11 m8 j8 n8 o8 m6 n5 l6 l10 m7"
+Háša vs Żukowski [ 0:1 ] 
+moves="h8 i11 d9 f9 i12 g8 e10 f11 f10 g11"
+Harmasz vs Żukowski [ 0:1 ] 
+moves="d8 i11 i5 k4 m3 j6 i7 j7 j8 i6 h6 g5 h7 h5 g4 j4 i4 l5 m6 m4 n3 j5"
+Brdková vs Zajk [ 0:1 ] 
+moves="f6 g6 c4 c7 h9 e5 f4 f7 e8 f5 g5 e4 d3 e3 e6 e2 e1 d5 c6 c5 b5 d7 e7 d8 d6 b6 e9 e10 f2 f9 d11 h10 h6 i7 i8 j7 h7 h5 j9 k9 j11 i10 g10 f11 f8 g7 g12 k10 j10 j12 k11 i11 k13 g11 i9 l12 i4 j4 j5 k6 k7"
+Dupszki vs Harmasz [ 0,5:0,5 ] 
+moves="j7 h9 f6 j6 i10 i7 h8 g7 k8 j9 k9 i5 m10 i6 i8 l8 k7 k10 l9 n11 g8 j8 k5 k6 h6 f5 h4 h5 g5 i3 i4 e7 e8 f8 d6 h3 e6 g6 g3 g4 e10 f9 d9 d10 c8 b7 f7 e9 c11 c10 f4 e5 d5 c4 d7 d8 e3"
+Tesařík vs Brdková [ 1:0 ] 
+moves="h7 h6 k10 g6 g7 f6 e6 f7 g5 i4 h5 f5 f4 i6 j6 k7 j8 j9 i10 l10 g10 f9 f8 h10 d6 e7 g11 g9 e9 h9 i9 f10 i11 i8 e11 i7 i5 h11 h12 l7 j5 k5 j7 j4 g13"
+Dupszki vs Fűri [ 1:0 ] 
+moves="h8 i6 f10 i7 j7 k6 i5 j5 h6 i4 l7 k4 l3 j4 h4 k5"
+Purkrábek vs Nipoti [ 0:1 ] 
+moves="h8 h7 i6 i8 g6 h6 h5 j7 g5 g7 f7 i7 k7 i4 f5 i5 f8 j4 k3 f4 e8 d9 g8 d8 d5 e5 e6 h9 c4"
+Tóth vs Varga [ 1:0 ] 
+moves="h8 l9 l5 k9 k5 i7 h6 j5 i6 j6 h5 h7 j7 k8 i8 k6 g8 f8 g6 e6 i4 f7 g7 g5 j4"
+Ménesi vs Jonsson [ 1:0 ] 
+moves="h8 j9 m10 k9 j8 k8 k10 j10 i10 i11 h12 l7 l8 k6 k7 j6 l6 i9 h9 j11 m9 k11 n10 o11 h11 h10 j12 j5 l10 o10 i4 l12 m13 g8 h7 h5 m11 m12 m7 m8 j4 k5 i5 o12 o9 m5 l5 l4 m3 k3 j2 g4 i6 i7 g12 k12 n12 f12 f11 g10 e10 d9 e11 g11 e13 e14 d11 e12 c11 b11 d12"
+Laube vs Háša [ 1:0 ] 
+moves="c5 d3 g2 e5 f5 g6 e6 d7 g7 f7 e8 f8 f10 h8 j8 h10 h9 j9 h3 g4 j5 i4 j4 j6 i6 j3 h5 i5 h4 h6 h2 h1 j2"
+Zajk vs Jonsson [ 1:0 ] 
+moves="e5 c4 e1 f5 f7 e6 g4 g6 h7 d6 f6 g7 h4 g5 h5 g8 g9 h6 e2 f3 e4 e3 f4 g3 d4"
+Tesařík vs Mosóczi [ 1:0 ] 
+moves="e5 c4 e1 f5 g6 g7 e6 e7 f7 e8 i6 g8 f8 f9 g10 d8 c7 f6 c9 d10 f4 d6 d9 e10 d11 c10 f10 e11 e9 i8 i4 h4 g5 i7 g3 f3 g2 g4 j5 h3 h5 j3 i5 k5 i2 i3 h2 a10"
+Hegedűs vs Sapszon [ 1:0 ] 
+moves="c4 c6 c7 e5 f6 f7 e8 e4 f5 g3 g2 h6 f4 h7 e7 h8 h9 i7"
+Rybka vs Nykl [ 0:1 ] 
+moves="c4 c5 c7 e6 f5 f4 g7 h8 g6 g5 h6 h7 f8 e9 i4 i5 f7 e8 e7 d7 j6 i6 f9 f6 j5 j7 h10 g9 f10 f11 k8 l7 k7 k6 i9 j8 i10"
+Nowakowski vs Rybka [ 0,5:0,5 ] 
+moves="c4 d3 b6 e6 f5 g5 f6 f7 g8 e5 e4 f4 h6 g3 d6 i5 h4 h5 g6 i6 i8 h7 f8 e8 e7 g9 c7 c3 e3 d4 d8"
+Tamioła vs Eged [ 1:0 ] 
+moves="m4 l5 l6 k7 j5 j4 i6 h7 j6 h6 i7 h8 h5 i5 g7 g4 k8 j9 l9 j7 h9 i4 h4 k10 i8 g10 j10 l8 i10 i9 g11 h12 f7 e6 f5 f9 f6 f4 g5 e7 m5 m6 k3 j2 k4 m2 k2 k5 e8 d9 j11 g8 e10 e5 g3 d6 c7 c5 b4 e11 f10 k12 j12 j13 h11 i11 l11 c9 e9 d8 d10 b10 a11 d5 d7 c6 e4 d3 d2 c4 c3"
+Purkrábek vs Tamioła [ 0:1 ] 
+moves="c3 d4 e4 c6 d5 f5 e6 f7 e3 e5 f6 h6 c7 i7 f3 g3 g2 h1 b3 d3 c4 a2 g5 h7 g7 h8 h5 g9 j6 f9 h9 e8 g10 g8 i8 e10 i6 d11"
+Mosóczi vs Ménesi [ 0:1 ] 
+moves="h3 j4 l5 i6 k4 j3 j5 i5 i4 k6 h6 g5 i8 h4 f6 h8 j6 k8 j9 f5 j7 j8 k10 l11 e5 e6 d4 c3 d7 h9 f7 g6 d6 d3 e4 f3 e3 e2 g7"
+Hegedűs vs Poltaratskiy [ 1:0 ] 
+moves="h3 j4 l5 i5 h6 i4 g4 i3 i2 f5 h5 i6 i7 h4 g5 f4 g3 g6 h7 h8 g2 g1 h2 f2 f3 e4 k7 j7 m5 l6 k5 j5 j8 k9 j2 k2 k4 j3 j6 k3 k8 k6 m8 l8 m6 m3 l3 m7 n7 o8 n5 o5 n6 l2 m1 n4 k1 j9 h9 d3 c2 d4 c4 c5 e3 f8 f6 e7 d6 e8 g8 e6 e5 c8 e10 d7 b9 f9 c6 f11"
+Poltaratskiy vs Nowakowski [ 0:1 ] 
+moves="k3 l4 m6 k6 j7 i6 h6 i5 i4 j3 j8 i7 h8 j9 i9 k8 j10 g7 h10 k7 h9 h7 h11 h12 k11 l12 g11 f12 i11 j11 f11 e11 g10"
+Nykl vs Sapszon [ 1:0 ] 
+moves="b2 d2 f3 d3 e5 f4 g5 e4 f5 d5 d4 f6 g4 h5 g3 g6 h3 e6 i3 d6 e3"
+Nipoti vs Varga [ 1:0 ] 
+moves="e2 i2 j2 h5 g5 f6 h6 i7 g7 f8 f7 g8 h8 h10 f9 j10 i9 j9 i10 i11 j12 j7 j8 k8 i6 k9"
+Fűri vs Laube [ 0:1 ] 
+moves="j2 k3 l5 j6 h6 g5 k7 i8 l7 j7 l6 l8 j5 k5 j8 m5 k9 k8 l9 h9 g10 m8 k4 l3 i7 l10 i4 j3 i3 m3 n3 l4 n2 h3 g9 g7 h11 g8 i12 f9 i11 i9 j10 j11 g13 h12 g11 g12 e11 f11 f10 h8 i10"
+Tóth vs Eged [ 1:0 ] 
+moves="h8 h10 k7 g6 e8 f8 g9 f10 f9 e9 g10 h11 g11 g8 i7 j7 j6 k5 i5 l8 h4 g3 j4 g5 h6 k3 i4"
+Nykl vs Hegedűs [ 1:0 ] 
+moves="h8 h10 k7 f10 g11 g10 e10 i12 i10 h11 f9 h12 h13 j12"
+Tóth vs Nipoti [ 0:1 ] 
+moves="h8 i11 d9 g11 e8 i9 f7 g6 f8 i8 i10 g8 f9 f10 e9 g9 c8"
+Tamioła vs Rostás [ 1:0 ] 
+moves="j10 h6 e8 f5 h8 g5 i9 g7 f8 g8 g6 h5 i5 h3 h4 e6"
+Drabos vs Jonsson [ 0:1 ] 
+moves="l11 l9 l7 j8 i9 i7 k8 i10 j10 k9 h6 k11 n9 k6 f6 h8 g9 h9 g6 e6 g8 g7 j7 k12 k10 j12 l10 h11 h12 k13 l13 g10 i6 j6 h7 k14 k15 i12 j13 f9 e8 h5 m6 j9 n7 n10 k4"
+Nykl vs Nowakowski [ 1:0 ] 
+moves="m12 i12 j10 i9 h11 j9 k9 h10 i11 h12 g11 j11 k10 l10 f11 e11 g12 g10 e10 h13 f9 d9 d11 c12 h6 f7 l8 m7 k8 k7 j8 i8 f10 f12 i7 g5 j6 h7 g6 i6 c10 f5 d10 b10 j5 f6 f8 g7 h8 g9 h4 h5"
+Rybka vs Hegedűs [ 0:1 ] 
+moves="b5 b4 e2 e5 f6 f7 e7 g5 h5 i6 g8 f8 i7 j6 k6 g3 f4 k7 g4 h4 i5 f3 d7 e6 f9 d3 e3 c6 e10 d11 d5 g10 d9 e9 c11 f11 h9 j9 i10 l5 l10 j10 k12 j11 j12 m9 i12 h12 i11 i13 l12 m12 l11 l13 l8 l9 d6 d8 k9 j8 m10"
+Brdková vs Jonsson [ 1:0 ] 
+moves="f6 g6 c4 f7 e8 h7 e7 g5 e5 e4 f5 g7 e6 e9 g4 d7 h6 g9 g8 d9 f9 d8"
+Laube vs Dupszki [ 0:1 ] 
+moves="f6 g6 c4 e7 f7 f5 e4 d5 d4 f4 e5 c3 g9 h8 i10 h10 i8 i9 g11 h9 h11 g12 h7 f11 e10 f9 j10 j9 k9 f12 f10 h12 i12 g10 e12 l10 j7 i7 k6 l8 j5 k7 k4 l6 j8 l7 l9 i6 j4 j6 m4"
+Dupszki vs Háša [ 1:0 ] 
+moves="f6 k8 j4 i4 j8 l7 k6 j7 l9 i7 h7 m6 n5 h8 g9 k11 i9 i6 i5 f7 g6 k7 m7 h6 g5 h5 g4 g3 e7 d8 f5 k9 k10 i10 j9 e6 c5 h9 g8 e4 e10 g11 e11 e9 f10 d10 f8 d6 e5 d5 d4 c3 e12 d12 d11 f9 f13 c10 e14 e13 g14 h15 f14 h14 f3 f2 k3 b6 c6 c7 a5 j3 k2 k4 l2 m1 l5 k5 l4 l3 n6"
+Harmasz vs Háša [ 1:0 ] 
+moves="f6 h8 h11 h6 g9 f8 f9 g10 h9 e9 g7 j9 g8 h7 g5 g6 f5 h5 h4 e7 f7 e6 e5 f4 j7 k5 k10 e10 e8 j11 f10 k6 k4 j6 i6 k8 l4 i4 l7 k7 k9 l8 m9 j8 i8 l6"
+Gyenes vs Tesařík [ 0:1 ] 
+moves="o7 n8 m9 k9 k8 j7 l6 j6 j8 i8 i9 k7 i7 h9 g10 h6 g6 i5 g3 j5"
+Fűri vs Harmasz [ 0:1 ] 
+moves="h8 h3 c10 d9 f14 f10 e9 f8 f11 f6 d7 e7 g6 d6 c5 f4 f5 e5"
+Drabos vs Zajk [ 0:1 ] 
+moves="h8 f9 d6 c7 c10 f10 f8 g10 e9 e8 h11 h10 i10 g7 g8 i8 j7 j9 k10 f11 f12 c8"
+Tesařík vs Zajk [ 0:1 ] 
+moves="h8 i10 f12 j9 h11 i9 i11 h9 k9 j11 g8 i8 j10 h12 k10 j7 k6 k12 l13 l7 i7 l8 k8 k7 g9 g10 f11 f10 j8 h6 j6 k5 l6 m6 f8 e7 j12 h10 e10 e8 h13 g12 i13 h14 e11 g11 j13 k13 g13 f13 d11"
+Żukowski vs Laube [ 1:0 ] 
+moves="c4 c6 c7 e7 f6 f5 e8 g7 h7 g9 h6 i6 g8 h8 f10 f9 d6 e9 d9 e6 c10 b11 d10 e10 d8 d7 c8 f8 b8"
+Nowakowski vs Sapszon [ 1:0 ] 
+moves="c4 d4 e3 f5 f6 h6 e6 d5 h5 c6 d3 g3 b5 e2 j6 d8 c7 e4 f3 f9 e8 e10 d9 b7 a8 f10 g8 h9 h8 f8 f7 g6 c10 b11 j7 i8"
+Kolouchová vs Tóth [ 0:1 ] 
+moves="c4 d3 b6 e6 g6 g4 d7 f7 e8 f9 e10 e9 h9 h5 f8 g8 h7 f3 e2 f5"
+Eged vs Kolouchová [ 0:1 ] 
+moves="m4 l5 l6 j8 i8 i6 j6 j4 h7 g6 h5 h4 g4 h9 g9 f8 f6 i10 j11 f10 g11 f11 f9 g10 e10 f13 g12 f12 f14 j10 h10 k9 l10 i11 h12 l7 m6 k6 m7 m8 n9 i4 j5 i5 m3 m5 i7 h6 g7 k3 l2 l4"
+Nipoti vs Tamioła [ 0:1 ] 
+moves="d3 d4 e3 f5 g3 f3 f4 h6 e5 d6 h4 g4 h2 i1 e6 e4 j6 i5 j4 d5 c6 h5 i6 g2 h1 j5 g5 i4 h3 i3 i2 f8 e7 d8 d7 e8 g8 f7 g6 f9 f6 f10 f11 e9 g7 g9"
+Rostás vs Eged [ 0:1 ] 
+moves="d3 f3 g3 g5 f6 e6 g7 e5 e4 f5 h5 d6 c5 d7 c8 c7 b8 e7 f7 d8 d9 b7 a7 e8 e9 f8 g9 f9 g10 g8 h8 f10 f11 h9 d11 g11 e12 d10 c10 f13 b9 a8 c9 a9 c11 c12 e11 b11 e10"
+Poltaratskiy vs Sapszon [ 1:0 ] 
+moves="d3 h2 i2 g5 f5 g6 g4 e6 h3 j1 e7 g8 f7 f8 g7 h7 i6 f4 h6 i5 d6 h5 k5 h8 i8 h10 d7 c7 d5 d4 d8 d9 c9 b10 k6 e10 i4 f9 d11 h9 h11 g9 e9 j5 k4 i9 j9 k7 k3 k2 j4 h4 m4 l4 l5 j6 j7"
+Fűri vs Żukowski [ 1:0 ] 
+moves="i3 k4 m7 j7 j6 i6 h5 h4 k5 j4 i4 j3 j5 l5 m6 i2 h1 l4 m4 m5 n6 k6 i8 l7 l6 k9 l9 k10 j10 h8 k11 l10 m11 i5 g7 l11 f7 h7 e8 g6 i7 f9 h9 i10 l12 m13 e10 e9 d9 f11 h11 d10 h12 k13 h13 h10 j13 n13 j9 o14 m12 l13 o13 i12 g11 j11 i13 j14 h14 h15 n8 o9 c11 d12 c10 b11 c8 c9 d8 f8 g13 f13 e6 d7 g15 j12 g12 g14 g9 g10 d5 g8 c4 b3 b7 a6 e4 c6 b5 a5 b8"
+Gyenes vs Brdková [ 1:0 ] 
+moves="i3 k4 m5 j6 j5 i5 k7 l6 k6 l7 l5 j7 j9 k8 i7 l9 m10 h4 h5 g3 f2 g6 g4 f5 e4 d4 l10 k10 j11 j8 i11 h8 i8 f6 i10 i9 f3 e2 h6 f8 f7 g8 g9 d8 e8 e7 g5 j10 g7 k11 l12 k12 k9 k13 k14 g11 c9 d11 f9 e9 f10 d7"
+Poltaratskiy vs Rybka [ 0,5:0,5 ] 
+moves="g8 f9 j6 h7 g9 g10 e8 h8 h10 g6 e6 e7 i8 f7 g7 d8 f8 g11 f10 i11 h11 i5 h5 d10 c9 g12 g13 e12 f11 j4 k6 i6 l6 l5 k7 i4 i3 k4 m6 n6 j8 i9 l4 k3 h6 m3 j5 n3 l3 n4 n5 k8 l10 k9 h12 h13 m9 l9 j9 j7 m10 k10 j11 j12"
+Nykl vs Poltaratskiy [ 0,5:0,5 ] 
+moves="f12 e8 j10 d12 c9 e11 f10 d9 d10 e10 e9 f11 g12 d11 c11 f8 d8 g11 h11 c10 f7 c12"
+Tóth vs Tamioła [ 0:1 ] 
+moves="c5 d3 g2 e6 f4 g6 e4 d4 d6 e5 f6 f5 h5 h4 g8 d7 c8 d5 f9 b3 f7 f8 e10 d11 d9 f11 e9 c9 e11"
+Zajk vs Gyenes [ 1:0 ] 
+moves="b5 b4 e2 d5 e6 f5 f4 f3 d3 c4 c6 d6 f8 d7 d8 h7 e8 c8 e7 e5 g5"
+Brdková vs Drabos [ 1:0 ] 
+moves="b6 d5 e4 g6 e6 e7 f4 g5 g4 h4 f6 f5 e5 d6 d4"
+Gyenes vs Kolouch [ 1:0 ] 
+moves="j7 h9 f6 e4 d3 f8 f3 h6 g7 h8 h7 i7 e3 c3 f5 f4 g4 g3 d7"
+Nipoti vs Eged [ 1:0 ] 
+moves="j7 h9 f6 i10 g6 h6 f7 f5 h5 i4 g7"
+Tesařík vs Drabos [ 1:0 ] 
+moves="h7 i9 h4 g8 g9 h6 i8 g6 f6 g5 g4 f7 f4 i4 h5 i5 f3 i6 i2 f5 e4 d4 e5 e6 d5 g2 g3 k6 j6 h3 j5 i7 i3 j8 k9 h2 c4 c3 b5 a6 b4 d6 b7"
+Hegedűs vs Nowakowski [ 1:0 ] 
+moves="g7 h12 l9 i10 j7 k8 j9 k9 k7 l8 k10 j10 i11 m7 n6 i8 j8 j6 i7 h7 h6 f8 i5 j4 g5 f4 g6 g4 f6 e6 i3"
+Tóth vs Eged [ 1:0 ] 
+moves="h8 d5 f13 f5 f10 g5 h5 f6 g9 i7 f9 f7 f4 e6"
+Nowakowski vs Rybka [ 0:1 ] 
+moves="h8 g7 e11 f10 e7 g10 e10 e9 f8 g8 g9 h10 i10 h11 h12 i12 j13 g6 d9 f11 d8 e8 f9 d10 b7 d7 c6 c8 d6 c5 e6 g5 g4 b6 e4 d5 f5 e3 d4 f4 h6 j7 i8 i9 j8 l9 k10 k9 j9 l11 k8 l8 l7 m6 j10 m7 k6 l10 l12 m9 m8 n9 o9 n8"
+Hegedűs vs Poltaratskiy [ 0:1 ] 
+moves="h8 j9 m9 i7 i8 j7 j8 k8 k7 i9 l9 l8 i10 j11 h12 i11 j12 g10 f9 f8 g11 f10 e10 f11 f12 e12 d13 e13 k11 l10 h14 e11 e14"
+Dupszki vs Żukowski [ 1:0 ] 
+moves="h8 j9 m10 k8 i10 k11 k9 l10 m9 l11 j11 l8 l9 m8 j8 h9 g10 h10 i12 i11 g9 i8 k10 h13 h11 j13 i7 f10 g8 g7 i6 h7 h6"
+Laube vs Fűri [ 1:0 ] 
+moves="h8 i9 h5 g9 h9 h10 j8 g8 g10 i8 i7 h6 f8 g6 h7 i11 j12 g11 h11 f12 e13 i6 j6 j7 i12 j13 f6 f7 g5 i5 e5 e7 d4 g7 d5 f5 d3 d2 c3 b2 e3 f3 e8 f9 d7 d6 c5"
+Rybka vs Sapszon [ 1:0 ] 
+moves="h8 i9 l9 j7 j8 i8 i7 h6 g9 f10 k6 l8 k10 k9 j11 i12 i11 h10 l11 k11 m12 n13 n9"
+Kolouchová vs Rostás [ 1:0 ] 
+moves="h8 i9 k12 j7 h9 i10 i7 h10 j8 k10 j10 k9 j6 g9 j9 g11 j12 j11 i12 h12 f10 h11 i11 g13 e13 h14 h13 g12"
+Żukowski vs Háša [ 0:1 ] 
+moves="c5 d3 g2 g4 e4 e5 f6 e7 c6 c7 e8 d6 f4 d7 d5 f3 b7 a8 f7 g6 f8 f5 e6 b8 a9 g8 h5 f9 e10 f11 g7 h6 i8 j6 k6 h9 j5 i5 h4 h3 e3 d4 l7 m8 k4 k5 i7 h7 k8 i2 j1 i3 i6 j3 g3 l3 k3 i9 j9 m6 k10 k7 i10 h11 l9 j7 l11 m12 l10 l8 m9"
+Zajk vs Brdková [ 1:0 ] 
+moves="e5 c4 e1 f5 e4 e3 f4 h4 e6 d6 c3 g7 e7 e8 h6 f9 g8 g10 d7 h11 i12 h9 f11 i9"
+Sapszon vs Nykl [ 0:1 ] 
+moves="h4 j4 m5 g5 g7 k5 j6 k7 k6 l6 m7 i5 h5 h6 i7 m4 k3 f4 e5 f6 f7 h7 h9 g10 j9 i9 j8 j7 i10 e6 j11 g8 g6 i4 i6 f3 f5 g3 e3 l4 k4 i3 h2 i2 i1 j10 k11 i11 l7"
+Harmasz vs Dupszki [ 1:0 ] 
+moves="l4 j3 i3 k5 j6 i5 h5 i6 i8 g7 h6 h7 g8 j8 f7 f6 e8 i4 h9 i10 f11 g10 d9 g6 f8 h8 c8"
+Tesařík vs Kolouch [ 1:0 ] 
+moves="m4 k3 h4 j6 k5 l6 k6 l5 l7 j5 j7 k8 g5 j3 l3 j8 k7 i7 f6 e7 i8 g8 g4 g6 f4 i4 h5 i3 f5"
+Tamioła vs Kolouchová [ 1:0 ] 
+moves="f3 h3 j3 g5 h5 g4 i4 g6 g7 e6 f5 f4"
+Rostás vs Nipoti [ 0:1 ] 
+moves="g3 h3 i3 i5 h5 g6 f6 e7 g8 f8 g9 f5 e4 d7 c7 e6 g4 e8 e9 c8 b9 d8 b8 d6 d5 d9 d10 f11"
+Harmasz vs Laube [ 0:1 ] 
+moves="k2 m3 n5 j4 k5 l5 l3 m4 k4 k3 m2 j5 j7 k8 j2 l2 i5 i7 l7 h8 l8 g9 j6 k7 k10 i9 l9 l6 j8 j10 g7 k11 l12 i10 i11 h10"
+Fűri vs Háša [ 0:1 ] 
+moves="h8 i11 g4 h11 h5 f11 g11 g10 f9 i10 i6 j7 h9 h7 j9 i9 i8 h10 j10 g12 h13 j12"
+Kolouchová vs Nipoti [ 0:1 ] 
+moves="h8 i11 d9 i10 g9 f10 f9 h9 e9 c9 e10 g8 j11 e8 j10 j9 i9 g7 e6 j7 c8 f11 f5 d7 i7 k8"
+Eged vs Tamioła [ 0:1 ] 
+moves="b6 d5 e4 f6 g6 h7 g4 f7 e6 e7 d7 f5 f4 h4 g5 g7 i7 h6 h8 f8"
+Kolouch vs Zajk [ 0:1 ] 
+moves="n7 m8 l9 l7 k6 k8 j8 j7 i7 k9 m6 l6 k11 h8 j12 l5 l8 l12 j11 i11 i13 h14 j10 j9 i10"
+Dupszki vs Fűri [ 1:0 ] 
+moves="h8 i7 e10 g8 i8 g7 h7 g6 g5 h6 f7 i5 j4 f6 e6 j9 j7 h9 g9 k9"
+Rybka vs Nykl [ 0:1 ] 
+moves="h8 i9 f6 i10 i8 j8 h10 j9 j10 h9 k9 h11 g12 i11"
+Sapszon vs Hegedűs [ 0:1 ] 
+moves="h8 i9 j10 h10 g11 i7 i8 g8 j8 j9 h9 k8 j7 k6 l7 i11 i12 f9 g9 k7 k9 e8 g10 f11 e10 d10 f10 e9 d8 i5 j5 j6 h4 l6 i6 m7"
+Rostás vs Tóth [ 0:1 ] 
+moves="c4 c6 c7 f7 g6 e5 f8 f5 g5 e6 g4 g7 e7 f6 d4 e4 f3 d3 i7 i6 g9 d6 b6 h9 h10 i11 g8 h8 i9 h6 j5 g3 j6 i5 h5 j4 k3 g11 l4 k5 l6 l5 h2 k6 k8 j11 h11 j9 k10 j10 j8 k7 h12 j13 j12 k12 l11 h13"
+Nowakowski vs Poltaratskiy [ 0,5:0,5 ] 
+moves="c3 c4 d3 e5 e6 f5 g5 f4 f3 g3 d6 d4 e4 f6 h8 g8 d9 c5 e10 e3 f2 b6 a7 e9 d8 d5 b5 d10 f8 f11 h10 g9 i9 g11 g10 i10 h11 h9 j11 i12 j8 j10 k7 l6 k8 l8 k9 k10 i7 h6 l10 m11 j6 l4 j7 l7 l5 j5"
+Tesařík vs Brdková [ 1:0 ] 
+moves="g3 h3 i3 g5 h5 h7 j4 i5 k4 j3 k5 l6 k6 k7 m4 l4 n5"
+Harmasz vs Żukowski [ 1:0 ] 
+moves="g2 i2 k3 j5 i4 h4 j6 h5 h6 i6 i5 g7 g8 g4 j7 f5 h3 f6"
+Drabos vs Demján [ 0:1 ] 
+moves="k2 m3 n5 j4 j6 l5 k4 i6 h5 h4 i8 i5 h6 k5 l6 k3 i4 j3 l3 j5 m5 j1 j2 j8 h9"
+Laube vs Háša [ 1:0 ] 
+moves="c3 d4 e5 e6 c5 d5 c4 c6 d6 e7 d3 e4 f3 e3 e2 f1 b7 f4 g4 h5 d2 c2 f7 g5 f6 h6 i7 i5 j5 g7 f8 f9 h8 j6 h4 e8 b5 a6 g10 g8 e10 j4 k3 d9 g9 f10 g11 g12 h10 i11 e13 f12 f11 e12 h12 h11 f13 g13 i9 j8 i10 j10 i8 i6 h9 j7 j9 k9 g6 k6 l6 k8 l9 k7 k10 k5"
+Maltell vs Karlsson [ 0:1 ] 
+moves="d4 f5 h4 f6 g6 f7 f8 g7 e7 f4 f3 d6 e5 e6 d7 h8 h9 i9 j10 i7 j7 i8 i6 k8 j8 i10 i11 j9 l7 j6 g9 h10 k9 h12 h11 g11 f10 f12 e13 e11"
+Theimer vs Maltell [ 0:1 ] 
+moves="l12 j11 h12 j9 j10 h9 k11 i9 k9 i11 k12 g9 f9 k10 i12 j12 h10 i8 h7 g10 j7 i10 i7 g8 f7 g7 k7 g6"
+Maltell vs Nyberg [ 0:1 ] 
+moves="d3 e4 f5 f6 g5 e5 e3 f4 g4 g3 d6 c4 d4 d5 c5 f2 e7 b4 d7 e6 f7 g7 b6 a7 f3 f8 h6 d8 e8 h5 d9 c10"
+Sandstrom vs Theimer [ 1:0 ] 
+moves="h8 g7 f6 h6 f8 f7 e7 g9 g8 e8 h5 g5 i7 i6 j6 k5 j4 j5 k4 i4 d9 d8 g10 i8 l7 l8 j9 k8 j8 j7 h9 k9 k7 h10 i11 j11 k10 m10 l9 m5 l5 m6 m7 f11 f12 f4 g3 e4 e3 f3 d5 h12 c5 d4 i5 h4 c4 c6 h13 k12 j13 l13 m14 i13 j14 k14 m12 l11 k11"
+Asplund vs Jonsson [ 0,5:0,5 ] 
+moves="j6 h5 f4 i7 i4 h4 h6 i6 j7 j5 i5 g7 g8 h9 i9 h10 h8 j10 e7 d6 e10 e8 f9 d11 d9 f11 c9 e9 c11 g10 i8 i10"
+Nyberg vs Jonsson [ 0:1 ] 
+moves="m13 l12 k11 j12 m11 l11 m12 m10 l13 k13 l14 k14 k12 i10 k9 k8 j9 i9 i11 l9 j7 l8 l10 j8 m8 k7 l6 f10 h10 h8 i8 g9 i7 g11 g10 e11 d12 f11 h9 k6 d11 h12 i13 f12 f9 d10 g13 g7 f6 e9"
+Karlsson vs Asplund [ 0:1 ] 
+moves="j11 k12 l13 j10 i9 i11 k9 h10 g9 i10 j9 h9 l9 m9 k10 m8 k8 k11 h7 g10 f10 i8 j7"
+Jonsson vs Theimer [ 1:0 ] 
+moves="h8 i9 j10 h9 i11 k9 j9 j8 h10 j12 f10 i7 l10 i10 i6 k7 k8 j7 h7 j5"
+Sandstrom vs Jonsson [ 0:1 ] 
+moves="l13 k12 j11 l11 j13 j12 i12 k10 h11 k14 k11 j9 g10 f9 i8 i11 h9 f11 h10 h8 f10 i10 g11 h12 g13 g12 f12 h13 e13"
+Theimer vs Nyberg [ 1:0 ] 
+moves="h15 h1 g15 h11 f15 i15 f13 f12 e11 d11 e13 d13 e12 e14 g10 g9 f9 h9 f8 f7 g8 e8 i8 h7 h8 j8 g7 e9 g6 j10 k9 j11 j9 g11"
+Sandstrom vs Asplund [ 0:1 ] 
+moves="g12 i10 k12 i8 i9 g8 h9 g9 h8 g7 g6 h7 h10 g11 g10 h12 f9 e8 f10 e10 e7 f11 h11 k7 k11 j10 j13 i12 k10 k9 k13 k14 i11 j11 i13"
+Maltell vs Jonsson [ 1:0 ] 
+moves="c3 d4 e5 e6 c5 d5 c4 c6 d6 e4 f3 d3 c2 c1 d2 e7 f2"
+Karlsson vs Theimer [ 1:0 ] 
+moves="g9 i7 k9 i5 h7 i6 i8 g6 h5 h6 j6 g5 j8 f6 e6 i3"
+Maltell vs Asplund [ 0:1 ] 
+moves="j5 h6 f7 i7 h5 g5 j8 j6 i4 g6 i6 g7 g8 h7 g4 j7 k7 h8 g9 i8"
+Karlsson vs Nyberg [ 0:1 ] 
+moves="f9 h7 j9 g10 h6 j7 i7 i8 h9 g9 g5 j8 g8 k8 l8 h5 i6 f7 g6 f6 f4 e3 g4 g7 h4 i4 j6"
+Asplund vs Theimer [ 1:0 ] 
+moves="h1 h15 i1 h8 g1 j1 g3 h4 f4 e5 g5 h6 g4 g2 h5 g7 f6 i5 f8 f5 j6 i6 i4 i8 i7 h7 g6 j3 g8 j4 k3 h9 h10 j7 e8 f7 d8 c8 e7 c9 g9 k6 d6"
+Sandstrom vs Maltell [ 1:0 ] 
+moves="i5 g6 e7 h7 f5 g5 g4 e6 h6 j4 g8 f8 f3 f4 g3 i3 k5 h4 j2 j7 j6 i7 k7 l6 l4 l5 k3 m5 i2 k6 h3 j1 m4 l8 g2 h2 e4 d5 e2 f7 g7 c4 b3 h5 i4 f9"
+Nyberg vs Sandstrom [ 0:1 ] 
+moves="h1 h15 i1 h7 j1 k1 f1 g1 h3 j5 k4 h5 k5 k6 k7 j7 j6 i7 h8 g6 f7 i8"
+Karlsson vs Sandstrom [ 0:1 ] 
+moves="g9 i7 k9 i5 h7 i6 i4 h6 g6 g5 f4 h5 j5 g4 f3 f5 e5 h3 e6 k6"
+Nyberg vs Asplund [ 0:1 ] 
+moves="k11 l12 m13 i10 k13 k12 l13 j13 j12 l11 m10 m11 l10 m9 i11 h10 j10 k9 j9 j8 h8 g11 i9 g7 g9 f10 h12 f12 f9 h9 g10 e8 l9 n11 h7 g8 f7 j11"
+Karlsson vs Jonsson [ 0:1 ] 
+moves="m4 k3 h4 j6 k5 l5 i6 h5 j4 i3 h7 g6 f7 g8 g7 e7 i9 i7 h8 f6 h10 h9 j10 k11 i10 g10 g11 j8 i11 i12 k9 h12 j9"
+Tamioła vs Němec [ 1:0 ] 
+moves="g8 f9 j6 i7 e10 i9 h9 f7 f8 i8 i6 h7 g7 g6 j9 e8 h5 d7 c6 d9 c10 e9 c9 d8 d10 f10"
+Tóth vs Nykl [ 0:1 ] 
+moves="h6 h8 l7 i6 h7 f7 j7 i7 i8 j9 l5 k6 l6 l4 i5 j4 k4 k7 k5 j5 j3 i2 g9 f5 f6 g10 h4 h3 g4 e7 e6 d6 d7 h11 i10 i12 j13 f11 f9 e10 e11 e12 d13 g12 h13 f10 d10 c5 b4 e5 b5 c7 c6 e8 b8 d9"
+Kozimor vs Tesařík [ 0:1 ] 
+moves="h8 j9 m10 i7 j8 g8 h7 h9 i10 g10 g9 f11 e12 e6 k10 k11 l10 j10 l9 j7 i8 l8 l12 j11 l11 l13 k12 j13 j12 m12 i12 h12 i11"
+Laube vs Hanzl [ 1:0 ] 
+moves="f6 h8 h11 e7 e8 f9 g9 g6 h7 g11 j8 j9 k9 l8 l10 m11 i7 h6 k7 j7 l6 m5 h10 i9 h12 h13 j10"
+Harmasz vs Kopecký [ 1:0 ] 
+moves="k2 m3 n5 j5 k4 l5 i5 j4 j6 k6 l7 k7 k8 m6 m4 l3 i8 j8 i9 i7 j9 k9 h6 l10 m11 i10 g6 h7 f6 i6 g7"
+Nipoti vs Kostlivý [ 1:0 ] 
+moves="c10 e8 d9 g10 f9 e10 e9 c9 f10 f8 d8 g11 g9 h9 h8 e11 f11 f12 d10 d7 e13 i7 g13 d12 j7 j8 k9 g5 i5 f5 f4 g4 e6 g6 g7 i8 h7 i9 h10 i10"
+Neuman vs Brdková [ 0:1 ] 
+moves="h8 i9 g12 i7 i10 h9 j9 h11 i8 k10 j8 g8 j7 j6 j11 j10 f9 l8 k9 i5 k7 k5 i6 j4 h5 g4 h4 l4 m3 k3 h6 h7 m5 l7 l6 n4 m4 m6 k2 m2 e6 f6 d8 e9 d7 c8 d5 d6 c4 b3 e5 c5 c6 e8 e4"
+Čapák vs Purkrábek [ 1:0 ] 
+moves="d3 e3 g3 f5 f6 g5 h6 g6 h7 h5 i5 f7 e8 g8 g7 d5 e5 e6 f8 h9"
+Turečková vs Kodatová [ 0:1 ] 
+moves="h8 i11 d9 g8 j10 i9 i10 g9 g10 h10 f8 j8 k7 k9 l10 g11 f12 h11 m10 k10"
+Háša vs Tamioła [ 0:1 ] 
+moves="f3 g3 i2 h5 f5 e4 h6 f4 g4 h3 e5 g7 e8 j5 i4 i7 i5 i6 i3 i1 h7 h8 g9 i9 j10 k8 i8 l9 j7 j9 k9 l7 m6 l8 l10 l5 l6 g10 d7 e6 c6 b5 d8 m8 n8 g8 i10 k10 j11 d5 f7 c4 d4 k5 k6 j6 l4 m9 d9"
+Tesařík vs Nykl [ 1:0 ] 
+moves="h8 g7 j10 j7 i6 h6 i5 i8 h9 h10 g8 f7 i7 g9 j5 h7 f8 i4 g6 j11 l8 k7 l6 l5 k6 m7 m6 j6 l7 n9 j9 k8 d6 d8 f5 g5 e7 e4 c6 e6 e10 d9 e11 e9 d11 c12 f12 c9 f9 f11 e12 g13 l9 l10 k9 i9 h12"
+Tóth vs Němec [ 1:0 ] 
+moves="h2 k3 l4 i6 j5 k5 k6 i4 i5 j7 h5 f5 l6 m6 h6 h4 f4 i7 e5 g3 g7 f8 d4 f6 l7 l5 g5 g4 k4 h8 e6 g9 j6 e7"
+Harmasz vs Kozimor [ 0:1 ] 
+moves="h8 i10 j5 g10 h5 g8 i5 g5 h9 h7 i8 g9 g11 h10 f10 i11 j12 i12 i9 i6 h11 j10 k10 i13 i14 j7 i7 k5 l8 k8 l9 j9 j8 l7 m6 n7 m7 k7 k6 h6 m9 m8 l10 k9 e7 d8 f11 e11"
+Nipoti vs Laube [ 0,5:0,5 ] 
+moves="d11 c10 c11 e11 f10 f9 e8 e9 g9 g7 h10 g10 i11 j12 f8 e7 i8 i9 h8 g8 h7 h6 j9 k10 k8 h11 j8 l8 j6 i7 j7"
+Kostlivý vs Neuman [ 1:0 ] 
+moves="b14 o15 n2 h8 e12 e11 d10 d11 f11 g10 f9 f8 g9 h9 g8 h7 h6 h10 h11 j10 i10 g7"
+Kopecký vs Čapák [ 0:1 ] 
+moves="n5 n4 k2 k5 k6 j7 i6 j6 j5 i7 h8 h7 k7 i4 g7 i9 j9 k9 j10 h4 l3 l4 m3 k4 j4 m4 o4 g5 h6 i5 f6 e5 f4 f5 h5 e4 g6 e6 e3 d7 g4 d8 e8 d5 d9 c5"
+Brdková vs Hanzl [ 0:1 ] 
+moves="g3 h3 j2 g5 h6 i5 j5 h7 g6 f5 e5 f6 f7 e7 d8 i2"
+Purkrábek vs Kodatová [ 0:1 ] 
+moves="l5 k4 h3 i7 j5 i4 j4 j6 k5 i5 i6 l6 g4 k7 h4 h5 f5 i2 e6 d7 m5 n5 f6 h7 g7 h6 h8 e5 f7"
+Tamioła vs Kozimor [ 1:0 ] 
+moves="g8 f9 j6 j9 e6 h9 g9 g10 h8 f10 f8 e8 i8 j8 h11 h10 i10 i7 g11 k9 l10 j10 j11 i11 h12 m7 l8 k7 i9 l6 k6 m5 n4 l5 j4 m6 m4 l7 j7 n7"
+Laube vs Nykl [ 0:1 ] 
+moves="h8 g7 j10 i7 j7 j8 h6 h7 f7 e8 i6 k8 g6 j6 e6 f6 g4 l8 i8 k7 i5"
+Tóth vs Tesařík [ 1:0 ] 
+moves="h4 i4 l5 j7 i6 h6 k7 l8 j8 i9 j5 k4 k5 m5 h9 g8 g7 e7 k9 k8 e8 h11 i10 l10 l9 f10 m8 n9 g11 e11 d12 d10 e10 c9 f12 d8 b10 f6 g5 d6 a7 e9"
+Nipoti vs Harmasz [ 0:1 ] 
+moves="d4 f3 i3 g5 h5 f6 f4 e4 e5 g6 g3 d6 e6 g7 h2 i1 g8 h7 f5 e7 f7 d8 c9 h4"
+Kodatová vs Němec [ 0:1 ] 
+moves="n3 l2 i2 l5 j4 k5 l6 i6 j7 j5 i5 k4 l3 k3 k2 m6 n7 m8"
+Hanzl vs Háša [ 0:1 ] 
+moves="g3 h3 j3 i5 h6 g6 f7 i7 i6 j6 k7 f5 h8 h5 g5 e4 d3 g4 i2 f4 h4 e6 d7 f3 f2 c6 g2 e2 d1 e5 e3 d4 c4 f6 d6 c3 b2 g7"
+Kopecký vs Kostlivý [ 0:1 ] 
+moves="h8 i9 g12 g9 f9 f11 h11 h10 g8 g10 i10 j9 h9 f7 f8 e8 h7 i6 j8 i8 h5 h6 d9 d11 e11 f12 f13 e14 j6 k5 j4 j5 k7 i5 i7 l7 l8 k10 m9 n10 m8 k8 m10 m6 n5 m11 l11 k12 k11 l12 k13 e9 e6 d13 c14 d10 e10 c12 b11 d12"
+Čapák vs Brdková [ 0:1 ] 
+moves="f3 g3 i2 f5 g6 h5 i5 i6 j7 h7 g8 f7 g7 g9 f8 h6 h8 i8 i9 h4 h3 j10 k7 j8 l7 m7 l8 l6 k5 m9 k6 k4 g5 g4 e5 f6 j5 i4 j4 l5 j3 j6 j2 j1 h2 k2 f2 g2 m8 n9 l3 i3 k9 k8 j12 e8 i12 k12 i13 h14 h12 g11 g12 f12 h11 i10 j13 k14 k13 h13 l14 i11 g10 f9 l9 h9 l13 m13 l12 l11 j14 m11 j11 k10 j15"
+Purkrábek vs Turečková [ 1:0 ] 
+moves="b5 d4 f3 f5 f6 e7 d7 e8 e6 g6 h7 h8 g8 f7 h5 f9 g4 i6 e2 d1 d3 d9 c10 c4 h4 h3 e3 c3 e4 e5 g2 c6 c2 a1 b2 f4 d5 h1 b8 g9"
+Tesařík vs Tamioła [ 0:1 ] 
+moves="h8 g9 k6 i10 g10 i11 h9 i8 i9 h10 j12 k10 j9 j10 l10 k9 h12 i12 k11 i13 i14 f11 l8 l9 j11 j6 j5 i4 k5 i5 k8 m8 l5 n7 o6 l6 k4 k7 k2 k3 n5 m5 m4 l3 n3"
+Nykl vs Neuman [ 1:0 ] 
+moves="h8 j8 m8 i10 k6 l7 i7 j9 k8 j10 j11 k10 l10 h10 g10 g9 i9 i11 j12 h12 g13 f10 j6"
+Tóth vs Kostlivý [ 1:0 ] 
+moves="d4 f3 i3 g5 h5 i6 h6 h7 g6 f7 g8 g9 g7 f8 f6 e5 d6 e6 e7 f10 f9 h10 g10 h11 h8 g11 i9 j10 i11 h12"
+Kodatová vs Kozimor [ 0:1 ] 
+moves="h8 g10 j6 g9 g8 f8 h10 f9 h9 h11 e8 f7 f10 g11 g12 f6 f5 h6 g7 g5 h4 f4 e3 c7 k7 g3 d6 i11 j11 c9 d9 c8 c10 e11 f11 d10 f12 c6 c5 e7 d8 b7 d7 d5 e4 e12"
+Laube vs Purkrábek [ 1:0 ] 
+moves="f6 h8 h11 f9 g9 g11 h10 h12 g8 f8 f10 j10 i9 g6 h5 j9 j8 j12 i12 j13 j11 i11 k9 k10 l10 i7 l11 l9 i8 k7 j7 k6 g10 i10 k5 i5 h4 h6 e10 d10 j4 g13 f14 g5 l6 f4 e3 i3 i6 g4 j5 j6 k4"
+Harmasz vs Hanzl [ 1:0 ] 
+moves="m4 k3 h4 j6 j5 i5 h6 k6 k7 i7 h8 h7 i8 g8 f9 f7 g7 i9 e6 f6 f5 d7 e4 e3 d3 c2 d4 d5 g4 f4 g5 g3 e9 d9 d8 g11 c10 h3 i3 c7 b7 d6 e5 f11 g12 e12 e13 d12 d13 f13 d11 j11 h11 i12 k10 i13 i10 j9 j10 h10 f12 h13 h14 f8 g9 j13 j14 k12 l12"
+Turečková vs Němec [ 0,5:0,5 ] 
+moves="f12 e8 j10 d9 g12 e12 i10 c10 f7 e10 h10 g10 g11 e11 e9 e13 e14 f13"
+Háša vs Nipoti [ 0:1 ] 
+moves="n5 n4 k2 k6 l5 l6 k7 j5 l7 k8 j6 j7 l2 j4 l3 m4 l4 l1 j2 m2 m5 k3 k5 o5 i7 n3 h8"
+Kopecký vs Brdková [ 1:0 ] 
+moves="h8 i9 g12 j7 j8 i8 i7 g9 h9 h7 g6 h6 i10 h11 e10 f11 f7 g8 e8 d9 f9 g10 g11 e7 e12 f12 c10 f8 d6 d11 e9 e11 d10 b10 c11 c6 d8 f10 c9 c8 k12 j11 i11 h12 k10 k9"
+Hromádka vs Čapák [ 0,5:0,5 ] 
+moves="m4 l5 l6 k7 j5 k4 m6 j6 i5 h5 h6 g7 k3 m7 l7 i4 k8 j9 l3 n5 j3 m3 j4 l2 i7 j8 i3 h3 j10 i9 h9 f7 e7 f6 f8 e5 h8 h10 g11 f5 e8 g8 g5 f4 f3 g4 j2 j1 i2 e6 d7 c4"
+Tóth vs Tamioła [ 0:1 ] 
+moves="m4 l4 j3 k6 k5 i5 m5 m6 l6 j4 h6 j8 h4 h5 g5 i3 j7 f6 i9 f7 f5 g8 h7 g6 e8 g9 g10 d6 h9 i8 h8 h10 e7 e6 c6 l7 f4 e3 m8 f3 g3 d4 d7 f9 e5 f2 c5 d5 c4 d3 d2 c3 b3 j10 i11 k10 i10"
+Kozimor vs Nykl [ 0,5:0,5 ] 
+moves="h8 j8 m8 i10 k6 l7 m6 j6 j7 l5 i9 j10 k9 l9 l8 k5 l4 h7 k10 k8 h11 h9 g8 e8 g7 g6 h5 e5 e4 m5 j5 g10 f10 d7 f11 e11 f9 f8 h3 e7"
+Kostlivý vs Tesařík [ 0:1 ] 
+moves="h8 j9 m10 i13 j13 k9 k11 i9 h9 i11 k12 i10 i12 l11 h7 h10"
+Harmasz vs Laube [ 0:1 ] 
+moves="o8 a8 o9 l8 k9 l9 j8 l10 l11 j7 k7 k8 i6 i9 i10 h9 g9 k6 i8 m8 n9 m10 n11 k10 j11 n10 m11 o10"
+Hromádka vs Němec [ 0:1 ] 
+moves="b2 d2 f3 e5 e6 f6 g7 g5 f4 h5 f5 g4 h7 g6 f7 e7 h4 g2 g3 f2 h2 i6 j7 i7 i5 j6 h6 j4 h10 h9 f10 k5 l4 f9 g9 g10 e9 f8 d8 g11 i12 g12 e12 e11 d11 d7 h11 j10 c10 g14 g13 b9 c12 c9 d12 b12 d10 d9 e13 h13 d13 d14 c13 f13 b13 a13 e10 i14 a14"
+Háša vs Brdková [ 1:0 ] 
+moves="k2 m3 n5 j4 l5 l3 j3 k4 i4 h5 j5 m4 l4 m5 m6 k8 i7 k6 k7 h7 h8 j7 i6 i5 g7 g6 i9 j10 i8 i10 f8 j8 j6 k5 g9 f10 j9 h9 e7 h10 g10 e8 f6 e5 g5 f7"
+Nipoti vs Kopecký [ 0:1 ] 
+moves="f2 h2 j3 i5 h6 g6 f5 f4 k5 g4 g5 e4 d4 e5 g3 e3 e6 i3 i6 k6 h8 h7 i7 j6 g8 k9 f7 h4 i4 k7 l8 k10 k8 h9 j9 j7 i8 i10 d7 d6 c7 e2 e1 e7 f8 e8 f9 f6 c8 b9 c4 d5 c6 c5 c9 c10 f10 f11 g9 e11 e9"
+Purkrábek vs Hanzl [ 1:0 ] 
+moves="d3 e3 g3 f5 e5 g6 f4 d6 h7 e6 f6 d7 c8 d8 d9 g7 g8 b6 d4 c7 e9 e7 f7 b4 c5 b7 a7 b5 b3 b8"
+Turečková vs Čapák [ 0:1 ] 
+moves="c10 c9 d10 e10 f8 e8 e9 g7 d11 d12 f11 e11 e12 f13 h9 g10 f9 f10 g9"
+Neuman vs Kodatová [ 1:0 ] 
+moves="b2 d2 f3 f6 e5 d5 f7 g6 h6 i7 d6 e7 h4 h3 h7 h5 h9 g8 g9 i9 i8 h10 f10 d8 c9 e11 g3 f4 i5 j6 f11"
+Tamioła vs Laube [ 1:0 ] 
+moves="h8 g9 k6 f6 e7 i10 g10 i8 j9 g6 f7 j11 i11 k12 h9 l13 m14 h7 e6 d7 h12 k10 j10 k9 k11 i9 h11 h10 i12 f9 g8 d5 f12 g12 g13 f14 h13"
+Nykl vs Kopecký [ 1:0 ] 
+moves="h8 h9 l11 i8 j7 i10 j11 i11 i9 j10 g10 h12 g13 h10 g12 g11 i13 h13 h11 f7 f9 e8 m10 k12 l9 k8 l10 l8 k9 m9 j8 i7 m11 n12 k11 n11 j12 h14 j13 i12 j14 j15 l12"
+Tóth vs Háša [ 1:0 ] 
+moves="j7 h9 f6 i10 g6 h11 i6 h6 k8 h5 g8 f9 h8 g9 i8 j8 e9 g10 e8 f8 j9 k10 g7 h10 j10 i9 h7"
+Tesařík vs Neuman [ 1:0 ] 
+moves="h8 j7 f10 j5 j6 i7 h7 k6 i8 l7 m8 k7 m7 k5 k8 l5"
+Čapák vs Kozimor [ 0:1 ] 
+moves="f6 h8 h11 g10 g9 i8 h9 i9 i10 g8 f8 h10 j8 j9 f7 f9 h7 e7 h6 g5 g6 e6 h5"
+Harmasz vs Purkrábek [ 1:0 ] 
+moves="o8 a8 o9 k9 k8 l7 m8 l8 m7 m10 l6 l10 o6 o7 m9 k10 n10 j8 m6 m5 k5 n8 k6 n6 k4 k7 l5 n7 k3"
+Němec vs Nipoti [ 1:0 ] 
+moves="l3 m4 m3 k5 k6 j6 j5 j4 l7 m8 i7 i6 l6 k7 k3 n3 m6 l5 l8 k9 k10 j9 i9 i10 h11 g10 h10 h9 j11 i11 g7 f7 f6 e5 g5 h4 g8 g6 l9 l10 h12 h13 g11 f12 e9 f10 f8"
+Kostlivý vs Brdková [ 1:0 ] 
+moves="d4 f3 i3 f6 g5 h6 h5 f5 f4 g6 e6 e4 h7 h8 i5 k5 i6 i7 g9 g8 f8 h10 i9 j8 j7 k8 i8 h9 i10 i12 k9 i4 k6 l9 k10 l11 l8 m7 l4 l6 j4 m4 j3 j5 k7 j6 k3 h3 l2 m1 d5 d3 c2 m5 m6 l5 n5 k12 h12 m10 j13 m11 k11 m9 m8 m12 m13 l12 j12 o12"
+Kodatová vs Hanzl [ 0:1 ] 
+moves="d3 e3 g3 f5 g6 g7 h5 i4 i6 j7 j5 k4 i5 k5 j6 k6 h4 k7 f2"
+Hromádka vs Turečková [ 1:0 ] 
+moves="m4 l5 l6 j8 i8 j6 h6 k4 j5 j3 i2 j9 i5 k5 i4 i3 k3 j4 h3 k6 i7 i6 k8 h2 g1 j10 j7 f5 g7 f7 f6 h9 g5 j11 j12 g8 i10 e6 d5 f4 e5 h8 e7"
+Nykl vs Tamioła [ 1:0 ] 
+moves="h10 f9 i13 i11 d8 g10 g11 i9 h9 h8 g8 f7 g7 i7 g9 h6 i6 g5 f4 h5 e8 f5"
+Harmasz vs Tóth [ 0:1 ] 
+moves="o8 a8 o9 k8 k9 j10 i10 h9 j8 i7 h8 g7 i6 g10 h7 f8 f9 g8 g9 e9 d10 e6 e7 f5 f7 g5 h6 g4 h5 g6"
+Hromádka vs Tesařík [ 0:1 ] 
+moves="l4 k4 i3 i5 j5 j3 l6 l5 m6 k6 j7 j8 m7 k5 k7 l7 h6 g6 h5 g4 h4 i2 h1 h7 f5 g5 g7 k10 l9 m8 j9 k12 k8 i6 l11 m10 l10 l12 k11 j12 m12 f8 i9 k9 i11 h11 i12 i10 h8 j10 f9 j11 h9 g9 g10 e12 f11 i8 e10 d9 e8 e9 d7 c6 d6"
+Němec vs Kozimor [ 0,5:0,5 ] 
+moves="k2 m3 n5 j4 j6 l5 k4 i6 h5 i5 i4 g6 h6 h7 i8 j8 h3 i3 k5 k6 m4 l3 k3 k1 l4 n6 g8 h8 h9 g10 f4 h4 g5 e3 f7 e6 f5 f6 e5 d5 d6 c7 j10"
+Laube vs Kopecký [ 0,5:0,5 ] 
+moves="c5 d3 g2 e6 e4 f3 e3 d4 e2 g5 e5 e1 d6 c7 f7 f8 g7 h7 h8 i9 d9 e8 d8 d7 f9 i6 j5 i7"
+Čapák vs Háša [ 0:1 ] 
+moves="h8 g10 j6 i7 g9 i9 j8 j7 i8 g8 h7 g6 k10 k8 h10 h9 j11 l11 l9 i12 j12 i11 j10 j9 i10 l10 j13 j14 h5 h4 j5 g5 f6 g4 g7 f4 e4 g3 g2 e5 h2 d6 c7 d5 d7"
+Purkrábek vs Kostlivý [ 0:1 ] 
+moves="f12 e8 j10 d9 h10 f7 g6 f9 g9 f8 f10 g10 d7 c8 d8 e9 c9 e10 e11 f11 d10 g12"
+Neuman vs Nipoti [ 0:1 ] 
+moves="f2 h2 j3 i5 j4 k5 h5 k2 k4 l4 j6 j5 l5 m6 i2 h1 g4 h3 k6 i6 i8 j7 g6 i4 i7 h7 g8 h8 h9 f7 f4 g5 d6 d4 e5 c7 e7 e6 c5 f1 g2 f8 d8 d9 c10 i10 f10 g10 h11 h12 i11 g11 g13 k8 j9 k10 k11 m10 l9 j10"
+Turečková vs Hanzl [ 0:1 ] 
+moves="d4 f3 i3 h6 g4 g5 f5 e6 f6 g7 h7 i7 f4 e4 f8 f7 d5 e5 e7 d6 g8 f9 j8 i8 i6 j5 j4 i4 k6 k5 h5 k8 m5 i9 j9 h8 g9 h11 i11 h10 j10 h12 h9 j7 i12 j11 i13 i14 h14 g11 f12 f13 g12 d8 e9 l11 k12 m9 m10 l10 l12 m12 n8 c10 e8 e10 d11 d10 b10 c6 c7 d3 e3 l8 k7 n11 k11 k13 l6 n4 m6 j6 l4 n6 l3 l5 k3 j3 n3 m3 b6 c5 c11 d12 b11"
+Kodatová vs Brdková [ 0,5:0,5 ] 

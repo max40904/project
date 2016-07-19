@@ -1,0 +1,906 @@
+moves="j7 j6 e9 k7 i5 i7 k5 h6 j8 g6 i6 h5 h7 g8 f7 e7 g5 g9 f8 g10 g7 i10 f10 f9 h11 g11 g12 k10 h9 h10 j10 l9 m8 l5 l8 k8 k9 i11 i9 k11 k13 f4 e12 f12 e13 e11 f13 d11 c11 d10 g13 d13 e14 d15 d8 e5 d6 d4 e4 f6 m11 m10 n11 n10 l10 n12 d9 d7 e8 c10 b8 c8 b10 d12 j14 i14 l12 i15"
+Żukowski vs Wojtasiński [ 0,5:0,5 ] 
+moves="g13 h13 i13 i11 h10 g10 f11 e11 f8 f9 e8 g8 g7 e9 g9 h7 e10 d9 f6 e5 f4 f5 g5 h4 h6 i6 j5 i7 d6 e7 g6 e6 e3 d2 i5 j4 h5 k5 i4 f7 h9 c9 b9 d10 b8 d8 g4 g3 d11 b10 a11 c7 b6 d5 c4 c5 b5 b7 d7 c6 c8 e4"
+Zajk vs Małowiejski [ 0:1 ] 
+moves="h8 c9 m9 g8 e8 e7 f6 g7 g9 g6 f9 i7 h9 i9 h11"
+Majksner vs Hanzl [ 1:0 ] 
+moves="m12 l13 i13 l3 m4 j10 j11 i12 k9 k8 k11 l11 m9 l10 l12 m10 k10 k12 j13 l9 n11 l7 l8 k6 j5 m6 j9 l6 j6 l5 l4 n5 o4 n6 o6 n9 o8 n7 n8 k4"
+Kodatová vs Bulatovsky [ 0:1 ] 
+moves="g8 d9 k10 h7 c8 e6 f6 g5 h5 e7 e8 f8 g9 g7 f7 g4 f5 f4 e3 g3 g6 i4 h4 h3 g2 i3"
+Brdková vs Katsev [ 0:1 ] 
+moves="i3 k3 m4 j6 k5 j4 h6 h7 j7 i8 g8 j9 g6 i9 g5 g9 h9 i7 i6 h8 f10 i10 i11 f6 g7 g4 k8 k10 l11 l9 j11 k11 j10 h12 j12 j13 k13 h10 g11 f7 f5 e5 f11 h11 e10 f13 g12 h13 h14 g13 i13 d10 e11 e9 e12 c11 b12 d9 d13 g10 f9 d12 c12 d11 d8 e14 d4 d6 e7 c14 f14 k7 l8 m7 m9 l12 f4 e3 e4 d3 f3 d5 c4 b4 l6"
+Brachaczek vs Tarasiński [ 0,5:0,5 ] 
+moves="m6 m8 l10 j7 k8 j9 j8 k9 i9 i8 k6 k10 l11 l9 j11 k7 l7 j6 i5 i11 j10 h8 g9 h7 g6 h9 h10 g8 f9 f10 f7 e8 f8 f6 g7 h6 h5 j5 j3 i4 l12 k4 i6 j4 e7 d6 l4 l13 k11 m13 m9 j12 o6 n6 o7"
+Hegedűs vs Gorzecki [ 1:0 ] 
+moves="j9 h6 f8 g5 i9 f6 g9 h9 e7 h10 i7 h8 h7 i8 g7 f7 j7 k7 e8 e6 d6 c5 g8 i6 g6 g10 f11 e11 f5 l8 k8 j6 i5 l6 k6 m5 n4 l7 l5 m7 c8 d8"
+Eged vs Fitzermann [ 0:1 ] 
+moves="d5 e3 i3 f6 f4 g4 g6 g8 e5 d6 h5 i4 f5 g5 e4 d3 e8 c6 c4 b3 a3 h7 f9 f7 e7 e6 b6 j7 g10 f3 c3 h3 g3 i7 g7 l7 k7 j5"
+Lange vs Zajk [ 0:1 ] 
+moves="b5 b4 e2 e5 e6 f7 g7 h6 h5 g4 f4 i8 j8 k6 j7 j9 i9 k7 k8 l9 l8 h10 k10 j10 e8 f9 f8 d8 e9 e10 d10 c11 d11 h12 i11 h11 h13 g12 i12 i13 d12 d13 f13 j11 h9 l12 k13 l13 l11 j12 j13 k12 m14 j14 m8 n8 k15 m12 n12 k14"
+Hanzl vs Brdková [ 0:1 ] 
+moves="i5 k6 k10 j11 f11 i8 j7 i9 i7 k7 j8 j6 h6 g5 g7 f8 i6 h4 i3 i4 j4 k3 k5 h2 j5 h5 h7"
+Brachaczek vs Bulatovsky [ 1:0 ] 
+moves="h6 k10 c9 j6 f6 i8 e7 g5 g7 i7 f7 h7 g6"
+Eged vs Kodatová [ 1:0 ] 
+moves="g8 l8 i13 g11 k9 i9 h10 i11 h11 i10 i8 h8 g7 h7 g6 g9 h6 i6 i5 f8 g5 g4 h5 j5 i7 j8 d6 f5 f7"
+Lange vs Żukowski [ 1:0 ] 
+moves="d5 e3 i3 f6 h6 h7 g7 f8 i6 f5 f7 g6 e4 e6 f3 c6 d6 e8 c8 g8 h8 e10 f9 h5 d4 d7 g2 h1 h3 i5 g5 g4 j3 g3 j6 k6 i7"
+Zajk vs Hegedűs [ 1:0 ] 
+moves="h15 h1 i15 i10 i11 h11 g12 i12 j15 g15 j11 g10 f9 k11 h10 j12 k15 l15 l10 k9 k8 f11 h9 e9 j8 l12 k12 i9 h8 i8 i6 h7 j7 l9 h5 g4 g6 m13 j10 j9 m9 l11 k10 l13 l14 k13 n10 m10 j13 j6 f7 i4 f6 f8 e6 h6 g7 d5 e8 d9 c6 d6 d7 b5 e7 c7 e5"
+Majksner vs Małowiejski [ 1:0 ] 
+moves="g3 h3 i3 h12 g12 i5 h6 g5 h5 h8 f7 g6 g8 h9 f9 e10 f10 f8 h11 g10 f13 i10 f11 f12 e9 d9 c8 d8 e7 d7 d6 e6 g4 g13 e11 d11 d10 i11 j10 i8 i9 i6 i7"
+Katsev vs Zajk [ 0,5:0,5 ] 
+moves="l6 l5 m4 j6 j5 k7 i5 h5 h6 g7 j4 k5 i7 i6 g5 f4 l4 k4 j8 k9 k3 l2 j2"
+Gorzecki vs Tarasiński [ 1:0 ] 
+moves="l3 j6 m4 k5 l4 l6 j4 k4 k6 l5 i5 h6 m5 m6 j3 k3 k2 j1 h5 i4 j8 g8 f7 g9 h8 g7 g6 e9 f5 g5 i8 h7 i6 j7 f9 f8 d10 e8 g11 d8 c8 e7 i9 i7 k7 h10"
+Fitzermann vs Wojtasiński [ 0:1 ] 
+moves="h8 h9 h4 c10 l6 e8 j8 f7 g6 i9 h6 g8 e6 f6 i7 g5 j6 k5 i5 k7 i4 i6 g4 f4 h5 h7 h3"
+Hegedűs vs Fitzermann [ 1:0 ] 
+moves="h13 l13 m11 i10 h9 g9 i11 h11 g10 f11 f10 d10 k9 l10 j10 l8 j9 j11 l9 i9 j7 k8 i8 k6 h7 g6 h6"
+Zajk vs Gorzecki [ 1:0 ] 
+moves="b5 b4 e2 e5 f6 f7 e7 g5 f5 g6 g4 f3 g8 h3 g3 e8 d9 h6 h5 i7 j8 k6 j6 j7 h7 i8 l5 k7 j5 i6 i5 k5 k8 g10 h9 i10 i9 h10 f10 g9 i11 h11 f9 g12 f13 d8 e4 f4 e3 f2 g13 j10 k10 d11 l9 l7 m7 j11 h12 i13 f12 f11 e11 d10 e13 d13 e14 k4 k3 e12 c14 f14 j13 k9 j3 j4 l4 l3 m8 m5 m10"
+Brdková vs Żukowski [ 1:0 ] 
+moves="i5 k6 k10 n8 i4 n7 i6 i7 j5 n6 n5 k4 k5 l5 i3 i2 l6 j3 h1 j4 g5 h5 f6 h4 g6 h6 h7 g7 i8 j9 f8 f9 e8 f5 g8 h8 d8 c8 e7 c9 e6"
+Bulatovsky vs Katsev [ 1:0 ] 
+moves="o8 a8 o7 l7 j7 k8 j9 l6 o9 o10 j8 j6 k6 l5 l4 i5 h4 k5 j5 j4 i3 o5 l8 k3 h6 m7 n8 m5 n5 k4 m6 k7 k1 g5 h8 h7 h9 j10 i9 k9 i8 g10 g8 f8 i10"
+Wojtasiński vs Małowiejski [ 1:0 ] 
+moves="g9 h10 f13 g13 h13 f11 f10 e11 g11 e9 e10 d10 f12 f8 g7 g8 h8 i7 i12 j10 h12 g12 j11 k10 i13 j14 i10 i11 k9 l10 m10 l11 j9 l9 l8 k8 h6 h5 j6 i6 j7 j5 l13 h7"
+Zajk vs Lange [ 0:1 ] 
+moves="h8 h9 h4 f9 g9 f10 e7 f8 f11 f6 f7 h7 i6 d10 e10 e9 c11 d8 c7 d7 d9 c8 e8 g6 f5 g4 h6 j6 g12 h13 g11 g10 e11 d11 h11 i11 e13 e12 c10 b11 c13"
+Eged vs Hanzl [ 1:0 ] 
+moves="i2 l3 n5 j6 k5 l6 k6 k7 j8 i5 h4 i8 l5 m5 k4 j3 k3 k2 h6 i4 h5 i7 i6 h7 j7 n4 o3 g4 j9 l9 l8 j10 i11 h11 g10 g7 h8 e6 e7 f5 h3 h2 g6 d7 c8 d5 d6 c4 f7 c5 e5 c3 c6 d3 b3 e2 f1 d2 f2 c2 c1 e4"
+Brachaczek vs Majksner [ 0:1 ] 
+moves="c5 d4 g3 f5 f6 e7 e6 g6 h7 h8 g9 f9 h5 i6 j6 i5 j4 j3 e10 g10 h11 j10 i9 j8 i8 i11 k9 j9 j11 k6 i4 k4 l5 l7 k8 k10 c6 c7 d5 c4 h3 f4 e4 f3 b7 a8 f12 g12 e11 h10 i10 g13 d9 c8 d8 d7 h6 h4 d10 c9 c10 f10 d11 d12 g11 f11 f7 e9 b10 a10 b11 e8 b9 b8 d6 b6 b13 b12 c12 a14 e12 f13 e13 e14 l11 k12 j12 i14 h13"
+Tarasiński vs Kodatová [ 0,5:0,5 ] 
+moves="h6 k10 c9 e8 j10 e7 h8 f7 h7 h5 g6 e6 e5 d7 c7 h9 g8 f9"
+Zajk vs Eged [ 0:1 ] 
+moves="m7 m9 l11 k10 k9 j10 l10 j8 j11 l12 i9 i11 h9 j9 j7 i10 k8 k7 i6 l9 k6 i8 j6 l6 j5 g6 h7 g8 g4 h5 k4 l3 j4 j3 i4"
+Gorzecki vs Małowiejski [ 1:0 ] 
+moves="h8 h9 h4 f6 e7 i8 i7 g9 f9 g10 f11 g8 g7 f7 e6 j9 i10 j8"
+Bulatovsky vs Hegedűs [ 0:1 ] 
+moves="j9 g7 m11 k10 g8 i10 j10 j11 k9 l9 i12 m8 n7 j8 l8 i11 i9 h11 k11 l12 k7 m7 m9 n10 l10 j12 n12 o13 n8 o7 n6 n5 k6 k5 l5 j6 j7 i8 i7 h7 k4 m6 m4 n3 f11 g9 h10 f8 f7 h6 i5 i3 j4 l4 h4"
+Hanzl vs Katsev [ 0,5:0,5 ] 
+moves="h8 h3 m6 k7 g3 k8 k6 j6 j7 l8 m9 m8 n8 i8 j8 l10 k10 i11 j10 j11 h11 h10 i9 g7 h6 g5 g6 e6 h4 e7 e8 f7 d7 f9 h7 h5 f8 d5 g8 d8 e5 c9 f6 e9 d9 f10 g11 d10 b10 k12 l12 k11 j13 l13 m14 h9 i10 g10 e10 f11"
+Majksner vs Lange [ 0:1 ] 
+moves="f7 h9 j7 g6 g10 f8 h8 g9 g7 e7 d6 i9 j9 e9 f9 e8 e10 g8 d8 h10 i11 j8 i7 h7 k7 l7 f12 f11 i12 h12 h11 j13 d10 c10 j11 k11 g12 f13 g13 e11 g14 g11 h13 k10 f15"
+Zajk vs Brachaczek [ 1:0 ] 
+moves="d10 d11 c12 f10 f9 e9 g11 h10 i10 h11 h8 i8 g7 f6 h7 g8 g13 g12 e6 f5 f4 i7 i13 h13 h12 i11 j12 e10 f11 e11 e8 g14 e12 i5 i9 k11 j11 j13 d7 c6 h5 i4 i6 h6 g4 f3 e7"
+Fitzermann vs Tarasiński [ 1:0 ] 
+moves="l3 j6 m4 k5 l4 l6 j4 k4 k6 l5 m5 m6 j3 k3 k2 n5 l7 h5 i7 i9 j8 k9 l8 l9 j9 j10 k10 h7 h8 n7 o8 f8 j5 m8 m7 g10 f9 e9 f10 e7 g9 e11 e8 d10 g7 d11 f11 f12 c9 d12 d13 e13"
+Brdková vs Wojtasiński [ 0:1 ] 
+moves="h8 j8 m8 i7 k9 j10 j7 l9 k6 l6 l5 m4 j5 l7 k5 l8 l10 i5 i6 h7 j3 k7 m5 n5 j6 j4 h5"
+Żukowski vs Kodatová [ 1:0 ] 
+moves="c4 e3 g3 f6 f5 g4 h6 i5 j5 i6 i4 k6 h5 g6 i7 g5 h8 h7 j6 k5 j8 j7 i8 g8 g7 i9 f9 f10 e9 d9 e7 e8 c7 d10 c10 c8 d7 f7 b7 a7 d8 d6 c6 d5 j3 j4 l6 k9 k8 l8 h9 h11 i11 f12 g12 e11 g13 d12 g9 h10 d11 e13 g11 g10 e10 e12 f14 h12 c14 c13 b14 e14 e15 c12 b12 d13"
+Małowiejski vs Brachaczek [ 0:1 ] 
+moves="n11 n12 k14 k10 j11 k12 m12 l13 k9 j9 i8 i7 h11 i11 j7 k6 g10 i12 h9 f11 g8 i10 i13 h12 j12 g13 f14 h8 m11 l10 m10 j10 h10 m9 g9 g7 i9 g11 d10 e9 d8 f9 f8 e7 f7 e8 e6 d5 e11 d9 c9 f12 e10 f10 f13 f5 e12 g14 b10 c10 b11 b12 g5 h5 k5 h4 j5 h6 h7 j6 i6 k4 i5 l5 j3 l6 m6 l4 l9"
+Gorzecki vs Brdková [ 0:1 ] 
+moves="g11 e10 e6 f11 f9 g10 e12 h9 i10 h8 h10 i9 j7 k9 j9 j10 k11 h6 k8 l7 g12 h11 h12 i12 i7 l8 m7 l9 l6 k10 j11 l10 l11 m11 n12 k6 m8 g6 g7 h7 h5 i6 j6 j5 k4 e7 i4 j4 g14 d12 f14 g13 d10 e9 f5 c7 d8 c8 d9 d7 b7"
+Bulatovsky vs Żukowski [ 0,5:0,5 ] 
+moves="h6 k10 c9 i7 h9 k8 f6 k9 k7 i8 i6 g6 h7 h8 g8 f9 g5 h5 j4 e7 j6"
+Wojtasiński vs Eged [ 1:0 ] 
+moves="c2 c3 d2 e4 e5 f5 g6 h6 g4 g5 i7 i6 j5 k6 j6 j7 k5 l4 l5 i5 j4 j3 k8 h8 h9 f8 f7 g8 e8 h5 h4 i4 e9 e7 d9 c10 d6 d8 c7 b8 f9 g9 c9 b9 g10 d7 j8 i3 i2 e12 d11 b10 b11 d12 e11 c11 e13 h11 h10 f12 g12 i10 l6 m5 l8 n8 l9 l7 m8 i8 k10 n7 k7 i9 k9 k11 m11 l10 m9"
+Fitzermann vs Zajk [ 1:0 ] 
+moves="m11 l13 h13 k10 i10 h11 k9 j8 i8 i9 h10 f10 f9 g8 g7 e9 e11 j7 j6 j11 i11 l9"
+Majksner vs Zajk [ 0:1 ] 
+moves="f6 h8 j5 e7 h10 e8 f7 e9 e10 f8 g8 e6 e5 f10 d8 d11 e11 f12 f11 d9 d10 f9 c9 f4 j6 g10 h11 g4 f5 d4 e4 c5 d6 h9 g9 e3 f2 c3 c4 j7 d3 c2 h5 k6 i8 c6 d7 i4 g5 d5 i11 g11 j12 k13 h12 i12 g13 a7 b6 j10 h13 h14 f13"
+Tarasiński vs Hanzl [ 1:0 ] 
+moves="c4 d3 g3 e5 f6 g6 g5 h4 f7 f8 h7 i7 g8 h9 d7 e7 f9 e10 c6 b5 f3 d5 c5 c7 g4"
+Katsev vs Kodatová [ 1:0 ] 
+moves="g9 h11 f6 h10 h12 i10 g11 h8 h9 g10 f10 e9 j10 e8 f9 f8 g8 e10 e11 g7 h6 j9 g12 h7 g6 e6 e7 j7 i7 k8 l7 i6 l9 g4 h5 h3 f5 j5 j8"
+Hegedűs vs Lange [ 1:0 ] 
+moves="b5 b4 e2 h3 j4 e5 f5 g6 f6 f4 g3 e7 e6 f7 d7 c8 d6 c6 d5 d4 c4 d3 e8 i7 g7 h6 g5 i6 h4 i5 i4 k4 k5 i3 i9 j7 k6 l7 k7 k8 l9 j3"
+Brdková vs Zajk [ 0:1 ] 
+moves="m6 m8 l10 j7 k7 k6 j6 l8 l6 j8 k8 j9 i8 l9 j11 k11 j5 i5 i9 i10 j4 k5 f6 j3 f7 g7 f8 f5 e8 g8 g6 d9 k4"
+Zajk vs Gorzecki [ 1:0 ] 
+moves="c2 c3 d2 f5 e5 g6 g4 f4 e6 h6 e2 f2 f3 i6 h5 d1 e4 e3 f6 i5 e7 e8 g5 j6 k6 h4 g3 d5 g7 h8 i7 h7 i8 d8 f9 d9 f8 f10 g9 d6 d7 h9 h10 i11 g11 c7 c10 j11"
+Fitzermann vs Lange [ 0,5:0,5 ] 
+moves="i8 l7 e6 e5 c3 i7 c4 c6 f5 f7 g4 d7 g6 h7 g7 g5 f4 f3 e4 d4 h6 f6 i5"
+Katsev vs Eged [ 1:0 ] 
+moves="h8 i11 d9 f12 j12 f11 j10 i9 g11 e12 f10 g10 h9 d12 g12 c11 c10 e13 f14 e14"
+Kodatová vs Majksner [ 0:1 ] 
+moves="h15 h1 i15 h11 i11 j12 i12 i13 k11 h13 g13 h12 h10 i9 j9 k10 i7 h7 j6 j8 h8 g9 l7 k8 l8 k7 l4 k5 l6 l5 k6 i6 j5 i4 n9 m8 l9 l10 k9 m9 m7"
+Małowiejski vs Hanzl [ 1:0 ] 
+moves="l6 l5 m4 j6 j5 k4 k7 j8 i7 j7 j9 i8 h9 k8 l8 h5 i6 j3 i2 i4 k2 h4 j4 g3 h2 h8 g8 h7 h6 g6 f7 e4 f5 g4"
+Tarasiński vs Bulatovsky [ 0:1 ] 
+moves="l3 j6 m4 n5 j7 k5 l6 l4 i7 k7 j5 k4 k6 m3 n2 i8 i4 h3 i5 i6 l5 n3 h6 g7 g5 f4 f6 e6 e7 d8 f8 f9 g9 h10 d5 c5 f3 e4 h11 e10 f5 h5 f10 g8 h7 d11 c12 e11 c11 e12 e9 d10 d9 f12 k9 j8 g13 i10 j10 m8 g11 k8"
+Hegedűs vs Wojtasiński [ 0:1 ] 
+moves="h8 h10 j5 i6 k11 k7 j8 j7 i7 k8 h5 g5 k9 l10 l9 j9 i10 i11 f8 i8 f10 g9 f7 f9 i9 g7 g8"
+Żukowski vs Brachaczek [ 1:0 ] 
+moves="c12 e13 g13 f10 e11 d10 g10 g11 e9 e10 d9 f9 f8 i11 h11 i12 i13 h10 i9 j12 k13 f12 d14 f11 f13 k10 j11 l10 j10 g12 h12 k11 k9 l11 j9 l9 l8 l12 l13 k12 m12 i14 h13 j13 h15 m10"
+Brachaczek vs Gorzecki [ 0:1 ] 
+moves="i6 k7 k11 i10 i9 j10 k10 k9 l8 j11 j9 h9 g8 h7 h8 g10 i8 f8 f10 i7 g7 g5 h6 j6 l7 l10 k12 m11 j8 n12 o13 h12 g13 j13 j14 k13 l13 e7 f6 e5 e6 g6 d6 f11 h11 d9 e10 c6 f7 d5 f5 d7 e8 d11 e12 d10 d8 c11 e11 e9 b12 f9 g9 d12 d13 e13 b10"
+Fitzermann vs Bulatovsky [ 0,5:0,5 ] 
+moves="h6 k10 c9 f6 i10 h9 g9 i8 g10 g8 h10 f10 f8 e7 e9 g7 i12"
+Eged vs Majksner [ 1:0 ] 
+moves="f6 h8 j5 f9 g10 h9 h7 g9 i9 f10 e11 f8 f11 h12 g11 h11 h10 j8 i6 i8 g8 k4 h6 g6 h5 k8 l8 h4 i5 g5 j4"
+Kodatová vs Hanzl [ 1:0 ] 
+moves="h8 h9 h4 f4 d4 g7 f7 h6 f8 f9 g9 e7 i7 j6 i6 i8 j7 k7 d5 e6 e8 g6 d6 d7 d8 g8 g4 h5 c7 b6 c8 b8 c10 c9 e10"
+Żukowski vs Hegedűs [ 1:0 ] 
+moves="d3 e4 f4 f6 d7 g5 e6 g7 f5 g4 g6 h7 f7 h8 i9 h5 h6 i3"
+Katsev vs Lange [ 0:1 ] 
+moves="d5 e3 i3 f6 e7 e8 g6 h7 h8 g9 g10 j10 i6 j7 i4 i7 i5 i2 g7 j9 j6 h6 k9 h10 j8 i11 f8 i8"
+Wojtasiński vs Zajk [ 0:1 ] 
+moves="h15 h1 i15 h12 i11 j11 i12 i13 g11 h10 h9 g10 f9 e9 e10 d11 j9 i9 h7 g8 h11 i10 j10 i8 i7 h6 f8 f7 j6 k7 l6 k5 k6 m6 l7 l8 j15 g15 m8 n9 m11 l10 l11 k12 n11 m12 e6 d7 d6 c6 g4 i4 h5 f3 l12 k13 l13 l15 m9 j7 e7 c5 e5 e4 g3 c7 f11 e11 c8 b7 d5 g5 d4 f6 f4 h2"
+Małowiejski vs Tarasiński [ 0,5:0,5 ] 
+moves="g13 h13 i13 g11 h10 i11 j11 f9 g8 f11 h9 i10 h11 h8 f10 e7 f7 d6 e8 d9 f6 e10 g12 d11 c11 c8 b7 d10 d12 c9 e9 c7 c6 c5 d5"
+Brdková vs Zajk [ 1:0 ] 
+moves="c5 d5 f3 f6 e3 d4 d3 c3 e5 e6 d6 f4 f7 f8 g6 h5 h7 g7 e9 i5 h4 j5 h3 g3 k5 i8 i7 j7 j6 h8 j8 g10 h9 e8 g8 d7"
+Brdková vs Fitzermann [ 0:1 ] 
+moves="d6 c8 c10 f9 e8 f7 f8 e7 g8 h8 g7 g9 h9 e9 f10 g5 h4 f5 e6 g3 h5 h3 f3 i6 j6 i10 k7 l8 j7 j8 i8 k6 i7 h7 f6 g6 d4 d5 e5 c3 e4 g4 g2 b6 d10 e10 f11 g10 f12 f13 d12 l7 m8 j5 i4 l5 l6 k4 l3 i2"
+Bulatovsky vs Gorzecki [ 0:1 ] 
+moves="l2 m3 n5 j5 k5 l6 k6 k4 i6 j7 j6 i7 k7 l8 l9 k9 j10 l5 l4 g6 g7 j11 l10 i10 h9 i8 h7 k8 h8 i9 i11 j8 m8 h6 g5 h11 j9 e7 d6 e5 e8 f9 d8 f8 f10 g11 d10 d9 e11 g9 f12 c9 e9 e12 l12 g13 g12 h13 f13 l11 j13 k13 d4 c7 c8 d5 e4 c4 e6 d7 b7 b6 h4 i3 i2 g4 m9 m10 c11 d12 b12 a13 b11 d11 d13 c12 b13 e10 g8 b14"
+Brachaczek vs Hanzl [ 0,5:0,5 ] 
+moves="h8 h9 h4 j9 i9 j10 k7 j8 j11 i7 k9 k10 j7 l11 m12 g10 h11 f11 e12 f7 g7 f9 e5 f6 h7 i10"
+Eged vs Hegedűs [ 0:1 ] 
+moves="m3 h8 j3 k4 i7 j6 k6 i5 k7 h6 g7 h7 h5 g6 i6 k8 i8 h9 h10 i10 j9 j11 k12 g11 i11 g9 f9 f10 e11 d6 e6 g12 g10 f5 e5 d8 e9 e7 f8 c9 f6 b10 a11 c10 c11 d10 e10 d9 d7 f7"
+Tarasiński vs Katsev [ 0:1 ] 
+moves="m11 l12 i12 k10 l9 k9 k11 m10 i10 i11 l8 l7 g10 h12 h11 j13 g12 f13 f10 g13 j10 h10 f9 e8 g9 i9 g11 g8 e11"
+Małowiejski vs Kodatová [ 1:0 ] 
+moves="f7 f5 i10 g8 f4 e7 f10 f9 h7 e8 g10 h10 f8 e9 e6 c9 d9 d8 f6 b8 e11 c7 c6 b6 a5 d5 d6 g6 e5 h8 i7 j7 g5 h6 h4 g3 g12 c8 a8 d12 e13 e12 h11 b10 a11 b9 b7 b12 b11 c12"
+Zajk vs Majksner [ 0:1 ] 
+moves="m4 j6 l3 k6 j3 k4 l6 m5 i5 i4 h6 j4 h4 l7 j5 g5 i8 h7 k3 m3 g7 f8 i9 i7 k5 h5 h10 j10 h11 k8 j7 h9 g10 i10 f9 e8 g11 f7"
+Wojtasiński vs Lange [ 0:1 ] 
+moves="h8 j10 m9 m6 l5 k7 k8 i8 i7 j9 j8 k9 i11 j6 g9 h10 h7 i5 h4 f7 h6 h5 g5 f4 f6"
+Żukowski vs Zajk [ 1:0 ] 
+moves="h8 f5 j12 j10 e5 i7 h7 h6 j8 i6 i8 k8 h10 j7 l9 g6 f8 g8 g9 i11 f6 g7 g5 e7 i9"
+Kozhin vs Rizvanov [ 1:0 ] 
+moves="j3 l3 m4 j6 l5 k6 i6 h5 i5 i4 k7 m6 l6 l7 j5 j8 j4 m5 i3 h2 g7 h6 h7 g8 h3 g3 i7 j7 i8 i9 j9 g6 e6 e7 j2 j1 g9 d8 e8 c9 b10 g5 f6 e5 m7 k5 f4 d7 f7 f5 d5 d9 d10 e9 f9 f10 c7 e12 f12 k11 j10 l11 i11 k9 m11 l10 j12 h10 k12 l9 l8 i12 h12 b9 a9"
+Bogatirev vs Kachaev [ 0,5:0,5 ] 
+moves="c14 c13 e13 f11 f10 e9 g12 g11 h11 e11 c11 i10 h13 g13 h12 h14 f12 e12 k10 i12 h9 h10 i9 k9 l8 g7 f8 f6 i8 h8 j7 k6 h7 j9 k7 j6 b10 d12 j8 i7 l6 m5 k5 e5 d4 g5 e8 h5 f5 g6 g4 i4 j3 e6 d6 i3 e7 i5 i6 h4 j2 g3 f2 i1 i2 h2"
+Lebedev vs Smirnov [ 0:1 ] 
+moves="f7 f5 i10 h10 i14 h9 h8 i8 j7 g9 f9 g11 h11 f12 e13 g10 g12 j9 i9 f8 e7 g7 g8 d10 f13 e14 e9 e11 g13 f11"
+Tóth vs Dupszki [ 0:1 ] 
+moves="c4 d4 d3 g9 j6 e6 g6 e7 f5 h7 b5 e2 e5 d5 f7 h5 f3 h6 h4 g3 c5 c6 e9 f8 h10 h8 h9 g8 e8 i6 j5 i7"
+Tarannikov vs Kondratiev [ 0:1 ] 
+moves="h8 e9 l10 j9 e11 g7 f8 g9 g10 g8 h7 g6 g5 h6 f6 e7 e8 f9 d9 d11 k11 j12 e10 j11 j10 i10 k12 h11 g12 f11 k13 k10 i11 l9 m8 j6 k8 j5 j8 l8 m11 i6 k6 i7 k9 n12 i9 l12 g13 h12 g11 g14 f12 h9 h10"
+Sakamoto vs Katsev [ 1:0 ] 
+moves="c14 c13 e13 f11 f10 g9 g11 h10 h9 e9 f8 d9 e10 f7 c9 e7 c10 d10 c8 c7 d7 e8 e6 b9 h7 h5 g6 f5 g5 i6 g4 g3 d11 f9 e14 d14 c12 c11 b12 e12 b11 d13 b13"
+Rizvanov vs Lebedev [ 1:0 ] 
+moves="f7 h11 j8 d5 b5 d7 d6 g6 h7 g5 g7 i7 h8 h9 i9 j10 f8 f9 g8"
+Tóth vs Kachaev [ 1:0 ] 
+moves="h8 g5 f12 f10 f4 f7 f8 g7 g6 e7 d7 d8 f6 e9 g11 e6 e8 g8 h9 h7 i7 f9 i6 g9 c9 h10 d10 e11 i4 i5 j6 h6 j4 h4 j5"
+Kondratiev vs Smirnov [ 1:0 ] 
+moves="h8 e9 l10 i9 d10 g7 h9 i7 h7 h6 i8 j8 h10 h11 g5 i10 j9 g6 g10 f11 f8 i6 f6 e7 f7 f9 d5"
+Dupszki vs Katsev [ 1:0 ] 
+moves="f13 d13 c12 f10 g10 f9 f11 g11 e9 e11 d10 f8 h8 i8 h7 h6 i7 j7 j6 k5 k6 j9 i10 l6 m7 l9 k8 j11 i11 l8 l7 j10 j8 k10 i12 l11 m12 l10 l12 m10 n10 j13 j12 k12 d5 n9"
+Bogatirev vs Kozhin [ 0:1 ] 
+moves="e13 h13 g13 d12 j12 g11 j10 h12 h10 f10 e9 j11 i10 k10 i12 i11 h11 k11 l11 f9 f11 e10 d11 e12 g9 d10 c10 h7 i6 j7 i7 i8 k12 m10 l9 l8 g6 j6 f6 g12 f12 e6 g7 g8 h8 i9 i5 g5 e5 d4 f4"
+Rizvanov vs Bogatirev [ 1:0 ] 
+moves="m12 l12 l13 k10 j10 i11 k8 l9 k14 n11 h11 j9 i9 h8 h10 g11 i12 j13 f10 g10 h7 g12 g13 n9 h13 h12 n10 j6 k6 k7 l8 m7 m8 g9 g8 i7 k5 j8"
+Lebedev vs Kachaev [ 0:1 ] 
+moves="a15 b14 e13 e10 g12 f9 g11 d11 c12 g10 h11 f10 h10 f12 f13 i10 h9"
+Tóth vs Smirnov [ 1:0 ] 
+moves="d3 e4 c5 b5 b6 d6 f6 g5 g7 h8 f8 h6 f7 f9 i7 h7 h5 f4 e5 d4 g4 d7 e8 d8 d5 g6 h9 b4 c4 i6 e6 b3 e9 e7 d10 c11 j5 e10 g8 f11 g12 d12 d11 e12 b11 e13"
+Kondratiev vs Dupszki [ 0:1 ] 
+moves="h9 h11 j6 f11 i6 g11 i11 g10 h6 g6 f9 g9 g12 e11 d11 h8 f10 e12 e13 d13 c14 f8 j5 i8 j8 j9 h7 g8 e8"
+Tarannikov vs Katsev [ 1:0 ] 
+moves="m4 l4 k3 k6 j6 h6 h7 i8 h9 k8 k7 l7 m8 i7 m6 i5 i6 g7"
+Sakamoto vs Kozhin [ 0:1 ] 
+moves="g6 e8 i3 i4 d9 h7 h8 j5 i6 j7 k6 j6 j4 k7 i7 l8 m9 i5 h4 l5 m5 l7"
+Kondratiev vs Rizvanov [ 0:1 ] 
+moves="e2 j7 b4 e4 f6 g7 b5 d6 d7 c6 f5 e6 b6 b7 f3 d5 a8 f4 d3 c4 b3 b2 e3 c3 c5 d4"
+Katsev vs Kachaev [ 0:1 ] 
+moves="h8 h6 d6 f6 h4 e6 f7 e5 e4 f5 g4 d4 g7 g5 h5 f4 e3 i6 g6 e8 f9 d7 e9 c8 b9 c9 d8 c7 c6 g9 j8 j6 i8 g8 j10 h7 i11"
+Tarannikov vs Smirnov [ 1:0 ] 
+moves="e12 h12 b9 h11 e10 f13 h10 g13 e11 e13 h13 i11"
+Kozhin vs Tóth [ 0:1 ] 
+moves="c14 c13 e13 f11 g11 h10 e10 g9 f8 h9 f9 g8 f7 f6 h8 i10 j10 j9 e12 e11 i9 k11 l11 k12 j11 k13 k14 j12 i11 h12 g12 i13"
+Lebedev vs Bogatirev [ 0:1 ] 
+moves="b2 d2 f3 f6 e5 g5 e7 d6 e6 e4 h6 h7 i8 d4 d5 f7 g4 h5 f5 d7 i5 j4 e3 d3 j6"
+Dupszki vs Sakamoto [ 1:0 ] 
+moves="g9 j4 d4 f10 d12 h9 h10 f8 f9 g8 e8 g7 h6 i8 g10 d7 f7 g6 g5 j8 h8 j7 j6 h7 i7 k5 f5 k7"
+Rizvanov vs Tóth [ 0:1 ] 
+moves="l13 l12 m12 k9 j13 k13 j11 k12 k14 n11 i12 k10 k11 h11 j12 j14 m11 i13 i11 l11 j9 j10 h10 m10 l10 k8 l9 n9 o8 n8 n10 l8 k6 j8 m8 g9 h8 h6 g5 f9 e9 j5 i5 f6 g6 l4 m5 m7 n6 g8 g7 f7 f5 h7 i6 e5 f10 e6 d5 e10 d11 e4 e7 j4 k5 g3 k4 k3 i3 h9 i10 i2 f4 d8 d9"
+Kachaev vs Kondratiev [ 0,5:0,5 ] 
+moves="h8 i11 d9 d8 j4 f11 g11 i13 g8 i12 i14 f8 g9 g10 f10 i7 h9 f9 h11 i10 i9 h10 j10 g7 k8 j9 k7 h7 k11 l12 k9 k10 i8 j8 k6 k5 j7 l5 l9 m10 m7 l8 l7 n7 j5 f7 e7 i4 j6 j3 i6 h5 g6 h6 m6"
+Katsev vs Smirnov [ 1:0 ] 
+moves="f6 g6 c4 d5 e6 e7 f4 f5 d6 c7 h7 h8 e5 e4 e8 c6 g3 h2 b7 i7 j6 g9 g8 f10 e11 e9 d8 f9 d9 f8 f11 d3 c2 f3 g2 d10 g7 e10 g10 d11 c10 b11 c12 i10 i11 i6 i8 h9 i9 j8 k9 j10 c11 c13 j9 k10 l9 m9 l10 i5 i4 j5 h5 k12 l13 l12 m12 h12 g11 h11 h10 e13 f13 k14 i12 l7 j4 h4 m7"
+Tarannikov vs Dupszki [ 0,5:0,5 ] 
+moves="i5 e14 d8 e11 f8 d11 g7 e9 f11 f9 e10 d9 c9 d12 f10 e12 g8 g9 h9 e8 f7"
+Kozhin vs Lebedev [ 1:0 ] 
+moves="h9 h8 l8 l9 l11 j11 j9 i8 g8 i7 i6 i9 i10 k10 i12 j6 k5 g7 f6 k8 k9 j7 f7 e6 k7 j5 j4 m8 n7 m7 m9 f5 f10 f9 n10 o11 n8 n9 k11 j12 h12 g11 g12 m10 n11 h13 l10 o7 l13 j13 j10 i11 l12 l14 n14"
+Bogatirev vs Sakamoto [ 1:0 ] 
+moves="h8 h6 d6 c7 b8 f8 g7 i9 f6 e6 g5 e5 e7 d8 g6 g4 i7 j6 i5"
+Rizvanov vs Tarannikov [ 1:0 ] 
+moves="g8 g9 g4 h9 i9 f8 h10 e9 g7 g6 f9 f6 j8 k7 e10 h7 f11 f12 d9 c8 d11 c12 d10 d8 c11"
+Dupszki vs Kachaev [ 1:0 ] 
+moves="h8 h7 l6 m7 m9 j8 j6 k6 k9 k7 g9 i7 g7 i9 g8 g10 i8 f8 f7 g5 h5 i4 e6 d5 g4 f5 l9 j9 i10 h9 f3 e5 c5 i6 l7 l8 c7 k4 k5 g3 e2 d1 h2 i3 i5 j3 k3 h6 f4 l5 m6 j4"
+Katsev vs Kozhin [ 0:1 ] 
+moves="i7 h5 g10 j8 j5 j6 i6 i8 h7 g8 h8 h9 k4 l3 i4 f7 i10 k7 j4 l4 g7 i5 h4 g4 j10"
+Kondratiev vs Bogatirev [ 1:0 ] 
+moves="h8 f5 j12 f7 g9 f8 f6 e5 i7 j6 g5 h6 g7 i6 k6 g8 i9 j10 h9 f9 f10 e11 h7 j7 h10 h11 i11 k13 j9"
+Tóth vs Lebedev [ 1:0 ] 
+moves="c8 g11 f3 e7 c5 c7 f5 d7 f7 d8 f6 f4 e5 e9 f10 b6 a5 b7 a7 b5"
+Sakamoto vs Smirnov [ 0:1 ] 
+moves="k3 h3 i3 i5 k5 h5 h4 g5 f5 l4 k6 k4 l6 j4 m4 j7 k7 k8 i6 j6 j8 j3 j5 m5 g6 h7 f8 f7 e6 g7 i7 i9 f6 h6 d7 c8 d6 c6 d4 d5 e4 f4 e3 e7 c3"
+Rizvanov vs Katsev [ 1:0 ] 
+moves="m13 m12 l13 j10 k10 i11 k9 k8 j8 i7 i9 h11 i10 j11 g11 h10 g9 h9"
+Kachaev vs Tarannikov [ 0:1 ] 
+moves="g12 k3 l9 k6 j9 j6 i10 k8 i8 i6 l6 i5 g6 k10 i9"
+Smirnov vs Dupszki [ 1:0 ] 
+moves="f8 i11 j5 g7 j10 g8 g9 e7 f7 f6 e5 f9 e10 i10 h11 i7 j8 k7 j7 j6 i5 k5 l4 j11 k12 l9 k10 k9 m9 k6 k8 l6 m6 i3 m7 m8 h4 e11 i13 k11 h13 h12 d10 l11 m11 d9 g13 f13 k13 j13 l12 n10 m12 n12 j12 i12 g6 h5 e4 f5 e3 e2 f3 g3 k4 j4 h2 k3 l7 n5 j14 i15 m13 m10 d5 c6 j3 i2 d7 d4 g12 g10 m14 m15"
+Kondratiev vs Kozhin [ 0,5:0,5 ] 
+moves="i13 h13 f13 g13 j13 g12 h12 g11 g10 f11 i14 e11 d11 e13 e12 g14 g15 f12"
+Bogatirev vs Tóth [ 0:1 ] 
+moves="h7 h8 k7 i9 j10 i8 j7 i7 i6 g9 j6 j9 k9 f8"
+Lebedev vs Sakamoto [ 0:1 ] 
+moves="h2 h3 k6 g5 i2 k5 l5 j3 k2 j2 m4 j7 l3 n5 l4 l2 i6"
+Rizvanov vs Smirnov [ 1:0 ] 
+moves="l13 k12 m11 l10 i11 j12 j10 k11 m9 h12 i12 i13 h14 m10 k8 h9 j9 l11 j13 h11 h10 j8 l7 m6 h7 k9 i6 j7 g8 k10 k13 n10 o10 j5 i8 f10 e9 j6 j4 i7 h6 f8 i9 i10 g6 f5 f6"
+Dupszki vs Kozhin [ 1:0 ] 
+moves="h9 g7 h12 i11 f6 g10 f9 h10 g9 e9 f10 h8 f8 f7 e7 d6 j8 i9 j10 j9 h7 g8 g4 h4 i5 h5 k6 l7 k8 k7 m7 l8 m9 l10 l9 j7 i12 j12 k5 j4 m5 m6 j3 l5 l4 k3 d5 e4 d9 f12 g11 i13 k11 l11 k10 l14 k13 j11 k12 k14 e3 c9 e11"
+Tarannikov vs Bogatirev [ 0,5:0,5 ] 
+moves="f8 c9 j10 g7 b9 e6 e7 g9 g8 h8 i7 f5 f6 g4 h3 g5 e5 f10 c10 e10 e12 d11 f11 g10 h10 f9 d8 d7"
+Lebedev vs Katsev [ 0:1 ] 
+moves="d3 c4 b6 e5 e6 f7 f5 g4 d7 c6 c8 b9 d9 d8 e10 f11 g9 f9 f10 g10 h9 h8 g7 j8 h6 f8 i8 i6 j7 k7 j5 i5 k6 l5 i4 h3 j9 i9 h10 l7 g6 h7 l6 g3 f4 g5 f6 d6 f3 f2 k10 l11 i12 j11 h12 j12 j10 i10 i11 g13 j3 j4 e12 e11 f12 g12 d11 f13 i13 g11 g14 l10 i14 i15 l8 k9 m11 e3 g1 c2 e2"
+Kondratiev vs Tóth [ 0,5:0,5 ] 
+moves="m13 m12 l13 k11 k10 i10 i11 j13 g10 g9 h8 j9 h9 h7 f11 e12 f8 e8 h6 i8 g7 e9 f6 i9 j4 i5 e5 d4 f5 e10 e11 f9 d11 b11 f7 f4 e6 g6 d5 g8 i6 g5 c6"
+Kachaev vs Sakamoto [ 1:0 ] 
+moves="i7 h6 j3 i8 h5 h8 g8 g6 h7 i6 j6 j7 h9 k8 l9 k7 j8 k6 k5 l7 m7 j5 i4 l4 m4 m6 n5 l3 l6 n8 e5 e6 f6 f5 e7 d8 d6 h3 g4 f4 h10 i10 j9 i9 g9 f8 i11 j12 k9 j10 k11 n9 m8 j11 e10 f9 f11 g11 j4 i3 k4 h4 e9 c8 f7 g7 d7 b8 e8 e11 j13 g12 i12 d10 f12 c9 a7 f13 h11 g10 k13 g13 g14 k12 l13 i13 m11 l10 m10"
+Dupszki vs Rizvanov [ 1:0 ] 
+moves="c4 d4 d3 e6 g6 f5 b5 e2 g4 g5 e5 f7 e7 f8 f6 h6 i7 h8 h9 f2"
+Smirnov vs Kachaev [ 0:1 ] 
+moves="k3 l3 n5 k6 j5 j6 l6 i7 k5 l5 i8 h7 j4 i3 n6 n4 h6 i5 m7 n8 l8 k9 i4 h4 g3 g7 f7 f6 g5 i9 h8 j8 j9 l10 m11 h10 g11 k10 k8 j10 i10 h11 h9 m10 n10 j7 k7 m4 n3 g8 m9 o11 i12 f9 e10 d7 e8 d9 e9 e11 h12 d8 d10 i13 j12 k12 c11 b12 c10 f10 c13 c12 f12 g12 l11"
+Bogatirev vs Katsev [ 0,5:0,5 ] 
+moves="g3 h3 j3 d7 d6 g6 f5 e5 g7 f8 e8 j6 i6 i8 j7 k8 j9 j10 k9 j8 l8 i9 h10 h11 g11 i12 h7 i10 i11 i7 e10 g10 f9 g8 e9 e7 d9 c9 c10 f7 h9 g9 e12 e11 d11"
+Kondratiev vs Lebedev [ 1:0 ] 
+moves="i7 h8 m5 i9 g7 j9 h9 j10 j8 l10 i10 l9"
+Sakamoto vs Tóth [ 0:1 ] 
+moves="h8 j11 f4 k7 e5 i9 e7"
+Kozhin vs Tarannikov [ 1:0 ] 
+moves="c4 d4 d3 e6 f5 g6 f6 f7 h5 g5 g8 e3 e2 b5 e7 f3 h6 h8 g9 e9 d9 d8 c7 h10 g11 g10 h9 j9 j10 k8 l7 k9 k10 j8 l8 l10 m11 j7 m9 k6 k7 j6 j5 l5 m4 m10 l9 j11"
+Kachaev vs Kozhin [ 0,5:0,5 ] 
+moves="c13 d12 g9 h10 h11 f11 i9 f9 g12 i10 f10 g8 h8 i7 j10 k11 h7 e12 g10 c12 b12 d11 e10 c10 f13 d9 g11 g13 d8 e9 c9 g7 h6 d10 d13 c11"
+Smirnov vs Bogatirev [ 0:1 ] 
+moves="k4 l5 n5 j4 j7 l7 l6 i5 h6 i7 i6 k5 h5 j5 m5 k8 h7 h4 g6 j6 h8 h9 k7 j8 f5"
+Dupszki vs Lebedev [ 1:0 ] 
+moves="h9 h11 j6 g10 h6 i10 i6 g6 h7 h10 f10 f9 i12 h5 f7 j9 g12 g7 j12 h12 h8 k6 l7 k7 j8 k9 k10 i11 j10 l9 m9 e11 e10 k8 k5 f12 f11 h13 h14 e13 i9 d10 c9 d12 i7 l4 k11 l12 g5 f4 i8 i5 g8 f8 j5 k4 j4 j7 n8 l10 l6 m7 i3 h2 j2"
+Tóth vs Tarannikov [ 1:0 ] 
+moves="m3 h8 j3 k5 j6 h6 i5 k7 h5 k8 k6 j8 i8 l6 i9 n8"
+Kondratiev vs Katsev [ 0:1 ] 
+moves="h8 g7 e4 h7 i7 g9 g8 f8 e9 h10 i11 j9 i8 i10 j10 i9 h9 k8 h11 g11 j8 k9 l9 k6 k7 h4 g10 f11 f9 l7 m6 e8 i4 e7 d6 f7 d7 d9 c10 h5 g6 h6 h3 i5"
+Sakamoto vs Rizvanov [ 0:1 ] 
+moves="h8 f11 j5 i6 e12 g9 h5 f9 f8 g8 h7 h6 g7 h9 i9 f6 g6 f7 i10 d9 e9 e10 g12 d10 d8 f10 g10 c10 b10 b11 e8 d11 c12 d12"
+Rizvanov vs Kachaev [ 0:1 ] 
+moves="f8 i11 j5 f11 g8 i8 f9 h7 e8 d8 f7 f6 g6 h5 g9"
+Kozhin vs Smirnov [ 1:0 ] 
+moves="j3 h3 g3 i6 h5 i4 k6 k4 i5 g5 f6 g7 g8 f7 e7 e8 d6 h4 j4 f4 c5 b4 e4 e6 j5 j6 d5 c6 h2 g1 g2 f2 d3 d2 e3 c3 d7 d4 k5 l5 l6 i3 j2 j1 k7 j8 k8 k9 k3 l2 m5 n6 m7 n8 m8 m6 l7"
+Dupszki vs Bogatirev [ 1:0 ] 
+moves="g3 h3 i3 f6 j6 f5 f4 e5 g5 g6 i5 h4 h6 i7 g7 j4 e6 i4 k4 h5 j3 g2 k6 i2 i6 l6 e3 d2 k2 j5 f1 c2 e2 d5 d3 h1 h2 e4 f3 c3 c5 j1 g4 f8 f9 j8 i8 h9 k5 k3 k7 k8 e8 d4 b2 d7 e10 d8 d6 e9 g8 h7 d11 c12 h11 g11 f10 g10 j10 k9 l8 m9"
+Tarannikov vs Lebedev [ 0,5:0,5 ] 
+moves="e13 d12 c11 e10 f11 g11 g9 f8 e8 i9 h10 g7 h6 i7 i8 d11 f9 d9 d10 h7 j7 h9 k8 f6 h8 j8 l9 i6 g10 f7 e7 f5 f4 h11 l7 j5 k4 l8 m6 j9 n7"
+Tóth vs Katsev [ 1:0 ] 
+moves="i9 h8 f6 h7 h6 g8 i7 j8 i8 i6 f9 f8 e8 g10 g9 j9 e6 h9 i10 i11 j11 e9 d6 g6 c6 b6 d7 b5 d8 d5 g5"
+Kondratiev vs Sakamoto [ 1:0 ] 
+moves="h9 h11 j6 j11 k11 i12 j13 g12 h14 h13 g14 i10"
+Sakamoto vs Tarannikov [ 0:1 ] 
+moves="d3 c4 b6 e5 e6 f5 g5 f6 f4 h6 h8 g6 i6 f9 e8 h9 g9 f8 f7 f10 f11 d10 e9 e10 c10 d11 g8 d12 d13 f12 e12 g10 h10 i12 h11 i11 i13 j8 k9 j5 j7 k8 l7 k7 l6 l8 m8 j11 j12 l11 k11 l10 h14 g15 h13 h12 l13 k13 j6 k5 c7 i8 h7 d8 d9 b11 c9 c8 g7 i7 j10 i9 f3 d4 l5 m6 j2 c11 b13 i3 f14"
+Dupszki vs Rizvanov [ 0,5:0,5 ] 
+moves="g7 l10 l4 k3 m3 j6 m4 l5 i5 h6 i6 j5 j7 i7 h8 h5 h3 g8 j8 i9 i10 j9 k9 k10 l11 m10 n10 f9 e10 f6 h9 f7 f5 g10 e8 e9"
+Kozhin vs Kachaev [ 0,5:0,5 ] 
+moves="c13 c12 d13 f10 e10 g11 e9 e11 f11 g9 h8 f12 g12 h13 e13 f13 d10 d11 e12 g10 f8 c11 e8 g8 g7 h6 f6 i9 c8"
+Kondratiev vs Smirnov [ 1:0 ] 
+moves="a9 c13 d12 i10 g10 f10 e9 f9 f11 e12 d9 e10 g8 d10 c10 e8 c11 c9 g11 g9 e13 b10 f12 d14 f14 g15 f13 f15 g13 h13 i11"
+Tarannikov vs Bogatirev [ 1:0 ] 
+moves="g3 h3 j3 h7 j6 j5 k6 i6 k4 k5 l5 m6 m4 n3 l4 j4 l6 l7 j2"
+Lebedev vs Miyagawa [ 1:0 ] 
+moves="e3 d3 c6 h8 c3 e6 f6 e5 e8 d7 c8 c7 d8 f8 e7 c9 b8 a8 g5 h4 g6 f4 h5 g3 d6 f7 i5 j5 g8 g4 i4 i6 j3 k2 f11 k4 l3 e10 g11 g9 h11 i11 h10 j6 d11 e11 k3 k5 i7 h2 i1 i3 j4 h6 h12 h13 f12 f10 d12 k6 l6 k8 k7 e13 e12 g12 d10"
+Katsev vs Rumyantseva [ 1:0 ] 
+moves="h7 g6 g3 f4 e4 f7 f3 h5 i4 d5 h3 i3 j5 k6 e6 e5 f5 d7 e7 i6 j6 j7 k8 h9 i8 e8 d9 f9 g10 d4 d6 f6 g7 c5 c6 h10 j4 g4 l4 b2 c3 h4 j2 j3 k5"
+Dupszki vs Kondratiev [ 1:0 ] 
+moves="m13 m12 l13 k11 k10 i10 i11 h10 g10 h8 h11 i12 i9 f11 j9 h9 h7 i8 g8 f9 f10 k8 l8 g7 j7 k9 l7 k7 j5 j6 i6 k4 m8"
+Kachaev vs Rizvanov [ 1:0 ] 
+moves="h8 g6 j10 g7 g8 f8 h6 f7 h7 h5 e8 f9 f6 h10 f10 i7 g5 i6 i5 j7 k8 k7 i9 j4 i4 l6 m7 k6 j8 i8 l5 m6 j6 k11 i11 o6 n6 h12 h11"
+Tarannikov vs Kozhin [ 0,5:0,5 ] 
+moves="g6 h8 i10 k4 l5 i6 h7 j6 k6 j7 j9 i8 k8 l7 i7 k7 i5 m5 m4 l6 n3 o2 j8 m7 n7 n8 k5 l10 l8 h5 g10 f8 g8 g9 j11"
+Sakamoto vs Lebedev [ 1:0 ] 
+moves="h8 i7 l9 f5 l5 f7 i8 h9 k8 g8 l8 j8 l7 l6 i10 j9 j7 i6 m8"
+Katsev vs Miyagawa [ 1:0 ] 
+moves="d13 c12 b10 d10 f9 f11 f12 h10 d9 e8 e9 c9 g11 g9 f10 h12 d8 c7 h9 g8 e7 f6 g6 i8 j10 f4 e5 f5 f7 h8 f8 i7 h6 i5 i6 j6 k5 k7"
+Rumyantseva vs Bogatirev [ 0:1 ] 
+moves="l13 l12 m12 k10 j10 i11 k8 l9 j11 i10 m11 j12 m10 m13 j8 l8 i9 h8 n11 o10 g9 j9 i13 g11 h11 g10 e10 g12 h13 j13 h7 g8 e9 f9 i7 j7 l11 k11 g7"
+Dupszki vs Kachaev [ 1:0 ] 
+moves="c3 c4 e5 d4 f4 d6 d7 e6 f6 g5 f7 f8 h5 e7 g9 e8 f3 f5 g4 i6 e2 d1 e3 b4 c5 e4 a4 g3 h7 h6 g7 i7 i9 h8 g8 g10 j6 h9 h11 e10 e9 c10 d10 c8 f11 c9 c7 g11 k7 j8 k9 k8 l8 m9 m7 n6 j4"
+Kozhin vs Sakamoto [ 1:0 ] 
+moves="d13 c12 b10 d10 e11 f11 f9 d8 d9 e9 f8 f10 g11 e7 f6 f7 d7 e6 e10 g8 d5 e5 e8 g10 i8 e4 e3 i10 h9 j9 j10 i7 g7 h8 j6 k8 l7 k9 l9 h6 g5 h4 i4 h5 h7 l6"
+Bogatirev vs Kondratiev [ 0,5:0,5 ] 
+moves="i14 m13 n10 e8 g11 f8 i11 g8 h8 f9 i13 i12 h11 f11 f10 h12 k11 j11 j12 l10 k13 h10 h14 g15 l14"
+Katsev vs Rizvanov [ 1:0 ] 
+moves="h8 i11 d9 g9 f8 g8 g7 i9 f7 i8 i7 h7 f9 f6 d10 e9 c10"
+Tarannikov vs Miyagawa [ 1:0 ] 
+moves="j13 i13 g13 g10 g11 i11 j11 i10 i12 j10 k10 l9 j12 k12 g14 h13 h14"
+Smirnov vs Rumyantseva [ 1:0 ] 
+moves="d3 e4 f4 h6 f6 d6 f8 f7 g8 e8 g6 g9 g5 g4 f5 e5 e7 d8 j5 i6 h3 i3 i4 k6 j6 j7 h5 i5 f2 f3 g2 f1 e2 h2 j4 j3 d5 b6 c5 d2 h9 d9"
+Kozhin vs Dupszki [ 0:1 ] 
+moves="i9 e10 i5 k4 n3 l5 l6 m6 n7 k7 j4 k5 k6 h6 m8 j5 l9 n5 m5 k10 i6 j9 k8 j7 i8 i7 j8 l8 h8 g8 h7 g7 f8 i11 j10 g11 f10 f9 g10 h10 e11 g9 k11 l12 m11 j12 k13 l11 m12 l7 m7 l13 l10 e6 g6 f5 d7 f4 e3 f3 f6 d5 c4 g2 e4 f2 f1 i2"
+Katsev vs Kachaev [ 0:1 ] 
+moves="a15 b14 e13 g13 h13 e11 f12 g11 h12 g12 g10 h10 h9 d11 f11 e12 f13 f10 e9 c11 d12 b11 a11 c10 c9 b10 b12 b9 a8 b7 b8 c8 e8 e7 d7 f9 g8 f7 f8 h8 i7 j7 i9 j9 k8 k9 j8 i8 k10 j11 h4 h6 k6 k7 i4 j4 i5 j5 i3 i6 j3 g6 f6 h3 f5 g5 f4 g3 g4 e4 f3"
+Bogatirev vs Smirnov [ 0,5:0,5 ] 
+moves="l13 m12 n10 j10 k10 k9 i11 l10 j8 m9 l9 j12 k11 j11 j13 k12 l12 m11 m8 k8 h9 g10 h7 h8 l7 n9 k7 j7 l6 m5 k6 i6 m6 o6 l5 l8 k4"
+Kondratiev vs Tarannikov [ 1:0 ] 
+moves="e3 c4 b5 e5 f7 g6 g5 f4 f6 f8 c7 e7 e9 g9 h10 e4 d4 f5 d3 e8 e6 g8 h8 f9"
+Lebedev vs Rizvanov [ 0:1 ] 
+moves="f3 g3 i3 g5 f5 f4 g4 h6 i7 e6 d6 i5 h5 e2 j6 e5 i6 j7 e3 g7 f8 e7"
+Rumyantseva vs Sakamoto [ 0:1 ] 
+moves="a15 b14 e13 e10 f9 g11 e11 f10 g10 h11 h12 i11 j11 d8 k10 d9 i12 h13 g12 j12 h9 f11 i10 k12 i8 h10 g9 j9 j7 k6 i6 e9 c7"
+Dupszki vs Smirnov [ 1:0 ] 
+moves="m12 l12 l13 m10 l9 j11 j10 i9 h9 i11 g11 g10 k14 j15 i10 h10 g9 e9 e10 f7 f9 d11 l7 k8 l8 l6 k7 j14 j12 m9 m7 j7 l11 l10 k10 n13 n7 o7 m8 o6 o10 n11 n9 k6 n6 k9 n8"
+Kachaev vs Bogatirev [ 1:0 ] 
+moves="h8 g9 e11 d8 e7 f7 f9 e10 f11 g11 g10 h11 e12 d13 f12 f10 h12 g12 g13 d10 i11 c10 b10 j10 i10 i12 e14 f14 e13 e15 i8 h9 e8 d7 d6 e5 f5 j9 j8 k8 i7 i9 k9 h6 i6 i4 h5 j5 j4 l10 l9 j13 j12"
+Kozhin vs Kondratiev [ 0,5:0,5 ] 
+moves="h8 i7 k11 g7 j7 h6 j8 g6 j6 j9 i5 i8 h7 i9 i6 g8 g9 f7 e6 h5 e8 i4 j3 e7 d7 f9 f10 k7 k9 k6 h3 k4 k8 j11 i10 k10 h11 h10 e11 d12 g11 f11 e9 d8 h14 g15 g13 f12 g12 g10 f13 e14 i13"
+Rizvanov vs Sakamoto [ 1:0 ] 
+moves="h8 j10 f5 i10 g5 h10 g10 i8 h5 i5 h7 h6 g7 i9 i7 f7 g4"
+Lebedev vs Katsev [ 1:0 ] 
+moves="h8 g9 d7 f9 g7 i9 h9 f8 f7 h7 g8 e6 h10 i10 i8 h11 g10 j7 d9 g12 k8 j8 f11 e12 f13 f12 h12 e7 d6 d8 f6 e5 e8 g6 j6 i7 h6 l10 j10 k9 m11 l9 l8 m9 j9 m8 l7 k11 m6 n5"
+Rumyantseva vs Miyagawa [ 0:1 ] 
+moves="l13 l12 m11 j11 k10 k9 j10 i10 h9 i8 i9 f9 h8 g7 m12 m10 i13 h11 g11 j9 k8 g10 e8 h7 g8 f8 f7 f12"
+Sakamoto vs Dupszki [ 0:1 ] 
+moves="a15 b14 e13 f12 f10 e9 g9 e10 e8 g8 f7 d10 f8 f9 d11 e11 c9 e7 g13 g12 h12 i11 g6 h5 f13 h13 c10 d9 f11 e12 i6 c12 d12 j6 j8 f5 g5 h4 g4 g3 i5 i7 j11 h3 h2 i3 j3 k7 j7 l8 k9 k5 l4 m9 n10 i9 k4 j4 l6 h7 h6 m6 i10 k10 l11 l12 k12 l13 m10 n9 j10 j9 j13 i14 e3 f2 d7 c7 m4 l3 m5 n6 e5"
+Tarannikov vs Lebedev [ 0,5:0,5 ] 
+moves="g3 h3 j3 i5 i6 h7 g6 g4 f4 h5 h6 f6 g5 i7 g7 g9 k5 k6 l5 f8 e5 d6 e3 d2 e7 f9 e6 e4 f10 e9 d9 i2 f7 e8 h9 g8 d7 c7 d8 f11 d11 d10 g10 i10 j9 l7 j5 i9"
+Bogatirev vs Kozhin [ 0,5:0,5 ] 
+moves="m13 m12 l13 k11 j12 j13 h11 h10 i9 i8 g10 j9 k12 k8 i12 h12 l8 k10 l11 j7 k7 i6 l9 j8 f9 e8 j6 g6"
+Smirnov vs Kachaev [ 0:1 ] 
+moves="i9 e10 i5 j6 d10 h8 h7 i7 k5 g6 h6 g9 f10 e8 h5 j5 d8 g8 g7 f8 i8 e7"
+Katsev vs Kondratiev [ 0:1 ] 
+moves="h8 i7 l9 j7 h7 j8 h6 h9 j9 i8 k6 i6 i9 i5 i4 k9 h4 h5 g4 f4 g5 f6 j5 h3 j4 k4 j2 j3 i3 k1 h2 k5 i11 j10 i10 l7 l8 i12 f8 f9 e8 d8 e10 g10 f11 h11 j13 e9 d9 c8 c10 f7 f10 d12 f13 f12 b11 a12 d11 e12 c12 h12 c11"
+Rizvanov vs Miyagawa [ 1:0 ] 
+moves="g3 h3 i3 i5 f6 g5 h5 g7 h6 g6 g8 h8 i9 j7 k6 k7 j6 l6 i7 j9 k8 i8 k10 m5 n4 l5 l7 l4 l3 m6 k4 m8 m7 f9 k11 k9 j11 i11 j10 i10 j13 i12 i13 j12 k13 l13 m11"
+Dupszki vs Rumyantseva [ 1:0 ] 
+moves="c3 c7 c5 d4 f5 e6 f7 e4 e5 d5 d6 f4 g4 h5 i7 e7 d8 f9 e10 j5 i5 i6 h7 j7 j6 h8 k8 h4 h6 g5 i3 k6 i4 k3 i8 j9 j10 i11 g11 l5 m4 k4 k5 i2 j3 l4 l6 h2 j2 m7 m8 k11 b5 c4 b4 d3 f3 e2 e9 b3 a2 f8 h10 i9 f10"
+Kachaev vs Kondratiev [ 1:0 ] 
+moves="h8 h10 k7 e7 e9 g7 g9 f10 f7 f9 g10 i8 j6 i5 h6 h7 i6 k6 f4"
+Kozhin vs Rizvanov [ 1:0 ] 
+moves="k2 n4 n7 k6 j7 l6 k5 l8 j6 l7 l5 j5 m8 l9 l10 j9 i7 h8 k9 j8 m6 k4 m5 i8 k8 g8"
+Lebedev vs Bogatirev [ 0:1 ] 
+moves="m3 m4 l3 j6 k6 i5 k7 k8 j7 l7 h8 h9 g8 f8 g7 h7 i9 f6 h10 g11 i10"
+Smirnov vs Tarannikov [ 1:0 ] 
+moves="h8 g9 d7 f9 h9 h7 g8 i8 f7 e6 e8 d8 g6 h5 j10 i9 i10 j11 h10 k10 h12 h11 i11 g13 i12 i13 j9 g12 f13 k9 k8 f10 e9 c10 d10 l10 k11 l9 l7 m6 m8 k6 j6 j8 m11 k4 l12 k13 l5 l4 m10 m9 m13 n14 k12 j12 n9 j13 h13 n11 o8 l11 n8 l8 k7 j4 i4 m4 n4 k3 i7 m7 n6 l3"
+Miyagawa vs Sakamoto [ 0:1 ] 
+moves="g9 h4 b11 f10 d6 e7 f6 e6 e8 f7 d7 f9 d5 d4 e5 c7 f5 c5 f8 d8 e9 f4 e4 c6 c8 h6 g7 g8 h7 i8 i7 j6 h9 e3 f2 d3 f3 g5 d2 e2 b5 k7 i5 k6 i6 i4 g4 j5 j7 h5 g2 h1"
+Lomakin vs Kozhin [ 0:1 ] 
+moves="f11 h5 j11 d12 b13 e10 f9 f12 e12 g10 f10 f8 g11 e9 h11 i11 f13 d11 i10 j9 k12 h9 h12 j12 g12 e14 g14 h13 j14 i13 g13 g15 k14 k11 h14 i14 d10 i9 k9 e8 e7 h8"
+Katsev vs Kachaev [ 0:1 ] 
+moves="h8 h6 d6 d8 d9 f7 f6 g7 f8 e7 h7 g8 e6 c6 f10 f9 c7 g9 g10 h10 g5 f5 i9 j9 f11 e10 d11 e11 e12 d13 i11 i10 f13 g14 j11 h11 k8 k9 i5 h5 j6 k7 h12 f14 i13 g11 l10 h14 e14 g13 f12 g12 g15 l9 m9 k11 l5 i4 g6 k5 k4 j5 h3 j3 g3 f3 g4 g2 l6 k2 l1 m6 d4 f4 f2 h4 d5 d3 m4 l7 k6 j7 i8 h9 l8 j8 i7 i6 k12 j13 b8 e8 e9 b5 d7 b9 l12 m12 l13 l14 m14 n15 j14 k13 c4 e5 b3 a2 n7 n8 j2 l4 m3 n3 b10 c11 c12"
+Tarannikov vs Bogatirev [ 0,5:0,5 ] 
+moves="h8 h3 c10 d9 i3 e9 f9 e10 d8 f8 e11 e6 e7 f6 g6 f5 g4 d5 f4 b7 c8 c6"
+Litvinenko vs Muratov [ 0:1 ] 
+moves="g3 h3 j3 i6 i5 j6 g6 h5 j7 h7 h6 g8 f9 f8 e7 i9 h8 i10 g5 g2 k6 h9 j11 g4 i2 f3 e2 e4 d5 f4 h4 e6"
+Osipov vs Taiblin [ 0:1 ] 
+moves="n7 k5 l6 j7 i6 j5 k7 l5 m5 j8 j6 k6 m4 l7 i4 i8 h9 i5 h5 g6 n6 n4 m7 m6 n9 n8 k9 l8 h8 h7 j9 i9 j11 k10 i10 k12 h11 g12 i11 g11 h10 h12 j12 g9 g10 j10 i12 j13 i13 i14 m9 l9 k11"
+Osipov vs Lomakin [ 1:0 ] 
+moves="f8 i11 j5 g9 f10 g11 f9 f11 h11 i9 g8 h10 j8 g10 g12 i10 i8 h8 h7 i6 j9 k10 j10 i12 i13 j11 h13 k12 l13 k13"
+Katsev vs Kozhin [ 0:1 ] 
+moves="j13 i13 h13 k10 g10 k11 k12 l11 j11 j10 i12 h11 j12 h12 i10 h9 j14 j15 l12 m12 j9 m11 m14 l13 k14 l14 l10 m10 m9 k8"
+Kachaev vs Tarannikov [ 0:1 ] 
+moves="l4 j3 h2 i6 i4 j5 k4 j4 j6 k5 i5 j2 j1 g5 g6 h7 h4 g3 j8 k7 j7 k9 k8 j10 l8 i8 i10 j9 k11 l9 m8 n8 i9 i12 h12 e6 h3 h5 g8 h9 g10 g9 h10 f10 h8 e5 e4 e9 d7 f4 c7 e3 h6 d2 c1 d5 f5 d3 d4 c3"
+Bogatirev vs Litvinenko [ 0:1 ] 
+moves="h7 c8 m8 l7 b9 j9 k8 l8 l9 j7 k7 k10 j10 g7 h6 h5 g5 i7 f6 g6 i4 k5 j6 e7 h4 i3 f4 j4 l6"
+Muratov vs Taiblin [ 1:0 ] 
+moves="i3 k4 m5 j6 i6 k5 k3 l4 i7 i5 j4 l5 l3 m3 n2 k7 l8 h4 g3 l7"
+Muratov vs Lomakin [ 0:1 ] 
+moves="m13 m12 l13 j10 j9 i11 k9 l9 h10 i12 j11 i10 i13 k8 i9 m10 n11 l10 k10 l11 j13 k13 l8 j7 i6 h9 i8 g6 k7"
+Litvinenko vs Katsev [ 1:0 ] 
+moves="d4 g3 h2 i4 h4 h5 g5 i3 j3 i6 i5 h7 j7 j5 g8 g6 e6 f3 h3 f7 e8 e7 g7 f8 g4 f5 e4 f4 h8 i9 e5 f6 i8 j6 h6 k6 l6 k9 l7 l8 k8 j8 j9 i10 l3 m6 m7 k7 h10 j11 k11 i12 k10 k12 h9 i11 i13 h12"
+Bogatirev vs Osipov [ 0:1 ] 
+moves="m13 m12 l13 j10 k10 i11 h12 i9 i12 j11 j13 k13 h11 g10 h10 h13 g12 f12 j9 k8 h8 h9 i8 h7 g8 f8 f13 i10 d11 e11 d10 d12 f10 e12 e14 d15 l11 j12 j6 l14 m15 e9 e8 i7 j7 j5 i5 l8 m8 k4 i6 k6 k5 e7 f6 b10 c11 b8 b9 g6 e5 g4 h3 h4 f4 f5 d7 d6 c5 f9 g9 c12 b12 l5 j3 g7 f7 l6 l7 m6 k7 m7 k9 m4 m3 n3 o2 l4 n4 l2 l3 j2 k3 e3"
+Kachaev vs Kozhin [ 0,5:0,5 ] 
+moves="h8 h6 d6 e7 g7 i9 f6 e5 e6 c6 g8 f7 f9 g9 e10 d11 g10 h10 d7 f8 i11 d9 f5 g4 i8 g6 e8 h11 j7"
+Tarannikov vs Taiblin [ 1:0 ] 
+moves="h8 h6 f11 d8 c7 f6 c8 g5 c9 c10 d9 e10 f9 e9 e8 d7 f8 f10 g10 g11 h12 h9 e7 g9 c5 c6 d6 b4 f4 e5 g6 h5 i8 g8 f5 h7 j5 f3 e4 j8 k9 i10 j11 d3 e3 d4 c3 j7 i7 h4 h3 k7 h11 i12 l6 j6 i5 i6 g4 e6 f7 l9 k8 l10 j10 i11 i13"
+Bogatirev vs Lomakin [ 0,5:0,5 ] 
+moves="h8 h10 k7 j5 h13 i8 j9 k6 i9 j10 k9 l9 l7 j7 h9 g9 i10 k8 i6 j11 l10 m8 k10 m7 m6 k5 m5 j8 l8 j4"
+Katsev vs Muratov [ 0:1 ] 
+moves="h8 h10 l10 m10 n11 k11 i7 i11 g9 j6 g8 j11 l11 g11 h11 j8 i9 j9 f8 e8 f10 e11 f9 f7 g7"
+Tarannikov vs Litvinenko [ 1:0 ] 
+moves="n5 l5 l6 k8 k7 j8 i8 i7 h6 j9 j6 i5 m7 k6 l7 n7 j10 l9 k9 l8 k5 n8 m8 m10 n11 i6 j7 g10 g6 f5 g5 i3 i4 f7 k11 f6 f8 h3 j3 g4 e6 i9 g9 h5 f4 e7 g7 g8 i11 j12 f10 e9 e11 d12 g13 h12 f12 h14 f11 f9 f13 f14 e13 e10 h7 h13 h11 g11 e14 i10 g12 d15 d13 c13"
+Osipov vs Kachaev [ 0,5:0,5 ] 
+moves="l5 l6 n6 j5 i6 j7 j8 h5 i4 i5 g5 i7 j6 f6 g7 g8 h9 f9 e8 e10 d11 f10 g10 e11 f12 d6 f8 e6 c6 d9 d7 c8 b5 a4 f11 e12 e9 d10 b10 e4 f4 e3 e5 d4 c4 d3 g6 c3 g3 g4 h2 i1 a3 f2 c5 d5 d2 e13 e14 i11 j12 i9 i10 j10 h12 h11 k11 k12 l10 m9 k9 m11 l8 m7 m8 k8 l7"
+Taiblin vs Kozhin [ 0,5:0,5 ] 
+moves="c4 d4 d3 e6 f6 g5 f5 g6 c6 c5 f3 f4 e3 g3 g4 h5 f7 f9 g7 h8 h7 e7 e4 d5 e5 b5 g9 j7 j8 k6 j5 l5 m4 i6 j6 k8 l9 k7 k5 i8 h9 i7 i9 m6"
+Lomakin vs Kachaev [ 0:1 ] 
+moves="l3 m4 n6 l6 k6 j5 j4 h6 j8 k8 k9 j10 h9 i9 l10 m11 k11 j12 j11 i10 h11 i11 i8 g10 h10 i12 i13 h12 g12 h7 i6 g7 f8 f7 e7 g9 g8 h8 f6 i7 j7 l5 j6 l7 l8 m6 j9 n5 o4 m5"
+Katsev vs Bogatirev [ 0:1 ] 
+moves="b14 b13 e13 h8 i9 e10 d11 f10 d10 d9 f12 g11 g12 e9 h12 e12 e11 c9"
+Tarannikov vs Muratov [ 0:1 ] 
+moves="j8 g5 f11 i9 f6 i8 i7 k9 j9 j10 i11 k11 l12 k8 k10 k6 h11 g11 h8 j6 h9 h10 k7 l6 m6 h5 i6 j5 i5 i4 l7 j7 j3 e5 f4 f5 d5 e6 g4 e8 e7 f10 g10 d8 e9 c8 b8 b5 b9 g6 f7 g8 f8 e4"
+Osipov vs Kozhin [ 0:1 ] 
+moves="h8 g7 e11 f10 f8 g8 h7 h9 g9 h10 i10 j9 i9 i11 h12 j6 d10 c9 e12 e10 d11 d12 f11 g11 d13"
+Litvinenko vs Taiblin [ 1:0 ] 
+moves="k11 l12 m13 i10 k13 k12 l13 j13 m12 m11 n11 k14 n13 o13 n12 n10 j12 i12 h11 i11 i13 l10 l11 k10 h13 h10 j10 k7 j8 j7 h8 m9"
+Karlsson vs Jonsson [ 0:1 ] 
+moves="d4 f5 h4 g3 f2 e3 d2 e5 e2 g2 c2 b2 d5 d3 f3 g4 g5 e6 d7 d6"
+Karlsson vs Sandstrom [ 0:1 ] 
+moves="e5 d4 c3 d6 e3 e4 d5 c5 e7 e6 g5 f5 f6 h4 g4 g6 h7 d3 c2 h6 f10 d8 h8 g7 f8 f9 g9 i7 i8 g8 h10"
+Jonsson vs Nyberg [ 1:0 ] 
+moves="e5 g7 i5 h4 h7 g6 g5 h5 i4 i6 h6 f4 g4 j8 i9 j10 k8 h10 i10 j9 j11 g8 i11 i8 i12 i13 k10 g10"
+Nyberg vs Sandstrom [ 0:1 ] 
+moves="l12 j11 h12 i10 h9 h11 k11 j10 j12 i12 i13 l10 k10 g10 f9 g12 j9 g11 g9 i9 i11 h10"
+Karlsson vs Nyberg [ 0:1 ] 
+moves="h8 i9 k5 g8 g9 i7 i8 j8 h6 h7 k7 f9 e10 j7 i6 j6 j9 f7 g7 f8 f6 e6 d5 e8 k6 i10 h9 k4 e5 d4 d8 d7 c6 g11 h11 f10 f11 h12 i13 g12 f12 f5 g4 h5 g6 g5 j5 j10 k9 k8 g10 e12 e4 c8 b9 b7 i4 h3 i3 j4 l10 m8 j13 i12 l11"
+Jonsson vs Sandstrom [ 1:0 ] 
+moves="d4 e5 g7 d6 f4 g4 f5 f6 g6 h7 e3 e7 c5 f2 c4 e4 g5 d2 b6 a7 c7"
+Jonsson vs Karlsson [ 1:0 ] 
+moves="h8 i9 k5 g9 k8 g10 i8 g8 j8 l8 g7 f9 h9 h11 i12 g11 g12 f11"
+Karlsson vs Sandstrom [ 0:1 ] 
+moves="f5 h6 i3 g5 i7 g7 g6 f6 i5 h7 i4 i6 h3 g4 j3"
+Jonsson vs Nyberg [ 1:0 ] 
+moves="h8 g7 e11 f10 f7 e8 g8 h9 e9 f12 f11 g11 h10 j7 i8 j8 j9 k10 h7 i6 h5 g6 h6 h4 i5 l10 k8 m10 n10 m11 k9 m9 m12 j11 i12 k11"
+Nyberg vs Sandstrom [ 0:1 ] 
+moves="f5 g7 i4 i5 g4 h3 h4 j4 f4 e4 h6 f6 g5 e3 e5 d5 g3"
+Karlsson vs Nyberg [ 1:0 ] 
+moves="i2 h2 f2 i5 h5 g4 j4 j6 k7 k4 i7 h7 i6 f4 e4 f7 e5 e7 g7 f6 f5 d8 g5 d5 c2"
+Jonsson vs Sandstrom [ 1:0 ] 
+moves="k2 l2 m3 k5 i5 i6 k6 l5 j5 l7 l8 k7 j7 n7 m7 j8 m6 m5 l6 n5 o5 n6 n8 h8 i9 h9 h6 g8 f8 g7 i10 f9 h7 g9 g10 e10 f10 j10 g5 h5 f4 e3 f6 f5 e6 d6 d9 d8 j12 i11 h12 g11 h11 i12 k8 j9 l10 k11 l11 l12 d4"
+Tarannikov vs Lomakin [ 0,5:0,5 ] 
+moves="h8 j11 f4 g6 j10 i9 h9 i8 h10 h7 j9 i10 i7 i11 i12 g5 g4 h4 f6 f5 e4 h5 e5 g7 j5 f7 e8 g9 g8 d6 e7 e6 d8 f8 e9 h3 h6 h11 g11 f10 c9 b10 c6 g3 i3"
+Osipov vs Litvinenko [ 0,5:0,5 ] 
+moves="g13 e12 c11 d10 f10 g11 h11 h10 i9 e9 i11 e11 e10 i10 j10 h12 k11 l12 j11 l11 j13"
+Muratov vs Kozhin [ 1:0 ] 
+moves="g3 h3 j3 i5 i6 j6 k7 g4 f5 j4 k4 h6 g7 i4 h5 i7 j8 k5 l4 j5 g2 l6 m7 f6 g5 f4 h4 m6 l7 j7 i8 g8 g9 i9 d6 d5 k10 k9 j11 j9 l9 m8 i12 h13 i11 h11 l11 l10 j12 h10 h12 i3 h2 i2 i1 k12 j14 j10 i13 i10 g11 f10 k15"
+Kachaev vs Bogatirev [ 1:0 ] 
+moves="c13 h8 f13 e13 f10 e11 h10 g10 e12 f11 d11 c10 h12 h11 i11 i12 f9 j13 k14 g9 f14 g13 g11 e9 h14 g14 j14 i13 l14 i14 k13 j12 l12"
+Katsev vs Taiblin [ 1:0 ] 
+moves="h8 h10 j5 i7 i9 g7 h7 h6 f8 g8 g6 g10 f10 f7 j9 i8 h9 k9 j8 j7 g11 h12 h11 i11 j10 j12 k13 g12 k11 l12 l7 f12 i12 k8 k10 m10 l9 j11 l8 l10 k6 i4 l6 l5 m8 n9 o6"
+Lomakin vs Litvinenko [ 1:0 ] 
+moves="i8 l7 e6 f7 j12 i6 g9 j7 k8 h7 i7 g8 j5 f9 e10 f8 f6 d8 e8 f10 f11 e9 c7 d10 g7 d9 d11 g11 h12 c11 b12 c9 b9 f12 b8 d6 d7 f5 e7"
+Tarannikov vs Katsev [ 1:0 ] 
+moves="h9 g7 h12 h11 h8 g10 i12 i10 j12 g12 j9 g11 g9 i9 j11 j13 i7 f13"
+Osipov vs Muratov [ 0:1 ] 
+moves="h8 f5 j12 i10 e4 g7 g8 i8 h7 h9 i7 f9 g9 f10 g10 g12 f11 h12 h11 g11 e9 j6 j7 k7 l8 i5 i6 h5 j5 k4 h4 l6 k6 j4 k3 m4 n4 i4 l4 j3 k2 i2 h1 i3"
+Bogatirev vs Kozhin [ 0:1 ] 
+moves="k4 l7 m9 j6 i7 h7 j9 k6 j5 k9 l6 h6 h5 i5 h4 g7 f8 j10 i11 g6 i6 g4 g5 f6 e6 h10 h9 g10 i10 g8 g9 f9 e10 d7 e8 e7 f7 d4 e5 e4 f5 d5 d6 f4 c4 g12 f12 m7 k7 m5 k3 m6 l3 m2 k2 m4 m8 i3 k11 j11 e11 g13 c10 b7 c6 c7 a7 e12 g11 h11 c11 h8 i9 d11 b10 f10 d10 a10 b12"
+Taiblin vs Kachaev [ 1:0 ] 
+moves="h8 g7 e11 g10 f6 f10 f8 f9 g8 e8 h11 f7 e7 e10 d10 d9 c10 f11 g12 i8 h9 h10 i10 f13 f12 c9 e9 f5 j9 k8 g4 d6 d5 f4 e5 j11 h12 i12 f14"
+Taiblin vs Lomakin [ 1:0 ] 
+moves="i9 f7 l11 j10 h8 i8 h10 h9 j8 g11 g10 g6 f10 i10 g8 h7 f5 l7 k8 i4 h5 k6 k7 l6"
+Katsev vs Osipov [ 0:1 ] 
+moves="h8 h10 l10 g8 i9 g7 g9 i7 j10 h7 f7 f9 i6 g10 f10 h9 i8 k11 k8 j7 k7 l8 k6 k9 l6 m6 k5 k4 j4 m7 m5 j8 l5 n5 l3"
+Tarannikov vs Kozhin [ 1:0 ] 
+moves="k13 l13 m10 k10 i10 i9 l11 k11 k8 l9 m8 m9 j9 l7 l8 n8 j12 j10 j8 i8 h8 h11"
+Kachaev vs Litvinenko [ 1:0 ] 
+moves="f9 f10 j7 h7 h11 g10 h10 h9 j9 g9 j8 j10 k8 g12 g11 i9 m8 i8 l7"
+Muratov vs Bogatirev [ 1:0 ] 
+moves="g7 g12 l5 f4 e11 g5 i5 e5 h6 j4 e8 e9 h5 c7 d6 d8 f10 c5 d5 b6 a5 c4"
+Lomakin vs Katsev [ 0:1 ] 
+moves="b11 d11 d10 g8 e8 d9 g7 e9 f9 g10 g11 i10 h9 h10 j10 j9 k8 i7 h8 f6 k9 k7 l8 m7 h6 i8 i11 h12 j4 i9 i6 j7 l7 l6 j8 i5 h5 h7 g6 j5 k10 h11 m8 n8 k6 j6 o10 n9 l10 g12"
+Osipov vs Tarannikov [ 0:1 ] 
+moves="f8 i11 j5 f7 i10 e8 g6 h11 h7 g8 g10 j11 k11 e6 d5 e9 e10 g11 f11 f10 d8 h12 i13 j10 g13 j8"
+Litvinenko vs Kozhin [ 0:1 ] 
+moves="c3 c4 d3 f6 e6 f5 g5 f4 f3 g3 d6 e5 f8 d4 e4 g8 g9 e7 h8 f10 i9 h10 j9 h9 i10 i8 j7 j10 i7 k8 k7 h7 j6 k5 j8 j5 k9"
+Kachaev vs Muratov [ 1:0 ] 
+moves="g12 h11 e13 g11 i11 e10 h12 i12 g13 f14 f9 j10 k10 f8 g7 c10 d10 c9 c8 f6 e7 f7 f5 e6 g6 g8 h9 h8 i8 i9 k11 k9 j8 e4 d5 k6 k7 m9 m8 j5 i6 i4 h3 j7 k4 l9 j9 m10 l11 m12 m11 j11 n11 o11 m6 l8 j3 l5 g5 l6 l7 m7 n6 o9 n9 k5"
+Bogatirev vs Taiblin [ 0:1 ] 
+moves="f9 h9 k9 l11 e6 h10 h8 i10 f8 g10 f10 f11 i8 g8 f7 f6 i7 g9 g7 g11 g12 j11 k12 j7 k10 i11 h11 k13 j12"
+Balabhai vs Katsev [ 1:0 ] 
+moves="h8 j8 m8 k10 j6 i7 k9 i9 k7 i5 i8 h6 g5 h10 m9 f8 l8 n10 g7 g9 i11 j10 g10"
+Kulin vs Kachaev [ 0:1 ] 
+moves="g13 h13 i13 g11 h10 i10 g9 i11 j11 h8 g7 f11 e11 j9 k8 g8 f8 i8 i9 h7 g6 e10"
+Frolochkin vs Kachaeva [ 0:1 ] 
+moves="a9 o9 a10 e10 d9 e9 e8 c10 d10 d11 a8 a7 f9 e12 f13 f11 e11 g10 h9 g12 f12 g13 g11 h10 a11 a12 c9 b8 i10 g8 i9 j9 i12 h13 i14 i8 k10 g6 f5 j8 k8 i11 l9 g9 g7"
+Kim vs Kalnitskiy [ 0:1 ] 
+moves="g8 h7 i8 h9 h8 j8 g7 g9 i9 j10 i6 i7 h6 j7 f6"
+Rumyantseva vs Kisilev [ 1:0 ] 
+moves="h4 j4 l4 j6 j7 i6 h6 h7 k6 i8 i9 g8 f9 g6 j9 g9"
+Polyakov vs Filinov [ 0:1 ] 
+moves="h8 k7 d6 f8 l6 g7 h6 i7 f7 g6 h9 h7 j7 g8 g9 i6 f9 i9 i8 g10 j5 k6 j8 j6 l8 k8 k5 i5 i4 l9 l4 j4 l5 l7 m5 n5 n6"
+Polyakov vs Frolochkin [ 0:1 ] 
+moves="f13 h13 i13 i10 h9 f10 h10 j9 h8 h11 k8 i8 h7 h6 i7 j7 k11 j10 j6 k5 j11 k10 l10 l11 m12 j12 m9 l8 k9 m10 f9 g9 d11 e10 d9 g11 e12 c10 d10 d8 e9 d12 e11"
+Balabhai vs Rumyantseva [ 1:0 ] 
+moves="h8 e9 l10 f8 j8 k9 j10 g7 h6 i9 j9 j7 k10"
+Katsev vs Kisilev [ 1:0 ] 
+moves="o9 a8 o8 k8 l9 k9 k10 m8 l11 k12 o10 o11 m12 j9 n13 o14 l10 l8 l13 l12 n11 k14 n10"
+Kulin vs Kim [ 1:0 ] 
+moves="m13 m12 l13 j13 j11 k12 l11 l12 j12 k11 k10 j10 i9 i12 h11 h10 i8 h7 k8 i10 l9 k9 j7 i6 k6"
+Kachaev vs Kalnitskiy [ 1:0 ] 
+moves="f3 g3 i3 h5 f6 g5 g4 f5 i5 e5 d5 f4 h2 h6 i7 e3 d2 e4"
+Kachaeva vs Filinov [ 0:1 ] 
+moves="k13 j13 i13 i11 j10 k11 i10 k10 h11 k9 k8 j9 l11 l9 m9 h9 i9 i7 h7 m8 n7 k6 g10 j8 h6 l7 j5 i6 h5 h8 i5 l10 m11 l6 l8 j6 m6 k5"
+Frolochkin vs Rumyantseva [ 0:1 ] 
+moves="g4 h11 i8 h7 h9 h8 g8"
+Kim vs Kisilev [ 1:0 ] 
+moves="f9 h9 k9 i7 h7 i6 i8 g6 k8 j6 h6 h8 g9 j10 j9 k10 i10 h11 i9 h10 h12 i12 k5 l7 l9 m9 i5 k6 j4 g7 l6 i3 m5 j5 m8 i4 h3 l8 k7 j8 m7 n7 m4 m6 n4 o3 l4"
+Balabhai vs Kachaeva [ 1:0 ] 
+moves="o7 a7 o6 l7 l6 m6 k8 k7 j7 i6 l9 m8 m9 k9 j5 j6 h6 i8 i5 k5 l10 k11 i10 k10 k12 l11 h7 j11 i11 j9 m12 h8 i7 g7 j12 i9 j10 i12 m10 n11"
+Kalnitskiy vs Polyakov [ 1:0 ] 
+moves="h8 f8 c8 b9 i11 d9 f7 d11 e9 d10 d12 c10 e12 e10 b10 f9 c12 d7"
+Kulin vs Katsev [ 0:1 ] 
+moves="l4 j4 h4 j6 j5 i6 h6 h5 j7 k7 l8 l6 k5 i8 m5 l5 k3 m6 k6 j2 k9 j10 i9 j9 k10 i4 j3 g6 f5 g8 i7 j8 h8 f7 e8 i10 j11 g10 g9 f10 h10 h9 e6 f11 e12"
+Kachaev vs Filinov [ 0:1 ] 
+moves="f4 h3 k4 h6 i6 j5 k6 j4 i5 j6 j7 h5 h4 i8 h8 g6 i4 i3 g3 k5 l6 f5 e4 g4 i2 j3 j2 h2 g1 e6 d7 f7 g8 e8 d9 e7 e9 d5 e5 c4 b3 f9 d6 c7"
+Balabhai vs Filinov [ 1:0 ] 
+moves="h8 k7 d6 j9 k8 j8 j7 l9 i9 j10 i8 j11 j12 k10 i12 i10 l10 h9 k12 h12 m9 k11 h11 f8 g10 f7 g8 f9 f6 g7 e9 l11 m11 m12 n13 l8 m7 h5 f10 i5 j6 i7 g5 i4 g6 h6 j4 i3 i6 m8 n7 j5 k6 l5 k5 l6 l7"
+Kalnitskiy vs Katsev [ 0:1 ] 
+moves="m12 l12 l13 k10 j11 k12 k11 m11 j13 k13 j14 j12 h12 i11 h10 h11 g11 i13 i10 l10 n10 i9 j8 g10 f9 l8 l9 j7 f10 f11 i8 g8 e12 e9 d12 f12 e11 c13 g7 f7 e6 h6 e5 f6 f5 e7 g5 h5 g6 g4 h7"
+Kachaev vs Rumyantseva [ 1:0 ] 
+moves="h8 f8 c8 e9 g7 e7 f6 e5 e6 d6 i9 j10 g9 c7 b8 d7"
+Kulin vs Kisilev [ 0:1 ] 
+moves="h8 g7 f4 i6 f8 g8 g6 h7 j5 f7 i7 h9 e6 f9 e10 g9 e9 i10 j11 h11"
+Kulin vs Kachaeva [ 0:1 ] 
+moves="i9 g9 d9 g8 g10 f8 h10 f10 f9 h8"
+Kim vs Frolochkin [ 0:1 ] 
+moves="h8 j8 m8 k7 i9 k9 k10 l9 i7 m9 n9 j10 j6 k5 k6 i6 l7"
+Polyakov vs Kisilev [ 1:0 ] 
+moves="l4 j4 h4 k7 h3 h6 g4 i3 f5 i2 e4 i4 i5 h2 e6 d7 k5 k2 j2"
+Katsev vs Filinov [ 1:0 ] 
+moves="h8 k6 d6 f7 l6 g7 f8 g8 g6 e6 h9 d5 c4 e7 h7 h6 i10 d7 c7 f5"
+Polyakov vs Kim [ 0:1 ] 
+moves="e3 f3 g3 g5 f6 e5 f7 f8 g6 e6 h5 e8 e7 d7 c8 h6 f9 i7 j8 j6 k5 d5 c5 g7 e9 j5 i4 j3 j4 c6 e4 l6 d8"
+Frolochkin vs Kalnitskiy [ 0:1 ] 
+moves="i13 h13 f13 g11 h10 i10 j11 f11 e11 e10 g12 f10 f9 d10 c10 e8 d8 g7 e7 f6 h8 h7 i7 g6 g9 f8 e9 d9 f5 h6 i6 h5 f7 g4 i9 h9 g5 h4 h3 i8 j6 k5 j7 j4"
+Rumyantseva vs Kachaeva [ 0:1 ] 
+moves="m13 m12 l13 k11 j11 i10 i9 k10 k9 j9 l11 l10 j10 j13 h11 m9 n8 h10 l8 i11 j12 m7 h8 g7 h7 h6 f8 g8 g6 f5 f10 f9 e10 e11 j6 i7 j8 k8 m6 k6 j4 j5 i4 k4 h4 i5 h5 j3 k5 f4 i3 h2 g5 f6 f3 e8 e5 d10"
+Balabhai vs Kachaev [ 0,5:0,5 ] 
+moves="o6 a6 o5 k6 k5 j6 l6 j4 l5 j5 j7 i4 l7 l4 k4 j3 j2 h5 g6 h3 g2 k3 l3 k2 l1 h6"
+Kalnitskiy vs Balabhai [ 0:1 ] 
+moves="g3 h3 j3 i5 h6 i7 g6 i6 i4 h5 g4 g5 j5 h4 f6 k7 i8 j6 l8 k5 h8 k8"
+Rumyantseva vs Filinov [ 0:1 ] 
+moves="h8 j8 m8 k10 l9 j10 j7 k8 k7 i10 l10 h10 g10 l7 h11 j9 m6 j11"
+Polyakov vs Kulin [ 0:1 ] 
+moves="e3 f3 g3 g5 f4 e5 h4 i5 g4 e4 i4 j4 h5 d5 g2 c5 f5 c6 b7 c4 c7 c3 c2 f6 d4 e6"
+Kisilev vs Frolochkin [ 0:1 ] 
+moves="h8 k10 e6 f7 l11 i9 i10 h7 g6 j8 k7 g7 i7 g9 i6 e7 d7 f8 f6 h6 d6 c6 e9 i5 j4 j9 h9 j11 j10 i12 l9 h10 i11 g11 f12 g10 g8 j13"
+Katsev vs Kachaev [ 0:1 ] 
+moves="l4 j4 h4 j6 j7 i6 h6 h7 l7 i7 l5 l6 i8 k6 m6 k4"
+Kalnitskiy vs Filinov [ 0:1 ] 
+moves="g3 h3 j3 i5 i6 h6 j4 h5 h4 j5 g5 g4 l5 f5 i2 k4 e6 e7 k6 f8 g7 f7 f6 h8 l6 i3 m4 n3 l7 h7 h9 l8 m6 j6 o6 n6 l3 l4 n5"
+Kachaev vs Kachaeva [ 1:0 ] 
+moves="f4 h3 k4 i6 f6 k6 h6 i7 i4 i8 i9 j7 h9 k8 l9 k7 k9 j9"
+Kulin vs Balabhai [ 0:1 ] 
+moves="l13 k13 j13 h9 m9 h10 k12 h12 h11 i11 j12 j10 k9 g10 i10 g12 j11 m14 g13 e12"
+Frolochkin vs Katsev [ 0:1 ] 
+moves="h8 e9 l10 i9 d10 g9 g11 e7 f9 f8 d6 h7 e8 i8 i10 g6"
+Polyakov vs Rumyantseva [ 0:1 ] 
+moves="h8 h10 k7 l8 n9 j10 l7 j7 k9 k10 i10 j9 j8 i8 l11 k6 h9 j11 j12 l9 m8 m10 i6 h6 l5 i12 h13 g11 m5 l6 k5 n5 m6 m7 k4 h7 g6 j3 l4 m4 k3 j2 n7 o8 n10 n11 k8 n8 k2 k1 i5 j5 h4 j4 j1 g3 f12 f9"
+Kachaev vs Katsev [ 0,5:0,5 ] 
+moves="h8 h13 m6 k7 i13 j6 l8 j8 j7 h6 k9 l6 m5 i5 m4 m7 k6 l5 j4 h4 g3 h5 h3 j5 k5 g5 f5 i9"
+Muratov vs Lomakin [ 0:1 ] 
+moves="l2 m3 m5 j5 k4 k6 i4 j4 j6 k7 k8 h5 i5 i3 h6 f6 j2 m8 k5 k3 l5 l7 n9 l6 k2 i2 n5 o5 l3 m4 l9 i7 j7 m10 h8 j10 m9 k9 i11 e6 f5 e7 d6 f7 h9 c7 g7 e9 h10 h7 h11 h12 e5 g5 h4 d8 c9 b6 a5 f10"
+Kondratiev vs Osipov [ 0:1 ] 
+moves="f2 g2 i2 h5 i4 i5 g4 h4 g5 h6 h7 j6 k7 j4 g7 g6 i6 k5"
+Lisyutin vs Taiblin [ 0:1 ] 
+moves="h13 i13 j13 h10 j11 i12 i10 k12 j12 j10 g9 g8 h8 i7 f11 g12 f10 e11 f9 f12 e9 d9 i9 h9 f7 f8 e12 g13 h14 j7 k7 j8 k9 k6 l5 j6 j9 i6 l6 i8 g10 i4"
+Kachaeva vs Bogatirev [ 0:1 ] 
+moves="j4 h3 e4 g6 h5 i5 j7 g3 j6 j5 i4 k4 g4 i6 h7 j3 k3 h8 g8 f6 e6 l5 m6 h4 f3 f2 e1 g7 e5 e7 g5 d5 i9 f8 d7 g9 h10 e9 h6 f9 f5 c8"
+Balabhai vs Lebedev [ 0:1 ] 
+moves="g3 h3 j3 i5 i6 j5 k5 h5 h4 k6 i4 f4 g5 f6 f5 h8 g7 g6 l4 m3 l6 j4 l5 l7 m5 k3 l2 l3 m8 m7 j7 j8 n5 o5 h9 i10 k8 k10 j10 i11 i9 g9 f8 j12 f10 e9 i12 f9 d9 k13 h10 l14 m15 e10 e8 d11 g8 c8 e12 k11 k9 l9 l11 i13 h14 f12"
+Taiblin vs Kachaev [ 0,5:0,5 ] 
+moves="j4 i5 l3 l4 m4 k6 m3 m5 k2 n5 j5 j3 k7 i6 i8 i3 i4 g3 k3 h4 j6 h3 f3 h5 h2 g5"
+Lomakin vs Osipov [ 0:1 ] 
+moves="h8 g7 j10 i7 h7 h6 i5 f6 g5 e6 i6 g8 f5 h5 d6 f7 d5 h9 i10 e9 g10 f8 d10 f10 f9 d8"
+Kondratiev vs Katsev [ 0:1 ] 
+moves="h8 j9 m9 i7 j7 i9 i8 h9 k9 g8 f9 f7 e6 g7 e7 g5 g6 h6 f4 i5 j4 j5 h5 k8 l7 h7 e5 e8 d6 c7 c6 f6 e4 e3 d4 i6 k4 i3 i4 h4 j2 f8 e9 c4 d5"
+Muratov vs Lisyutin [ 1:0 ] 
+moves="g3 h3 j3 j6 i6 h5 i7 i5 j5 h7 h6 j8 j9 i10 h10 g8 h9 g9 g10 f5 g5 g6 i8 f11 e6 e8 f7 e10 f9 d9 c8 e11 e9 f10 d12 h11 g11 f12 f13 g13 h14 d6 d7 e7 b9 a10 f8 c11 d10 g7 l9 k9 l8 l7 l11 k10 m10 k8 k6 j7 k12 k11 k7 j13 l12 l10 j12 h13 g12 m12 k13 m11 n12 l14 k4 k3 j4 l4 i2 h1 j2 j1 h2 e4 d3 g2 i3"
+Bogatirev vs Rumyantseva [ 1:0 ] 
+moves="h8 i9 g12 i7 i6 j8 h6 j9 j6 g6 i8 h9 g9 j11 j10 k9 l9 k11 l10 k12"
+Kachaeva vs Lebedev [ 0:1 ] 
+moves="h8 h10 k7 i7 g11 g7 f8 g8 f7 g6 g5 i10 g10 i8 i9 h7 f5 f6 i6 j7 k10 k9 j8 l6 l8 m9 g12 g13 f11 k6 h9 f9 e10 h13 e11 h11 e12"
+Bogatirev vs Katsev [ 1:0 ] 
+moves="m12 k13 i11 j10 k10 l11 i9 j13 i13 j11 j12 k12 i12 i10 i14 i15 l13 l7 n11 k14 k6 j7 k8 k7 m7 j5 i7 h7 h9 i6 g8 j6 j8 l8"
+Balabhai vs Taiblin [ 0:1 ] 
+moves="h8 h6 e4 e5 g6 f7 g8 g7 h7 i8 f8 f9 g9 e7 d7 g5 d8 e8 f5 d3 e6 c8 d6 d5 f10 i7 c6 f6 b6 a6 e9 c7 g11 h12 g10 g12 d10"
+Lisyutin vs Lomakina [ 1:0 ] 
+moves="b5 c3 e2 d4 c5 f5 e5 d5 d6 e7 f4 g3 f7 e8 e9 f10 g10 h9 h8 g7 i7 g5 i4 g4 g6 g2 g1 f3 c6 e3"
+Kachaeva vs Kondratiev [ 0:1 ] 
+moves="f13 d12 b11 f11 e10 e9 f9 d11 d10 g10 g11 i9 i10 h8 g7 f7 h12 h9 i8 g6 h5 e6 f5 d6 f6 d5 g8 d4 d7 c4 b3 b4 e4 c5 a3 e7"
+Muratov vs Kachaev [ 0:1 ] 
+moves="j14 i14 g14 g11 h11 j11 i10 j9 h10 g10 g9 h9 j12 i11 k10 k9 j10 l10 i9 m11 j8 k7 h8 k11 l11 i8 j7 f10 e12 d11 e9 g7 e7 f8 d8 c9 f11 e10 c12 f6 f5 e5 c7 b6 d4 d6 c6 g4 g6 b7 c4 f9 f7 h7 g8 c5 e4 b4 d3 c2 b5 e2 d5 e6 h5 i4 d2 d1 j5 g5 h4 g3 g2 f3 h2 h3 j4 j6 i3 k5 j2 i2 j3 j1 m9"
+Lisyutin vs Rumyantseva [ 0,5:0,5 ] 
+moves="h8 i9 i12 g10 f10 g9 h9 h7 g8 i8 i7 f7 g6 e7 f8 d7 g7 e8 f9 e9 e6 h6 e10 f12 g11 d9 d8 d11 c10 h12 j11 k10 j9 i10 j10 j12 k9 l8 l10 j8 k7 b10 d12 b9 b8 g4 e5 d4 f4 j6 i6 h4 h3 g3 i5 j5 j4 k5 l5 l4 m8 k3 k4 i3 j2 m6 m10 m11 m3 d6 c7 c9 a9 d3 d5"
+Lomakina vs Kachaeva [ 0,5:0,5 ] 
+moves="f12 g11 d13 e13 g9 e11 f11 e12 e10 f9 g7 g12 f13 f14 g10 f10 e9 h14 g14 c11 d12 g8 e7 f8 h7 f7 f6 h8 i8 d8 e8 e6 d5 j7 f5 g6 e5 c5 f4 e15 e14 i11 g5 h5 h4 i3 d4 c3 f3 f2 e4 g4 c6 h12 b7"
+Osipov vs Bogatirev [ 1:0 ] 
+moves="h8 h3 c10 h6 f7 i6 j6 h5 h7 i7 j8 j7"
+Taiblin vs Lomakin [ 0:1 ] 
+moves="l4 l3 d6 h12 f9 g12 d9 f12 i12 g10 f11 g11 g9 e9 f10 h10 e13 h11 h13 f13"
+Balabhai vs Katsev [ 0:1 ] 
+moves="h8 g7 k5 g9 g6 f8 h6 f9 f6 i6 e7 h7 g8 i7 f7 h9 i9 g10 f11 e8 d7 j7 k7 k8 l9 j9 i10 d8 f4 b8 c8 f5 g4 h4 c7 b7 e6 d6 c4 d5 b9 a10 e4 d4 d11 e9 d9 d10 c11 e11 c5 c6 c9 c10 e10 g12 i12 i11 j8 l6 l12 j11 l10 i8"
+Lebedev vs Kondratiev [ 0:1 ] 
+moves="c4 d4 d3 e6 f5 g6 f6 h5 f7 f8 c7 c6 e7 d7 d8 c9 i7"
+Kachaev vs Osipov [ 1:0 ] 
+moves="e9 f12 j10 f11 f10 g11 h10 g10 g12 h11 i11 f9 e8 e12 d13 d11 e11 e10"
+Kondratiev vs Lomakin [ 0:1 ] 
+moves="i13 h13 f13 g11 h10 i10 j11 k11 h8 g9 j9 h9 f9 g10 g12 e9 g8 i8 j7 i6 i7 j8 k7 l7 g7 h7 f6 e5 d8 e7 d11 f8 c12 e10 e12 c10 d10 d12 d7 d9 e8 c6 c5 e4 d5 f4 e6 d6 c7 g4 c4 f7 h4 g3 h2 g5 g6 e3 h6 e2"
+Muratov vs Taiblin [ 0:1 ] 
+moves="g3 h3 j3 j6 e5 h5 f4 h2 h6 k5 g5 i7 l4 i3 j4 i5 i4 h4 h1 k7 l8 l5 j5 j7 h7 i6 j2 j1 m4 k4 k8 i8 i9 k6"
+Bogatirev vs Lisyutin [ 0:1 ] 
+moves="h8 k7 d6 j8 f8 i9 h10 i7 h6 i8 g9 e7 i11 j12 i5 g7 h7 h9 h5 h4 f5 j5 f7 f6 g5 e5 e8 d4 c3 d9 e3 d3 f10 i10 i6 g8 j7 j11 k12 j9 j10 k9 l9 k8 i4"
+Katsev vs Lebedev [ 1:0 ] 
+moves="l12 d13 d12 e11 e12 f12 g13 g11 h10 d10 f11 e9 d8 f8 g7 e7 e8 d6 c5 f6 f7 c11 b12 c12 c10 d9 f9 b11 e14 c9 b8 b9 a9 e6 c8 a8 g6 g10 h13 g12 g8 g5 h7 d11 a11 i6 h9 h8 i13 j13 i11 i12 j12 h11 k14 k13 j10 k9 j11 i10 j9 j8 i8"
+Kachaeva vs Rumyantseva [ 1:0 ] 
+moves="g9 e7 g5 h8 d7 h6 h9 f9 f7 g8 f8 i9 i6 j10 k11 j8 k8 j7 j9 k7 h10 g7 f6 i7 h7 k9 l10 m7"
+Lomakina vs Balabhai [ 0:1 ] 
+moves="g9 e7 g5 h9 i10 f10 e9 f9 f8 e10 d10 g7 h7 f11 e12 d7 c7 c8 d9 e8 c6 h11 g10 g11 i11 h10"
+Lomakina vs Osipov [ 0:1 ] 
+moves="l4 l3 d4 j6 i6 i4 h5 g4 h4 g7 g5 f5 h3 h6 i3 j2 g3 j3 i5 g1 j5 k5 f4 e5 e3 f3 c5 b6 b4 d6 d2 c1 e1 f2 c3 a5 c4"
+Balabhai vs Rumyantseva [ 1:0 ] 
+moves="g3 h3 j3 g6 f5 e5 g7 h6 i6 h7 h8 e6 e7 i9 f7 f6 d6 f8 j6 h4 h5 j5 k6 k4 l5 j7 l6 m6 l8 l7 k7 m9 k5 l4 k8 k9 j8 i8 n8 m8 m7"
+Taiblin vs Lebedev [ 1:0 ] 
+moves="h13 i13 j13 h11 j11 i12 i10 k12 j12 j10 g9 g8 h8 f10 h7 h6 j8 k7 i8 i7 g6 f5 h9 f9 j7 k6 f11 g10 e8 f7 e10 g12 e9 e11 c8 e7 c7 d8 c9 c10 e5 d6 d9 b7 b9 a9 k9 j9 j14 j15 k5 c5 b4 g4 e6 f4 g5 d4"
+Lomakin vs Kachaev [ 0:1 ] 
+moves="j3 l4 n5 k5 j6 j7 k6 l7 l6 i6 h5 k7 i7 l9 k4 n7 m7 k10 m8 m6 k8 g5 i4 k2 h4 g4 h3 h2 g3 k3 f3 i3 g6 f7 h7 h6 d3 e3 f2"
+Muratov vs Osipov [ 1:0 ] 
+moves="j3 l3 n4 j6 k5 j5 k4 j4 k6 k7 j8 i8 i5 m6 m4 j7 l5 k3 i2 h1 i4 i6 n3 o2 n5 n2 h7 h5 k8 g9 h9 f8 h8 h10 e7 g7 g10 e9 d10 f10 l8 k9 g11 d8 e8 g6 g5 f6 h6 f4 f5 e5 g3 d4"
+Kraubner vs Lomakin [ 0:1 ] 
+moves="h8 g5 f12 g7 h10 e7 g8 h9 e10 f6 d8 f7 h7 f9 f10 f8 f5 g10 g11"
+Kondratiev vs Balabhai [ 1:0 ] 
+moves="g3 h3 j3 g6 h6 i5 j5 h7 j6 j7 i7 i8 f5 h9 g10 h8 j8 g5 g8 k9 j9 j10 g11 g9 h10 i9 k11 e8 e7 h5"
+Rumyantseva vs Kachaev [ 0:1 ] 
+moves="h8 k7 d6 i9 h10 i7 g9 k9 h7 h9 f8 e7 g8 i8 i11 j12 i6 f9 g10"
+Katsev vs Lisyutin [ 1:0 ] 
+moves="j14 i14 f13 g12 f11 g10 g11 f10 h10 e11 f9 f12 d12 d10 c9 g13 h14 e9 e10 g8 g7 d8 f7 c7 b6 e7 e8 g6 j12 i11 j10 i13 j11 j13 j8 j9 i9 k7 h8 k11 f6"
+Bogatirev vs Steshev [ 1:0 ] 
+moves="h8 g6 g3 i7 g7 h6 f6 e5 j8 i9 i8 k8 h9 f8 g10 j7 h11 h10 f11 e12 g11 i11 g9 g8 f9"
+Muratov vs Kachaeva [ 1:0 ] 
+moves="e3 g2 i2 g4 g5 e4 f4 h6 f3 f5 d3 c3 e6 d6 h7 f8 e7 g7 e9 e8 g8 f9 f7 d5 d7 d8 c8 b7 c6 c5 e5 j6 i5 i6 k6 j7 h5 j5 j8 h9 i9 h11 g3 h3 i4 i3 g10 f11 h10 j3 j4 l3 k3 k4 m2 g11 e11 i10 g12 k8 l9 l6 l5 c9 j9 k9 k10 g6 f6 j11 i11 l11 l13 k13 j13 e12 f10 d12 c12 d11 d10 e10 c10 b11 b10 d13 d14 c14 b15 f13 e13 m11 l12 m7 m5 l2 l4 j2 n6 o7 k11 j10 n5 m4 n8 n7 b9 a10 b4 c1 c4 e2 h14 i13 g14 f14 k14 m12 m9 l10 m13 j14 f12 g13 n14 o15"
+Kraubner vs Lisyutin [ 0,5:0,5 ] 
+moves="m13 m12 l13 j13 i11 k11 k10 i10 i9 j12 j11 i13 h14 h11 i12 l9 j9 j7 k8 k7 l8 i8 i7 m7 m8 j8 k6 g9 g10 f8 e7 j5 g8 j4 j6 l6 k5 l4 k4 k3 m5 f5 f7 h7 g6 e6 d7 c7 g5 f6 h5 i4 g4 g7 f3 i6 d4 g2 e4"
+Kachaev vs Kondratiev [ 1:0 ] 
+moves="g4 h4 j4 j6 g7 g5 f6 h6 f4 f5 e5 d4 d6 c7 e6 c6 e7 e8 f7 h7 h8 i9 g3 h2 g8 h9 g9"
+Muratov vs Bogatirev [ 1:0 ] 
+moves="h8 h6 e9 f10 g5 f6 g6 g7 e8 f7 g8 f8 f9 e7 h7 f5 f4 d7 c7 i6 h11 h9 i8 j9 g12 e10 d6 e5 g10 i12 g11 g9 i11 j11 f13 e14 g13 g14 h13"
+Osipov vs Taiblin [ 1:0 ] 
+moves="h8 h7 d8 g6 f5 g8 f6 g7 g9 f7 i7 f10 e8 h9 i10 i6 j6 k5 f9 h5 g5 h4"
+Katsev vs Lomakin [ 0:1 ] 
+moves="e3 f3 h3 g6 h5 h6 i6 f5 h7 g8 j7 g4 k8 l9 f6 g7 g5 f8 i5 e8 j5 k5 d8 e7 k4 l3 e9 g9 g10 h10 i11 d6"
+Steshev vs Kachaeva [ 0:1 ] 
+moves="h8 g7 k5 j5 h4 i7 j7 g8 i6 h6 k8 h5 k7 k6 i5 l8 g6 l7 l9 m10 m8 k9 j8 i9 j10 j9 g3 j6 i3 j4 h3 j3 j2 g5 f2 e1 f4 f5 i2"
+Lebedev vs Lomakina [ 1:0 ] 
+moves="h6 h8 l7 j9 h9 i10 k6 j6 k5 k7 j5 i4 l5 i5 l8 l6 m4 j7 m5 n5 m6 m7 k4"
+Tesařík vs Kostlivý [ 1:0 ] 
+moves="e3 f2 h2 h6 g6 i7 e5 e4 g5 g3 g7 g8 f6 h8 h5 f5 h4 i3 h3 h1 d7 d8 e8 f7 c6 b5 d4 c3 d6 e6 d5 d3 c7 f4 c5"
+Hanzl vs Eged [ 1:0 ] 
+moves="h1 h15 g1 h4 g5 g4 i4 h5 f3 f4 h7 i7 j5 h3 i2 i5 i1 j1 i6 k4 j6 k6 h6 j7 h8 g8 i9 f6 j10 k11 i8 j9 h10 h9 i10 k10 g11 j8 h12"
+Brdková vs Turečková [ 1:0 ] 
+moves="k2 m3 n5 j6 k5 l5 j7 k7 i5 k4 h5 i6 j3 i4 j4 h6 k6 j5 l3 m4 f6 j8 i3 h2 g5 h4 f5 e5 h3 k3 f3 g3 f4 f2 f7"
+Kopecký vs Souček [ 1:0 ] 
+moves="h6 h8 l7 g5 g8 g6 g4 f6 e5 h4 e7 e6 i10 f5 j9 k8 f7 h7 e4 d7 j11 h9 j10 j8 g10 h10 h11"
+Tesařík vs Hanzl [ 1:0 ] 
+moves="n5 n6 k2 k5 j6 i6 h5 h4 j4 j5 l5 i4 k6 l3 k4 i8 i5 j3 k3 h6 l7 j7 l2 m1 j2 m2 k8 m6 l8 l9 i10 j9 k10 k9 m9 k7 m8 j8 l6 l4 l10 i7 g5 h7 g7 g8 f9 h8 f8 h9"
+Kopecký vs Eged [ 0:1 ] 
+moves="f8 h12 k10 j9 g12 h9 i9 j10 j11 i11 g13 i12 h10 j8 j7 g10 h11 f13 f11 e10 i7 h7 g8 e8 e7 f10 e9 d10 c10 d6 f5 f6 e6 d7 d5 e5 f4 c4 c6 i5 h4 h5 h6 d4 g7 c3 b2 g5 k5 k6 j4 i4 j3 j5 l7 i3 i2 g2 h3 g4 g3 g6 f7 k4 l8 i6 l3 m7 l11 l10 k12 k11 j12 m11 m10 j13 n12 l12 l13 i10 k13 i14 i13 m13 n14 n15 n10 d8 d9 n11 m9 j6 o7 m4 m6 o8"
+Brdková vs Souček [ 0,5:0,5 ] 
+moves="c5 e4 g3 f7 e7 f8 f6 d8 g8 d10 e9 d9 d7 e10 e8 f11 c8 f10"
+Turečková vs Kostlivý [ 0:1 ] 
+moves="g12 d9 j8 d11 g11 d10 d12 g10 h11 h10 j11"
+Tesařík vs Kopecký [ 1:0 ] 
+moves="b5 b4 e2 f5 f4 e4 g6 g5 e7 f7 g8 g9 f9 e10 i6 j6 e5 d6 h8 f6 h5 h7 i8 j8 g4 f3 j7 k8 e8 f8 d7"
+Eged vs Brdková [ 1:0 ] 
+moves="f3 g2 i2 h5 g6 f6 e7 h7 i6 j6 h6 j5 i5 i4 h3 j4 j7 l4 k4 k5 m3 l6 i3 j3 j2 l5 l3 l7"
+Kostlivý vs Hanzl [ 0:1 ] 
+moves="b2 b3 e3 f7 c5 d4 e7 d5 d6 f8 e6 f6 f5 e5 g7 d7 g5 f9 f10 e8 c6 g6 d9 g8 h8 i6 h7 h6 j6 i7 h5 i5 i8 g11 g10 e10 j10 i10 j8 h9 j11 i9 g9 j9 l9 d11 c12 e11 f11 e12 e9 e13 e14 f12 h10 d14 c15 d8 c8 c9 k8 l8 d10 f13 c4 c7 g14 g12"
+Turečková vs Souček [ 0:1 ] 
+moves="j10 d8 e12 h11 e8 g10 h12 g11 i11 g13 g12 f12 e11 f10 h10 f9 f11 e9 c7 d9 c9 d10 d11 g9"
+Brdková vs Tesařík [ 0:1 ] 
+moves="c6 d3 f2 f6 e5 d5 g6 f7 f8 e8 c4 e7 d8 g8 c7 c5 e9 f10 d6 b8 b6 a5 e6 a6 g7 h6 g4 f4 d10 c11 d7"
+Eged vs Turečková [ 1:0 ] 
+moves="i2 g2 f3 c6 d5 f5 g6 h6 e7 f7 f8 g8 d6 c5 d7 d8 c7 e5 e10 h9 i10 e9 g11 h10 i7 i11 h8 g9 f9 k9 j10 k11 k10 i5 j9 j12 k13 j7 k8 l7 h11 g12 g10 e8 i8"
+Kopecký vs Hanzl [ 1:0 ] 
+moves="h8 j8 m8 e8 i11 h11 g10 j10 j9 l10 k10 l9 l11 i8 g9 i7 k9 i9 i6 k7 l6 h7 j7 g11 h10 j12 k6 j6 n9 l7 k12 j13 k11 j11 k13"
+Kostlivý vs Souček [ 1:0 ] 
+moves="b5 c3 e2 f5 f6 e7 e6 d6 f8 g7 f7 d5 g6 h5 f9 f10 g8 h7 e8 h8 c8 d8 d7 c6 b9 a10 d9 c10 h9 i10 e9"
+Tesařík vs Turečková [ 1:0 ] 
+moves="d5 h4 h6 g7 e7 e6 c5 d6 c6 c7 e4 f3 e5 b5 c3 c4 e3 d3 g5 f5 f4 d2 i7"
+Eged vs Souček [ 1:0 ] 
+moves="b5 b4 e2 e5 d6 d7 e8 f7 f8 g8 g7 e9 h9 h10 g11 f5 g4 h7 g6 i6 g5 g3 j5 h4 i5 h6 h5 k5 f3 d1 l6 k8 k9 j10 i10 j11 j9 i9 l12 l9 j7 i8 j8 j6 h12 i13 m8 i12 j13 h13 k10 g14 f15 e12 e10 d12 d11 c12 b12 e13 f14 e11 f13 e15 e14 f12 g12 c9 d10 d9 f9 a9 b9 c11 b10 c10"
+Hanzl vs Brdková [ 0:1 ] 
+moves="k2 m3 n5 j5 j6 k7 l7 k8 k9 j10 i9 h9 i7 h6 h7 i8 g10 f10 l9 l10 j11 i12 l5 l6 n7 k10 m9 j9 n9 o9 m10 h10 i10 h8 g8 h12 h11 g12 f12 g11 e9 i11 k12 i13 j14 i15 i14 j12 g9 g7 l11 o8 m11 k11 h14 g13 f14 g14 g15 m12 m8 m7 k6 o10 n8 n6 o11 m4 m5 h13 j13 l14 k13 l12"
+Kostlivý vs Kopecký [ 0,5:0,5 ] 
+moves="h6 h8 l7 e6 e8 d5 j5 g6 j8 g8 f7 g5 g7 f5 e5 d7 c8 d6 d8 d3 d4 e4 h7 c2"
+Souček vs Tesařík [ 0:1 ] 
+moves="h8 j8 m8 i10 k6 l7 i7 j9 k8 j10 j11 k10 l10 h10 g10 k5 i9 g9 f8 g7 g6 g8 i6 h5 i8 i5 j7 h9 m10 l9 j6 h6 m6"
+Eged vs Kostlivý [ 1:0 ] 
+moves="k2 m4 n6 j6 k4 k6 l5 j3 l6 l7 j5 k5 l3 m2 i7 l4 m6 m3 n2 m5 m1 h7 k9 j8 j10 l8 m9 l9 l10 k11 j11 i10 m10 n10 g8 g9 f10 g11 g12 f12 h10 h11 j9 m12 e7 e8 d9 d10 e11 h6 h5 g4 d7 g6 i6 f5 i8 e4 d3 i5"
+Kopecký vs Brdková [ 0:1 ] 
+moves="h8 g7 e11 i7 i6 h9 g8 f8 e9 h7 j7 h5 f7 g5 h6 f5 e5 g6 e4 g4 g3 e6 h3 d6 e7 c6 f6 e10 c9 d9 c8 b6 a6 d8 d7 f12 j6 k6 j5 j9 i8 j4 k9 f11 g12 j12 f10 g9 j8 k8 h10 k4 h4 i5 l7 k2 k5 m4 l4 l3 n5 i9 f9 j3 i4 m3 m5 l5"
+Turečková vs Hanzl [ 0:1 ] 
+moves="b5 b4 e2 e5 e6 d7 d6 f6 g7 g8 f9 g5 f5 g6 i7 e7 h4 f8 h8 j6 i6 h5 i4 i5 j5 j4 k6 l7 i9 k3 l2 i8 h10 h9 g11 j8 h11 j10 j11 i11 h12 l8 j7 d8 c9 e8 c8 f7 d9 k7 m9 k9 m7 k8 m8 k10"
+Kostlivý vs Brdková [ 0:1 ] 
+moves="b2 b3 e3 f6 e6 d5 g5 f4 f3 g3 e5 e4 d4 h7 g7 i5 h4 i6 j5 f8 f5 i8 i7 g8 h8 f9 e10 f10 f7 f11 f12 g10 h9 h11 e8 g11 i11 j9 k10 g12"
+Turečková vs Kopecký [ 0:1 ] 
+moves="h3 f4 k6 j3 e5 h7 g6 j5 g5 g4 h5 f5 h4 h6 g8 f6 f7 e8 j6 k7 h9 i10 i7 h8 f2 i5 h2 h1 e3 e4 l6 m6 d4 c5 l4 j4 g7 g9 j2 i2 d7 d6 e10 k10 k3 m5 l5 l3 m4 k4 i6 m2 n1 j7 j10 j9 l11 k8 l7 l8 m8 j12 i11 h12 k12 k11 k9 g12 h11 j13 g11 f12 i12 e11 f11 j11 e12 j8 i8 g10 d10 c10 d11 f10 d12 d13 c12 f9 b13 a14 b12 a12 l1 k1 c11 e7 f8 b11 d9 i13 h14 k13"
+Hanzl vs Souček [ 0:1 ] 
+moves="c6 d3 f2 f6 e5 d5 g6 f7 f8 f4 d4 e6 g8 g4 f3 h4 e4 g5 i3 h6"
+Eged vs Tesařík [ 0:1 ] 
+moves="h8 h6 e9 e8 d7 f10 i9 f7 g6 i7 j8 g7 h7 i8 h10 g11 j10 h9 j11 j7 j12 j9 g10 l5 k6 f9 k10 i10 k7 l6 k9 k8 k11"
+Osipov vs Sviridov [ 1:0 ] 
+moves="i14 g14 f14 i11 g12 f11 h10 i9 i10 h11 j11 j10 k12 l13 k9 f9 k11 k10 m11 l11 l10 j8 j12 m9 j14 g11 e11 l12 f12 g13 e12 d12 h8 j6 j7 k7 l8 l6 m5 h9 g9 f10 f8 e8 j15 j13 e7 d6 d7 f7 l14 k14 g6 l15 i12 i6 k6 i5 i7 l5 h4 j5 l3 h5 k5 g5 f5 h7 g8 j9 i8 n13 m12 m13 k13 e9"
+Muratov vs Kozhin [ 0,5:0,5 ] 
+moves="i13 h13 f13 g10 h9 i10 f10 g9 g11 h12 j10 j12 h11 i12 k12 f8 g7 h8 g8 i11 h10 f12 g12 g14 k10 k9 i8 h7 h5 g4 i4 j5 i6 g6 j7 j8 l10 l9 m10 n10 l11 j13 m9 m11 m6 k6 l5 k4 m7 m8 l7 k7 n5 k5 k3 i7 j6 k8 n9 o8 m12 j9 l3 l6 m5"
+Tarannikov vs Taiblin [ 1:0 ] 
+moves="g12 k3 l9 k6 j9 l6 i10 k8 j6 j8 i9 k9 k7 l8 m8 n6 m7 l4 o7 i8 h8 l5 l7 n7"
+Smirnov vs Mokeev [ 0:1 ] 
+moves="d4 d6 b4 e4 e6 f7 e3 f3 c5 b6 e8 d7 e7 e9 d8 f6 f8 g8 h7 h6 g1 f2 i6 j7 j8 i9 h9 h11 i11 j10 k11 h10 g10 i5 j4 h4 g3 g5 g4 h5 j5 g2"
+Sinitsin vs Bogatirev [ 0:1 ] 
+moves="h8 i9 e11 i7 i10 j8 h10 j7 f10 j10 g9 d12 j9 k9 h6 k7 l7 h7 g7"
+Rumyantseva vs Lebedev [ 1:0 ] 
+moves="g3 h3 j3 g6 k4 h6 j5 j6 i6 l3 l5 m6 i5 k5 i4 i3 j4 h4 i2 h1 h5 j2 g5 f5 j7"
+Bogatirev vs Lebedev [ 1:0 ] 
+moves="g11 k2 l8 j8 k3 h8 j10 i11 g9 g10 h9 f9 g8 f6 f7 e6 g6 g5 e8 h5 k9 f5 e5 h4 i3 h6 h7 h3"
+Katsev vs Kozhin [ 0:1 ] 
+moves="c3 c4 d3 f5 e6 e5 g5 h6 f6 h4 d6 c6 h7 d5 e8 f3 e4 i5 j4 g3 f2 h3 i3 j6 k7 i6 l6 h5 h2 k5 e2 j5 l5 k6"
+Rumyantseva vs Smirnov [ 0:1 ] 
+moves="l13 k13 i13 i10 l10 k11 i9 j9 h10 k10 k12 l11 i8 j11 i11 m11 n11 m12 n13 m13 m10 l12"
+Sadelov vs Mokeev [ 0:1 ] 
+moves="h8 f7 c6 i8 f6 g7 e7 g5 g6 e6 j7 h6 i5 f4 e3 h4 g4 g9 i10 e9 f9 d8 d7 e8 g8 f10 g11 d10 f8 e10 c10 e11 e12 b8 c9 c8 a8 d11 d9 k8 h10 d12 c13 d13 d14 c11 b11 j8 i7 h11 j5 h5 i6 h7 h3 i3 l8 l7 m6 m7 k4 l5 l4 k5 j4 j2 k1 m4 k10 j10 d4 d5 e5 c3 k12 j11 j12 k11 l12 l11 i11 m11 n11 i12"
+Muratov vs Taiblin [ 0,5:0,5 ] 
+moves="k2 l2 m3 k5 j5 i6 j7 j4 i5 k7 k6 i8 l6 m6 l3 n3 j9 j8 h8 m8 l8 k9 l10 i10 i9 g7 g5 h5 f7 h4 n5 j1 h3 i4 o6 m4 l9 l7 g4 e6 g9 f9 d6 e5 e3 h6 f6 f3 d4 d8 g2 g3 f2 c5 d2 e2 f4 c1 f8 f5 h10 e7 j12"
+Tarannikov vs Osipov [ 1:0 ] 
+moves="c3 e4 e5 d6 d4 f6 b2 a1 c5 b5 c6 c4 g6 h5 g5 f5 f7 g4 f3 d3 e2 c2 b1 g8 h8 i6 h7 j7 k8 j6 e3 f2 h6 i7 i5 j4 d2 f4 j5 k5 l6 l4 m3 k4 m4 k3 k2 k7 k6 l7 m7 l8 h3 h10 g11 e9 k11 j10 k10 j9 j8 k9 i9 d9 i11 d7 b6 a7 d8 f9 g9 c8 e6 e10"
+Sinitsin vs Sviridov [ 0:1 ] 
+moves="h8 g8 d5 g7 g9 i7 h7 h6 g5 f8 e9 h9 i8 g6 f5 j4 i5 i10 f7 k9 k8 j10 j8 l8 i11 l9 l10 m8"
+Smirnov vs Muratov [ 0:1 ] 
+moves="h8 h10 k7 j6 i13 g7 g6 f8 e9 g10 g9 f10 e10 f9 f7 i9 f11 i10 j10 i8 i11 i6 i7 k6 h6 j7 h9 h5 k8 j5 j4 h7 g8 l3"
+Sinitsin vs Osipov [ 0:1 ] 
+moves="h8 i10 f6 h7 i11 j9 i8 j7 j8 k8 g8 f8 l7 f9 h11 g7 i7 h6 i5 i6 l9 e9 d10 g9 d9 e7 d6 d7 f7 e8"
+Bogatirev vs Tarannikov [ 0:1 ] 
+moves="i3 k3 m4 k6 j6 i7 k7 i5 h6 g5 h5 h7 i8 g8 i6 g4 j8 k8 g6 f6 l6 m5 j4 k5 j5 j7 j3"
+Sviridov vs Sadelov [ 1:0 ] 
+moves="j13 i13 g13 l9 g9 l10 j12 j10 k12 l8 l11 m10 k10 j7 k8 k9"
+Rumyantseva vs Katsev [ 0:1 ] 
+moves="g11 k2 l8 h8 c10 h9 f10 e9 e10 g10 d9 f11 d10 b10 i8 e8 f9 g8 d8 e12 d13 d7 f7 g7 g6 f6 i9 h6 h7 e5 d4 f5 e7 i5 f8 k5"
+Tarannikov vs Kozhin [ 0:1 ] 
+moves="n2 l4 j6 i5 h5 k6 l5 i4 k4 h7 i7 j8 h3 i2 i3 k3 h6 f6 g8 m5 h2 h4 n6 k8 m6 n7 f4 i1"
+Muratov vs Osipov [ 0:1 ] 
+moves="f12 g11 d13 d12 h11 f10 e9 d10 e10 e8 g12 e11 g9 d9 d8 h12 g8 i10 h7 f9 g6 g7 i8 j9 h8 j8 h6 h5 f6 e6 g5 e7 j6"
+Osipov vs Kozhin [ 1:0 ] 
+moves="h8 g9 i12 j11 c9 g11 g10 i9 h10 h9 j9 f10 f9 h11 i11 e11 d11 f13 g12 g13 i13 i14 j12 k12 g8 e10 f12 h12 e9 f8 d7 d12 c13 d9 g6 f6 f5 e6 h5 h7 g5 i5 f3"
+Sviridov vs Lebedev [ 1:0 ] 
+moves="j4 k5 m8 i4 i6 h5 j5 h6 h7 k4 j3 j6 j8 g6 k7 f7 e8 i7 h8 g8 l6 m5 j2 j1 g7 f6 h9 e6 d6 d5 c4 h10 f5 e3 e4 d8 e7 f10 e9 f9 f8 c5 k10 d4 f2 l9 m10 j10 l11 k11 d10 c11 m9 m11 n9 k12 l7 k6 m7 m6 n7"
+Taiblin vs Dmitriy [ 1:0 ] 
+moves="i9 l11 j14 k15 f7 l10 l12 k11 j11 j12 m9 k9 k12 m11 j8 m13 o11 m12 m14 l13 n13 h10 i11 i10 j9 j10 k10 g10 f10 k14 j15 i13 h14 j13 k13 h11 i12 h13 g13 h9 h12 f11 e12 g12 e10 f13 e14 e11 g11 g6 j7 j6 h7 g7 i6 g8 g9 d10 f14 e15 d12 e13 c12"
+Smirnov vs Katsev [ 1:0 ] 
+moves="l4 m3 o7 l6 k7 k8 j6 l8 l7 j7 m8 l9 m7 n7 i6 m10 n11 h6 j5 k6 k4 l3 i4 j4 i5 i7 g5"
+Bogatirev vs Sadelov [ 1:0 ] 
+moves="h7 i9 h4 h5 h8 j8 k7 i7 k9 i5 i6 j5 k5 k6 i4 l7 i8 j9 k8 h10 i11 f9 j10 l8 g11 f8 f4 g4 g9 h11 g10 g12 g7 g8 f7 h12 h13 e12 f12 f5 g5 d7 c8 f13 i10 d11 c10 e14 d15 e13 e10 g14 h15 f14 d14 e11 e15 c11 d10 f10 b10 a10 g15 f15 b11 e8 e6 c6 b5 e3 d4 f6 e4 c4 l9 k10 n9 l11 k12 m12 n13 l13 m10 j7 j6 l4 n11 o12 l6 m7 m5"
+Tarannikov vs Muratov [ 0,5:0,5 ] 
+moves="g8 d9 k10 e8 i8 f7 g6 f9 g10 f8 h7 j9 f5 e4 f11 h9 g9 g7 g11 g12 i11 e11 m8 h11 k8 i10 f13 h8 i9 f6 f10 e5 d4 e7 e6 e9 e10 d10"
+Mokeev vs Katsev [ 0:1 ] 
+moves="h8 g9 e5 g6 d10 i9 f8 h9 j9 h10 g7 e9 f9 f7 g8 e8 d9 e10 f6 d4 e11 i8 f12 g13 d11 d8 f11 f10 g11"
+Sviridov vs Dmitriy [ 1:0 ] 
+moves="h8 i9 j12 h9 g9 i7 i10 j9 h10 i11 g10 j10 k9 f10 g8 g11 e8 f8 f7 g6 i8 j8 j7 h6 e9 e6 f6 e10 g5 e7 f11 d7 f5 h5 h12 k12 h4 d6 d4 f4 e5 g7 c5 d5 j4 k4 k6 k7 i3 j2 i5 j6 f2 g1 i4 i2 g3 e1 e3 b6 h3 f3 j5 c6 l7"
+Sadelov vs Averina [ 1:0 ] 
+moves="h8 g7 k5 i7 j7 j8 h6 h7 k6 i6 j5 i4 i5 l5 k3 k4 j4 l2 j3 j6 i3 f7 e7 h3 l6"
+Lebedev vs Sedov [ 1:0 ] 
+moves="g3 h3 j3 i6 i5 g5 h4 j6 h6 j4 f4 e5 f5 f3 g7 f7 g8 h8 g9 g10 e4 g4 j7 e9 l5 k6 g6 d3 k4 m6 l6 l4 k5 j5 i4 k7 k8 f10 h10 d8 c7 d10 e8 d9 d11 e10 c10 f11 i8 h7 g12 e12 d13 c9 f9 e11"
+Bogatirev vs Taiblin [ 0:1 ] 
+moves="f6 f5 d4 e5 d5 d6 f4 g4 g5 h6 e6 f7 e3 d2 c5 b6 c4 c6 h4 i3 i5 j6 h5 j5 d3 c3 h3 f3 k6 j7 j8 f9 b5 e2 h2 h1 i7 i8 f2 g1 e1 g3 f10 g10 g9 e8 d7 e11 e9 h11"
+Smirnov vs Sinitsin [ 0:1 ] 
+moves="h8 j10 k12 i10 h10 i11 j9 k9 h12 h11 i12 j12 g11 f10 h7 k10 l10 f12 f9 g8 f7 h6 i7 g7 g6 i5 f5 i8 f8 f6 k7 l8 m7 k5 h5 e8 j4 h4 h3 g3 j6 j3 e7 d6 l6 m5 k6 m6 l5 l7 g2 g4 d4 e4 e5 i4 f4 i3 i6 f2 e1 m4 g5 d5 l3 d10 e11 f13 g12 f11 f14 c10 g10 g13 d11 b7 c6 e10 b10 c8 d9 c11 c9 e9 e13"
+Rumyantseva vs Sedov [ 0,5:0,5 ] 
+moves="g3 h3 j3 g6 i6 j6 f5 g8 e5 f4 g7 h8 i7 i8 j8 g5 f8 f7 h9 i9 e8 e9 c6 d7 c5 d5 d6 e7 c7 c8 f6 e6 c4 c3 f11 k10 j9 k11 j10 j11 k9 l10 l9 m9 j12 i11 l11 b9 a10 d11 k8 h11 g11 j7 f9 i12 i10 n8 o7 m6 m7 e12 c10 f12 g12 d10 d9 e11 b8 a9 g13 g14 h13 e10 e13 f13 h15 n6"
+Taiblin vs Kozhin [ 0,5:0,5 ] 
+moves="h8 j9 m10 l8 j10 k8 i10 m8 j8 k7 k10 l10 h10 g10 h9 h11 g8 f7 i9 k11 i8 f8 i11 i12 i7"
+Mokeev vs Dmitriy [ 1:0 ] 
+moves="l11 k10 h12 h11 i10 i9 k12 j13 j11 l13 g10 f10 l8 l9 h9 g8 j8 k8 m11 i11 j12"
+Katsev vs Taiblin [ 1:0 ] 
+moves="d4 d6 b4 i6 h8 h5 c4 e4 e5 j7 g4 d5 b5 c3 d7 e8 g7 f6 g6 g5 e7 f7 d3 e2 j5 i8 b7 b6 c7 a7 c6 f4"
+Sinitsin vs Tarannikov [ 0:1 ] 
+moves="g13 h13 i13 g11 j10 i11 h11 i9 i8 j9 h9 h10 j8 g9 f8 g8 g10 f11 k8 l8 k9 k10 h6 i7 j6 k6 e10 i12 j11 g7 h5 f6 f10 e5 h8 h7 f7 j7 k7 e8 h4 i5 d6 g5 g6 i4 h3 h2 i3 l10 l9 d10"
+Osipov vs Rumyantseva [ 0,5:0,5 ] 
+moves="h8 g7 k5 g9 g6 f8 h5 e7 d6 f7 h7 i11 h10 f5 h6 h4 f6 e6 i6 j6 g4"
+Dmitriy vs Lebedev [ 1:0 ] 
+moves="g13 h13 i13 i10 h12 g11 f12 e12 i11 j10 j12 h14 i12 g12 h10 k13 f11 f10 k11 l11 l12 k12 m10 g9 e11 g8 g10 h9 j11 f9 e9 j9 i9 h11 f13 k8"
+Averina vs Mokeev [ 0:1 ] 
+moves="n2 l4 j6 i5 i4 k6 l5 h7 g7 g6 i8 j8 j10 f6 e6 i9 h10 g10 f8 e9 g9 i11 d5 e8 d7 d6 f5 g4 c5 e5 c7 c4 e7 f7 b7 a7 c8 b9 c6 c9 e4 f3 a8"
+Muratov vs Bogatirev [ 1:0 ] 
+moves="h9 h7 e10 g10 i5 i10 j10 g9 g11 g7 i7 e7 d7 d6 f8 g6 g8 e6"
+Smirnov vs Kozhin [ 0:1 ] 
+moves="g3 h3 j3 i6 h6 i7 i5 g7 j6 h4 j7 j5 k4 f6 l5 m6 h8 h7 e7 g8 f9 g6 g5 f5 i8 g9 g10 f4 f11 h9 k6 m4 i2 h1 f7 e4 d3 g4"
+Rumyantseva vs Taiblin [ 0:1 ] 
+moves="h8 i9 j12 g9 j9 j8 h10 g10 h9 h11 g8 h7 f7 e6 e8 f8 j11 i10 i12 i7 i6 h6 k9 i5 j4 g5 f4 h5 f5 g7 e9 h4 h3 k7 f6 j7"
+Sedov vs Sadelov [ 0:1 ] 
+moves="f8 c9 j10 d8 e7 d10 e11 d9 d11 f10 g11 f11 e10 e9 f9 d6 d7 c7 b6 g8 h10 i11 i9 j8 h8 g7 g10 e8 c10 b9 a9 f13 h9"
+Osipov vs Katsev [ 1:0 ] 
+moves="h8 i12 g4 h5 h13 f6 g6 f5 g5 g7 g3 g2 f4 h4 h6 i7 f9 h9 g10 e8 e10 f7 h7 g8 e6"
+Sinitsin vs Mokeev [ 1:0 ] 
+moves="i7 i5 e8 f9 j3 g7 h6 g5 h5 f6 h4 h7 g8 h8 e5 e7 f7 i9 j10 d9 d8 h9 f8 c8 f4 h2 g4 e4 j6 j9 g9 k9 l9 j7 k6 l6 h10 g10 f11 h11 h3 i4 i3 g3 k4"
+Muratov vs Mokeev [ 1:0 ] 
+moves="h8 j8 m8 i10 k7 l7 m10 k10 j7 l8 h10 h7 j9 i6 m11 m9 l9 k11 h9 k9 k8 n11 i8 g10 i11 g9 g8 h6 k6 l5 l10 k4 j4 j5 l3 j3 i2 k5 m5 f6 f8 e8 e6 h5 i5 g5 i7 h4 h3 e7"
+Dmitriy vs Sinitsin [ 0:1 ] 
+moves="h9 j11 k13 i12 k10 h11 k11 k12 j13 h12 j12 h13 h14 i13 i11 h10 g11 g12 f13 l13 i10 i8 f11 e12 f12 f10 e11 d10 f14 f15 g14 e14 i15 g13 j14 i14 k9 j10 m11 l12 k8 k7 l10 j8 j9 i9 l6 m9 n12 o13 n10 m14 n15 m10 l7 m6 m7 f8 l8 l9 n6 o5 g8 g7 f7 e6 e9 f6 h8 d6 d11 c11 g6 e10 g10 c8 c7 e7 g9 b10 c10 d8 c9 e8"
+Sedov vs Kozhin [ 0:1 ] 
+moves="o9 i12 d4 h11 g10 i11 j11 i10 i9 g12 f13 h13 h12 i14 i13 f11 e10 j15"
+Averina vs Bogatirev [ 0:1 ] 
+moves="h8 g6 j10 g7 g9 i7 j8 i8 j7 j9 h7 i6 i5 h5 g4 h10 l12 f10 k11 i9 i10 e9 d10 e7"
+Lebedev vs Tarannikov [ 0:1 ] 
+moves="h8 h9 l10 g9 i10 i8 j10 k10 j9 j7 g10 k11 k9 i11 h11 g12 l9 k6 l5 m9 j12"
+Elizarov vs Muratov [ 1:0 ] 
+moves="m5 k4 i3 j6 j7 i8 i6 h5 k7 l7 l6 j8 k5 j4 l5 j5 n4 o3 n5 o5 n6 n3 m4 m8 i4 i2 l3"
+Lomakin vs Osipov [ 1:0 ] 
+moves="i9 h8 e6 g10 i7 i8 g8 f7 e8 h9 j7 h7 h6 f11 e12 h11 h10 i12 f9 j8 g6 f6 g7 g5 e9 f8 e7"
+Muratova vs Sinitsin [ 1:0 ] 
+moves="h8 j6 h4 k8 l7 k6 i6 k7 k9 j8 i5 m5 i9 k5 k4 l8 i7 i8 m8 j7 i4"
+Lomakina vs Maslov [ 1:0 ] 
+moves="j9 i9 f8 i7 h10 i11 h8 h7 i10 h9 g10 f10 h11"
+Osipov vs Muratova [ 1:0 ] 
+moves="h8 h9 l10 j8 j10 k10 i9 k11 i11 k9 k8 i10 j11 j12 i6 i7 h6 g7 h5 j7 h7 h4 g6 f6 e8 f7 g8"
+Elizarov vs Lomakina [ 1:0 ] 
+moves="h8 h7 j4 g9 f8 g7 g8 i8 f7 e8 f9 f6 g6 j7 i7 h9 f11 f10 k6 j9 j6 k5 i4 j3 h4"
+Elizarov vs Maslov [ 1:0 ] 
+moves="h8 g5 e4 f6 e7 f5 f4 e6 g4 d4 e5 d6 c6 h5 h6 i4 g6 j5 i5 k6 l7 k4 j4 k3 k5 l3 m2 n3 j3 m4 l5 n5 o6 n4 n6 l6 k7 h7 i6 f8 l8 j6 m7"
+Lomakina vs Bogatirev [ 1:0 ] 
+moves="h11 i10 e12 e11 i7 g9 f10 i12 i11 g11 f8 f12 d10 g10 g8 h10 e13 j12"
+Osipov vs Muratov [ 0:1 ] 
+moves="h8 h13 m6 g11 k8 g10 g9 f10 j9 i10 h10 h12 i13 i11 i8"
+Lomakin vs Maslov [ 1:0 ] 
+moves="l4 m3 o7 j5 i5 h6 h7 i4 h4 k6 l7 j6 l6 l5 j7 j3 k2 k4"
+Bogatirev vs Osipov [ 0:1 ] 
+moves="g7 h8 k10 f7 h9 f8 g8 g9 f9 e10 h10 e11 f10 d9 e8 f11 g12 d7 c8 d11 c11 e12"
+Dmitriy vs Maslov [ 0:1 ] 
+moves="h8 i10 k12 j9 h11 h10 g10 g11 i9 j10 j11 f9 f10 g9 e9 j7 k9 k8 l10 i6 h5 h7 g8 g6 i8 j6"
+Lomakina vs Sinitsin [ 0:1 ] 
+moves="g6 h7 i10 g8 i6 h6 h8 i9 j10 h10 j8 j7 k8 l7 j11 i11 k10 k7 i7 k9 l8 i8"
+Lomakin vs Muratova [ 1:0 ] 
+moves="h8 g7 g4 g9 g6 f8 h6 f9 f6 i6 e7 h7 e6 d6 g8 j7 i7 f11 f7 h9 e9 e8 d7 g10 i8 f12 f10 e12 d13 i12 h11 g12 h12 g11 g13 i9 j9"
+Dmitriy vs Lomakin [ 0:1 ] 
+moves="h8 j9 m10 l8 j8 k8 l7 k7 k9 i7 m11 m9 l10 n12 n10 k10 h7 i5 j6 i6 i4 h6 j4 h5 j7 j5 g5 g4 i9 l12 k12 f6 e6 d4 l11 j13 g7 j11 j10 k11 g8 h9 f8 i8 g9 g6 g11 g10 h10"
+Muratov vs Dmitriy [ 1:0 ] 
+moves="b14 b13 e14 e11 d11 f12 d10 d12 f10 g10 e12 f9 c10 b9 d8 b10 e9 c7 b11 d7 h11 f13 c11"
+Elizarov vs Lomakin [ 1:0 ] 
+moves="h8 g6 f11 h11 g3 i7 i8 g8 g7 h6 f6 e5 j8 k8 e7 g5 i9 j10 h9"
+Muratov vs Lomakin [ 1:0 ] 
+moves="b14 b13 e14 e11 d11 g10 f14 f13 h12 h10 f10 g11 f12 g12 g9 j9 i10 i11 f11 f9 d14 c14 g14 h14 j11 e8 d7 h8 g8 i12 h11 f7 g6 g7 f6 h6 i5 k11 k12 h9 h7 k7 j8 l10 l9 j12 i13 m9 n8 n10 l8 m11 m8 k8 k10 n7 k13 l13 f5 i8 k6 l7 m7 m6 n5 g4 d5 d6 d8 e4 c8 e7 c11"
+Elizarov vs Osipov [ 1:0 ] 
+moves="g2 h2 j5 i4 h5 j4 i5 k5 i3 j6 g5 f5 h4 f6 g4 g6 f3 i6 h6 h3 e4 d5 f4 d4 e3"
+Elizarov vs Muratova [ 1:0 ] 
+moves="n7 n8 n10 k7 l8 k10 k9 j10 j8 i7 h8 i8"
+Muratova vs Muratov [ 0:1 ] 
+moves="h5 g6 k4 j7 j8 h8 g7 h9 i8 g9 f9 h10 h7 f10 e11 g11 e9 g10"
+Lomakina vs Osipov [ 0:1 ] 
+moves="f2 g2 j5 j4 i2 i5 k5 k6 j6 i7 i6 h7 g7 f6 g5 g6 i8 e8 e6 d5 h9 f7 h5 f5"
+Muratova vs Bogatirev [ 0:1 ] 
+moves="l4 m3 o7 i5 k4 j4 k3 k5 l6 l5 j5 i6 i7 k7 h6 k9 k6 n6 h3 i4 i3 j3 g5"
+Maslov vs Bogatirev [ 1:0 ] 
+moves="b10 b9 b7 n9 n8 e9 d9 e10 e11 e7 e6 f8 d10 d8 g8 f7 f6 g7 d7 h6 i5 g9 h10 c7 f10 d6 c5 f4 e5 i7"
+Lomakina vs Muratov [ 0:1 ] 
+moves="h8 g6 e4 e5 g7 f7 h5 h6 i6 j7 i7 i8 j5 k5 k6 i4 k4 h7 f5 f3 g5 i5 i9 j10 g9 j6 j9 h9 i10 h11 g11 e6 f10 e11 g10 g8 d5 h10 e9 h12 h13 g3 h4 d6"
+Muratova vs Lomakina [ 0:1 ] 
+moves="h8 h9 e8 g10 f11 g8 g9 i7 f7 d9 e7 d7 e5 e6 f8 d6 f9 f10 f6 f5 g7"
+Elizarov vs Dmitriy [ 1:0 ] 
+moves="l4 m3 o7 j5 i5 h6 i6 i7 j8 h8 h7 g9 f10 i9 j10 j9 h9 i4 j6 h4 g4 h3 g2 i10 k6 h5 h2 g6 f7 f6 g5 f8 g3 g1 d6 i11"
+Bogatirev vs Elizarov [ 0:1 ] 
+moves="h8 i10 k12 k9 h11 i9 i11 j8 h10 h9 j9 i7 h6 j7 k6 l7 k7 l9 l11"
+Lomakina vs Dmitriy [ 0:1 ] 
+moves="l4 m3 o7 k6 k7 j7 l6 l5 m4 m5 i6 j4 i5 i4 j6 h4 g4 j5 h3 i8 h9 j3 i2 j1 j2 k3 l3 k5 n5 k2"
+Bogatirev vs Lomakin [ 0:1 ] 
+moves="h8 h7 d8 e9 b10 e7 e10 f7 d7 d9 e8 f9 g9 g8 f8 e6 d5 f6 d6 d4 f5 e5 g7 f10 i6 g11 f11 i10 h9 h10 g10 i8 i9 j10 j9 k9 i11 l10 k10 l8 l9 m8 j8 m9 m7 k11 j12 k6 k7 l7 j5 n8 o7 k8 o8 l6 m6 l5 l4 c3"
+Sinitsin vs Lomakin [ 0,5:0,5 ] 
+moves="h8 i8 h4 g5 h7 h6 i7 g7 j6 k5 i5 k7 h9 g9 h10 h11 g8 i6 g3 f2 k8 i10 g12 f9 e9 f7 e8 e7 f6 d8 d6 e5 l9 f5 d5 e3 e6 c6 f4 e4 c2 c5 d4 c7 d7 d3 c4 m10 i12 h12 j4 i4 l10 k10 l11 l12 m11 k11 k9 j8"
+Sinitsin vs Bogatirev [ 0,5:0,5 ] 
+moves="h8 g8 d6 c5 c3 d7 e8 e6 f5 f7 h9 h7 f9 i9 e7 i7 e9 h10 j7 i8 i10 j8 k7 g9 g10 k9 l10 i6 i5 h6 g5 g6 f6 j5 k4 h4 i4 m8 l8 k10 j9 l9 j11 k12 h11"
+Sinitsin vs Maslov [ 1:0 ] 
+moves="c3 c5 d3 e3 d4 e5 e4 f4 d5 d6 d2 d1 c7 f5 f3 g3 h2 g2 e7 f7 g5 f6 f8 c6 e6 e9 h8 g9 h9 i8 j10 i9 i11 h12 j11 g11 f10 h10 f12 f9 g10 g6 e8 i6 g8 d8 i7 j9 h7 h5 k7 j7 k8 i4 j3"
+Elizarov vs Sinitsin [ 0:1 ] 
+moves="h8 g10 d9 f7 g7 e9 h6 f6 h5 h7 g5 f5 f4 i7 g4 g8 i6 f3 h4"
+Osipov vs Dmitriy [ 1:0 ] 
+moves="h8 j10 h12 l10 k10 l11 i12 l9 l12 k9"
+Maslov vs Osipov [ 0:1 ] 
+moves="l4 m3 o7 k6 j5 i5 k7 i6 l6 i7 i8 m5 j4 m4 m6 l5 n3 j8 h6 i3 i4 h4 g5 h9 g9 f8 j9 k10 i10 h11 k9 m7 i11 i12 h10 f10 f9 h12 j12 k13 g11 g10 f12 e13 l9 m9 j13 f5 l10 l8 h14 j11 f6 g4 j3 j6 e6 g6 e4 e5 d6 c6 e10 g13 f13 d11 d9 e9 c8 b7 i14 g14 h13 l11 m10 n11 k11 i13 c11"
+Bogatirev vs Muratov [ 0,5:0,5 ] 
+moves="f6 g7 j9 h6 h7 f8 e9 i5 j4 g5 g6 i8 i7 k7 j6 g8 h8 g9 i4 k5 j3 h5 j5"
+Sinitsin vs Dmitriy [ 1:0 ] 
+moves="g2 h2 k3 j4 h4 i5 k5 k6 j6 i7 h6 g6 g5 i8"
+Muratova vs Maslov [ 0:1 ] 
+moves="h8 g7 g4 j6 j5 h5 i4 h3 h4 j4 g8 i6 h6 f4 f8 e8 h9 h7 f7 e6 f9 f10 i9 j9 i10 j11 i8"
+Lomakin vs Lomakina [ 1:0 ] 
+moves="b14 b13 e13 e11 e10 g11 g9 f11 d11 h11 i11 h10 h12 j10 i10 i9 j8 h8 g7 g8 h7 d10 e8 f7 e6 e9 h6 c9 b8 c11 b12 g5 f5 d8 c7 g6 d6 e5 c6 f6 e7"
+Muratov vs Sinitsin [ 1:0 ] 
+moves="h8 j9 m10 k8 j8 l7 m6 i10 h11 k10 k9 i7 i8 g8 j11 j7 h7 g11 i11 j10 h10 h9 g9 j12 e6 e7 f5 g4 g6 e4 f6 h6 e5 g7 f4 f3 d6"
+Muratov vs Maslov [ 1:0 ] 
+moves="g9 f10 d12 g11 e9 f8 f9 d9 e8 e7 e12 f11 c12"
+Bogatirev vs Dmitriy [ 1:0 ] 
+moves="h8 h10 k7 i7 i11 j9 i10 k9 i9 i12 g7 f6 g8 h9 f8 e8 e9 h6 j8 i8 g11 g6 k11 j10 j11 h11 m11 l11 g10 g9 i6 d8 g5 f5 h7 j5 k6 l6 j4 k5 l5 f4 f3 d10 d9 e10 h12 f10 b10 b9 i13"
+Osipov vs Sinitsin [ 0,5:0,5 ] 
+moves="h8 f5 j12 i9 f4 g8 g9 h7 i7 j6 i6 g6 i8 f7 h10 i11 f10 e11 g10 e10 h9 f11 e9 f9 d11 h11 g11 h12 k8 j7 f8"
+Lomakin vs Litvinenko [ 1:0 ] 
+moves="h8 i6 j11 g9 d9 g6 g8 i8 i9 h6 f6 g7 f7 h7 f5 f8 i5 j7 h9 i10 j9 h5"
+Litvinenko vs Lomakin [ 0:1 ] 
+moves="h8 h6 f11 g10 i5 g8 g9 f10 h10 h11 i11 j12 i9 k7 j10 k11 k9 l8 f12 g11 h9 j9 f8 e7 e9 f9 g7"
+Lomakin vs Litvinenko [ 1:0 ] 
+moves="e4 f3 j3 g6 g5 e5 f7 f8 h6 f4 d6 g8 h8 h7 j5 j4 k4 i6 j7 i5 i7 j6 h4 i3 h2 i2 i4 k6 g10 k9 l8 j9"
+Lomakin vs Litvinenko [ 0:1 ] 
+moves="d8 f8 h8 g10 h9 g7 g8 g9 h6 h10 e7 i10 f10 i11 j12 g11 f12 g13 g12 j10 k10 h12"
+Muratova vs Dmitriy [ 0:1 ] 
