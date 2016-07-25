@@ -1,33 +1,52 @@
-import sys
 from pymongo import MongoClient
+import random
+class MongoDB:
+	def __init__(self):
+		self.client =  MongoClient()
+		self.db = self.client.gomukuDB
+		self.curseq = 1
+		self.curstep = 1
+		self.curset = [[0 for x in range(15)] for y in range(15)] 
+		self.allset = self.db.Gamedata.count()
+		self.maxstep  = 0
+		self.nowchess = "a"
+		self.playerA = "unknown"
+		self.playerB = "unknown"
+		self.Win = "-1"
+		
 
-client = MongoClient()
-db = client.test
-coll =  db.Gamedata
-seqnumber = 1 
-for i in range(len(sys.argv)-1):
-	f = open(sys.argv[i+1], 'r')
-	while True:
-		game = f.readline()
-		if not game :break
-		name = f.readline()
-		print name, game
-		Aname = name.split("[")[0].split("vs")[0]
-		Bname = name.split("[")[0].split("vs")[0]
-		Win = name.split("[")[1].replace("]","")[1]
-		game =  game.split("=")[1].replace("\n","")
-		print str(seqnumber)
-		result = coll.insert_one(
-		    {
-		    	"SeqNumber" : str(seqnumber),
-		    	"PlayerA" : Aname,
-		        "PlayerB" : Bname,
-		        "Win"  : Win,
-		        "Set" : game
-		    }
-	    )
-		seqnumber = seqnumber + 1
-	f.close()
+	def Find(self,i):
+		cursor = self.db.Gamedata.find({"SeqNumber" : i})
+		return cursor[0]
+	
+	def ReturnSet(self):
+		self.curstep =self.curstep + 1
+		if self.curstep >= self.maxstep :
+			self.curseq = random.randint(1,self.allset)
+			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curstep)})[0]
+			self.nowchess = cursor["Set"].replace('"',"")
+			self.maxstep = len(self.nowchess.split(" "))
+			self.curstep = 1
+			self.playerA = cursor["PlayerA"]
+			self.playerB =  cursor["PlayerB"]
+			self.Win = cursor["Win"]
+			self.curset = [[0 for x in range(15)] for y in range(15)] 
+		game = self.nowchess.split(" ")[self.curstep-1]
+		y_loc = int(ord(game[0])-ord('a'))
+		x_loc = int(game[1:])-1
+		if self.curstep%2 ==1:
+			self.curset[x_loc][y_loc] = 1
+		else :
+			self.curset[x_loc][y_loc] = 0.5
+		return self.curset
 
-
-
+	def ReturnAnw(self):
+		game = self.nowchess.split(" ")[self.curstep]
+		y_loc = int(ord(game[0])-ord('a'))
+		x_loc = int(game[1:])-1
+		print y_loc, x_loc
+		curset = [[0 for x in range(15)] for y in range(15)] 
+	
+		curset[x_loc][y_loc] = 1
+	
+		return curset
