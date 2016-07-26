@@ -16,14 +16,14 @@ class MongoDB:
 		
 
 	def Find(self,i):
-		cursor = self.db.Gamedata.find({"SeqNumber" : i})
-		return cursor[0]
-	
+		Cursor =self.db.Gamedata.find({"SeqNumber" : str(i)})[0]
+		return Cursor
+
 	def ReturnSet(self):
 		self.curstep =self.curstep + 1
 		if self.curstep >= self.maxstep :
 			self.curseq = random.randint(1,self.allset)
-			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curstep)})[0]
+			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curseq)})[0]
 			self.nowchess = cursor["Set"].replace('"',"")
 			self.maxstep = len(self.nowchess.split(" "))
 			self.curstep = 1
@@ -44,9 +44,14 @@ class MongoDB:
 		game = self.nowchess.split(" ")[self.curstep]
 		y_loc = int(ord(game[0])-ord('a'))
 		x_loc = int(game[1:])-1
-		print y_loc, x_loc
 		curset = [[0 for x in range(15)] for y in range(15)] 
 	
 		curset[x_loc][y_loc] = 1
 	
 		return curset
+	def ReturnPlayerA(self):
+		return self.playerA 
+	def ReturnPlayerA(self):
+		return self.playerB
+	def ReturnWin():
+		return self.Win
