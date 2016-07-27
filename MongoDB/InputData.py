@@ -12,7 +12,7 @@ def inputdata ():
 			if not game :break
 			name = f.readline()
 			Aname = name.split("[")[0].split("vs")[0]
-			Bname = name.split("[")[0].split("vs")[0]
+			Bname = name.split("[")[0].split("vs")[1]
 			Win = name.split("[")[1].replace("]","")[1]
 			game =  game.split("=")[1].replace("\n","")
 			result = coll.insert_one(
