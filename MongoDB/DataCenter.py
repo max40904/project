@@ -34,6 +34,8 @@ class MongoDB:
 		game = self.nowchess[self.curstep-1]
 		y_loc = int(ord(game[2])-ord('a'))
 		x_loc = int(ord(game[3])-ord('a'))
+		print x_loc
+		print y_loc
 		color = game[0]
 		if color == "B":
 			self.curset[x_loc][y_loc] = 1
@@ -46,7 +48,8 @@ class MongoDB:
 		y_loc = int(ord(game[2])-ord('a'))
 		x_loc = int(ord(game[3])-ord('a'))
 		curset = [[0 for x in range(15)] for y in range(15)] 
-	
+		print x_loc
+		print y_loc
 		curset[x_loc][y_loc] = 1
 		return curset
 
