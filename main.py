@@ -135,8 +135,8 @@ with tf.Session() as sess:
 
     count = 0
     for i in range(test_iters):
-    	set_x = Data.ReturnSet()
-    	out_y = Data.ReturnAnw()
+    	set_x = Data.SGFReturnSet()
+    	out_y = Data.SGFReturnAnw()
     	acc = sess.run(y_estimate, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
     	num_list = acc.tolist()
     	num = num_list[0]
