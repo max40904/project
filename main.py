@@ -128,6 +128,8 @@ with tf.Session() as sess:
     for step in range(training_iters):
     	set_x = Data.SGFReturnSet()
     	out_y = Data.SGFReturnAnw()
+        print set_x
+        print out_y
     	sess.run(optimizer, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
     	if step %100 ==0:
     		print step
