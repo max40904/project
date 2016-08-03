@@ -32,6 +32,7 @@ class MongoDB:
 			self.curset = [[0 for x in range(15)] for y in range(15)] 
 		
 		game = self.nowchess[self.curstep-1]
+		print game
 		y_loc = int(ord(game[2])-ord('a'))
 		x_loc = int(ord(game[3])-ord('a'))
 		print x_loc,game[2]
