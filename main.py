@@ -7,7 +7,7 @@ learning_rate = 0.001
 training_iters = 200000
 test_iters = 10000
 display_step = 10000
-
+test = 1
 # Network Parameters
 n_input =225 # alphaGo data input (img shape: 19*19)
 n_classes = 225 # AlphaGo total classes (19x19=361 digits)
