@@ -13,7 +13,7 @@ def inputdata ():
 		PB =  nabw[nabw.index("PB")+1]
 		PW =  nabw[nabw.index("PW")+1]
 		game = sgf.split(";")[2:len(sgf.split(";"))-1]
-		result = coll.insert_one(
+		result = coll.insert(
 		    {
 		    	"SeqNumber" : str(seqnumber),
 		    	"PlayerA" : PB,
