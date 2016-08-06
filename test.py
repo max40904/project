@@ -1,0 +1,150 @@
+from MongoDB import DataCenter 
+from gameinfo import game
+import numpy as np
+def evaluate_all(set):
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set[y][x] == 0:
+				anw[y][x] = 1
+	return anw
+def evaluate_alive_two(set,flag):
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	high_edge = 13
+	low_edge = 1
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set_x[ y ][ x ] == flag :
+				#right
+				if x - 1 >= low_edge -1 and set [ y ][ x - 1 ] == 0 :  
+					for i in range(1 , 3):
+						if x + i <= high_edge and set[ y ] [ x + i +1 ] == 0 and set_x[ y ][ x + i] == 0:
+							anw [ y ][ x + i ]= 1
+						else :
+							break
+
+				#left
+				if x + 1 <= high_edge + 1  and set [ y ][ x + 1 ] == 0 :
+					for i in range( 1 , 3):
+						if x - i >= low_edge and set[ y ][ x - i - 1] == 0 and set_x [ y ][ x - i] == 0: 
+							anw [ y ] [ x - i ] = 1
+						else :
+							break
+
+				#up
+				if y - 1 >= low_edge -1 and set [ y  - 1][ x ] == 0 :
+					for i in range(1 , 3 ):
+
+						if y + i <= high_edge and set [ y + i + 1 ][ x ] ==0 and set_x [ y + i ][ x ] == 0:
+							anw [ y + i ][ x ] =1
+						else :
+							break
+
+				#down
+				if y + 1 <= high_edge + 1  and set [ y + 1][ x ] == 0 :
+					for i in range( 1 , 3 ):
+						if y - i >= low_edge and set [ y - i - 1 ] [ x ] == 0 and set_x [ y - i ][ x ] == 0:
+							anw [ y - i ][ x ] = 1
+						else :
+							break
+
+
+
+				#left_up
+				if x + 1 <= high_edge + 1 and y + 1 <= high_edge + 1 and set[ y + 1 ] [ x + 1 ] ==0:
+					for i in range(1 , 3 ):
+						if x - i >= low_edge and y - i >= low_edge and set [ y - i -1 ][ x - i -1  ] ==0 and set_x [ y -i ][ x - i] == 0:
+							anw [ y - i ][ x - i ] = 1
+						else :
+							break
+
+				#right_up
+				if x - 1 >= low_edge  - 1 and y + 1 <= high_edge  + 1 and set [ y + 1][ x - 1 ] ==0:
+					for i in range(1 , 3 ):
+						if x  + i <=high_edge and y - i >= low_edge and set [ y - i -  1] [ x + i + 1] == 0 and set_x [ y -i ][ x + i] == 0 :
+							anw [ y - i ][ x + i ] = 1
+						else :
+							break
+
+				#right_down
+				if x - 1 >= low_edge  - 1 and y - 1 >= low_edge - 1and set [ y - 1][ x - 1 ] ==0:
+					for i in range(1 , 3 ):
+						if x  + i <=high_edge and y + i <= high_edge and set [ y + i +  1] [ x + i + 1] == 0 and set_x [ y + i ][ x + i] == 0:
+							anw [ y + i ][ x + i ] = 1
+						else :
+							break
+				#left_down
+				if x + 1 <= high_edge + 1  and y - 1 >= low_edge - 1 and set [ y - 1][ x + 1 ] ==0:
+					for i in range(1 , 3 ):
+						if x  - i >=low_edge and y + i <= high_edge and set [ y + i +  1] [ x - i - 1] == 0 and set_x [ y + i  ][ x - i] == 0:
+							anw [ y + i ][ x - i ] = 1
+						else :
+							break
+
+
+				
+
+				
+	return anw
+def evaluate_lib_five(set,flag):
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set_x[y][x] == flag :
+				for i in range(5):
+				
+					if y - i >= 0 and set[y - i][ x ] ==0:
+						anw [ y - i ][ x ] = 1
+
+					if y + i <=14 and set[y + i][ x ] ==0:
+						anw [ y + i ][ x ] = 1
+
+
+					if x + i <= 14 and set[y ][ x + i ] ==0:
+						anw [ y ][ x + i ] = 1
+
+
+					if x - i >= 0  and set[y ][ x - i ] ==0:
+						anw [ y ][ x - i ] = 1 
+
+
+					if x - i >= 0 and y - i >=0 and set[y - i][ x - i ] ==0:
+						anw [ y - i] [ x -  i] =1
+
+
+					if x + i <= 14 and y - i >=0  and set[y - i][ x + i ] ==0:
+						anw [ y - i] [x + i] =1
+
+					if x -i >= 0 and y + i <= 14 and set[y + i][ x - i ] ==0:
+						anw [y + i][ x - i ] = 1
+
+					if x + i <= 14 and y +i <= 14  and set[y + i][ x + i ] ==0:
+						anw [ y + i] [x + i] = 1
+	return anw
+
+Data = DataCenter.MongoDB()
+
+set_x = Data.SGFReturnSet()
+set_x = Data.SGFReturnSet()
+
+set_x = Data.SGFReturnSet()
+
+
+
+
+print "   \n\n\n"
+print set_x[1][1]
+out_y = Data.SGFReturnAnw()
+x = [0 for x in range(225)]
+y = np.reshape(set_x,[225,1])
+game.gameshow(y)
+y = np.reshape(evaluate_all(set_x),[225,1])
+y = np.reshape(evaluate_alive_two(set_x,1),[225,1])
+
+game.gameshow(y)
