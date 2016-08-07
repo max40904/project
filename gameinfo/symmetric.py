@@ -1,11 +1,5 @@
 import numpy as np
-def evaluate_all(set):
-	anw = [[0 for i in range(15)] for j in range(15)]
-	for y in range(15):
-		for x in range(15):
-			if set[y][x] == 0:
-				anw[y][x] = 1
-	return anw
+
 def evaluate_alive_two(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -304,6 +298,14 @@ def evaluate_lib_five(set,flag):
 						anw [ y + i] [x + i] = 1
 	return anw
 
+def evaluate_self(set,flag):
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set[y][x] == flag:
+				anw[y][x] = 1
+	return anw
+
 
 def rotate90(set):
 	anw = [[0 for i in range(15)] for j in range(15)]
@@ -325,3 +327,5 @@ def reflection(set):
 
 
 	return anw
+
+
