@@ -1,7 +1,6 @@
 from MongoDB import DataCenter
 import tensorflow as tf
 import numpy as np
-from gameinfo import game
 
 # Parameters
 learning_rate = 0.001
@@ -127,6 +126,4 @@ with tf.Session() as sess:
     set_x = Data.SGFReturnSet()
     out_y = Data.SGFReturnAnw()
     acc = sess.run(y_estimate, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
-    num_list = acc.tolist()
-    num = num_list[0]
-    print num
+    print acc

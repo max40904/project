@@ -1,7 +1,6 @@
 from MongoDB import DataCenter
 import tensorflow as tf
 import numpy as np
-from gameinfo import game
 
 # Parameters
 learning_rate = 0.001
@@ -119,14 +118,35 @@ tf.scalar_summary("loss", cost)
 # Merge all summaries to a single operator
 merged_summary_op = tf.merge_all_summaries()
 # Launch the graph
-
 Data = DataCenter.MongoDB()
 saver = tf.train.Saver()
 with tf.Session() as sess:
-    saver.restore(sess, "./Neural_network_save/save_net.ckpt")
-    set_x = Data.SGFReturnSet()
-    out_y = Data.SGFReturnAnw()
-    acc = sess.run(y_estimate, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
-    num_list = acc.tolist()
-    num = num_list[0]
-    print num
+    sess.run(init)
+    summary_writer = tf.train.SummaryWriter('/tmp/logs', graph_def=sess.graph_def)
+    step = 1
+    # Keep training until reach max iterations
+    for step in range(training_iters):
+    	set_x = Data.SGFReturnSet()
+    	out_y = Data.SGFReturnAnw()
+        
+
+    	sess.run(optimizer, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
+    	if step %100 ==0:
+    		print step
+    	
+    save_path = saver.save(sess, "./Neural_network_save/save_net.ckpt")
+    print("Save to path: ", save_path)
+
+    count = 0
+    for i in range(test_iters):
+    	set_x = Data.SGFReturnSet()
+    	out_y = Data.SGFReturnAnw()
+    	acc = sess.run(y_estimate, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
+    	num_list = acc.tolist()
+    	num = num_list[0]
+    	if np.argmax(out_y) == num:
+    		count = count + 1
+
+    print count
+    print "Optimization Finished!"
+    # Calculate accuracy for 256 mnist test images
