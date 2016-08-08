@@ -61,6 +61,29 @@ def show_game_set(num):
 	print ("\n")
 	show_game_pos(num)
 
+def ReturnAllLayer(set,color):
+	s = set
+	left = ReturnAllInfo(s,color)
+	s = symmetric.rotate90(s)
+	up = ReturnAllInfo(s,color)
+	s = symmetric.rotate90(s)
+	right = ReturnAllInfo(s,color)
+	s = symmetric.rotate90(s)
+	down = ReturnAllInfo(s,color)
+
+	s =  symmetric.reflection(set)
+	ref_left  = ReturnAllInfo(s,color)
+	s = symmetric.rotate90(s)
+
+	ref_up = ReturnAllInfo(s,color)
+	s = symmetric.rotate90(s)
+
+	ref_right = ReturnAllInfo(s,color)
+	s = symmetric.rotate90(s)
+	ref_down = ReturnAllInfo(s,color)
+	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
+
+	return all_layer
 def ReturnAllInfo(set,color):
 	ocolor = 1
 	if color == 1:
