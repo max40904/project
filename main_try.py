@@ -9,9 +9,10 @@ from gameinfo import game
 import numpy as np
 
 learning_rate = 0.0003
-k_filter = 80
-input_stack = 4
-training_iters = 1000
+input_stack = 24
+
+k_filter = 24 * 4
+training_iters = 401915
 
 
 def weight_variable(shape):
@@ -35,9 +36,8 @@ def max_pool_2x2(x):
 input = tf.placeholder(tf.float32, [None, 15,15,input_stack]) # 28x28
 output = tf.placeholder(tf.float32, [None, 225])
 
-## conv1 layer ##
 
-w_conv1 = weight_variable([5,5,input_stack,k_filter])# patch 5 * 5 insize 120 outsize 100
+w_conv1 = weight_variable([5,5,input_stack,k_filter])
 print w_conv1
 b_conv1 = bias_variable([k_filter])
 print b_conv1
@@ -115,10 +115,11 @@ init = tf.initialize_all_variables()
 
 Data = DataCenter.MongoDB()
 
+saver = tf.train.Saver()
 
 with tf.Session() as sess:
     sess.run(init)
-    for  i in range(100000):
+    for  i in range(training_iters):
 
         set_x = Data.SGFReturnSet()
         out_y = Data.SGFReturnAnw()
@@ -126,6 +127,8 @@ with tf.Session() as sess:
         all_layer_1 = game.ReturnAllLayer (set_x, cut_color)
         sess.run(optimizer, feed_dict = {input: all_layer_1,output : np.reshape(out_y,[1,225])})
         print i
+    save_path = saver.save(sess, "./Neural_network_save/save_net.ckpt")
+    print("Save to path: ", save_path)
 		# set_x = Data.SGFReturnSet()
 		# out_y = Data.SGFReturnAnw()
 		# cur_color = Data.ReturnColor()
