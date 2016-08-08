@@ -105,8 +105,25 @@ print h_pool13_flat
 prediction = tf.nn.softmax(h_pool13_flat)
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(output * tf.log(prediction),reduction_indices=[1]))
 train = tf.train.GradientDescentOptimizer(learning_rate).minimize(cross_entropy)
+init = tf.initialize_all_variables()
+
+Data = DataCenter.MongoDB()
+saver = tf.train.Saver()
+with tf.Session() as sess:
+	for step in range(training_iters):
+    	set_x = Data.SGFReturnSet()
+    	out_y = Data.SGFReturnAnw()
+    	cur_color = Data.ReturnColor()
+        all_layer_1 = ReturnAllLayer(set_x,cur_color)
+        
+
+    	sess.run(optimizer, feed_dict={input: all_layer_1, output: np.reshape(out_y,[1,225]), keep_prob: 1.})
+    	
 
 
+
+    	if step %100 ==0:
+    		print step
 
 # the error between prediction and real data
 # cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys * tf.log(prediction),
