@@ -30,7 +30,7 @@ def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 
 # define placeholder for inputs to network
-input = tf.placeholder(tf.float32, [None, 19,19,input_layer]) # 28x28
+input = tf.placeholder(tf.float32, [None, 15,15,input_layer]) # 28x28
 output = tf.placeholder(tf.float32, [None, 225])
 
 ## conv1 layer ##
