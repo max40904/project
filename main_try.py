@@ -116,7 +116,7 @@ with tf.Session() as sess:
 		set_x = Data.SGFReturnSet()
 		out_y = Data.SGFReturnAnw()
 		cur_color = Data.ReturnColor()
-		all_layer_1 = ReturnAllLayer(set_x,cur_color)
+		all_layer_1 = game.ReturnAllLayer(set_x,cur_color)
 		sess.run(optimizer, feed_dict={input: all_layer_1, output: np.reshape(out_y,[1,225]), keep_prob: 1.})
     	if step %100 ==0:
     		print step
