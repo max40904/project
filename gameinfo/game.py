@@ -83,16 +83,64 @@ def ReturnAllLayer(set,color):
 	ref_down = ReturnAllInfo(s,color)
 	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
 
-	return all_layer
+	return 
+
 def ReturnAllInfo(set,color):
 	ocolor = 1
 	if color == 1:
 		ocolor = 0.5
 
 	layer_1 = symmetric.evaluate_self(set,color)
+
 	layer_2 = symmetric.evaluate_self(set,ocolor)
+
 	layer_3 = symmetric.evaluate_self(set,0)
+
 	layer_4 = [[1 for i in range(15)] for j in range(15)]
+
+	# player
+	layer_6 = symmetric.evaluate_lib_five(set,color)
+
+	layer_5 = symmetric.evaluate_square_three(set,color)
+
+	layer_7 = symmetric.evaluate_dead_two(set,color)
+
+	layer_8 = symmetric.evaluate_alive_two(set,color)
+
+	layer_9 = symmetric.evaluate_dead_three(set,color)
+
+	layer_10 = symmetric.evaluate_alive_three(set,color)
+
+	layer_11 = symmetric.evaluate_dead_four(set,color)
+
+	layer_12 = symmetric.evaluate_alive_four(set,color)
+
+	layer_13 = symmetric.evaluate_five(set,color)
+
+	layer_14 = [[1 for i in range(15)] for j in range(15)]
+
+	#opponent
+	layer_15 = symmetric.evaluate_lib_five(set,ocolor)
+
+	layer_16 = symmetric.evaluate_square_three(set,ocolor)
+
+	layer_17 = symmetric.evaluate_dead_two(set,ocolor)
+
+	layer_18 = symmetric.evaluate_alive_two(set,ocolor)
+
+	layer_19 = symmetric.evaluate_dead_three(set,ocolor)
+
+	layer_20 = symmetric.evaluate_alive_three(set,ocolor)
+
+	layer_21 = symmetric.evaluate_dead_four(set,ocolor)
+
+	layer_22 = symmetric.evaluate_alive_four(set,ocolor)
+
+	layer_23 = symmetric.evaluate_five(set,ocolor)
+
+	layer_24= [[0 for i in range(15)] for j in range(15)]
+
+
 
 
 	all_layer = [[[0 for i in range(4)] for j in range(15)] for x in range(15)]
@@ -106,5 +154,3 @@ def ReturnAllInfo(set,color):
 
 	return all_layer
 
-
-	
