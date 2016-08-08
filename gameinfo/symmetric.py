@@ -305,6 +305,22 @@ def evaluate_self(set,flag):
 			if set[y][x] == flag:
 				anw[y][x] = 1
 	return anw
+def evaluate_square_three(set,flag):
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set[y][x] == flag:
+				for i in range(-2,3):
+					for j in range(-2,3):
+						if x + j <=14 and x + j >=0 and y + i >= 0 and y + i <= 14 and set [ y + i ][ x + j ]==0:
+							anw [ y + i ][ x + j ] = 1  
+
+
+
+	return anw
 
 
 def rotate90(set):
