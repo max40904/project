@@ -36,7 +36,7 @@ class MongoDB:
 		game = self.nowchess[self.curstep-1]
 		y_loc = int(ord(game[2])-ord('a'))
 		x_loc = int(ord(game[3])-ord('a'))
-
+		print game
 		color = game[0]
 		if color == "B":
 			self.curset[x_loc][y_loc] = 1
@@ -46,7 +46,8 @@ class MongoDB:
 
 	def SGFReturnAnw(self):
 		game = self.nowchess[self.curstep]
-		y_loc = int(ord(game[2])-ord('a'))
+		print game
+		game = int(ord(game[2])-ord('a'))
 		x_loc = int(ord(game[3])-ord('a'))
 		curset = [[0 for x in range(15)] for y in range(15)]
 
