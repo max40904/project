@@ -8,7 +8,8 @@ from MongoDB import DataCenter
 
 learning_rate = 0.0003
 k_filter = 80
-
+input_layer = 7
+training_iters = 1000
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
     return tf.Variable(initial)
@@ -27,12 +28,12 @@ def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 
 # define placeholder for inputs to network
-input = tf.placeholder(tf.float32, [None, 19,19,7]) # 28x28
+input = tf.placeholder(tf.float32, [None, 19,19,input_layer]) # 28x28
 output = tf.placeholder(tf.float32, [None, 225])
 
 ## conv1 layer ##
 
-w_conv1 = weight_variable([5,5,7,k_filter])# patch 5 * 5 insize 120 outsize 100
+w_conv1 = weight_variable([5,5,input_layer,k_filter])# patch 5 * 5 insize 120 outsize 100
 print w_conv1
 b_conv1 = bias_variable([k_filter])
 print b_conv1
