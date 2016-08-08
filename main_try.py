@@ -10,7 +10,7 @@ import numpy as np
 
 learning_rate = 0.0003
 k_filter = 80
-input_layer = 7
+input_layer = 4
 training_iters = 1000
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
