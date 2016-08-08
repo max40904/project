@@ -32,7 +32,6 @@ class MongoDB:
 			self.curset = [[0 for x in range(15)] for y in range(15)] 
 		
 		game = self.nowchess[self.curstep-1]
-
 		y_loc = int(ord(game[2])-ord('a'))
 		x_loc = int(ord(game[3])-ord('a'))
 
@@ -91,7 +90,7 @@ class MongoDB:
 		return self.Win
 
 	def ReturnColor(self):
-		step = self.curstep
+		step = self.curstep + 1
 		color = 1.
 		if step %2 == 0 :
 			color = 0.5
