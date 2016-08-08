@@ -10,8 +10,10 @@ import numpy as np
 
 learning_rate = 0.0003
 k_filter = 80
-input_layer = 4
+input_stack = 4
 training_iters = 1000
+
+
 def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
     return tf.Variable(initial)
@@ -30,12 +32,12 @@ def max_pool_2x2(x):
     return tf.nn.max_pool(x, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 
 # define placeholder for inputs to network
-input = tf.placeholder(tf.float32, [None, 15,15,input_layer]) # 28x28
+input = tf.placeholder(tf.float32, [None, 15,15,input_stack]) # 28x28
 output = tf.placeholder(tf.float32, [None, 225])
 
 ## conv1 layer ##
 
-w_conv1 = weight_variable([5,5,input_layer,k_filter])# patch 5 * 5 insize 120 outsize 100
+w_conv1 = weight_variable([5,5,input_stack,k_filter])# patch 5 * 5 insize 120 outsize 100
 print w_conv1
 b_conv1 = bias_variable([k_filter])
 print b_conv1
@@ -112,17 +114,24 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cross_entr
 init = tf.initialize_all_variables()
 
 Data = DataCenter.MongoDB()
-saver = tf.train.Saver()
+
+
 with tf.Session() as sess:
-	sess.run(tf.initialize_all_variables())
-	for step in range(training_iters):
-		set_x = Data.SGFReturnSet()
-		out_y = Data.SGFReturnAnw()
-		cur_color = Data.ReturnColor()
-		all_layer_1 = game.ReturnAllLayer(set_x,cur_color)
-		sess.run(optimizer, feed_dict={input: all_layer_1, output: np.reshape(out_y,[1,225])})
-    	if step %100 ==0:
-    		print step
+    sess.run(init)
+    for  i in range(100000):
+
+        set_x = Data.SGFReturnSet()
+        out_y = Data.SGFReturnAnw()
+        cut_color = Data.ReturnColor()
+        all_layer_1 = game.ReturnAllLayer (set_x, cut_color)
+        sess.run(optimizer, feed_dict = {input: all_layer_1,output : np.reshape(out_y,[1,225])})
+        print i
+		# set_x = Data.SGFReturnSet()
+		# out_y = Data.SGFReturnAnw()
+		# cur_color = Data.ReturnColor()
+		# all_layer_1 = game.ReturnAllLayer(set_x,cur_color)
+		# sess.run(optimizer, feed_dict={input: all_layer_1, output: np.reshape(out_y,[1,225])})
+  #       print step
 
 # the error between prediction and real data
 # cross_entropy = tf.reduce_mean(-tf.reduce_sum(ys * tf.log(prediction),
