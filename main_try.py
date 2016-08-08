@@ -6,6 +6,7 @@
 import tensorflow as tf
 from MongoDB import DataCenter 
 from gameinfo import game
+import numpy as np
 
 learning_rate = 0.0003
 k_filter = 80
