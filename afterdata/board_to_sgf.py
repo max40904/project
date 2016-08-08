@@ -24,7 +24,7 @@ for count in range(len(sys.argv)-1):
 	print len(game)
 	for i in range(1, len(game)-1,2):
 		print game[i],game[i+1]
-		x_loc = game[i+1][0]
+		x_loc = game[i+1][0].lower()
 	 	y_loc = chr (int(game[i+1][1:])+ord("a")-1)
 		if int(game[i]) % 2 == 1 :
 			f_out.write("B[")
