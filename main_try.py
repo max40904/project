@@ -4,6 +4,7 @@
 # Youku video tutorial: http://i.youku.com/pythontutorial
 
 import tensorflow as tf
+from MongoDB import DataCenter 
 
 learning_rate = 0.0003
 k_filter = 80
@@ -31,7 +32,7 @@ output = tf.placeholder(tf.float32, [None, 225])
 
 ## conv1 layer ##
 
-w_conv1 = weight_variable([5,5,20,k_filter])# patch 5 * 5 insize 120 outsize 100
+w_conv1 = weight_variable([5,5,7,k_filter])# patch 5 * 5 insize 120 outsize 100
 print w_conv1
 b_conv1 = bias_variable([k_filter])
 print b_conv1
