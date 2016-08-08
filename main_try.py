@@ -37,9 +37,7 @@ output = tf.placeholder(tf.float32, [None, 225])
 
 w_conv1 = weight_variable([5,5,input_layer,k_filter])# patch 5 * 5 insize 120 outsize 100
 print w_conv1
-b_conv1 = bias_variable([k_filter])
-print b_conv1
-h_conv1 = tf.nn.relu(conv2d(input, w_conv1) + b_conv1)
+h_conv1 = tf.nn.relu(conv2d(input, w_conv1) )
 print h_conv1
 
 w_conv2 = weight_variable([3,3,k_filter,k_filter])
