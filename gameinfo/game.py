@@ -83,7 +83,7 @@ def ReturnAllLayer(set,color):
 	ref_down = ReturnAllInfo(s,color)
 	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
 
-	return 
+	return all_layer
 
 def ReturnAllInfo(set,color):
 	ocolor = 1
@@ -99,9 +99,9 @@ def ReturnAllInfo(set,color):
 	layer_4 = [[1 for i in range(15)] for j in range(15)]
 
 	# player
-	layer_6 = symmetric.evaluate_lib_five(set,color)
+	layer_5 = symmetric.evaluate_lib_five(set,color)
 
-	layer_5 = symmetric.evaluate_square_three(set,color)
+	layer_6 = symmetric.evaluate_square_three(set,color)
 
 	layer_7 = symmetric.evaluate_dead_two(set,color)
 
@@ -143,7 +143,7 @@ def ReturnAllInfo(set,color):
 
 
 
-	all_layer = [[[0 for i in range(4)] for j in range(15)] for x in range(15)]
+	all_layer = [[[0 for i in range(24)] for j in range(15)] for x in range(15)]
 
 	for i in range(15):
 		for j in range(15):
@@ -159,17 +159,17 @@ def ReturnAllInfo(set,color):
 			all_layer[i][j][9] = layer_10[i][j]
 			all_layer[i][j][10] = layer_11[i][j]
 			all_layer[i][j][11] = layer_12[i][j]
-			all_layer[i][j][13] = layer_13[i][j]
-			all_layer[i][j][14] = layer_14[i][j]
-			all_layer[i][j][15] = layer_15[i][j]
-			all_layer[i][j][16] = layer_16[i][j]
-			all_layer[i][j][17] = layer_17[i][j]
-			all_layer[i][j][18] = layer_18[i][j]
-			all_layer[i][j][19] = layer_19[i][j]
-			all_layer[i][j][20] = layer_20[i][j]
-			all_layer[i][j][21] = layer_21[i][j]
-			all_layer[i][j][22] = layer_22[i][j]
-			all_layer[i][j][23] = layer_23[i][j]
-			all_layer[i][j][24] = layer_24[i][j]
+			all_layer[i][j][12] = layer_13[i][j]
+			all_layer[i][j][13] = layer_14[i][j]
+			all_layer[i][j][14] = layer_15[i][j]
+			all_layer[i][j][15] = layer_16[i][j]
+			all_layer[i][j][16] = layer_17[i][j]
+			all_layer[i][j][17] = layer_18[i][j]
+			all_layer[i][j][18] = layer_19[i][j]
+			all_layer[i][j][19] = layer_20[i][j]
+			all_layer[i][j][20] = layer_21[i][j]
+			all_layer[i][j][21] = layer_22[i][j]
+			all_layer[i][j][22] = layer_23[i][j]
+			all_layer[i][j][23] = layer_24[i][j]
 	return all_layer
 

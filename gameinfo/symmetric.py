@@ -346,7 +346,7 @@ def reflection(set):
 
 
 
-def evaluate_live_three(set,flag):
+def evaluate_alive_three(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
