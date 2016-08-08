@@ -4,7 +4,7 @@ class MongoDB:
 	def __init__(self):
 		self.client =  MongoClient()
 		self.db = self.client.gomukuDB
-		self.curseq = 1
+		self.curseq = 0
 		self.curstep = 1
 		self.curset = [[0 for x in range(15)] for y in range(15)] 
 		self.allset = self.db.Gamedata.count()
@@ -21,7 +21,9 @@ class MongoDB:
 	def SGFReturnSet(self):
 		self.curstep = self.curstep + 1
 		while self.curstep >= self.maxstep:
-			self.curseq = random.randint(1,self.allset)
+			self.curseq =self.curseq + 1 
+			if self.curseq >= self.allset:
+				self.curseq = 1
 			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curseq)})[0]
 			self.nowchess = cursor["Set"]
 			self.maxstep = len(self.nowchess)

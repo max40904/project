@@ -3,8 +3,9 @@ from pymongo import MongoClient
 def inputdata ():
 	client = MongoClient()
 	db = client.gomukuDB
+	seqnumber = db.Gamedata.count() +1 
 	coll =  db.Gamedata
-	seqnumber = 1 
+	
 	for i in range(len(sys.argv)-2):
 		f = open(sys.argv[i+2], 'r')
 		sgf = f.read()
