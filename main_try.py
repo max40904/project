@@ -111,17 +111,11 @@ Data = DataCenter.MongoDB()
 saver = tf.train.Saver()
 with tf.Session() as sess:
 	for step in range(training_iters):
-    	set_x = Data.SGFReturnSet()
-    	out_y = Data.SGFReturnAnw()
-    	cur_color = Data.ReturnColor()
-        all_layer_1 = ReturnAllLayer(set_x,cur_color)
-        
-
-    	sess.run(optimizer, feed_dict={input: all_layer_1, output: np.reshape(out_y,[1,225]), keep_prob: 1.})
-    	
-
-
-
+		set_x = Data.SGFReturnSet()
+		out_y = Data.SGFReturnAnw()
+		cur_color = Data.ReturnColor()
+		all_layer_1 = ReturnAllLayer(set_x,cur_color)
+		sess.run(optimizer, feed_dict={input: all_layer_1, output: np.reshape(out_y,[1,225]), keep_prob: 1.})
     	if step %100 ==0:
     		print step
 
