@@ -17,7 +17,7 @@ def weight_variable(shape):
     return tf.Variable(initial)
 
 def bias_variable(shape):
-    initial = tf.random_normal(shape)
+    initial = tf.constant(0.1, shape=shape)
     return tf.Variable(initial)
 
 def conv2d(x, W):
