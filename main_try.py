@@ -107,7 +107,7 @@ print h_pool13_flat
 
 prediction = tf.nn.softmax(h_pool13_flat)
 cross_entropy = tf.reduce_mean(-tf.reduce_sum(output * tf.log(prediction),reduction_indices=[1]))
-train = tf.train.GradientDescentOptimizer(learning_rate).minimize(cross_entropy)
+optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cross_entropy)
 init = tf.initialize_all_variables()
 
 Data = DataCenter.MongoDB()
