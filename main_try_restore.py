@@ -121,17 +121,8 @@ Data = DataCenter.MongoDB()
 
 saver = tf.train.Saver()
 sess = tf.Session()
+saver.restore(sess, "./Neural_network_save/save_net.ckpt")
 
-sess.run(init)
-for  i in range(1000):
-    set_x = Data.SGFReturnSet()
-    out_y = Data.SGFReturnAnw()
-    cut_color = Data.ReturnColor()
-    all_layer_1 = game.ReturnAllLayer (set_x, cut_color)
-    bbb =  sess.run(optimizer, feed_dict = {input: all_layer_1,output : np.reshape(out_y,[1,225])})
-    
-save_path = saver.save(sess, "./Neural_network_save/save_net.ckpt")
-print("Save to path: ", save_path)
 for i in range(10):
     set_x = Data.SGFReturnSet()
     out_y = Data.SGFReturnAnw()
@@ -140,7 +131,6 @@ for i in range(10):
     pre = sess.run(y_estimate, feed_dict={input: np.reshape(all_layer_1,[1,15,15,24]), output: np.reshape(out_y,[1,225])})
     print pre
 sess.close()
-
   #       print step
 
 # the error between prediction and real data
