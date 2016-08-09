@@ -124,12 +124,12 @@ sess = tf.Session()
 
 sess.run(init)
 for  i in range(training_iters):
+    print i
     set_x = Data.SGFReturnSet()
     out_y = Data.SGFReturnAnw()
     cut_color = Data.ReturnColor()
     all_layer_1 = game.ReturnAllLayer (set_x, cut_color)
     bbb =  sess.run(optimizer, feed_dict = {input: all_layer_1,output : np.reshape(out_y,[1,225])})
-    
 save_path = saver.save(sess, "./Neural_network_save/save_net.ckpt")
 print("Save to path: ", save_path)
 for i in range(10):
