@@ -12,7 +12,7 @@ learning_rate = 0.0003
 input_stack = 24
 
 k_filter = 24 * 4
-training_iters = 1000
+training_iters = 400000
 
 
 def weight_variable(shape):
@@ -123,7 +123,7 @@ saver = tf.train.Saver()
 sess = tf.Session()
 
 sess.run(init)
-for  i in range(1000):
+for  i in range(training_iters):
     set_x = Data.SGFReturnSet()
     out_y = Data.SGFReturnAnw()
     cut_color = Data.ReturnColor()
@@ -138,7 +138,9 @@ for i in range(10):
     cur_color = Data.ReturnColor()
     all_layer_1 = game.ReturnAllInfo(set_x,cur_color)
     pre = sess.run(y_estimate, feed_dict={input: np.reshape(all_layer_1,[1,15,15,24]), output: np.reshape(out_y,[1,225])})
-    print pre
+    pre_num = int(pre[0])
+    game.show_game(np.reshape(out_y,[225,1]))
+    game.show_game_pos(pre_num)
 sess.close()
 
   #       print step
