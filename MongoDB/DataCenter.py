@@ -93,7 +93,7 @@ class MongoDB:
 		return self.Win
 
 	def ReturnColor(self):
-		step = self.curstep + 1
+		step = self.curstep 
 		color = 1.
 		if step %2 == 0 :
 			color = 0.5
