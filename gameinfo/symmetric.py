@@ -526,7 +526,7 @@ def evaluate_five (set_x,color):
 				elif x+4 < 15 and y-4 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0:
 					re_set[x+4][y-4] = color
 				#O_OOO
-				elif x+4 < 15 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color:
+				if x+4 < 15 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color:
 					re_set[x+1][y] = color
 				elif x-4 >= 0 and set_x[x-1][y] == 0 and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == color:
 					re_set[x-1][y] = color
@@ -543,7 +543,7 @@ def evaluate_five (set_x,color):
 				elif x+4 < 15 and y-4 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color:
 					re_set[x+1][y-1] = color
 				#OO_OO
-				elif x+4 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color:
+				if x+4 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color:
 					re_set[x+2][y] = color
 				elif x-4 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == 0 and set_x[x-3][y] == color and set_x[x-4][y] == color:
 					re_set[x-2][y] = color
@@ -585,7 +585,7 @@ def evaluate_alive_four (set_x,color) :
 				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
 					re_set[x+4][y-4] = color
 				#_OO_O_
-				elif x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+3][y] = color
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == 0 and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-3][y] = color
