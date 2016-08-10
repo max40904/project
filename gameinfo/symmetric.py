@@ -321,6 +321,23 @@ def evaluate_square_three(set,flag):
 
 
 	return anw
+def evaluate_square_four(set,flag):
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set[y][x] == flag:
+				for i in range(-3,4):
+					for j in range(-3,4):
+						if x + j <=14 and x + j >=0 and y + i >= 0 and y + i <= 14 and set [ y + i ][ x + j ]==0:
+							anw [ y + i ][ x + j ] = 1  
+
+
+
+	return anw
+
 
 
 def rotate90(set):
@@ -368,7 +385,7 @@ def evaluate_alive_three(set,flag):
 						if x + 4 <= high_edge + 1 and set[y ] [x + 4 ] ==0:
 							anw [ y ][ x + 3 ]= 1
 					if x + 3 <= high_edge and set[ y ] [ x + 1 ] == 0 and set[ y ] [ x + 2 ] == 0 and set[ y ][ x + 3] == flag and x + 4 <= high_edge + 1 and set[y ] [x + 4 ] ==0:
-						anw [ y ][ x + 3 ]= 1
+						anw [ y ][ x + 1 ]= 1
 						anw [ y ][ x + 2 ]= 1
 
 				#left
