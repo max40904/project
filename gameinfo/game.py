@@ -60,6 +60,20 @@ def show_game_set(num):
 
 	print ("\n")
 	show_game_pos(num)
+def Return_Eight_Layer(set):
+	
+	left = set
+	up = symmetric.rotate90(left)
+	right = symmetric.rotate90(up)
+	down =  symmetric.rotate90(up)
+	ref_left = symmetric.reflection(s)
+	ref_up = symmetric.rotate90(ref_left)
+	ref_right =  symmetric.rotate90(ref_up)
+	ref_down = symmetric.rotate90(ref_right)
+
+	all_layer = [left, up , right, down, ref_left, ref_up, ref_right, ref_down]
+	return all_layer
+
 
 def ReturnAllLayer(set,color):
 	s = set
