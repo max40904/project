@@ -6,7 +6,7 @@ import numpy as np
 learning_rate = 0.003
 input_stack = 24
 k_filter = input_stack * 2
-train_iters = 400001
+train_iters = 410000
 
 
 
@@ -94,12 +94,12 @@ Data = DataCenter.MongoDB()
 saver = tf.train.Saver()
 saver.restore(sess, "./Neural_network_save/save_net390000.ckpt")
 count = 0
+print "Please input 1. Test accuracy		 2.Player Black 	3. Player White "
 check = raw_input()
 set = [[0 for i in range(15)] for j in range(15)]
-set[7][7] = 1
 
 if check =="1":
-	for i in range(40000):
+	for i in range(train_iters):
 		print i
 		x = Data.SGFReturnSet()
 		y = Data.SGFReturnAnw()
@@ -119,11 +119,33 @@ if check =="1":
 		game.show_game_pos(aa.argmax())
 
 		game.show_game_set(num)
-		if x.argmax()==num:
+		if aa.argmax()==num:
 		 	count = count + 1
 
 	print count
-if check =="2":
+if check == "2":
+	while True:
+		game.show_game(np.reshape(set,[225,1]))
+		print "Your turn "
+		print "Please input :"
+
+		choose = raw_input()
+		step = game.ConvertToNum(choose)
+		game.StepGame(step,set,1)
+
+		x = set 
+		y = set
+		x_8_24_stack =np.reshape(game.ReturnAllInfo(set,1),[1,15,15,24])
+		y_8_stack = np.reshape(y,[1,225])
+		y_estimate = sess.run(pre_loc, feed_dict = {xs :x_8_24_stack,ys:y_8_stack})
+		num = y_estimate[0]
+		game.StepGame(num, set, 0.5)
+		game.show_game_set(num)
+		game.show_game(np.reshape(set,[225,1]))
+
+
+if check =="3":
+	set[7][7] = 1
 	while True:
 		game.show_game(np.reshape(set,[225,1]))
 
@@ -135,13 +157,14 @@ if check =="2":
 		y = set
 
 		cut_color = Data.ReturnColor()
-		x_8_24_stack = np.reshape(game.ReturnAllInfo (x, 0.5),[1,15,15,24])
+		x_8_24_stack = np.reshape(game.ReturnAllInfo (set, 0.5),[1,15,15,24])
 		y_8_stack = np.reshape(y,[1,225]) 
 		y_estimate =  sess.run(pre_loc, feed_dict = {xs: x_8_24_stack,ys :y_8_stack})
 		num= y_estimate[0]
 		game.StepGame(num,set,1)
 		game.show_game_set(num)
 		game.show_game(np.reshape(x,[225,1]))
+
 
 
 
