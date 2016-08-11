@@ -124,8 +124,8 @@ if check =="1":
 
 	print count
 if check == "2":
+	game.show_game(np.reshape(set,[225,1]))
 	while True:
-		game.show_game(np.reshape(set,[225,1]))
 		print "Your turn "
 		print "Please input :"
 
@@ -133,15 +133,15 @@ if check == "2":
 		step = game.ConvertToNum(choose)
 		game.StepGame(step,set,1)
 
-		x = set 
-		y = set
+		
 		x_8_24_stack =np.reshape(game.ReturnAllInfo(set,1),[1,15,15,24])
-		y_8_stack = np.reshape(y,[1,225])
+		y_8_stack = np.reshape(set,[1,225])
 		y_estimate = sess.run(pre_loc, feed_dict = {xs :x_8_24_stack,ys:y_8_stack})
 		num = y_estimate[0]
 		game.StepGame(num, set, 0.5)
 		game.show_game_set(num)
 		game.show_game(np.reshape(set,[225,1]))
+		game.show_game_pos(num)
 
 
 if check =="3":
