@@ -1,6 +1,8 @@
 
 from __future__ import print_function
 import symmetric
+import numpy as np
+
 def show_all_info_game(set,y):
 	for x in range(y):
 		seq = 1
@@ -66,12 +68,14 @@ def Return_Eight_Layer(set):
 	up = symmetric.rotate90(left)
 	right = symmetric.rotate90(up)
 	down =  symmetric.rotate90(up)
-	ref_left = symmetric.reflection(s)
+	ref_left = symmetric.reflection(set)
 	ref_up = symmetric.rotate90(ref_left)
 	ref_right =  symmetric.rotate90(ref_up)
 	ref_down = symmetric.rotate90(ref_right)
 
-	all_layer = [left, up , right, down, ref_left, ref_up, ref_right, ref_down]
+	all_layer = [np.reshape(left,[225]), np.reshape(up,[225]) , np.reshape(right,[225]), 
+	np.reshape(down,[225]), np.reshape(ref_left,[225]), np.reshape(ref_up,[225]), 
+	np.reshape(ref_right,[225]), np.reshape(ref_down,[225])]
 	return all_layer
 
 
@@ -187,3 +191,18 @@ def ReturnAllInfo(set,color):
 			all_layer[i][j][23] = layer_24[i][j]
 	return all_layer
 
+
+
+def ConvertToNum(step):
+	first = step[0]
+	second = step[1:]
+	num = (ord(first)-ord('a'))+(int(second)-1)*15
+	return num
+
+
+
+def StepGame(step ,set,color ):
+	y = step /15
+	x = step %15
+	set[y][x] = color
+	return set
