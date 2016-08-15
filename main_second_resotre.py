@@ -134,7 +134,7 @@ if check == "2":
 		game.StepGame(step,set,1)
 
 		
-		x_8_24_stack =np.reshape(game.ReturnAllInfo(set,1),[1,15,15,24])
+		x_8_24_stack =np.reshape(game.ReturnAllInfo(set,1.),[1,15,15,24])
 		y_8_stack = np.reshape(set,[1,225])
 		y_estimate = sess.run(pre_loc, feed_dict = {xs :x_8_24_stack,ys:y_8_stack})
 		num = y_estimate[0]

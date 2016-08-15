@@ -6,7 +6,7 @@ import numpy as np
 learning_rate = 0.003
 input_stack = 24
 k_filter = input_stack * 2
-train_iters = 10
+train_iters = 400900
 
 
 
@@ -136,6 +136,7 @@ sess.run(tf.initialize_all_variables())
 merged = tf.merge_all_summaries()
 Data = DataCenter.MongoDB()
 writer = tf.train.SummaryWriter("logs/", sess.graph)
+saver = tf.train.Saver()
 for i in range(train_iters):
 	print i
 	x = Data.SGFReturnSet()
@@ -144,8 +145,17 @@ for i in range(train_iters):
 	x_8_24_stack = game.ReturnAllLayer (x, cut_color)
 	y_8_stack = game.Return_Eight_Layer (y )
 	sess.run(train_step, feed_dict = {xs: x_8_24_stack,ys :y_8_stack})
-	result = sess.run(merged,feed_dict={xs: x_8_24_stack, ys: y_8_stack})
-	writer.add_summary(result, i)
+	
+	if i % 1000==0:
+		bbb =  sess.run(cross_entropy, feed_dict = {xs: x_8_24_stack,ys :y_8_stack})
+		result = sess.run(merged,feed_dict={xs: x_8_24_stack, ys: y_8_stack})
+		writer.add_summary(result, i)
+		print bbb
+
+	if i %10000 ==0:
+		save_path = saver.save(sess, "./Neural_network_save/save_net"+str(i)+".ckpt")
+		print("Save to path: ", save_path)
+
 
 
 
