@@ -118,11 +118,11 @@ class PolicyNetwork:
 		self.sess.run(self.train_step, feed_dict = {self.xs: input,self.ys :output})
 
 
-	def cross_entropy(self, input, output):
-		cross =  self.sess.run(cross_entropy, feed_dict = {self.xs: input,self.ys :output})
-		return cross[0]
+	def Return_cross_entropy(self, input, output):
+		cross =  self.sess.run(self.cross_entropy, feed_dict = {self.xs: input,self.ys :output})
+		return cross
 
-	def prediction(self,input,output):
+	def Return_prediction(self,input,output):
 		pre =  self.sess.run(self.pre_loc, feed_dict = {self.xs: input,self.ys :output})
 		return pre[0]
 	def draw(self, input, output, i):
@@ -131,7 +131,7 @@ class PolicyNetwork:
 
 
 	def __weight_variable(self,shape,names):
-		initial = tf.truncated_normal(shape,stddev =  0.1,name = names)
+		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = 8)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):
