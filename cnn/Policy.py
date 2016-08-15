@@ -127,7 +127,7 @@ class PolicyNetwork:
 		return pre[0]
 	def draw(self, input, output, i):
 		result = self.sess.run(self.merged,feed_dict={self.xs:input, self.ys : output})
-		self.writer.add_summary(i,result)
+		self.writer.add_summary(result,i)
 
 
 	def __weight_variable(self,shape,names):
