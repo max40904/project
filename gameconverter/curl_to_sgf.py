@@ -12,8 +12,10 @@ for count in range(len(sys.argv)-1):
 	    RE ="black"
 	    if line2.split("[")[1][1] == "1":
 	    	RE ="black"
-	    else:
+	    elif line2.split("[")[1][1] == "0":
 	    	RE = "white"
+	    else:
+	    	RE ="draw"
 	    game = line1.split("\"")[1].split(" ")
 	    PB =  line2.split("[")[0].split("vs")[0]
 	    PW =  line2.split("[")[0].split("vs")[1]

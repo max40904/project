@@ -1,129 +1,125 @@
-from MongoDB import DataCenter
 import tensorflow as tf
+from MongoDB import DataCenter 
+from gameinfo import game
 import numpy as np
 
-# Parameters
-learning_rate = 0.001
-training_iters = 100
-test_iters = 100
-display_step = 100
+learning_rate = 0.0003
+input_stack = 24
 
-# Network Parameters
-n_input =225 # alphaGo data input (img shape: 19*19)
-n_classes = 225 # AlphaGo total classes (19x19=361 digits)
-dropout = 0.618 # Dropout, probability to keep units
+k_filter = 24 * 4
+training_iters = 1000
 
-# tf Graph input
-x = tf.placeholder(tf.float32, [1, n_input])
-y = tf.placeholder(tf.float32, [1, n_classes])
-keep_prob = tf.placeholder(tf.float32) # dropout (keep probability)
 
-# Create custom model
-def conv2d(name, l_input, w, b):
-    return tf.nn.relu(tf.nn.bias_add(tf.nn.conv2d(l_input, w, strides=[1, 1, 1, 1], padding='SAME'),b), name=name)
+def weight_variable(shape):
+    initial = tf.truncated_normal(shape, stddev=0.1)
+    return tf.Variable(initial)
 
-def max_pool(name, l_input, k):
-    return tf.nn.max_pool(l_input, ksize=[1, k, k, 1], strides=[1, k, k, 1], padding='SAME', name=name)
+def bias_variable(shape):
+    initial = tf.constant(100., shape=shape)
+    return tf.Variable(initial)
 
-def norm(name, l_input, lsize=4):
-    return tf.nn.lrn(l_input, lsize, bias=1.0, alpha=0.001 / 9.0, beta=0.75, name=name)
+def conv2d(x, W):
+    # stride [1, x_movement, y_movement, 1]
+    # Must have strides[0] = strides[3] = 1
+    return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
 
-def alphago(_X, _weights, _biases, _dropout):
-    # Reshape input picture
-    _X = tf.reshape(_X, shape=[-1, 15, 15, 1])
+def max_pool_2x2(x):
+    # stride [1, x_movement, y_movement, 1]
+    return tf.nn.max_pool(x, ksize=[1,2,2,1], strides=[1,2,2,1], padding='SAME')
 
-    # Convolution Layer
-    conv1 = conv2d('conv1', _X, _weights['wc1'], _biases['bc1'])
-    print conv1
-    # Max Pooling (down-sampling)
-    pool1 = max_pool('pool1', conv1, k=2)
-    print pool1
-    # Apply Normalization
-    norm1 = norm('norm1', pool1, lsize=4)
-    print norm1
-    # Apply Dropout
-    norm1 = tf.nn.dropout(norm1, _dropout)
-    #conv1 image show
-    tf.image_summary("conv1", conv1)
-    
-    # Convolution Layer
-    
-    conv2 = conv2d('conv2', norm1, _weights['wc2'], _biases['bc2'])
-    print conv2
-    # Max Pooling (down-sampling)
-    pool2 = max_pool('pool2', conv2, k=2)
-    print pool2
-    # Apply Normalization
-    norm2 = norm('norm2', pool2, lsize=4)
-    print norm2
-    # Apply Dropout
-    norm2 = tf.nn.dropout(norm2, _dropout)
+# define placeholder for inputs to network
+input = tf.placeholder(tf.float32, [None, 15,15,input_stack]) # 28x28
+output = tf.placeholder(tf.float32, [None, 225])
 
-    # Convolution Layer
-    conv3 = conv2d('conv3', norm2, _weights['wc3'], _biases['bc3'])
-    print conv3
-    # Max Pooling (down-sampling)
-    pool3 = max_pool('pool3', conv3, k=2)
-    print pool3
-    # Apply Normalization
-    norm3 = norm('norm3', pool3, lsize=4)
-    
-    # Apply Dropout
-    norm3 = tf.nn.dropout(norm3, _dropout)
-   
-    # Fully connected layer
-    print norm3
-    print _weights['wd1'].get_shape().as_list()[0]
-    dense1 = tf.reshape(norm3, [-1, _weights['wd1'].get_shape().as_list()[0]]) # Reshape conv3 output to fit dense layer input
-    dense1 = tf.nn.relu(tf.matmul(dense1, _weights['wd1']) + _biases['bd1'], name='fc1') # Relu activation
 
-    dense2 = tf.nn.relu(tf.matmul(dense1, _weights['wd2']) + _biases['bd2'], name='fc2') # Relu activation
-    print dense2
-    # Output, class prediction
-    out = tf.matmul(dense2, _weights['out']) + _biases['out']
-    return out
+w_conv1 = weight_variable([5,5,input_stack,k_filter])
+print w_conv1
+b_conv1 = bias_variable([k_filter])
+print b_conv1
+h_conv1 = tf.nn.relu(conv2d(input, w_conv1) + b_conv1)
+print h_conv1
 
-# Store layers weight & bias
-weights = {
-    'wc1': tf.Variable(tf.random_normal([3, 3, 1, 64])),
-    'wc2': tf.Variable(tf.random_normal([3, 3, 64, 128])),
-    'wc3': tf.Variable(tf.random_normal([3, 3, 128, 256])),
-    'wd1': tf.Variable(tf.random_normal([2*2*256, 1024])), 
-    'wd2': tf.Variable(tf.random_normal([1024, 1024])),
-    'out': tf.Variable(tf.random_normal([1024, n_classes]))
-}
-biases = {
-    'bc1': tf.Variable(tf.random_normal([64])),
-    'bc2': tf.Variable(tf.random_normal([128])),
-    'bc3': tf.Variable(tf.random_normal([256])),
-    'bd1': tf.Variable(tf.random_normal([1024])),
-    'bd2': tf.Variable(tf.random_normal([1024])),
-    'out': tf.Variable(tf.random_normal([n_classes]))
-}
+w_conv2 = weight_variable([3,3,k_filter,k_filter])
+b_conv2 = bias_variable([k_filter])
+h_conv2 = tf.nn.relu(conv2d(h_conv1, w_conv2) + b_conv2)
+print h_conv2
 
-# Construct model
-pred = alphago(x, weights, biases, keep_prob)
 
-# Define loss and optimizer
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(pred, y))
-optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
+w_conv3 = weight_variable([3,3,k_filter,k_filter])
+b_conv3 = bias_variable([k_filter])
+h_conv3 = tf.nn.relu(conv2d(h_conv2, w_conv3) + b_conv3)
+print h_conv3
 
-# Evaluate model
-y_estimate = tf.argmax(pred,1)
+w_conv4 = weight_variable([3,3,k_filter,k_filter])
+b_conv4 = bias_variable([k_filter])
+h_conv4 = tf.nn.relu(conv2d(h_conv3, w_conv4) + b_conv4)
+print h_conv4
 
-# Initializing the variables
+
+w_conv5 = weight_variable([3,3,k_filter,k_filter])
+b_conv5 = bias_variable([k_filter])
+h_conv5 = tf.nn.relu(conv2d(h_conv4, w_conv5) + b_conv5)
+print h_conv5
+
+
+w_conv6 = weight_variable([3,3,k_filter,k_filter])
+b_conv6 = bias_variable([k_filter])
+h_conv6 = tf.nn.relu(conv2d(h_conv5, w_conv6) + b_conv6)
+print h_conv6
+
+w_conv7 = weight_variable([3,3,k_filter,k_filter])
+b_conv7 = bias_variable([k_filter])
+h_conv7 = tf.nn.relu(conv2d(h_conv6, w_conv7) + b_conv7)
+print h_conv6
+
+w_conv8 = weight_variable([3,3,k_filter,k_filter])
+b_conv8 = bias_variable([k_filter])
+h_conv8 = tf.nn.relu(conv2d(h_conv7, w_conv8) + b_conv8)
+print h_conv8
+
+
+w_conv9 = weight_variable([3,3,k_filter,k_filter])
+b_conv9 = bias_variable([k_filter])
+h_conv9 = tf.nn.relu(conv2d(h_conv8, w_conv9) + b_conv9)
+print h_conv9
+
+
+w_conv10 = weight_variable([3,3,k_filter,k_filter])
+b_conv10 = bias_variable([k_filter])
+h_conv10 = tf.nn.relu(conv2d(h_conv9, w_conv10) + b_conv10)
+print h_conv10
+
+w_conv11 = weight_variable([3,3,k_filter,k_filter])
+b_conv11 = bias_variable([k_filter])
+h_conv11 = tf.nn.relu(conv2d(h_conv10, w_conv11) + b_conv11)
+print h_conv11
+
+w_conv12 = weight_variable([1,1,k_filter,1])
+b_conv12 = bias_variable([1])
+h_conv12=  conv2d(h_conv11, w_conv12) + b_conv12
+
+h_pool13_flat = tf.reshape(h_conv1, [-1 ,15*15*1])
+print h_pool13_flat
+
+
+
+prediction = tf.nn.softmax(h_pool13_flat)
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(output * tf.log(prediction),reduction_indices=[1]))
+optimizer = tf.train.GradientDescentOptimizer(learning_rate).minimize(cross_entropy)
 init = tf.initialize_all_variables()
-# 
-tf.scalar_summary("loss", cost)
-# Merge all summaries to a single operator
-merged_summary_op = tf.merge_all_summaries()
-# Launch the graph
 
 Data = DataCenter.MongoDB()
+
 saver = tf.train.Saver()
+
 with tf.Session() as sess:
     saver.restore(sess, "./Neural_network_save/save_net.ckpt")
-    set_x = Data.SGFReturnSet()
-    out_y = Data.SGFReturnAnw()
-    acc = sess.run(y_estimate, feed_dict={x: np.reshape(set_x,[1,225]), y: np.reshape(out_y,[1,225]), keep_prob: 1.})
-    print acc
+    for i in range(10):
+        set_x = Data.SGFReturnSet()
+        out_y = Data.SGFReturnAnw()
+        cur_color = Data.ReturnColor()
+        all_layer_1 = game.ReturnAllInfo(set_x,cur_color)
+        pre = sess.run(y_estimate, feed_dict={input: np.reshape(all_layer_1,[1,15,15,24]), output: np.reshape(out_y,[1,225])})
+        pre_num = int(pre[0])
+        game.show_game(np.reshape(out_y,[225,1]))
+        game.show_game_pos(pre_num)

@@ -75,12 +75,20 @@ sess = tf.Session()
 # important step
 sess.run(tf.initialize_all_variables())
 print sess.run(W_conv1)
-for i in range(0):
+for i in range(1000):
     batch_xs, batch_ys = mnist.train.next_batch(100)
     sess.run(train_step, feed_dict={xs: batch_xs, ys: batch_ys, keep_prob: 0.5})
+    temp = sess.run(W_fc1)
+
     if i % 50 == 0:
-        print(compute_accuracy(
-            mnist.test.images, mnist.test.labels))
+        print "\n\n\n\n\n"
+        print temp
+        a = raw_input()
+
+for i in range(100):
+    batch_xs, batch_ys = mnist.train.next_batch(100)
+    a =  sess.run(cross_entropy, feed_dict={xs: batch_xs, ys: batch_ys, keep_prob: 0.5})
+    print a
 
 
     
