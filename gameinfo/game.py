@@ -1,6 +1,7 @@
 
 from __future__ import print_function
-import symmetric
+import martix
+import analysis
 import numpy as np
 
 def show_all_info_game(set,y):
@@ -61,17 +62,17 @@ def show_game_set(num):
 		print (chr(ord('a')+i),end = " ")
 
 	print ("\n")
-	show_game_pos(num)
+	
 def Return_Eight_Layer(set):
 	
 	left = set
-	up = symmetric.rotate90(left)
-	right = symmetric.rotate90(up)
-	down =  symmetric.rotate90(up)
-	ref_left = symmetric.reflection(set)
-	ref_up = symmetric.rotate90(ref_left)
-	ref_right =  symmetric.rotate90(ref_up)
-	ref_down = symmetric.rotate90(ref_right)
+	up = martix.rotate90(left)
+	right = martix.rotate90(up)
+	down =  martix.rotate90(up)
+	ref_left = martix.reflection(set)
+	ref_up = martix.rotate90(ref_left)
+	ref_right =  martix.rotate90(ref_up)
+	ref_down = martix.rotate90(ref_right)
 
 	all_layer = [np.reshape(left,[225]), np.reshape(up,[225]) , np.reshape(right,[225]), 
 	np.reshape(down,[225]), np.reshape(ref_left,[225]), np.reshape(ref_up,[225]), 
@@ -82,22 +83,22 @@ def Return_Eight_Layer(set):
 def ReturnAllLayer(set,color):
 	s = set
 	left = ReturnAllInfo(s,color)
-	s = symmetric.rotate90(s)
+	s = martix.rotate90(s)
 	up = ReturnAllInfo(s,color)
-	s = symmetric.rotate90(s)
+	s = martix.rotate90(s)
 	right = ReturnAllInfo(s,color)
-	s = symmetric.rotate90(s)
+	s = martix.rotate90(s)
 	down = ReturnAllInfo(s,color)
 
-	s =  symmetric.reflection(set)
+	s =  martix.reflection(set)
 	ref_left  = ReturnAllInfo(s,color)
-	s = symmetric.rotate90(s)
+	s = martix.rotate90(s)
 
 	ref_up = ReturnAllInfo(s,color)
-	s = symmetric.rotate90(s)
+	s = martix.rotate90(s)
 
 	ref_right = ReturnAllInfo(s,color)
-	s = symmetric.rotate90(s)
+	s = martix.rotate90(s)
 	ref_down = ReturnAllInfo(s,color)
 	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
 
@@ -108,53 +109,53 @@ def ReturnAllInfo(set,color):
 	if color == 1:
 		ocolor = 0.5
 
-	layer_1 = symmetric.evaluate_self(set,color)
+	layer_1 = analysis.evaluate_self(set,color)
 
-	layer_2 = symmetric.evaluate_self(set,ocolor)
+	layer_2 = analysis.evaluate_self(set,ocolor)
 
-	layer_3 = symmetric.evaluate_self(set,0)
+	layer_3 = analysis.evaluate_self(set,0)
 
 	layer_4 = [[1 for i in range(15)] for j in range(15)]
 
 	# player
-	layer_5 = symmetric.evaluate_lib_five(set,color)
+	layer_5 = analysis.evaluate_lib_five(set,color)
 
-	layer_6 = symmetric.evaluate_square_three(set,color)
+	layer_6 = analysis.evaluate_square_three(set,color)
 
-	layer_7 = symmetric.evaluate_dead_two(set,color)
+	layer_7 = analysis.evaluate_dead_two(set,color)
 
-	layer_8 = symmetric.evaluate_alive_two(set,color)
+	layer_8 = analysis.evaluate_alive_two(set,color)
 
-	layer_9 = symmetric.evaluate_dead_three(set,color)
+	layer_9 = analysis.evaluate_dead_three(set,color)
 
-	layer_10 = symmetric.evaluate_alive_three(set,color)
+	layer_10 = analysis.evaluate_alive_three(set,color)
 
-	layer_11 = symmetric.evaluate_dead_four(set,color)
+	layer_11 = analysis.evaluate_dead_four(set,color)
 
-	layer_12 = symmetric.evaluate_alive_four(set,color)
+	layer_12 = analysis.evaluate_alive_four(set,color)
 
-	layer_13 = symmetric.evaluate_five(set,color)
+	layer_13 = analysis.evaluate_five(set,color)
 
 	layer_14 = [[1 for i in range(15)] for j in range(15)]
 
 	#opponent
-	layer_15 = symmetric.evaluate_lib_five(set,ocolor)
+	layer_15 = analysis.evaluate_lib_five(set,ocolor)
 
-	layer_16 = symmetric.evaluate_square_three(set,ocolor)
+	layer_16 = analysis.evaluate_square_three(set,ocolor)
 
-	layer_17 = symmetric.evaluate_dead_two(set,ocolor)
+	layer_17 = analysis.evaluate_dead_two(set,ocolor)
 
-	layer_18 = symmetric.evaluate_alive_two(set,ocolor)
+	layer_18 = analysis.evaluate_alive_two(set,ocolor)
 
-	layer_19 = symmetric.evaluate_dead_three(set,ocolor)
+	layer_19 = analysis.evaluate_dead_three(set,ocolor)
 
-	layer_20 = symmetric.evaluate_alive_three(set,ocolor)
+	layer_20 = analysis.evaluate_alive_three(set,ocolor)
 
-	layer_21 = symmetric.evaluate_dead_four(set,ocolor)
+	layer_21 = analysis.evaluate_dead_four(set,ocolor)
 
-	layer_22 = symmetric.evaluate_alive_four(set,ocolor)
+	layer_22 = analysis.evaluate_alive_four(set,ocolor)
 
-	layer_23 = symmetric.evaluate_five(set,ocolor)
+	layer_23 = analysis.evaluate_five(set,ocolor)
 
 	layer_24= [[0 for i in range(15)] for j in range(15)]
 
