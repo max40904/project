@@ -48,13 +48,12 @@ elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
     restore_loc = raw_input()
-    Cnn.restore("./Neural_network_save/save_net+10000.ckpt")
+    Cnn.restore("./Neural_network_save/save_net400000.ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
     if check =="1":
         count = 0.
         for i in range(training_iters):
-            print i
             x = Data.SGFReturnSet()
             y = Data.SGFReturnAnw()
             cut_color = Data.ReturnColor()
@@ -64,8 +63,8 @@ elif choose =='2':
             nownum =np.matrix(np.reshape(y,[225]))
             if nownum.argmax()==y_estimate:
                 count = count + 1
-
-        print count,  count/training_iters
+            if i%10000 ==0:
+                print count,  count/training_iters
 
     if check =="2":
         game.show_game(np.reshape(set,[225,1]))
