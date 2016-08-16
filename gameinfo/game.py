@@ -1,7 +1,8 @@
 
 from __future__ import print_function
 import martix
-import analysis
+import policy_analysis
+import local_policy_analysis
 import numpy as np
 
 def show_all_info_game(set,y):
@@ -109,53 +110,53 @@ def ReturnAllInfo(set,color):
 	if color == 1:
 		ocolor = 0.5
 
-	layer_1 = analysis.evaluate_self(set,color)
+	layer_1 = policy_analysis.evaluate_self(set,color)
 
-	layer_2 = analysis.evaluate_self(set,ocolor)
+	layer_2 = policy_analysis.evaluate_self(set,ocolor)
 
-	layer_3 = analysis.evaluate_self(set,0)
+	layer_3 = policy_analysis.evaluate_self(set,0)
 
 	layer_4 = [[1 for i in range(15)] for j in range(15)]
 
 	# player
-	layer_5 = analysis.evaluate_lib_five(set,color)
+	layer_5 = policy_analysis.evaluate_lib_five(set,color)
 
-	layer_6 = analysis.evaluate_square_three(set,color)
+	layer_6 = policy_analysis.evaluate_square_three(set,color)
 
-	layer_7 = analysis.evaluate_dead_two(set,color)
+	layer_7 = policy_analysis.evaluate_dead_two(set,color)
 
-	layer_8 = analysis.evaluate_alive_two(set,color)
+	layer_8 = policy_analysis.evaluate_alive_two(set,color)
 
-	layer_9 = analysis.evaluate_dead_three(set,color)
+	layer_9 = policy_analysis.evaluate_dead_three(set,color)
 
-	layer_10 = analysis.evaluate_alive_three(set,color)
+	layer_10 = policy_analysis.evaluate_alive_three(set,color)
 
-	layer_11 = analysis.evaluate_dead_four(set,color)
+	layer_11 = policy_analysis.evaluate_dead_four(set,color)
 
-	layer_12 = analysis.evaluate_alive_four(set,color)
+	layer_12 = policy_analysis.evaluate_alive_four(set,color)
 
-	layer_13 = analysis.evaluate_five(set,color)
+	layer_13 = policy_analysis.evaluate_five(set,color)
 
 	layer_14 = [[1 for i in range(15)] for j in range(15)]
 
 	#opponent
-	layer_15 = analysis.evaluate_lib_five(set,ocolor)
+	layer_15 = policy_analysis.evaluate_lib_five(set,ocolor)
 
-	layer_16 = analysis.evaluate_square_three(set,ocolor)
+	layer_16 = policy_analysis.evaluate_square_three(set,ocolor)
 
-	layer_17 = analysis.evaluate_dead_two(set,ocolor)
+	layer_17 = policy_analysis.evaluate_dead_two(set,ocolor)
 
-	layer_18 = analysis.evaluate_alive_two(set,ocolor)
+	layer_18 = policy_analysis.evaluate_alive_two(set,ocolor)
 
-	layer_19 = analysis.evaluate_dead_three(set,ocolor)
+	layer_19 = policy_analysis.evaluate_dead_three(set,ocolor)
 
-	layer_20 = analysis.evaluate_alive_three(set,ocolor)
+	layer_20 = policy_analysis.evaluate_alive_three(set,ocolor)
 
-	layer_21 = analysis.evaluate_dead_four(set,ocolor)
+	layer_21 = policy_analysis.evaluate_dead_four(set,ocolor)
 
-	layer_22 = analysis.evaluate_alive_four(set,ocolor)
+	layer_22 = policy_analysis.evaluate_alive_four(set,ocolor)
 
-	layer_23 = analysis.evaluate_five(set,ocolor)
+	layer_23 = policy_analysis.evaluate_five(set,ocolor)
 
 	layer_24= [[0 for i in range(15)] for j in range(15)]
 
@@ -207,3 +208,54 @@ def StepGame(step ,set,color ):
 	x = step %15
 	set[y][x] = color
 	return set
+
+
+def Retrun_fif_to_nine_set(set,out):
+	set_lib = local_policy_analysis.evaluate_square_five_check(set)
+	anw_lib = local_policy_analysis.evaluate_square_five_check(out)
+ 	check = [[0 for i in range(15)] for j in range(15)]
+ 	for i in range(15):
+		for j in range(15):
+			if set_lib[i][j] ==1 and set_lib[i][j] ==1:
+				check[i][j] =1
+			if out[i][j]==1:
+				check[i][j] =1
+
+	anw = []
+	for i in range(15):
+		for j in range(15):
+			if check[i][j] ==1:
+				ele = local_policy_analysis.ReturnFiftoEight(set,i,j)
+				anw.append(ele)
+
+
+
+
+
+	return anw
+
+def show_game_eight(set):
+	seq = 1
+	for i in range(81):
+		if i %9 ==0:
+			print ("")
+		if set[i] == 1:
+			print("X ", end="")
+
+			
+		elif set[i] ==0.5:
+			print("O ", end="")
+		elif set[i] ==9999:
+			print ("? ", end="")
+
+			
+		else :
+			print('. ', end="")
+		if i %9 ==8:
+			print("",seq,end= "")
+			seq = seq + 1
+	print ("")
+	for i in range(9):
+		print (chr(ord('a')+i),end = " ")
+
+	print ("\n")
