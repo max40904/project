@@ -256,11 +256,6 @@ def Retrun_fif_to_nine_anw(set,out):
 			if check[i][j] ==1:
 				ele = local_policy_analysis.ReturnFiftoEight(out,i,j)
 				anw.append(ele)
-
-
-
-
-
 	return anw
 
 def Show_game_nine(set):
@@ -292,16 +287,30 @@ def Show_game_nine(set):
 def Return_Eight_anw_nine(set,color):
 	all_anw = []
 	if set[4][4]==1:
-		if color =="1":
+		if color ==1:
 			all_anw = [[0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0]]
-		if color =="0.5":
+		if color ==0.5:
 			all_anw = [[0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1]]
 	else:
-		all_anw = [[0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0]]
+		all_anw = [[1,0,0], [1,0,0], [1,0,0], [1,0,0], [1,0,0], [1,0,0], [1,0,0], [1,0,0]]
 	
 
 	
 	return all_anw
+def Return__anw_nine(set,color):
+	all_anw = []
+	if set[4][4]==1:
+		if color ==1:
+			all_anw = [0,1,0]
+		if color ==0.5:
+			all_anw = [0,0,1]
+	else:
+		all_anw = [0,0,0]
+	
+
+	
+	return all_anw
+
 
 def Return_Eight_Layer_nine(set):
 	
@@ -371,16 +380,16 @@ def ReturnAllInfo_nine(set,color):
 	layer_22 = local_policy_analysis.evaluate_nine_alive_four(set,ocolor)
 
 	layer_23 = local_policy_analysis.evaluate_nine_five(set,ocolor)
+	layer_24= [[0 for i in range(9)] for j in range(9)]
 
-
-	layer_24= [[1 for i in range(9)] for j in range(9)]
+	layer_25= [[1 for i in range(9)] for j in range(9)]
 	if color ==0.5:
 		layer_24= [[0 for i in range(9)] for j in range(9)]
 
 
 
 
-	all_layer = [[[0 for i in range(24)] for j in range(9)] for x in range(9)]
+	all_layer = [[[0 for i in range(25)] for j in range(9)] for x in range(9)]
 
 	for i in range(9):
 		for j in range(9):
@@ -408,6 +417,7 @@ def ReturnAllInfo_nine(set,color):
 			all_layer[i][j][21] = layer_22[i][j]
 			all_layer[i][j][22] = layer_23[i][j]
 			all_layer[i][j][23] = layer_24[i][j]
+			all_layer[i][j][24] = layer_25[i][j]
 	return all_layer
 
 def ReturnAllLayer_nine(set,color):
