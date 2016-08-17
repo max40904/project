@@ -172,7 +172,7 @@ def ReturnAllInfo(set,color):
 
 
 
-	all_layer = [[[0 for i in range(24)] for j in range(15)] for x in range(15)]
+	all_layer = [[[0 for i in range(28)] for j in range(15)] for x in range(15)]
 
 	for i in range(15):
 		for j in range(15):
@@ -200,10 +200,10 @@ def ReturnAllInfo(set,color):
 			all_layer[i][j][21] = layer_22[i][j]
 			all_layer[i][j][22] = layer_23[i][j]
 			all_layer[i][j][23] = layer_24[i][j]
-			all_layer[i][j][23] = layer_25[i][j]
-			all_layer[i][j][23] = layer_26[i][j]
-			all_layer[i][j][23] = layer_27[i][j]
-			all_layer[i][j][23] = layer_28[i][j]
+			all_layer[i][j][24] = layer_25[i][j]
+			all_layer[i][j][25] = layer_26[i][j]
+			all_layer[i][j][26] = layer_27[i][j]
+			all_layer[i][j][27] = layer_28[i][j]
 	return all_layer
 
 def ConvertToNum(step):
