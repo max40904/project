@@ -382,8 +382,6 @@ def evaluate_dead_four (set_x,color):
 					re_set[x+5][y-5] = color
 	return re_set		
 	
-
-
 def evaluate_alive_two(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -465,6 +463,7 @@ def evaluate_alive_two(set,flag):
 
 				
 	return anw
+
 def evaluate_dead_two(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -546,6 +545,7 @@ def evaluate_dead_two(set,flag):
 
 				
 	return anw
+
 def evaluate_dead_three(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -643,6 +643,7 @@ def evaluate_dead_three(set,flag):
 
 				
 	return anw
+
 def evaluate_lib_five(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -651,35 +652,47 @@ def evaluate_lib_five(set,flag):
 	for y in range(15):
 		for x in range(15):
 			if set[y][x] == flag :
-				for i in range(5):
-				
+				for i in range(1,5):
 					if y - i >= 0 and set[y - i][ x ] ==0:
 						anw [ y - i ][ x ] = 1
+					else:
+						break
+				for i in range(1,5):
 
 					if y + i <=14 and set[y + i][ x ] ==0:
 						anw [ y + i ][ x ] = 1
-
-
+					else:
+						break
+				for i in range(1,5):
 					if x + i <= 14 and set[y ][ x + i ] ==0:
 						anw [ y ][ x + i ] = 1
-
-
+					else:
+						break
+				for i in range(1,5):
 					if x - i >= 0  and set[y ][ x - i ] ==0:
-						anw [ y ][ x - i ] = 1 
-
-
+						anw [ y ][ x - i ] = 1
+					else:
+						break
+				for i in range(1,5):
 					if x - i >= 0 and y - i >=0 and set[y - i][ x - i ] ==0:
 						anw [ y - i] [ x -  i] =1
-
-
+					else:
+						break
+				for i in range(1,5):
 					if x + i <= 14 and y - i >=0  and set[y - i][ x + i ] ==0:
 						anw [ y - i] [x + i] =1
-
+					else:
+						break
+				for i in range(1,5):
 					if x -i >= 0 and y + i <= 14 and set[y + i][ x - i ] ==0:
 						anw [y + i][ x - i ] = 1
-
+					else:
+						break
+				for i in range(1,5):
 					if x + i <= 14 and y +i <= 14  and set[y + i][ x + i ] ==0:
 						anw [ y + i] [x + i] = 1
+					else:
+						break
 	return anw
 
 def evaluate_self(set,flag):
@@ -689,6 +702,7 @@ def evaluate_self(set,flag):
 			if set[y][x] == flag:
 				anw[y][x] = 1
 	return anw
+
 def evaluate_square_three(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -705,6 +719,24 @@ def evaluate_square_three(set,flag):
 
 
 	return anw
+
+def evaluate_square_two(set,flag):
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	anw = [[0 for i in range(15)] for j in range(15)]
+	for y in range(15):
+		for x in range(15):
+			if set[y][x] == flag:
+				for i in range(-1,2):
+					for j in range(-1,2):
+						if x + j <=14 and x + j >=0 and y + i >= 0 and y + i <= 14 and set [ y + i ][ x + j ]==0:
+							anw [ y + i ][ x + j ] = 1  
+
+
+
+	return anw
+
 def evaluate_square_four(set,flag):
 	rflag = 0.5
 	if flag == 0.5:

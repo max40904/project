@@ -17,6 +17,7 @@ def show_all_info_game(set,y):
 			print ("")
 		print ("\n")
 	print ("\n")
+
 def show_game(set):
 	seq = 1
 	for i in range(225):
@@ -40,6 +41,7 @@ def show_game(set):
 		print (chr(ord('a')+i),end = " ")
 
 	print ("\n")
+
 def show_game_pos(num):
 	byte =  num % 15
 	y =  num / 15 + 1
@@ -67,39 +69,38 @@ def show_game_set(num):
 def Return_Eight_Layer(set):
 	
 	left = set
-	up = martix.rotate90(left)
-	right = martix.rotate90(up)
-	down =  martix.rotate90(up)
-	ref_left = martix.reflection(set)
-	ref_up = martix.rotate90(ref_left)
-	ref_right =  martix.rotate90(ref_up)
-	ref_down = martix.rotate90(ref_right)
+	up = martix.rotate90_fif(left)
+	right = martix.rotate90_fif(up)
+	down =  martix.rotate90_fif(up)
+	ref_left = martix.reflection_fif(set)
+	ref_up = martix.rotate90_fif(ref_left)
+	ref_right =  martix.rotate90_fif(ref_up)
+	ref_down = martix.rotate90_fif(ref_right)
 
 	all_layer = [np.reshape(left,[225]), np.reshape(up,[225]) , np.reshape(right,[225]), 
 	np.reshape(down,[225]), np.reshape(ref_left,[225]), np.reshape(ref_up,[225]), 
 	np.reshape(ref_right,[225]), np.reshape(ref_down,[225])]
 	return all_layer
 
-
 def ReturnAllLayer(set,color):
 	s = set
 	left = ReturnAllInfo(s,color)
-	s = martix.rotate90(s)
+	s = martix.rotate90_fif(s)
 	up = ReturnAllInfo(s,color)
-	s = martix.rotate90(s)
+	s = martix.rotate90_fif(s)
 	right = ReturnAllInfo(s,color)
-	s = martix.rotate90(s)
+	s = martix.rotate90_fif(s)
 	down = ReturnAllInfo(s,color)
 
-	s =  martix.reflection(set)
+	s =  martix.reflection_fif(set)
 	ref_left  = ReturnAllInfo(s,color)
-	s = martix.rotate90(s)
+	s = martix.rotate90_fif(s)
 
 	ref_up = ReturnAllInfo(s,color)
-	s = martix.rotate90(s)
+	s = martix.rotate90_fif(s)
 
 	ref_right = ReturnAllInfo(s,color)
-	s = martix.rotate90(s)
+	s = martix.rotate90_fif(s)
 	ref_down = ReturnAllInfo(s,color)
 	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
 
@@ -121,44 +122,52 @@ def ReturnAllInfo(set,color):
 	# player
 	layer_5 = policy_analysis.evaluate_lib_five(set,color)
 
-	layer_6 = policy_analysis.evaluate_square_three(set,color)
+	layer_6 = policy_analysis.evaluate_square_four(set,color)
 
-	layer_7 = policy_analysis.evaluate_dead_two(set,color)
+	layer_7 = policy_analysis.evaluate_square_three(set,color)
 
-	layer_8 = policy_analysis.evaluate_alive_two(set,color)
+	layer_8 = policy_analysis.evaluate_square_two(set,color)
 
-	layer_9 = policy_analysis.evaluate_dead_three(set,color)
+	layer_9 = policy_analysis.evaluate_dead_two(set,color)
 
-	layer_10 = policy_analysis.evaluate_alive_three(set,color)
+	layer_10 = policy_analysis.evaluate_alive_two(set,color)
 
-	layer_11 = policy_analysis.evaluate_dead_four(set,color)
+	layer_11= policy_analysis.evaluate_dead_three(set,color)
 
-	layer_12 = policy_analysis.evaluate_alive_four(set,color)
+	layer_12 = policy_analysis.evaluate_alive_three(set,color)
 
-	layer_13 = policy_analysis.evaluate_five(set,color)
+	layer_13 = policy_analysis.evaluate_dead_four(set,color)
 
-	layer_14 = [[1 for i in range(15)] for j in range(15)]
+	layer_14 = policy_analysis.evaluate_alive_four(set,color)
+
+	layer_15 = policy_analysis.evaluate_five(set,color)
+
+	layer_16 = [[1 for i in range(15)] for j in range(15)]
 
 	#opponent
-	layer_15 = policy_analysis.evaluate_lib_five(set,ocolor)
+	layer_17 = policy_analysis.evaluate_lib_five(set,ocolor)
 
-	layer_16 = policy_analysis.evaluate_square_three(set,ocolor)
+	layer_18 = policy_analysis.evaluate_square_four(set,ocolor)
+	
+	layer_19 = policy_analysis.evaluate_square_three(set,ocolor)
+	
+	layer_20 = policy_analysis.evaluate_square_two(set,ocolor)
 
-	layer_17 = policy_analysis.evaluate_dead_two(set,ocolor)
+	layer_21 = policy_analysis.evaluate_dead_two(set,ocolor)
 
-	layer_18 = policy_analysis.evaluate_alive_two(set,ocolor)
+	layer_22 = policy_analysis.evaluate_alive_two(set,ocolor)
 
-	layer_19 = policy_analysis.evaluate_dead_three(set,ocolor)
+	layer_23 = policy_analysis.evaluate_dead_three(set,ocolor)
 
-	layer_20 = policy_analysis.evaluate_alive_three(set,ocolor)
+	layer_24 = policy_analysis.evaluate_alive_three(set,ocolor)
 
-	layer_21 = policy_analysis.evaluate_dead_four(set,ocolor)
+	layer_25 = policy_analysis.evaluate_dead_four(set,ocolor)
 
-	layer_22 = policy_analysis.evaluate_alive_four(set,ocolor)
+	layer_26 = policy_analysis.evaluate_alive_four(set,ocolor)
 
-	layer_23 = policy_analysis.evaluate_five(set,ocolor)
+	layer_27 = policy_analysis.evaluate_five(set,ocolor)
 
-	layer_24= [[0 for i in range(15)] for j in range(15)]
+	layer_28= [[0 for i in range(15)] for j in range(15)]
 
 
 
@@ -191,9 +200,11 @@ def ReturnAllInfo(set,color):
 			all_layer[i][j][21] = layer_22[i][j]
 			all_layer[i][j][22] = layer_23[i][j]
 			all_layer[i][j][23] = layer_24[i][j]
+			all_layer[i][j][23] = layer_25[i][j]
+			all_layer[i][j][23] = layer_26[i][j]
+			all_layer[i][j][23] = layer_27[i][j]
+			all_layer[i][j][23] = layer_28[i][j]
 	return all_layer
-
-
 
 def ConvertToNum(step):
 	first = step[0]
@@ -201,25 +212,14 @@ def ConvertToNum(step):
 	num = (ord(first)-ord('a'))+(int(second)-1)*15
 	return num
 
-
-
 def StepGame(step ,set,color ):
 	y = step /15
 	x = step %15
 	set[y][x] = color
 	return set
 
-
 def Retrun_fif_to_nine_set(set,out):
-	set_lib = local_policy_analysis.evaluate_square_five_check(set)
-	anw_lib = local_policy_analysis.evaluate_square_five_check(out)
- 	check = [[0 for i in range(15)] for j in range(15)]
- 	for i in range(15):
-		for j in range(15):
-			if set_lib[i][j] ==1 and set_lib[i][j] ==1:
-				check[i][j] =1
-			if out[i][j]==1:
-				check[i][j] =1
+	check =Return_nine_can_use(set,out)
 
 	anw = []
 	for i in range(15):
@@ -234,7 +234,36 @@ def Retrun_fif_to_nine_set(set,out):
 
 	return anw
 
-def show_game_eight(set):
+def Return_nine_can_use(set,out):
+	anw_lib = local_policy_analysis.evaluate_square_five_check(out)
+ 	check = [[0 for i in range(15)] for j in range(15)]
+ 	for i in range(15):
+		for j in range(15):
+			if anw_lib[i][j] ==1 and set[i][j] ==0:
+				check[i][j] =1
+			if out[i][j]==1:
+				check[i][j] =1
+	return check
+
+
+def Retrun_fif_to_nine_anw(set,out):
+	
+ 	check =Return_nine_can_use(set,out)
+
+	anw = []
+	for i in range(15):
+		for j in range(15):
+			if check[i][j] ==1:
+				ele = local_policy_analysis.ReturnFiftoEight(out,i,j)
+				anw.append(ele)
+
+
+
+
+
+	return anw
+
+def Show_game_nine(set):
 	seq = 1
 	for i in range(81):
 		if i %9 ==0:
@@ -259,3 +288,148 @@ def show_game_eight(set):
 		print (chr(ord('a')+i),end = " ")
 
 	print ("\n")
+
+def Return_Eight_anw_nine(set,color):
+	all_anw = []
+	if set[4][4]==1:
+		if color =="1":
+			all_anw = [[0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0]]
+		if color =="0.5":
+			all_anw = [[0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1], [0,0,1]]
+	else:
+		all_anw = [[0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0], [0,0,0]]
+	
+
+	
+	return all_anw
+
+def Return_Eight_Layer_nine(set):
+	
+	left = set
+	up = martix.rotate90_nine(left)
+	right = martix.rotate90_nine(up)
+	down =  martix.rotate90_nine(up)
+	ref_left = martix.reflection_nine(set)
+	ref_up = martix.rotate90_nine(ref_left)
+	ref_right =  martix.rotate90_nine(ref_up)
+	ref_down = martix.rotate90_nine(ref_right)
+
+	all_layer = [np.reshape(left,[81]), np.reshape(up,[81]) , np.reshape(right,[81]), 
+	np.reshape(down,[81]), np.reshape(ref_left,[81]), np.reshape(ref_up,[81]), 
+	np.reshape(ref_right,[81]), np.reshape(ref_down,[81])]
+	return all_layer
+
+def ReturnAllInfo_nine(set,color):
+	ocolor = 1
+	if color == 1:
+		ocolor = 0.5
+
+	layer_1 = local_policy_analysis.evaluate_nine_self(set,color)
+
+	layer_2 = local_policy_analysis.evaluate_nine_self(set,ocolor)
+
+	layer_3 = local_policy_analysis.evaluate_nine_self(set,0)
+
+	layer_4 = [[1 for i in range(9)] for j in range(9)]
+
+	# player
+	layer_5 = local_policy_analysis.evaluate_nine_lib_five(set,color)
+
+	layer_6 = local_policy_analysis.evaluate_nine_square_three(set,color)
+
+	layer_7 = local_policy_analysis.evaluate_nine_dead_two(set,color)
+
+	layer_8 = local_policy_analysis.evaluate_nine_alive_two(set,color)
+
+	layer_9 = local_policy_analysis.evaluate_nine_dead_three(set,color)
+
+	layer_10 = local_policy_analysis.evaluate_nine_alive_three(set,color)
+
+	layer_11 = local_policy_analysis.evaluate_nine_dead_four(set,color)
+
+	layer_12 = local_policy_analysis.evaluate_nine_alive_four(set,color)
+
+	layer_13 = local_policy_analysis.evaluate_nine_five(set,color)
+
+	layer_14 = [[1 for i in range(9)] for j in range(9)]
+
+	#opponent
+	layer_9 = local_policy_analysis.evaluate_nine_lib_five(set,ocolor)
+
+	layer_16 = local_policy_analysis.evaluate_nine_square_three(set,ocolor)
+
+	layer_17 = local_policy_analysis.evaluate_nine_dead_two(set,ocolor)
+
+	layer_18 = local_policy_analysis.evaluate_nine_alive_two(set,ocolor)
+
+	layer_19 = local_policy_analysis.evaluate_nine_dead_three(set,ocolor)
+
+	layer_20 = local_policy_analysis.evaluate_nine_alive_three(set,ocolor)
+
+	layer_21 = local_policy_analysis.evaluate_nine_dead_four(set,ocolor)
+
+	layer_22 = local_policy_analysis.evaluate_nine_alive_four(set,ocolor)
+
+	layer_23 = local_policy_analysis.evaluate_nine_five(set,ocolor)
+
+
+	layer_24= [[1 for i in range(9)] for j in range(9)]
+	if color ==0.5:
+		layer_24= [[0 for i in range(9)] for j in range(9)]
+
+
+
+
+	all_layer = [[[0 for i in range(24)] for j in range(9)] for x in range(9)]
+
+	for i in range(9):
+		for j in range(9):
+			all_layer[i][j][0] = layer_1[i][j]
+			all_layer[i][j][1] = layer_2[i][j]
+			all_layer[i][j][2] = layer_3[i][j]
+			all_layer[i][j][3] = layer_4[i][j]
+			all_layer[i][j][4] = layer_5[i][j]
+			all_layer[i][j][5] = layer_6[i][j]
+			all_layer[i][j][6] = layer_7[i][j]
+			all_layer[i][j][7] = layer_8[i][j]
+			all_layer[i][j][8] = layer_9[i][j]
+			all_layer[i][j][9] = layer_10[i][j]
+			all_layer[i][j][10] = layer_11[i][j]
+			all_layer[i][j][11] = layer_12[i][j]
+			all_layer[i][j][12] = layer_13[i][j]
+			all_layer[i][j][13] = layer_14[i][j]
+			all_layer[i][j][14] = layer_9[i][j]
+			all_layer[i][j][9] = layer_16[i][j]
+			all_layer[i][j][16] = layer_17[i][j]
+			all_layer[i][j][17] = layer_18[i][j]
+			all_layer[i][j][18] = layer_19[i][j]
+			all_layer[i][j][19] = layer_20[i][j]
+			all_layer[i][j][20] = layer_21[i][j]
+			all_layer[i][j][21] = layer_22[i][j]
+			all_layer[i][j][22] = layer_23[i][j]
+			all_layer[i][j][23] = layer_24[i][j]
+	return all_layer
+
+def ReturnAllLayer_nine(set,color):
+	s = set
+	left = ReturnAllInfo_nine(s,color)
+	s = martix.rotate90_nine(s)
+	up = ReturnAllInfo_nine(s,color)
+	s = martix.rotate90_nine(s)
+	right = ReturnAllInfo_nine(s,color)
+	s = martix.rotate90_nine(s)
+	down = ReturnAllInfo_nine(s,color)
+
+	s =  martix.reflection_nine(set)
+	ref_left  = ReturnAllInfo_nine(s,color)
+	s = martix.rotate90_nine(s)
+
+	ref_up = ReturnAllInfo_nine(s,color)
+	s = martix.rotate90_nine(s)
+
+	ref_right = ReturnAllInfo_nine(s,color)
+	s = martix.rotate90_nine(s)
+	ref_down = ReturnAllInfo_nine(s,color)
+	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
+
+	return all_layer

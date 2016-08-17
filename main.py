@@ -9,11 +9,11 @@ import numpy as np
 
 
 learning_rate = 0.0003
-input_stack = 24
+input_stack = 28
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = 24 * 4
+k_filter = input_stack * 4
 training_iters = 410001
 
 
