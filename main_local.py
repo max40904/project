@@ -12,7 +12,7 @@ learning_rate = 0.0003
 input_stack = 25
 step_save = 1000
 step_draw = 100
-step_check_crossenropy = 10
+step_check_crossenropy = 500
 k_filter = input_stack * 2
 training_iters = 100001
 
@@ -20,7 +20,7 @@ training_iters = 100001
 
 Data = DataCenter.MongoDB()
 LocalCnn =  Local_Policy.LocalPolicy(learning_rate, input_stack, k_filter) 
-print "1. train 2. restoredata"
+print "1. train 2. restoredata    3.restore data and then train"
 choose = raw_input()
 if choose =='1':
 	LocalCnn.initialize()
@@ -36,25 +36,78 @@ if choose =='1':
 	    	input = game.ReturnAllLayer_nine(all_set_nine[j],cut_color)
 	    	y_real = game.Return_Eight_anw_nine(all_anw_nine[j],cut_color)
 	    	LocalCnn.train(input,y_real)
-	    	if i%step_draw:
-	    		LocalCnn.draw(input,y_real,count)
+	    	
+	    	LocalCnn.draw(input,y_real,count)
+	    	result = LocalCnn.Return_cross_entropy(input,y_real)
+	    	print result
 	    	count = count +1
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")
 if choose =='2':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net10.ckpt")
-	for i in range(10 ):
+	LocalCnn.restore("./Loc_Neural_network_save/save_net100000.ckpt")
+	for i in range(10000 ):
 		x = Data.SGFReturnSet()
 		y = Data.SGFReturnAnw()
-		cut_color = Data.ReturnColor()
-		all_set_nine = game.Retrun_fif_to_nine_set( x, y ) 
-		all_anw_nine = game.Retrun_fif_to_nine_anw( x, y )
-		for j in range(len(all_set_nine)):
-			input = game.ReturnAllInfo_nine(all_set_nine[j],cut_color)
-			output = game.Return__anw_nine(all_anw_nine[j],cut_color)
-			b = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,9,9,input_stack]),np.reshape(output,[1,3]))
-			print b
+		game.show_game(np.reshape(x,[225,1]))
+		game.show_game(np.reshape(y,[225,1]))
 
+		cut_color = Data.ReturnColor()
+		check = game.ReturnSelectField(x , 0)
+		prob = [[0.0 for i in range(15)] for j in range(15)]
+		for i in range(15):
+			for j in range(15):
+				if check[i][j] == 1 :
+					input = game.ReturnAllInfo_nine(game.ReturnFif_to_Nine(x,i,j), cut_color)
+					output = [[0 for sss in range(3)] for jjjj in range(1)]
+					if cut_color == 1:
+						prob[i][j] = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,9,9,25]), output)
+
+					if cut_color == 0.5:
+						prob[i][j] = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,9,9,25]), output)
+		prob_flat = np.reshape(prob,[225])
+		test = game.Return_Biggest_Five_Loc(prob_flat)
+		test2 = game.Return_Biggest_Five_Prob(prob_flat)
+		print test
+		print test2
+		game.Show_Biggest_Five_Loc(prob_flat)
+		ss = np.argmax(np.reshape(prob,[225]))
+		game.show_game_set(ss)
+		game.show_game_pos(ss)
+
+		a = raw_input()
+if choose =='3':
+	LocalCnn.restore("./Loc_Neural_network_save/save_net100000.ckpt")
+	print "where you want to start?"
+	aaa = raw_input()
+	time = int(aaa)
+	count = 0
+	for j in range(time):
+		x = Data.SGFReturnSet()
+
+
+	for i in range(time ,time + training_iters):
+	    x = Data.SGFReturnSet()
+	    y = Data.SGFReturnAnw()
+	    cut_color = Data.ReturnColor()
+	    all_set_nine = game.Retrun_fif_to_nine_set( x, y ) 
+	    all_anw_nine = game.Retrun_fif_to_nine_anw( x, y )
+	    print i
+	    for j in range(len(all_set_nine)):
+	    	input = game.ReturnAllLayer_nine(all_set_nine[j],cut_color)
+	    	y_real = game.Return_Eight_anw_nine(all_anw_nine[j],cut_color)
+	    	LocalCnn.train(input,y_real)
+	    	
+	    	
+	    	if count %step_draw ==0:
+	    		LocalCnn.draw(input,y_real,count)
+	    	if count %step_check_crossenropy ==0:
+	    		result = LocalCnn.Return_cross_entropy(input,y_real)
+	    	count = count +1
+	    if i %step_save ==0:
+	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")
+
+
+		
 
 
 

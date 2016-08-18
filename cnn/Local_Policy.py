@@ -136,13 +136,13 @@ class LocalPolicy:
 		return cross
 	def Return_prediction_prob_empty(self,input,output):
 		pre =  self.sess.run(self.predic , feed_dict = {self.xs: input,self.ys :output})
-		return pre[0]
+		return pre[0][0]
 	def Return_prediction_prob_black(self,input,output):
 		pre =  self.sess.run(self.predic , feed_dict = {self.xs: input,self.ys :output})
-		return pre[1]
+		return pre[0][1]
 	def Return_prediction_prob_white(self,input,output):
 		pre =  self.sess.run(self.predic , feed_dict = {self.xs: input,self.ys :output})
-		return pre[2]
+		return pre[0][2]
 
 	def Return_prediction(self,input,output):
 		pre =  self.sess.run(self.pre_loc, feed_dict = {self.xs: input,self.ys :output})

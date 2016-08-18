@@ -4,6 +4,33 @@ import martix
 import policy_analysis
 import local_policy_analysis
 import numpy as np
+def Return_Biggest_Five_Prob(set):
+	anw = []
+	s  = set.copy()
+	for i in range(5):
+		anw.append(s[np.argmax(s)])
+		s[np.argmax(s)] = 0
+	return anw
+def Show_Biggest_Five_Loc(set):
+	anw = []
+	s = set.copy()
+	for i in range(5):
+		show_game_pos(np.argmax(s))
+		s[np.argmax(s)] = 0
+	
+
+def Return_Biggest_Five_Loc(set):
+	anw = []
+	s = set.copy()
+	for i in range(5):
+		anw.append(np.argmax(s))
+		s[np.argmax(s)] = 0
+	return anw
+
+def ReturnSelectField(set,flag):
+
+	anw = policy_analysis.evaluate_self(set,flag)
+	return anw
 
 def show_all_info_game(set,y):
 	for x in range(y):
@@ -17,6 +44,23 @@ def show_all_info_game(set,y):
 			print ("")
 		print ("\n")
 	print ("\n")
+
+def show_game_prob(set):
+	seq = 1
+	for i in range(225):
+		if i %15 ==0:
+			print ("")
+
+		print(set[i], end=" ")
+		if i %15 ==14:
+			print("",seq,end= "")
+			seq = seq + 1
+	print ("")
+	for i in range(15):
+		print (chr(ord('a')+i),end = "  ")
+
+	print ("\n")
+
 
 def show_game(set):
 	seq = 1
@@ -245,6 +289,9 @@ def Return_nine_can_use(set,out):
 				check[i][j] =1
 	return check
 
+
+def ReturnFif_to_Nine(set, x , y):
+	return local_policy_analysis.ReturnFiftoEight(set, x ,y )
 
 def Retrun_fif_to_nine_anw(set,out):
 	
