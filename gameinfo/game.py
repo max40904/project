@@ -257,7 +257,7 @@ def ReturnAllInfo(set,color):
 
 
 
-	all_layer = [[[0 for i in range(28)] for j in range(15)] for x in range(15)]
+	all_layer = [[[0 for i in range(48)] for j in range(15)] for x in range(15)]
 
 	for i in range(15):
 		for j in range(15):
