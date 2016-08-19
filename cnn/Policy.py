@@ -131,7 +131,7 @@ class PolicyNetwork:
 
 
 	def __weight_variable(self,shape,names):
-		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = 11)
+		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = 10)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):
