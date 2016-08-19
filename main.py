@@ -9,12 +9,12 @@ import numpy as np
 
 
 learning_rate = 0.0003
-input_stack = 28
+input_stack = 48
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
 k_filter = input_stack * 4
-training_iters = 410001
+training_iters = 250001
 
 
 
@@ -57,7 +57,7 @@ elif choose =='2':
             x = Data.SGFReturnSet()
             y = Data.SGFReturnAnw()
             cut_color = Data.ReturnColor()
-            x_8_24_stack = np.reshape(game.ReturnAllInfo (x, cut_color),[1,15,15,24])
+            x_8_24_stack = np.reshape(game.ReturnAllInfo (x, cut_color),[1,15,15,input_stack])
             y_8_stack = np.reshape(y,[1,225])
             y_estimate = Cnn.Return_prediction(x_8_24_stack,y_8_stack)
             nownum =np.matrix(np.reshape(y,[225]))
@@ -75,7 +75,7 @@ elif choose =='2':
             choose  =raw_input()
             step = game.ConvertToNum(choose)
             game.StepGame(step, set, 1)
-            x_8_24_stack =np.reshape(game.ReturnAllInfo(set,0.5),[1,15,15,24])
+            x_8_24_stack =np.reshape(game.ReturnAllInfo(set,0.5),[1,15,15,input_stack])
             y_8_stack = np.reshape(set,[1,225])
             y_estimate = Cnn.Return_prediction(x_8_24_stack,y_8_stack)
             game.StepGame(y_estimate, set, 0.5)
@@ -90,7 +90,7 @@ elif choose =='2':
         game.StepGame(step, set, 0.5)
         y = set
         x = set
-        x_8__stack = np.reshape(game.ReturnAllInfo (set, 1),[1,15,15,24])
+        x_8__stack = np.reshape(game.ReturnAllInfo (set, 1),[1,15,15,input_stack])
         y_stack = np.reshape(y,[1,225])
         y_estimate = Cnn.Return_prediction(x_8__stack,y_stack) 
         game.StepGame(y_estimate, set, 1)
