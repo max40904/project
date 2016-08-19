@@ -126,13 +126,12 @@ class PolicyNetwork:
 		pre =  self.sess.run(self.pre_loc, feed_dict = {self.xs: input,self.ys :output})
 		return pre[0]
 	def draw(self, input, output, i):
-		print self.sess.run(self.W_conv3)
 		result = self.sess.run(self.merged,feed_dict={self.xs:input, self.ys : output})
 		self.writer.add_summary(result,i)
 
 
 	def __weight_variable(self,shape,names):
-		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = 14)
+		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = 13)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):
