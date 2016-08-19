@@ -13,7 +13,7 @@ input_stack = 48
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 4
+k_filter = input_stack * 2
 training_iters = 250001
 
 
@@ -28,12 +28,13 @@ choose = raw_input()
 if choose =='1':
     Cnn.initialize()
     for i in range(training_iters):
+        print i
         x = Data.SGFReturnSet()
         y = Data.SGFReturnAnw()
         cut_color = Data.ReturnColor()
         x_8_24_stack = game.ReturnAllLayer (x, cut_color)
         y_8_stack = game.Return_Eight_Layer (y )
-        print i
+
         Cnn.train(x_8_24_stack, y_8_stack)
         if i %step_check_crossenropy ==0:
             a= Cnn.Return_cross_entropy(x_8_24_stack,y_8_stack)
