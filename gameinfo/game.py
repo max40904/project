@@ -192,15 +192,16 @@ def ReturnAllInfo(set,color):
 
 	layer_18 = policy_analysis.evaluate_dead_three(set,color,2)
 	
-	layer_19 = policy_analysis.evaluate_dead_three(set,color,3)
 	
-	layer_20 = policy_analysis.evaluate_alive_three(set,color,1)
+	layer_19 = policy_analysis.evaluate_alive_three(set,color,1)
 
-	layer_21 = policy_analysis.evaluate_alive_three(set,color,2)
+	layer_20 = policy_analysis.evaluate_alive_three(set,color,2)
 
-	layer_22 = policy_analysis.evaluate_dead_fout(set,color,1)
+	layer_21 = policy_analysis.evaluate_dead_four(set,color,1)
 
-	layer_23 = policy_analysis.evaluate_dead_fout(set,color,2)
+	layer_22 = policy_analysis.evaluate_dead_four(set,color,2)
+
+	layer_23 = policy_analysis.evaluate_alive_three_dead_four(set,color)
 
 	layer_24 = policy_analysis.evaluate_alive_four(set,color,1)
 
@@ -236,15 +237,16 @@ def ReturnAllInfo(set,color):
 
 	layer_40 = policy_analysis.evaluate_dead_three(set,ocolor,2)
 	
-	layer_41 = policy_analysis.evaluate_dead_three(set,ocolor,3)
 	
-	layer_42 = policy_analysis.evaluate_alive_three(set,ocolor,1)
+	layer_41 = policy_analysis.evaluate_alive_three(set,ocolor,1)
 
-	layer_43 = policy_analysis.evaluate_alive_three(set,ocolor,2)
+	layer_42 = policy_analysis.evaluate_alive_three(set,ocolor,2)
 
-	layer_44 = policy_analysis.evaluate_dead_fout(set,ocolor,1)
+	layer_43 = policy_analysis.evaluate_dead_four(set,ocolor,1)
 
-	layer_45 = policy_analysis.evaluate_dead_fout(set,ocolor,2)
+	layer_44 = policy_analysis.evaluate_dead_four(set,ocolor,2)
+	
+	layer_45 = policy_analysis.evaluate_alive_three_dead_four(set,ocolor)
 
 	layer_46 = policy_analysis.evaluate_alive_four(set,ocolor,1)
 
