@@ -11,10 +11,10 @@ import numpy as np
 learning_rate = 0.0003
 input_stack = 25
 step_save = 1000
-step_draw = 100
+step_draw = 1000
 step_check_crossenropy = 500
 k_filter = input_stack * 2
-training_iters = 100001
+training_iters = 1600001
 
 
 
@@ -44,7 +44,7 @@ if choose =='1':
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")
 if choose =='2':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net100000.ckpt")
+	LocalCnn.restore("./Loc_Neural_network_save/save_net240000.ckpt")
 	for i in range(10000 ):
 		x = Data.SGFReturnSet()
 		y = Data.SGFReturnAnw()
@@ -76,11 +76,11 @@ if choose =='2':
 
 		a = raw_input()
 if choose =='3':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net100000.ckpt")
+	LocalCnn.restore("./Loc_Neural_network_save/save_net240000.ckpt")
 	print "where you want to start?"
 	aaa = raw_input()
 	time = int(aaa)
-	count = 0
+	count = time * 60
 	for j in range(time):
 		x = Data.SGFReturnSet()
 
@@ -102,6 +102,7 @@ if choose =='3':
 	    		LocalCnn.draw(input,y_real,count)
 	    	if count %step_check_crossenropy ==0:
 	    		result = LocalCnn.Return_cross_entropy(input,y_real)
+	    		print result
 	    	count = count +1
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")
