@@ -49,7 +49,7 @@ elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
     restore_loc = raw_input()
-    Cnn.restore("./Neural_network_save/save_net400000.ckpt")
+    Cnn.restore("./Neural_network_save/save_net250000.ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
     if check =="1":
@@ -86,18 +86,26 @@ elif choose =='2':
 
     if check =="3":
         set[7][7] = 1
-        loc = raw_input()
-        step  = game.ConvertToNum(loc)
-        game.StepGame(step, set, 0.5)
-        y = set
-        x = set
-        x_8__stack = np.reshape(game.ReturnAllInfo (set, 1),[1,15,15,input_stack])
-        y_stack = np.reshape(y,[1,225])
-        y_estimate = Cnn.Return_prediction(x_8__stack,y_stack) 
-        game.StepGame(y_estimate, set, 1)
-        show_game_set(y_estimate)
         game.show_game(np.reshape(set,[225,1]))
-        game.show_game_pos(y_estimate)
+        
+        while True:
+            print "Your turn"
+            print "Please input : "
+            loc = raw_input()
+            step  = game.ConvertToNum(loc)
+            game.show_game(np.reshape(set,[225,1]))
+            
+            game.StepGame(step, set, 0.5)
+            game.show_game(np.reshape(set,[225,1]))
+            y = set
+            x = set
+            x_8__stack = np.reshape(game.ReturnAllInfo (set, 1),[1,15,15,input_stack])
+            y_stack = np.reshape(y,[1,225])
+            y_estimate = Cnn.Return_prediction(x_8__stack,y_stack) 
+            game.StepGame(y_estimate, set, 1)
+            show_game_set(y_estimate)
+            game.show_game(np.reshape(set,[225,1]))
+            game.show_game_pos(y_estimate)
 
 
 
