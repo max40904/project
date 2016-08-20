@@ -103,7 +103,7 @@ elif choose =='2':
             y_stack = np.reshape(y,[1,225])
             y_estimate = Cnn.Return_prediction(x_8__stack,y_stack) 
             game.StepGame(y_estimate, set, 1)
-            show_game_set(y_estimate)
+            game.show_game_set(y_estimate)
             game.show_game(np.reshape(set,[225,1]))
             game.show_game_pos(y_estimate)
 
