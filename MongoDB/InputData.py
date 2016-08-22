@@ -7,6 +7,7 @@ def inputdata ():
 	coll =  db.Gamedata
 	
 	for i in range(len(sys.argv)-2):
+		print sys.argv[i+2]
 		f = open(sys.argv[i+2], 'r')
 		sgf = f.read()
 		nabw = sgf.split(";")[1].replace("[", " " ).replace("]"," ").split(" ")
