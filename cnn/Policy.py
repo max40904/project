@@ -5,10 +5,11 @@ import tensorflow as tf
 class PolicyNetwork:
 	
 
-	def __init__(self, learning, input_stack, k_filter):
+	def __init__(self, learning, input_stack, k_filter,seed):
 		self.learning_rate = learning
 		self.input_stack = input_stack
 		self.k_filter = k_filter
+		self.seed = seed
 		with tf.name_scope('input'):
 			self.xs = tf.placeholder(tf.float32, [None, 15,15,input_stack],name = 'x_input')
 			self.ys = tf.placeholder(tf.float32, [None, 225], name = 'y_input')
@@ -131,7 +132,7 @@ class PolicyNetwork:
 
 
 	def __weight_variable(self,shape,names):
-		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = 9)
+		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = self.seed)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):
@@ -141,8 +142,10 @@ class PolicyNetwork:
 	def __conv2d(self, x ,W):
 		return tf.nn.conv2d(x, W, strides = [1, 1, 1, 1], padding = 'SAME')
 
-	# def __del__(self):
-	# 	self.sess.close()
+	def __del__(self):
+		self.sess.close()
+	def __exit(self):
+		self.sess.close()
 
 
 

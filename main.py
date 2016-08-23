@@ -8,18 +8,19 @@ from gameinfo import game
 import numpy as np
 
 
-learning_rate = 0.0003
+learning_rate = 0.0009
 input_stack = 48
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 3
-training_iters = 540000
+k_filter = input_stack * 2
+training_iters = 540001
+seed = 17
 
 
 
 Data = DataCenter.MongoDB()
-Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter) 
+Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 
 
 
