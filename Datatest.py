@@ -1,8 +1,14 @@
 from MongoDB import DataCenter
-training_iters = 500000
 Data = DataCenter.MongoDB()
+count = Data.allset
+training_iters =  0
+for i in range(1,count):
+	temp  =  Data.Find(i)
+	training_iters +=len(temp["Set"])
+	print training_iters
+	
 
 for i in range(training_iters):
-	print i
 	set_x = Data.SGFReturnSet()
 	out_y = Data.SGFReturnAnw()
+print "All Clear"
