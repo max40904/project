@@ -8,14 +8,14 @@ from gameinfo import game
 import numpy as np
 
 
-learning_rate = 0.0009
+learning_rate = 0.00004
 input_stack = 48
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 2
+k_filter = input_stack * 3
 training_iters = 540001
-seed = 17
+seed = 23
 
 
 
@@ -50,7 +50,7 @@ elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
     restore_loc = raw_input()
-    Cnn.restore("./Neural_network_save/save_net250000.ckpt")
+    Cnn.restore("./Neural_network_save/save_net540000.ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
     if check =="1":
@@ -65,8 +65,8 @@ elif choose =='2':
             nownum =np.matrix(np.reshape(y,[225]))
             if nownum.argmax()==y_estimate:
                 count = count + 1
-            if i%10000 ==0:
-                print count,  count/training_iters
+            if i%10000 ==1:
+                print count,  count/i
 
     if check =="2":
         game.show_game(np.reshape(set,[225,1]))

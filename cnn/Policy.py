@@ -114,7 +114,9 @@ class PolicyNetwork:
 		save_path = self.saver.save(self.sess, loc_str)
 		print("Save to path: ", save_path)
 
-
+	def Return_weight(self):
+		cross =  self.sess.run(self.W_conv3)
+		return cross[1]
 	def train(self, input, output):
 		self.sess.run(self.train_step, feed_dict = {self.xs: input,self.ys :output})
 
@@ -133,6 +135,7 @@ class PolicyNetwork:
 
 	def __weight_variable(self,shape,names):
 		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = self.seed)
+		# initial = tf.random_uniform(shape, minval=-0.1, maxval=0.1, dtype=tf.float32, seed=self.seed, name=names)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):

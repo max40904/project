@@ -44,8 +44,11 @@ if choose =='1':
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")
 if choose =='2':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net240000.ckpt")
-	for i in range(10000 ):
+	LocalCnn.restore("./Loc_Neural_network_save/save_net411000.ckpt")
+	for i in range(200000 ):
+		x = Data.SGFReturnSet()
+		y = Data.SGFReturnAnw()
+	for i in range(200000 ):
 		x = Data.SGFReturnSet()
 		y = Data.SGFReturnAnw()
 		game.show_game(np.reshape(x,[225,1]))
@@ -76,7 +79,7 @@ if choose =='2':
 
 		a = raw_input()
 if choose =='3':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net240000.ckpt")
+	LocalCnn.restore("./Loc_Neural_network_save/save_net411000.ckpt")
 	print "where you want to start?"
 	aaa = raw_input()
 	time = int(aaa)

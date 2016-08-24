@@ -129,8 +129,8 @@ class LocalPolicy:
 
 	def train(self, input, output):
 		self.sess.run(self.train_step, feed_dict = {self.xs: input,self.ys :output})
-
-
+	
+	
 	def Return_cross_entropy(self, input, output):
 		cross =  self.sess.run(self.cross_entropy, feed_dict = {self.xs: input,self.ys :output})
 		return cross
