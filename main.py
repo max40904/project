@@ -6,22 +6,21 @@ from cnn import Policy
 from MongoDB import DataCenter 
 from gameinfo import game
 import numpy as np
+import AI
 
-
-learning_rate = 0.00004
+learning_rate = 0.0003
 input_stack = 48
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 3
+k_filter = input_stack * 2
 training_iters = 540001
-seed = 23
-
+seed = 13
 
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
-
+ai = AI.Ai(Cnn,input_stack)
 
 
 print "please choose  1. train data   2.restore from save   3.restore and train data     "
@@ -50,7 +49,7 @@ elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
     restore_loc = raw_input()
-    Cnn.restore("./Neural_network_save/save_net540000.ckpt")
+    Cnn.restore("./Neural_network_save/save_net530000.ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
     if check =="1":
@@ -79,7 +78,7 @@ elif choose =='2':
             game.StepGame(step, set, 1)
             x_8_24_stack =np.reshape(game.ReturnAllInfo(set,0.5),[1,15,15,input_stack])
             y_8_stack = np.reshape(set,[1,225])
-            y_estimate = Cnn.Return_prediction(x_8_24_stack,y_8_stack)
+            y_estimate = ai.ReturnAIAnw(set, 0.5)
             game.StepGame(y_estimate, set, 0.5)
             game.show_game_set(y_estimate)
             game.show_game(np.reshape(set,[225,1]))
@@ -102,7 +101,7 @@ elif choose =='2':
             x = set
             x_8__stack = np.reshape(game.ReturnAllInfo (set, 1),[1,15,15,input_stack])
             y_stack = np.reshape(y,[1,225])
-            y_estimate = Cnn.Return_prediction(x_8__stack,y_stack) 
+            y_estimate =ai.ReturnAIAnw(set, 1)
             game.StepGame(y_estimate, set, 1)
             game.show_game_set(y_estimate)
             game.show_game(np.reshape(set,[225,1]))

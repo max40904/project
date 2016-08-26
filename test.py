@@ -1,15 +1,18 @@
 from MongoDB import DataCenter 
-from gameinfo import symmetric
+from gameinfo import policy_analysis
 from gameinfo import game
 import numpy as np
 
-a = raw_input()
 Data = DataCenter.MongoDB()
 set_x = Data.SGFReturnSet()
 set_y = Data.SGFReturnAnw()
-s = Data.ReturnColor()
-print s
+set_x[7][6] =  1
+set_x[7][5] =  1
 
+set_x[7][4] =  1
+
+game.show_game(np.reshape(set_x,[225]))
+game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
 # set_x = Data.SGFReturnSet()
 # set_x = Data.SGFReturnSet()
 

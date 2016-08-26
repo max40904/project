@@ -2,7 +2,7 @@ import tensorflow as tf
 
 
 
-class LocalPolicy:
+class ValueNetwork:
 	
 
 	def __init__(self, learning, input_stack, k_filter,seed):
@@ -11,7 +11,7 @@ class LocalPolicy:
 		self.k_filter = k_filter
 		self.seed = seed
 		with tf.name_scope('input'):
-			self.xs = tf.placeholder(tf.float32, [None, 9,9,input_stack],name = 'x_input')
+			self.xs = tf.placeholder(tf.float32, [None, 15,15,input_stack],name = 'x_input')
 			self.ys = tf.placeholder(tf.float32, [None, 3], name = 'y_input')
 
 
@@ -73,7 +73,7 @@ class LocalPolicy:
 		
 		with tf.name_scope('layer_6'):
 			with tf.name_scope('weighs'):
-				self.W_conv6 = self.__weight_variable([1, 1, k_filter, 3],'W_conv6')
+				self.W_conv6 = self.__weight_variable([1, 1, k_filter, 1],'W_conv6')
 				tf.histogram_summary('layer_6' + '/weights', self.W_conv6)
 			with tf.name_scope('biases'):
 				self.b_conv6 = self.__bias_variable([3],'b_conv6')
@@ -84,22 +84,34 @@ class LocalPolicy:
 
 
 		with tf.name_scope('h_conv_flat'):
-			self.h_conv_flat = tf.reshape(self.h_conv6, [-1, 9*9*3])
+			self.h_conv_flat = tf.reshape(self.h_conv6, [-1, 15*15*1])
+
 
 		with tf.name_scope('layer_7'):
 			with tf.name_scope('weighs'):
-				self.W_fc1 = self.__weight_variable([9*9*3, 3],'W_fc1')
+				self.W_fc1 = self.__weight_variable([15*15*1,128],'W_fc1')
 				tf.histogram_summary('layer_7' + '/weights', self.W_fc1)
 			with tf.name_scope('biases'):
-				self.b_fc1 = self.__bias_variable([3],'b_fc1')
+				self.b_fc1 = self.__bias_variable([128],'b_fc1')
 				tf.histogram_summary('layer_7'  + '/biases', self.b_fc1)
 			with tf.name_scope('h_fc1'):
-				self.h_fc1 = tf.matmul(self.h_conv_flat, self.W_fc1) + self.b_fc1
+				self.h_fc1 = tf.nn.relu(tf.matmul(self.h_conv_flat, self.W_fc1) + self.b_fc1)
 			tf.histogram_summary('layer_7' + '/outputs', self.h_fc1)
+
+		with tf.name_scope('layer_8'):
+			with tf.name_scope('weighs'):
+				self.W_fc2 = self.__weight_variable([128,1],'W_fc2')
+				tf.histogram_summary('layer_8' + '/weights', self.W_fc2)
+			with tf.name_scope('biases'):
+				self.b_fc2 = self.__bias_variable([],'b_fc1')
+				tf.histogram_summary('layer_7'  + '/biases', self.b_fc1)
+			with tf.name_scope('h_fc1'):
+				self.h_fc2 = tf.nn.tahn(tf.matmul(self.h_fc1, self.W_fc2) + self.b_fc2)
+			tf.histogram_summary('layer_7' + '/outputs', self.h_fc2)
 		
 
 		with tf.name_scope('prediction_softmax'):
-			self.predic = tf.nn.softmax(self.h_fc1)
+			self.predic = self.h_fc2
 		with tf.name_scope('cross_entropy'):
 			self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(self.ys * tf.log(self.predic),reduction_indices=[1]))
 			tf.scalar_summary('cross_entropy', self.cross_entropy)

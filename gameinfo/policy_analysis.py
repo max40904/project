@@ -1,9 +1,6 @@
 
 		
 
-
-
-
 def evaluate_lib_five(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
@@ -753,8 +750,6 @@ def evaluate_square_four(set,flag):
 
 
 	return anw
-
-
 
 def Return_Num_Filter(set, limit):
 	anws = [[0 for i in range(15)] for j in range(15)]

@@ -43,6 +43,19 @@ class MongoDB:
 			else:
 				self.curset[x_loc][y_loc] = 0.5
 		return self.curset
+	def SGFReturnBefore(self):
+		anw = []
+		for i in range(8):
+			if self.curstep - 8  + i >= 0:
+				game = self.nowchess[self.curstep - 8  + i]
+				y_loc = int(ord(game[2])-ord('a'))
+				x_loc = int(ord(game[3])-ord('a'))
+				num = y_loc + x_loc*15
+				anw.append(num)
+
+
+		return anw
+
 
 
 	def SGFReturnSet(self):

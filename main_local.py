@@ -9,17 +9,18 @@ import numpy as np
 
 
 learning_rate = 0.0003
-input_stack = 25
+input_stack = 49
 step_save = 1000
 step_draw = 1000
 step_check_crossenropy = 500
-k_filter = input_stack * 2
+k_filter = input_stack * 2 
 training_iters = 1600001
+seed = 13
 
 
 
 Data = DataCenter.MongoDB()
-LocalCnn =  Local_Policy.LocalPolicy(learning_rate, input_stack, k_filter) 
+LocalCnn =  Local_Policy.LocalPolicy(learning_rate, input_stack, k_filter,seed) 
 print "1. train 2. restoredata    3.restore data and then train"
 choose = raw_input()
 if choose =='1':

@@ -452,52 +452,102 @@ def ReturnAllInfo_nine(set,color):
 	# player
 	layer_5 = local_policy_analysis.evaluate_nine_lib_five(set,color)
 
-	layer_6 = local_policy_analysis.evaluate_nine_square_three(set,color)
+	layer_6 = local_policy_analysis.evaluate_nine_square_four(set,color)
 
-	layer_7 = local_policy_analysis.evaluate_nine_dead_two(set,color)
+	layer_7 = local_policy_analysis.evaluate_nine_square_three(set,color)
 
-	layer_8 = local_policy_analysis.evaluate_nine_alive_two(set,color)
+	layer_8 = local_policy_analysis.evaluate_nine_square_two(set,color)
 
-	layer_9 = local_policy_analysis.evaluate_nine_dead_three(set,color)
+	layer_9 = local_policy_analysis.evaluate_nine_dead_two(set,color,1)
 
-	layer_10 = local_policy_analysis.evaluate_nine_alive_three(set,color)
+	layer_10 = local_policy_analysis.evaluate_nine_dead_two(set,color,2)
 
-	layer_11 = local_policy_analysis.evaluate_nine_dead_four(set,color)
+	layer_11= local_policy_analysis.evaluate_nine_dead_two(set,color,3)
 
-	layer_12 = local_policy_analysis.evaluate_nine_alive_four(set,color)
+	layer_12 = local_policy_analysis.evaluate_nine_dead_two(set,color,4)
 
-	layer_13 = local_policy_analysis.evaluate_nine_five(set,color)
+	layer_13 = local_policy_analysis.evaluate_nine_alive_two(set,color,1)
 
-	layer_14 = [[1 for i in range(9)] for j in range(9)]
+	layer_14 = local_policy_analysis.evaluate_nine_alive_two(set,color,2)
 
-	#opponent
-	layer_9 = local_policy_analysis.evaluate_nine_lib_five(set,ocolor)
+	layer_15 = local_policy_analysis.evaluate_nine_alive_two(set,color,3)
 
-	layer_16 = local_policy_analysis.evaluate_nine_square_three(set,ocolor)
+	layer_16 = local_policy_analysis.evaluate_nine_alive_two(set,color,4)
 
-	layer_17 = local_policy_analysis.evaluate_nine_dead_two(set,ocolor)
+	layer_17 = local_policy_analysis.evaluate_nine_dead_three(set,color,1)
 
-	layer_18 = local_policy_analysis.evaluate_nine_alive_two(set,ocolor)
+	layer_18 = local_policy_analysis.evaluate_nine_dead_three(set,color,2)
+	
+	
+	layer_19 = local_policy_analysis.evaluate_nine_alive_three(set,color,1)
 
-	layer_19 = local_policy_analysis.evaluate_nine_dead_three(set,ocolor)
+	layer_20 = local_policy_analysis.evaluate_nine_alive_three(set,color,2)
 
-	layer_20 = local_policy_analysis.evaluate_nine_alive_three(set,ocolor)
+	layer_21 = local_policy_analysis.evaluate_nine_dead_four(set,color,1)
 
-	layer_21 = local_policy_analysis.evaluate_nine_dead_four(set,ocolor)
+	layer_22 = local_policy_analysis.evaluate_nine_dead_four(set,color,2)
 
-	layer_22 = local_policy_analysis.evaluate_nine_alive_four(set,ocolor)
+	layer_23 = local_policy_analysis.evaluate_nine_alive_three_dead_four(set,color)
 
-	layer_23 = local_policy_analysis.evaluate_nine_five(set,ocolor)
-	layer_24= [[0 for i in range(9)] for j in range(9)]
+	layer_24 = local_policy_analysis.evaluate_nine_alive_four(set,color,1)
 
-	layer_25= [[1 for i in range(9)] for j in range(9)]
+	layer_25 = local_policy_analysis.evaluate_nine_five(set,color)
+
+	layer_26 = [[1 for i in range(9)] for j in range(9)]
+
+	layer_27 = local_policy_analysis.evaluate_nine_lib_five(set,ocolor)
+
+	layer_28 = local_policy_analysis.evaluate_nine_square_four(set,ocolor)
+
+	layer_29 = local_policy_analysis.evaluate_nine_square_three(set,ocolor)
+
+	layer_30 = local_policy_analysis.evaluate_nine_square_two(set,ocolor)
+
+	layer_31 = local_policy_analysis.evaluate_nine_dead_two(set,ocolor,1)
+
+	layer_32 = local_policy_analysis.evaluate_nine_dead_two(set,ocolor,2)
+
+	layer_33= local_policy_analysis.evaluate_nine_dead_two(set,ocolor,3)
+
+	layer_34 = local_policy_analysis.evaluate_nine_dead_two(set,ocolor,4)
+
+	layer_35 = local_policy_analysis.evaluate_nine_alive_two(set,ocolor,1)
+
+	layer_36 = local_policy_analysis.evaluate_nine_alive_two(set,ocolor,2)
+
+	layer_37 = local_policy_analysis.evaluate_nine_alive_two(set,ocolor,3)
+
+	layer_38 = local_policy_analysis.evaluate_nine_alive_two(set,ocolor,4)
+
+	layer_39 = local_policy_analysis.evaluate_nine_dead_three(set,ocolor,1)
+
+	layer_40 = local_policy_analysis.evaluate_nine_dead_three(set,ocolor,2)
+	
+	
+	layer_41 = local_policy_analysis.evaluate_nine_alive_three(set,ocolor,1)
+
+	layer_42 = local_policy_analysis.evaluate_nine_alive_three(set,ocolor,2)
+
+	layer_43 = local_policy_analysis.evaluate_nine_dead_four(set,ocolor,1)
+
+	layer_44 = local_policy_analysis.evaluate_nine_dead_four(set,ocolor,2)
+	
+	layer_45 = local_policy_analysis.evaluate_nine_alive_three_dead_four(set,ocolor)
+
+	layer_46 = local_policy_analysis.evaluate_nine_alive_four(set,ocolor,1)
+
+	layer_47 = local_policy_analysis.evaluate_nine_five(set,ocolor)
+
+	layer_48 = [[0 for i in range(9)] for j in range(9)]
+
+	layer_49= [[1 for i in range(9)] for j in range(9)]
 	if color ==0.5:
-		layer_24= [[0 for i in range(9)] for j in range(9)]
+		layer_49= [[0 for i in range(9)] for j in range(9)]
 
 
 
 
-	all_layer = [[[0 for i in range(25)] for j in range(9)] for x in range(9)]
+	all_layer = [[[0 for i in range(49)] for j in range(9)] for x in range(9)]
 
 	for i in range(9):
 		for j in range(9):
@@ -515,8 +565,8 @@ def ReturnAllInfo_nine(set,color):
 			all_layer[i][j][11] = layer_12[i][j]
 			all_layer[i][j][12] = layer_13[i][j]
 			all_layer[i][j][13] = layer_14[i][j]
-			all_layer[i][j][14] = layer_9[i][j]
-			all_layer[i][j][9] = layer_16[i][j]
+			all_layer[i][j][14] = layer_15[i][j]
+			all_layer[i][j][15] = layer_16[i][j]
 			all_layer[i][j][16] = layer_17[i][j]
 			all_layer[i][j][17] = layer_18[i][j]
 			all_layer[i][j][18] = layer_19[i][j]
@@ -526,6 +576,30 @@ def ReturnAllInfo_nine(set,color):
 			all_layer[i][j][22] = layer_23[i][j]
 			all_layer[i][j][23] = layer_24[i][j]
 			all_layer[i][j][24] = layer_25[i][j]
+			all_layer[i][j][25] = layer_26[i][j]
+			all_layer[i][j][26] = layer_27[i][j]
+			all_layer[i][j][27] = layer_28[i][j]
+			all_layer[i][j][28] = layer_29[i][j]
+			all_layer[i][j][29] = layer_30[i][j]
+			all_layer[i][j][30] = layer_31[i][j]
+			all_layer[i][j][31] = layer_32[i][j]
+			all_layer[i][j][32] = layer_33[i][j]
+			all_layer[i][j][33] = layer_34[i][j]
+			all_layer[i][j][34] = layer_35[i][j]
+			all_layer[i][j][35] = layer_36[i][j]
+			all_layer[i][j][36] = layer_37[i][j]
+			all_layer[i][j][37] = layer_38[i][j]
+			all_layer[i][j][38] = layer_39[i][j]
+			all_layer[i][j][39] = layer_40[i][j]
+			all_layer[i][j][40] = layer_41[i][j]
+			all_layer[i][j][41] = layer_42[i][j]
+			all_layer[i][j][42] = layer_43[i][j]
+			all_layer[i][j][43] = layer_44[i][j]
+			all_layer[i][j][44] = layer_45[i][j]
+			all_layer[i][j][45] = layer_46[i][j]
+			all_layer[i][j][46] = layer_47[i][j]
+			all_layer[i][j][47] = layer_48[i][j]
+			all_layer[i][j][48] = layer_49[i][j]
 	return all_layer
 
 def ReturnAllLayer_nine(set,color):
