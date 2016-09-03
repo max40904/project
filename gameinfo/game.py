@@ -4,6 +4,17 @@ import martix
 import policy_analysis
 import local_policy_analysis
 import numpy as np
+from operator import itemgetter, attrgetter
+def Return_Sort(set,num):
+	list = []
+	for i  in range(num):
+		list.append((i,set[i]))
+
+
+	return (sorted(list,key=itemgetter(1),reverse=True))
+
+
+
 def Return_Biggest_Five_Prob(set):
 	anw = []
 	s  = set.copy()
@@ -109,6 +120,22 @@ def show_game_set(num):
 		print (chr(ord('a')+i),end = " ")
 
 	print ("\n")
+
+def Rotate_All_Num(beforestep):
+	afterstep =  [0 for i in range(8)]
+	for i in range(8):
+		afterstep[i] = martix.rotate90_num_fif(beforestep[i])
+	
+
+	return afterstep
+
+def Reflect_All_Num(beforestep):
+	afterstep =  [0 for i in range(8)]
+	for i in range(8):
+		afterstep[i] = martix.reflection_num_fif(beforestep[i])
+	
+
+	return afterstep
 	
 def Return_Eight_Layer(set):
 	
@@ -622,6 +649,238 @@ def ReturnAllLayer_nine(set,color):
 	ref_right = ReturnAllInfo_nine(s,color)
 	s = martix.rotate90_nine(s)
 	ref_down = ReturnAllInfo_nine(s,color)
+	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
+
+	return all_layer
+
+def Return_Loc_Set(num):
+	new = [[0 for i in range(15)] for j in range(15)]
+	if num!=0:
+		new [num/15][num%15] = 1
+	return new
+
+
+def ReturnAllInfo_before(set,color,beforestep):
+	ocolor = 1
+	if color == 1:
+		ocolor = 0.5
+
+	layer_1 = policy_analysis.evaluate_self(set,color)
+
+	layer_2 = policy_analysis.evaluate_self(set,ocolor)
+
+	layer_3 = policy_analysis.evaluate_self(set,0)
+
+	layer_4 = [[1 for i in range(15)] for j in range(15)]
+	
+	#beforestep
+
+	layer_5 = Return_Loc_Set(beforestep[7])
+
+	layer_6 = Return_Loc_Set(beforestep[6])
+
+	layer_7 = Return_Loc_Set(beforestep[5])
+
+	layer_8 = Return_Loc_Set(beforestep[4])
+
+	layer_9 = Return_Loc_Set(beforestep[3])
+
+	layer_10 = Return_Loc_Set(beforestep[2])
+
+	layer_11 = Return_Loc_Set(beforestep[1])
+
+	layer_12 = Return_Loc_Set(beforestep[0])
+
+	# player
+	layer_13 = policy_analysis.evaluate_lib_five(set,color)
+
+	layer_14 = policy_analysis.evaluate_square_four(set,color)
+
+	layer_15 = policy_analysis.evaluate_square_three(set,color)
+
+	layer_16 = policy_analysis.evaluate_square_two(set,color)
+
+	layer_17 = policy_analysis.evaluate_dead_two(set,color,1)
+
+	layer_18 = policy_analysis.evaluate_dead_two(set,color,2)
+
+	layer_19= policy_analysis.evaluate_dead_two(set,color,3)
+
+	layer_20 = policy_analysis.evaluate_dead_two(set,color,4)
+
+	layer_21 = policy_analysis.evaluate_alive_two(set,color,1)
+
+	layer_22 = policy_analysis.evaluate_alive_two(set,color,2)
+
+	layer_23 = policy_analysis.evaluate_alive_two(set,color,3)
+
+	layer_24 = policy_analysis.evaluate_alive_two(set,color,4)
+
+	layer_25 = policy_analysis.evaluate_dead_three(set,color,1)
+
+	layer_26 = policy_analysis.evaluate_dead_three(set,color,2)
+	
+	
+	layer_27 = policy_analysis.evaluate_alive_three(set,color,1)
+
+	layer_28 = policy_analysis.evaluate_alive_three(set,color,2)
+
+	layer_29 = policy_analysis.evaluate_dead_four(set,color,1)
+
+	layer_30 = policy_analysis.evaluate_dead_four(set,color,2)
+
+	layer_31 = policy_analysis.evaluate_alive_three_dead_four(set,color)
+
+	layer_32 = policy_analysis.evaluate_alive_four(set,color,1)
+
+	layer_33 = policy_analysis.evaluate_five(set,color)
+
+	layer_34 = [[1 for i in range(15)] for j in range(15)]
+
+	layer_35 = policy_analysis.evaluate_lib_five(set,ocolor)
+
+	layer_36 = policy_analysis.evaluate_square_four(set,ocolor)
+
+	layer_37 = policy_analysis.evaluate_square_three(set,ocolor)
+
+	layer_38 = policy_analysis.evaluate_square_two(set,ocolor)
+
+	layer_39 = policy_analysis.evaluate_dead_two(set,ocolor,1)
+
+	layer_40 = policy_analysis.evaluate_dead_two(set,ocolor,2)
+
+	layer_41= policy_analysis.evaluate_dead_two(set,ocolor,3)
+
+	layer_42 = policy_analysis.evaluate_dead_two(set,ocolor,4)
+
+	layer_43 = policy_analysis.evaluate_alive_two(set,ocolor,1)
+
+	layer_44 = policy_analysis.evaluate_alive_two(set,ocolor,2)
+
+	layer_45 = policy_analysis.evaluate_alive_two(set,ocolor,3)
+
+	layer_46 = policy_analysis.evaluate_alive_two(set,ocolor,4)
+
+	layer_47 = policy_analysis.evaluate_dead_three(set,ocolor,1)
+
+	layer_48 = policy_analysis.evaluate_dead_three(set,ocolor,2)
+	
+	layer_49 = policy_analysis.evaluate_alive_three(set,ocolor,1)
+
+	layer_50 = policy_analysis.evaluate_alive_three(set,ocolor,2)
+
+	layer_51 = policy_analysis.evaluate_dead_four(set,ocolor,1)
+
+	layer_52 = policy_analysis.evaluate_dead_four(set,ocolor,2)
+	
+	layer_53 = policy_analysis.evaluate_alive_three_dead_four(set,ocolor)
+
+	layer_54 = policy_analysis.evaluate_alive_four(set,ocolor,1)
+
+	layer_55 = policy_analysis.evaluate_five(set,ocolor)
+
+	layer_56 = [[0 for i in range(15)] for j in range(15)]
+
+
+
+
+	all_layer = [[[0 for i in range(48)] for j in range(15)] for x in range(15)]
+
+	for i in range(15):
+		for j in range(15):
+			all_layer[i][j][0] = layer_1[i][j]
+			all_layer[i][j][1] = layer_2[i][j]
+			all_layer[i][j][2] = layer_3[i][j]
+			all_layer[i][j][3] = layer_4[i][j]
+			all_layer[i][j][4] = layer_5[i][j]
+			all_layer[i][j][5] = layer_6[i][j]
+			all_layer[i][j][6] = layer_7[i][j]
+			all_layer[i][j][7] = layer_8[i][j]
+			all_layer[i][j][8] = layer_9[i][j]
+			all_layer[i][j][9] = layer_10[i][j]
+			all_layer[i][j][10] = layer_11[i][j]
+			all_layer[i][j][11] = layer_12[i][j]
+			all_layer[i][j][12] = layer_13[i][j]
+			all_layer[i][j][13] = layer_14[i][j]
+			all_layer[i][j][14] = layer_15[i][j]
+			all_layer[i][j][15] = layer_16[i][j]
+			all_layer[i][j][16] = layer_17[i][j]
+			all_layer[i][j][17] = layer_18[i][j]
+			all_layer[i][j][18] = layer_19[i][j]
+			all_layer[i][j][19] = layer_20[i][j]
+			all_layer[i][j][20] = layer_21[i][j]
+			all_layer[i][j][21] = layer_22[i][j]
+			all_layer[i][j][22] = layer_23[i][j]
+			all_layer[i][j][23] = layer_24[i][j]
+			all_layer[i][j][24] = layer_25[i][j]
+			all_layer[i][j][25] = layer_26[i][j]
+			all_layer[i][j][26] = layer_27[i][j]
+			all_layer[i][j][27] = layer_28[i][j]
+			all_layer[i][j][28] = layer_29[i][j]
+			all_layer[i][j][29] = layer_30[i][j]
+			all_layer[i][j][30] = layer_31[i][j]
+			all_layer[i][j][31] = layer_32[i][j]
+			all_layer[i][j][32] = layer_33[i][j]
+			all_layer[i][j][33] = layer_34[i][j]
+			all_layer[i][j][34] = layer_35[i][j]
+			all_layer[i][j][35] = layer_36[i][j]
+			all_layer[i][j][36] = layer_37[i][j]
+			all_layer[i][j][37] = layer_38[i][j]
+			all_layer[i][j][38] = layer_39[i][j]
+			all_layer[i][j][39] = layer_40[i][j]
+			all_layer[i][j][40] = layer_41[i][j]
+			all_layer[i][j][41] = layer_42[i][j]
+			all_layer[i][j][42] = layer_43[i][j]
+			all_layer[i][j][43] = layer_44[i][j]
+			all_layer[i][j][44] = layer_45[i][j]
+			all_layer[i][j][45] = layer_46[i][j]
+			all_layer[i][j][46] = layer_47[i][j]
+			all_layer[i][j][47] = layer_48[i][j]
+			all_layer[i][j][48] = layer_49[i][j]
+			all_layer[i][j][49] = layer_50[i][j]
+			all_layer[i][j][50] = layer_51[i][j]
+			all_layer[i][j][51] = layer_52[i][j]
+			all_layer[i][j][52] = layer_53[i][j]
+			all_layer[i][j][53] = layer_54[i][j]
+			all_layer[i][j][54] = layer_55[i][j]
+			all_layer[i][j][55] = layer_56[i][j]
+	return all_layer
+
+
+def ReturnAllLayer_before(set,color,beforestep):
+	s = set
+	bef_eight = beforestep
+
+	left = ReturnAllInfo_before(s,color,bef_eight)
+	
+	s = martix.rotate90_fif(s)
+	bef_eight = Rotate_All_Num(bef_eight)
+	up = ReturnAllInfo_before(s,color,bef_eight)
+	
+	s = martix.rotate90_fif(s)
+	bef_eight = Rotate_All_Num(bef_eight)
+	right = ReturnAllInfo_before(s,color,bef_eight)
+	
+	s = martix.rotate90_fif(s)
+	bef_eight = Rotate_All_Num(bef_eight)
+	down = ReturnAllInfo_before(s,color,bef_eight)
+
+	s =  martix.reflection_fif(set)
+	bef_eight = Reflect_All_Num(beforestep)
+	ref_left  = ReturnAllInfo_before(s,color,bef_eight)
+
+	s = martix.rotate90_fif(s)
+	bef_eight = Rotate_All_Num(bef_eight)
+	ref_up = ReturnAllInfo_before(s,color,bef_eight)
+
+	s = martix.rotate90_fif(s)
+	bef_eight = Rotate_All_Num(bef_eight)
+	ref_right = ReturnAllInfo_before(s,color,bef_eight)
+
+	s = martix.rotate90_fif(s)
+	bef_eight = Rotate_All_Num(bef_eight)
+	ref_down = ReturnAllInfo_before(s,color,bef_eight)
+	
 	all_layer = [left, up, right, down, ref_left, ref_up, ref_right, ref_down]
 
 	return all_layer

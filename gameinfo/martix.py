@@ -12,6 +12,23 @@ def rotate90_fif(set):
 
 	return anw
 
+def rotate90_num_fif(num):
+	if num ==0:
+		return 0
+	j = num /15
+	i = num %15
+	new_j = i
+	new_i = 14 - j
+	return new_j*15+new_i
+
+def reflection_num_fif(num):
+	if num ==0:
+		return 0
+	j = num /15
+	i = num %15
+	new_j = j
+	new_i = 14 - i
+	return new_j*15+new_i
 
 def reflection_fif(set):
 	anw = [[0 for i in range(15)] for j in range(15)]
