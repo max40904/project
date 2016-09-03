@@ -110,7 +110,7 @@ class ValueNetwork:
 			tf.histogram_summary('layer_7' + '/outputs', self.h_fc2)
 		
 
-		with tf.name_scope('prediction_softmax'):
+		with tf.name_scope('prediction'):
 			self.predic = self.h_fc2
 		with tf.name_scope('cross_entropy'):
 			self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(self.ys * tf.log(self.predic),reduction_indices=[1]))

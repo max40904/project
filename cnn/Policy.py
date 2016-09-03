@@ -70,20 +70,55 @@ class PolicyNetwork:
 			with tf.name_scope('h_conv5'):
 				self.h_conv5 = tf.nn.relu(self.__conv2d(self.h_conv4, self.W_conv5) + self.b_conv5)
 			tf.histogram_summary('layer_5' + '/outputs', self.h_conv5)
-		
+
 		with tf.name_scope('layer_6'):
 			with tf.name_scope('weighs'):
-				self.W_conv6 = self.__weight_variable([1, 1, k_filter, 1],'W_conv6')
+				self.W_conv6 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv6')
 				tf.histogram_summary('layer_6' + '/weights', self.W_conv6)
 			with tf.name_scope('biases'):
-				self.b_conv6 = self.__bias_variable([1],'b_conv6')
+				self.b_conv6 = self.__bias_variable([k_filter],'b_conv6')
 				tf.histogram_summary('layer_6'  + '/biases', self.b_conv6)
 			with tf.name_scope('h_conv6'):
 				self.h_conv6 = tf.nn.relu(self.__conv2d(self.h_conv5, self.W_conv6) + self.b_conv6)
 			tf.histogram_summary('layer_6' + '/outputs', self.h_conv6)
 
+		with tf.name_scope('layer_7'):
+			with tf.name_scope('weighs'):
+				self.W_conv7 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv7')
+				tf.histogram_summary('layer_7' + '/weights', self.W_conv7)
+			with tf.name_scope('biases'):
+				self.b_conv7 = self.__bias_variable([k_filter],'b_conv7')
+				tf.histogram_summary('layer_7'  + '/biases', self.b_conv7)
+			with tf.name_scope('h_conv7'):
+				self.h_conv7 = tf.nn.relu(self.__conv2d(self.h_conv6, self.W_conv7) + self.b_conv7)
+			tf.histogram_summary('layer_7' + '/outputs', self.h_conv7)
+
+		with tf.name_scope('layer_8'):
+			with tf.name_scope('weighs'):
+				self.W_conv8 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv8')
+				tf.histogram_summary('layer_8' + '/weights', self.W_conv8)
+			with tf.name_scope('biases'):
+				self.b_conv8 = self.__bias_variable([k_filter],'b_conv8')
+				tf.histogram_summary('layer_8'  + '/biases', self.b_conv8)
+			with tf.name_scope('h_conv8'):
+				self.h_conv8 = tf.nn.relu(self.__conv2d(self.h_conv7, self.W_conv8) + self.b_conv8)
+			tf.histogram_summary('layer_8' + '/outputs', self.h_conv8)
+
+
+		
+		with tf.name_scope('layer_9'):
+			with tf.name_scope('weighs'):
+				self.W_conv9 = self.__weight_variable([1, 1, k_filter, 1],'W_conv9')
+				tf.histogram_summary('layer_9' + '/weights', self.W_conv9)
+			with tf.name_scope('biases'):
+				self.b_conv9 = self.__bias_variable([1],'b_conv9')
+				tf.histogram_summary('layer_9'  + '/biases', self.b_conv9)
+			with tf.name_scope('h_conv9'):
+				self.h_conv9 = tf.nn.relu(self.__conv2d(self.h_conv8, self.W_conv9) + self.b_conv9)
+			tf.histogram_summary('layer_9' + '/outputs', self.h_conv9)
+
 		with tf.name_scope('h_conv4_flat'):
-			self.h_conv4_flat = tf.reshape(self.h_conv6, [-1, 15*15])
+			self.h_conv4_flat = tf.reshape(self.h_conv9, [-1, 15*15])
 
 		with tf.name_scope('prediction_softmax'):
 			self.predic = tf.nn.softmax(self.h_conv4_flat)
@@ -131,6 +166,10 @@ class PolicyNetwork:
 	def draw(self, input, output, i):
 		result = self.sess.run(self.merged,feed_dict={self.xs:input, self.ys : output})
 		self.writer.add_summary(result,i)
+
+	def Return_softmax(self,input,output):
+		pre =  self.sess.run(self.predic, feed_dict = {self.xs: input,self.ys :output})
+		return pre[0]
 
 
 	def __weight_variable(self,shape,names):
