@@ -28,6 +28,17 @@ class referee:
 			self.SetStep = [[0 for i in range(15)] for j in range(15)]
 			self.Step_Rer = []
 
+	def Before_Eight(self):
+		num = []
+		for i in range(8):
+			if i <= len(self.Step_Rer) and self.step - 8  + i >=0:
+				num.append(self.Step_Rer[self.step - 8  + i ])
+
+
+
+		return num
+		
+
 
 
 	def writefile(self):
@@ -46,8 +57,8 @@ class referee:
 		f_out.write(RE)
 		f_out.write("];")
 		for i in range(self.step - 1):
-			x_loc = chr(Step_Rer[i]/15+ord("a"))
-			y_loc = chr(Step_Rer[i]%15+ord("a"))
+			x_loc = chr(self.Step_Rer[i]/15+ord("a"))
+			y_loc = chr(self.Step_Rer[i]%15+ord("a"))
 			if i%2 == 0 :
 				f_out.write("B[")
 			else: 

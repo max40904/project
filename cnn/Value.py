@@ -104,10 +104,10 @@ class ValueNetwork:
 				tf.histogram_summary('layer_8' + '/weights', self.W_fc2)
 			with tf.name_scope('biases'):
 				self.b_fc2 = self.__bias_variable([],'b_fc1')
-				tf.histogram_summary('layer_7'  + '/biases', self.b_fc1)
+				tf.histogram_summary('layer_8'  + '/biases', self.b_fc1)
 			with tf.name_scope('h_fc1'):
 				self.h_fc2 = tf.nn.tahn(tf.matmul(self.h_fc1, self.W_fc2) + self.b_fc2)
-			tf.histogram_summary('layer_7' + '/outputs', self.h_fc2)
+			tf.histogram_summary('layer_8' + '/outputs', self.h_fc2)
 		
 
 		with tf.name_scope('prediction'):

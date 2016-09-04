@@ -124,7 +124,8 @@ def show_game_set(num):
 def Rotate_All_Num(beforestep):
 	afterstep =  [0 for i in range(8)]
 	for i in range(8):
-		afterstep[i] = martix.rotate90_num_fif(beforestep[i])
+		if i<len(beforestep) :
+			afterstep[i] = martix.rotate90_num_fif(beforestep[i])
 	
 
 	return afterstep
@@ -132,7 +133,8 @@ def Rotate_All_Num(beforestep):
 def Reflect_All_Num(beforestep):
 	afterstep =  [0 for i in range(8)]
 	for i in range(8):
-		afterstep[i] = martix.reflection_num_fif(beforestep[i])
+		if i<len(beforestep) :
+			afterstep[i] = martix.reflection_num_fif(beforestep[i])
 	
 
 	return afterstep
@@ -674,22 +676,52 @@ def ReturnAllInfo_before(set,color,beforestep):
 	layer_4 = [[1 for i in range(15)] for j in range(15)]
 	
 	#beforestep
+	layer_5  = [[0 for i in range(15)] for j in range(15)]
+	if 7<len(beforestep) :
+		layer_5  = Return_Loc_Set(beforestep[7])
+	else :
+		layer_5  = [[0 for i in range(15)] for j in range(15)]
+	layer_6  = [[0 for i in range(15)] for j in range(15)]
+	if 6<len(beforestep) :
+		layer_6  = Return_Loc_Set(beforestep[6])
+	else :
+		layer_6  = [[0 for i in range(15)] for j in range(15)]
 
-	layer_5 = Return_Loc_Set(beforestep[7])
+	layer_7  = [[0 for i in range(15)] for j in range(15)]
+	if 5<len(beforestep) :
+		layer_7  = Return_Loc_Set(beforestep[5])
+	else :
+		layer_7  = [[0 for i in range(15)] for j in range(15)]
 
-	layer_6 = Return_Loc_Set(beforestep[6])
+	layer_8  = [[0 for i in range(15)] for j in range(15)]
+	if 4<len(beforestep) :
+		layer_8  = Return_Loc_Set(beforestep[4])
+	else :
+		layer_8  = [[0 for i in range(15)] for j in range(15)]
 
-	layer_7 = Return_Loc_Set(beforestep[5])
+	layer_9  = [[0 for i in range(15)] for j in range(15)]
+	if 3<len(beforestep) :
+		layer_9  = Return_Loc_Set(beforestep[3])
+	else :
+		layer_9  = [[0 for i in range(15)] for j in range(15)]
 
-	layer_8 = Return_Loc_Set(beforestep[4])
 
-	layer_9 = Return_Loc_Set(beforestep[3])
+	layer_10  = [[0 for i in range(15)] for j in range(15)]
+	if 2<len(beforestep) :
+		layer_10  = Return_Loc_Set(beforestep[2])
+	else :
+		layer_10  = [[0 for i in range(15)] for j in range(15)]
 
-	layer_10 = Return_Loc_Set(beforestep[2])
-
-	layer_11 = Return_Loc_Set(beforestep[1])
-
-	layer_12 = Return_Loc_Set(beforestep[0])
+	layer_11  = [[0 for i in range(15)] for j in range(15)]
+	if 1<len(beforestep) :
+		layer_11  = Return_Loc_Set(beforestep[1])
+	else :
+		layer_11  = [[0 for i in range(15)] for j in range(15)]
+	layer_12  = [[0 for i in range(15)] for j in range(15)]
+	if 0<len(beforestep) :
+		layer_12  = Return_Loc_Set(beforestep[0])
+	else :
+		layer_12  = [[0 for i in range(15)] for j in range(15)]
 
 	# player
 	layer_13 = policy_analysis.evaluate_lib_five(set,color)
@@ -784,7 +816,7 @@ def ReturnAllInfo_before(set,color,beforestep):
 
 
 
-	all_layer = [[[0 for i in range(48)] for j in range(15)] for x in range(15)]
+	all_layer = [[[0 for i in range(56)] for j in range(15)] for x in range(15)]
 
 	for i in range(15):
 		for j in range(15):
@@ -850,7 +882,6 @@ def ReturnAllInfo_before(set,color,beforestep):
 def ReturnAllLayer_before(set,color,beforestep):
 	s = set
 	bef_eight = beforestep
-
 	left = ReturnAllInfo_before(s,color,bef_eight)
 	
 	s = martix.rotate90_fif(s)

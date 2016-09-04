@@ -2,7 +2,11 @@ from MongoDB import DataCenter
 from gameinfo import policy_analysis
 from gameinfo import game
 import numpy as np
-
+import time
+import Referee
+judge = Referee.referee()
+str = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
+print str
 Data = DataCenter.MongoDB()
 set_x = Data.SGFReturnSet()
 set_y = Data.SGFReturnAnw()
