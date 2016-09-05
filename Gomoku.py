@@ -3,7 +3,7 @@ import sys
 from PyQt4.QtGui import *
 import pygame
 import Chessboard
-
+import Referee
 from cnn import Policy
 from MongoDB import DataCenter 
 from gameinfo import game
@@ -27,7 +27,7 @@ class Gomoku():
 	def loop(self):
 		while self.going:
 			self.update()
-			self.draw()	
+			self.draw()
 			self.clock.tick(60)
 
 		pygame.quit()
@@ -42,14 +42,22 @@ class Gomoku():
 					self.going = False
 				elif e.type == pygame.MOUSEBUTTONDOWN:
 					self.chessboard.handle_key_event(e)
-					print self.chessboard.grid					
-					y_estimate = ai.ReturnAIAnw(self.chessboard.grid, 0.5)
-					print y_estimate
-					self.chessboard.set_piece(y_estimate/15,y_estimate%15)
-					self.chessboard.check_win(y_estimate/15,y_estimate%15)
+					
+					print self.chessboard.grid
+					judge.input(self.chessboard.grid,self.chessboard.nowstep)
+					self.draw()			
+					if self.chessboard.winner ==None:
+						before_eight = judge.Before_Eight()
+						y_estimate = ai.ReturnAIAnw_beforeeight(self.chessboard.grid, 0.5,before_eight)
+						print y_estimate
+						self.chessboard.set_piece(y_estimate/15,y_estimate%15)
+						judge.input(self.chessboard.grid,self.chessboard.nowstep)
+						self.chessboard.check_win(y_estimate/15,y_estimate%15)
 		else:
 			if time == 0:
 				self.chessboard.set_piece(7,7)
+				judge.input(self.chessboard.grid,self.chessboard.nowstep)
+
 				time = 1
 			else:
 				for e in pygame.event.get():
@@ -57,11 +65,17 @@ class Gomoku():
 						self.going = False
 					elif e.type == pygame.MOUSEBUTTONDOWN:
 						self.chessboard.handle_key_event(e)
-						print self.chessboard.grid					
-						y_estimate = ai.ReturnAIAnw(self.chessboard.grid, 1)
-						print y_estimate
-						self.chessboard.set_piece(y_estimate/15,y_estimate%15)
-						self.chessboard.check_win(y_estimate/15,y_estimate%15)
+						print self.chessboard.grid
+						self.draw()
+						if self.chessboard.winner ==None:
+							before_eight = judge.Before_Eight()
+							y_estimate = ai.ReturnAIAnw_beforeeight(self.chessboard.grid, 1,before_eight)
+							print y_estimate
+							
+							self.chessboard.set_piece(y_estimate/15,y_estimate%15)
+							judge.input(self.chessboard.grid,self.chessboard.nowstep)
+
+							self.chessboard.check_win(y_estimate/15,y_estimate%15)
 
 	def draw(self):
 		global win
@@ -69,7 +83,16 @@ class Gomoku():
 		self.screen.fill((255, 255, 255))
 		self.screen.blit(self.font.render("FPS: {0:.2F}".format(self.clock.get_fps()), True, (0, 0, 0)), (10, 10))	
 		self.chessboard.draw(self.screen)
+
+		for i in range (15):
+			x = i+1
+			font = pygame.font.Font(None,20)
+			game.screen.blit(font.render(str(x), True, (0,128,255)), (410,i*26+46))
+			y = i+97	
+			game.screen.blit(font.render(chr(y), True, (255,0,0)), (i*26+26,430))
+
 		pygame.display.update()
+
 		if self.chessboard.game_over:
 			self.screen.blit(self.font.render("{0} Win".format("Black" if self.chessboard.winner == 1 else "White"), True, (0, 0, 0)), (500, 10))
 			pygame.display.update()
@@ -185,17 +208,17 @@ if __name__ == '__main__':
 	app.exec_()
 
 	learning_rate = 0.0003
-	input_stack = 48
+	input_stack = 56
 	step_check_crossenropy = 100
-	k_filter = input_stack * 2
-	seed = 13
+	k_filter = input_stack * 3
+	seed = 30
 
 
 	Data = DataCenter.MongoDB()
 	Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 	ai = AI.Ai(Cnn,input_stack)
 	Cnn.restore("./Neural_network_save/save_net530000.ckpt")
-
+	judge = Referee.referee()
 	game = Gomoku()
 	game.loop()
 

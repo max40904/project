@@ -13,6 +13,7 @@ class referee:
 
 
 	def input(self,set,num):
+		print "input",num
 		self.Step_Rer.append(num)
 		j = num / 15
 		i = num % 15
@@ -20,19 +21,20 @@ class referee:
 		self.CurSet = set
 
 		self.step = self.step + 1
-		if self.__CheckWin(j,i) ==1:
-			self.writefile()
-			self.step = 1
-			self.winner = 0
-			self.CurSet =  [[0 for i in range(15)] for j in range(15)]
-			self.SetStep = [[0 for i in range(15)] for j in range(15)]
-			self.Step_Rer = []
+		# if self.__CheckWin(j,i) ==1:
+		# 	self.writefile()
+		# 	self.step = 1
+		# 	self.winner = 0
+		# 	self.CurSet =  [[0 for i in range(15)] for j in range(15)]
+		# 	self.SetStep = [[0 for i in range(15)] for j in range(15)]
+		# 	self.Step_Rer = []
 
 	def Before_Eight(self):
 		num = []
 		for i in range(8):
-			if i <= len(self.Step_Rer) and self.step - 8  + i >=0:
-				num.append(self.Step_Rer[self.step - 8  + i ])
+			if  self.step - 9  + i >=0:
+				print "eight",self.Step_Rer[self.step - 9  + i ]
+				num.append(self.Step_Rer[self.step - 9  + i ])
 
 
 

@@ -9,7 +9,7 @@ import numpy as np
 import Referee
 import AI
 
-learning_rate = 0.003
+learning_rate = 0.0003
 input_stack = 56
 step_save = 10000
 step_draw = 100
@@ -52,7 +52,7 @@ elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
     restore_loc = raw_input()
-    Cnn.restore("./Neural_network_save/save_net100.ckpt")
+    Cnn.restore("./Neural_network_save/save_net530000.ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
     if check =="1":
@@ -89,7 +89,7 @@ elif choose =='2':
             y_8_stack = np.reshape(set,[1,225])
 
             y_prob = Cnn.Return_softmax( x_8_24_stack, y_8_stack )
-            print game.Return_Sort(np.reshape(y_prob,[225]),225)
+            #print game.Return_Sort(np.reshape(y_prob,[225]),225)
             y_estimate = ai.ReturnAIAnw_beforeeight(set, 0.5,before_eight)
             judge.input(set,y_estimate)
             game.StepGame(y_estimate, set, 0.5)
@@ -100,25 +100,28 @@ elif choose =='2':
     if check =="3":
         set[7][7] = 1
         game.show_game(np.reshape(set,[225,1]))
-        
+        step = 7*15+7
+        judge.input(set,step)
+        before_eight = judge.Before_Eight()
         while True:
             print "Your turn"
-            print "Please input : "
-            loc = raw_input()
-            step  = game.ConvertToNum(loc)
-            game.show_game(np.reshape(set,[225,1]))
-            
-            game.StepGame(step, set, 0.5)
-            game.show_game(np.reshape(set,[225,1]))
-            y = set
-            x = set
-            x_8__stack = np.reshape(game.ReturnAllInfo (set, 1),[1,15,15,input_stack])
-            y_stack = np.reshape(y,[1,225])
-            y_estimate =ai.ReturnAIAnw(set, 1)
+            print "Please input :"
+            choose = raw_input()
+            step = game.ConvertToNum(choose)
+            game.StepGame(step,set,0.5)
+            judge.input(set,step)
+            before_eight = judge.Before_Eight()
+            x_8_56_stack = np.reshape(game.ReturnAllInfo_before(set,1,before_eight),[1,15,15,input_stack])
+            y_8_stack = np.reshape(set,[1,225])
+            y_prob =  Cnn.Return_softmax(x_8_56_stack,y_8_stack)
+            y_estimate = ai.ReturnAIAnw_beforeeight(set, 1,before_eight)
+            judge.input(set,y_estimate)
             game.StepGame(y_estimate, set, 1)
             game.show_game_set(y_estimate)
             game.show_game(np.reshape(set,[225,1]))
             game.show_game_pos(y_estimate)
+
+
 
 
 

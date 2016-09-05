@@ -13,6 +13,7 @@ class Chessboard:
 		self.piece = 1
 		self.winner = None
 		self.game_over = False
+		self.nowstep = 0
 
 		self.grid = [[0 for i in range(15)] for j in range(15)]
 
@@ -33,6 +34,7 @@ class Chessboard:
 	def set_piece(self, r, c):
 		if self.grid[r][c] == 0:
 			self.grid[r][c] = self.piece
+			self.nowstep = r*15+c
 
 			if self.piece == 1:
 				self.piece = 0.5
@@ -95,7 +97,20 @@ class Chessboard:
 			for c in range(self.grid_count):
 				#print r,c,self.grid[r][c]
 				piece = self.grid[r][c]
-				if piece != 0:
+				if piece == 0:
+					x = self.start_x + c * self.grid_size
+					y = self.start_y + r * self.grid_size
+					if r==3 and c==3:
+						pygame.draw.circle(screen, (0, 0, 0), [x, y], self.grid_size // 4)
+					elif r==3 and c==11:
+						pygame.draw.circle(screen, (0, 0, 0), [x, y], self.grid_size // 4)
+					elif r==11 and c==3:
+						pygame.draw.circle(screen, (0, 0, 0), [x, y], self.grid_size // 4)
+					elif r==11 and c==11:
+						pygame.draw.circle(screen, (0, 0, 0), [x, y], self.grid_size // 4)
+					elif r==7 and c==7:
+						pygame.draw.circle(screen, (0, 0, 0), [x, y], self.grid_size // 4)
+				elif piece != 0:
 					if piece == 1:
 						color = (0, 0, 0)
 					else:
