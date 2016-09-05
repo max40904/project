@@ -12,7 +12,7 @@ class ValueNetwork:
 		self.seed = seed
 		with tf.name_scope('input'):
 			self.xs = tf.placeholder(tf.float32, [None, 15,15,input_stack],name = 'x_input')
-			self.ys = tf.placeholder(tf.float32, [None, 3], name = 'y_input')
+			self.ys = tf.placeholder(tf.float32, [None, 1], name = 'y_input')
 
 
 		with tf.name_scope('layer_1'):
@@ -76,7 +76,7 @@ class ValueNetwork:
 				self.W_conv6 = self.__weight_variable([1, 1, k_filter, 1],'W_conv6')
 				tf.histogram_summary('layer_6' + '/weights', self.W_conv6)
 			with tf.name_scope('biases'):
-				self.b_conv6 = self.__bias_variable([3],'b_conv6')
+				self.b_conv6 = self.__bias_variable([1],'b_conv6')
 				tf.histogram_summary('layer_6'  + '/biases', self.b_conv6)
 			with tf.name_scope('h_conv6'):
 				self.h_conv6 = tf.nn.relu(self.__conv2d(self.h_conv5, self.W_conv6) + self.b_conv6)
@@ -103,17 +103,18 @@ class ValueNetwork:
 				self.W_fc2 = self.__weight_variable([128,1],'W_fc2')
 				tf.histogram_summary('layer_8' + '/weights', self.W_fc2)
 			with tf.name_scope('biases'):
-				self.b_fc2 = self.__bias_variable([],'b_fc1')
-				tf.histogram_summary('layer_8'  + '/biases', self.b_fc1)
+				self.b_fc2 = self.__bias_variable([1],'b_fc2')
+				tf.histogram_summary('layer_8'  + '/biases', self.b_fc2)
 			with tf.name_scope('h_fc1'):
-				self.h_fc2 = tf.nn.tahn(tf.matmul(self.h_fc1, self.W_fc2) + self.b_fc2)
+				self.h_fc2 = tf.nn.tanh(tf.matmul(self.h_fc1, self.W_fc2) + self.b_fc2)
 			tf.histogram_summary('layer_8' + '/outputs', self.h_fc2)
 		
 
 		with tf.name_scope('prediction'):
 			self.predic = self.h_fc2
 		with tf.name_scope('cross_entropy'):
-			self.cross_entropy = tf.reduce_mean(-tf.reduce_sum(self.ys * tf.log(self.predic),reduction_indices=[1]))
+			self.cost = (self.ys - self.predic)*self.predic
+			self.cross_entropy = -tf.reduce_mean(self.cost) 
 			tf.scalar_summary('cross_entropy', self.cross_entropy)
 
 
@@ -124,7 +125,7 @@ class ValueNetwork:
 		self.sess = tf.Session()
 		self.saver = tf.train.Saver()
 		self.merged = tf.merge_all_summaries()
-		self.writer = tf.train.SummaryWriter("logs_local/", self.sess.graph)
+		self.writer = tf.train.SummaryWriter("logs_Value/", self.sess.graph)
 		
 
 
@@ -145,7 +146,7 @@ class ValueNetwork:
 	
 	
 	def Return_cross_entropy(self, input, output):
-		cross =  self.sess.run(self.cross_entropy, feed_dict = {self.xs: input,self.ys :output})
+		cross =  self.sess.run(self.cost, feed_dict = {self.xs: input,self.ys :output})
 		return cross
 	def Return_prediction_prob_empty(self,input,output):
 		pre =  self.sess.run(self.predic , feed_dict = {self.xs: input,self.ys :output})
@@ -166,7 +167,7 @@ class ValueNetwork:
 
 
 	def __weight_variable(self,shape,names):
-		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = self.seed )
+		initial = tf.random_uniform(shape, minval=-0.1, maxval=0.1, dtype=tf.float32, seed=self.seed, name=names)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):

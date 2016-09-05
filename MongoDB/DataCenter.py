@@ -13,6 +13,24 @@ class MongoDB:
 		self.playerA = "unknown"
 		self.playerB = "unknown"
 		self.Win = "-1"
+		self.time = 0
+
+	def SGFReturnSet_Win_three(self):
+		if self.time ==0:
+			self.SGFReturnSet()
+			self.curstep = self.curstep +  self.maxstep/3
+			self.time = 1
+		
+		elif self.time ==1:
+			self.curstep = self.curstep +  self.maxstep/3
+			self.time = 2
+		
+		elif self.time ==2:
+			self.curstep = self.maxstep -2
+			self.time =0
+
+		
+		return self.SGFReturnSet()
 		
 
 	def Find(self,i):
@@ -129,36 +147,7 @@ class MongoDB:
 		return curset
 
 
-	def ReturnSet(self):
-		self.curstep =self.curstep + 1
-		if self.curstep >= self.maxstep :
-			self.curseq = random.randint(1,self.allset)
-			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curseq)})[0]
-			self.nowchess = cursor["Set"].replace('"',"")
-			self.maxstep = len(self.nowchess.split(" "))
-			self.curstep = 1
-			self.playerA = cursor["PlayerA"]
-			self.playerB =  cursor["PlayerB"]
-			self.Win = cursor["Win"]
-			self.curset = [[0 for x in range(15)] for y in range(15)] 
-		game = self.nowchess.split(" ")[self.curstep-1]
-		y_loc = int(ord(game[0])-ord('a'))
-		x_loc = int(game[1:])-1
-		if self.curstep%2 ==1:
-			self.curset[x_loc][y_loc] = 1
-		else :
-			self.curset[x_loc][y_loc] = 0.5
-		return self.curset
-
-	def ReturnAnw(self):
-		game = self.nowchess[self.curstep]
-		y_loc = int(ord(game[2])-ord('a'))
-		x_loc = int(ord(game[3])-ord('a'))
-		curset = [[0 for x in range(15)] for y in range(15)] 
 	
-		curset[x_loc][y_loc] = 1
-	
-		return curset
 	def ReturnPlayerA(self):
 		return self.playerA 
 	def ReturnPlayerA(self):

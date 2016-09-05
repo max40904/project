@@ -8,12 +8,17 @@ judge = Referee.referee()
 str = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
 print str
 Data = DataCenter.MongoDB()
-set_x = Data.SGFReturnSet()
-set_y = Data.SGFReturnAnw()
-set_x[7][6] =  1
-set_x[7][5] =  1
+for i in range(10000):
+	set_x = Data.SGFReturnSet_Win_three()
+	print Data.ReturnWin()
+	set_x = Data.SGFReturnSet_Win_three()
+	print Data.ReturnWin()
+	set_x = Data.SGFReturnSet_Win_three()
+	print Data.ReturnWin()
 
-set_x[7][4] =  1
+	set_y = Data.SGFReturnAnw()
+
+
 
 game.show_game(np.reshape(set_x,[225]))
 game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
