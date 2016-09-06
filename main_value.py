@@ -9,12 +9,12 @@ import numpy as np
 import Referee
 import AI
 
-learning_rate = 0.0003
+learning_rate = 0.003
 input_stack = 57
 step_save = 12000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 4
+k_filter = input_stack *3
 training_iters = 12000*3 + 1
 seed = 19
 
@@ -31,15 +31,16 @@ if choose =='1':
     y = []
     Cnn.initialize()
     for i in range(training_iters):
-        print i
+        
         x = Data.SGFReturnSet_Win_three()
         if Data.ReturnWin()=="black":
             y= [[1 for j in range(1)]for j in range(8)]
         elif Data.ReturnWin()=="draw":
             y= [[0 for j in range(1)]for j in range(8)]
+            continue
         else:
             y= [[-1 for j in range(1)]for j in range(8)]
-
+        print i
         cut_color = Data.ReturnColor()
         before_eight = Data.SGFReturnBefore()
         x_8_56_stack = game.ReturnAllLayer_before (x, cut_color,before_eight)
@@ -79,6 +80,7 @@ elif choose =='2':
     count_12 = 0 
     count_25 = 0 
     count_50 = 0 
+    other = 0
 
 
     for i in range(training_iters):
@@ -111,6 +113,7 @@ elif choose =='2':
                         x_8_56_stack[x][p][j].append(1)
 
         pre = Cnn.Return_prediction_prob_empty(x_8_56_stack,y)
+        
         if pre <0 and wincolor < 0 :
             count_white = count_white +1 
         if pre >0 and wincolor > 0 :
@@ -119,14 +122,17 @@ elif choose =='2':
             count_draw =  count_draw + 1
         if abs(pre - wincolor) <0.125:
             count_12 =count_12 +1
-        if abs(pre - wincolor) <0.25:
+        elif abs(pre - wincolor) <0.25:
             count_25 = count_25 + 1
-        if abs(pre - wincolor) <0.5:
+        elif abs(pre - wincolor) <0.5:
             count_50 =  count_50 + 1
+        else:
+            other = other + 1
         if i %step_save:
             print "black check",count_black," black ori  ",count_original_black
             print "white check",count_white," white ori  ",count_original_white
             print "draw check",count_draw," draw ori  ",count_original_draw
+            print "other    :",other
             print "count_50 :",count_50
             print "count_25 :",count_25
             print "count_12 :",count_12

@@ -66,6 +66,7 @@ class Gomoku():
 					elif e.type == pygame.MOUSEBUTTONDOWN:
 						self.chessboard.handle_key_event(e)
 						print self.chessboard.grid
+						judge.input(self.chessboard.grid,self.chessboard.nowstep)
 						self.draw()
 						if self.chessboard.winner ==None:
 							before_eight = judge.Before_Eight()

@@ -113,12 +113,26 @@ class Chessboard:
 				elif piece != 0:
 					if piece == 1:
 						color = (0, 0, 0)
+						x = self.start_x + c * self.grid_size
+						y = self.start_y + r * self.grid_size
+						pygame.draw.circle(screen, color, [x, y], self.grid_size // 2)
+						pygame.draw.circle(screen, (10,10,10), [x-4, y-4], self.grid_size // 3)
+						pygame.draw.circle(screen, (20,20,20), [x-4, y-4], self.grid_size // 4)
+						pygame.draw.circle(screen, (30,30,30), [x-4, y-4], self.grid_size // 5)
+						pygame.draw.circle(screen, (40,40,40), [x-4, y-4], self.grid_size // 6)
+						pygame.draw.circle(screen, (50,50,50), [x-4, y-4], self.grid_size // 7)
+						pygame.draw.circle(screen, (60,60,60), [x-4, y-4], self.grid_size // 8)
 					else:
-						color = (255, 255, 255)
-
-					x = self.start_x + c * self.grid_size
-					y = self.start_y + r * self.grid_size
-					pygame.draw.circle(screen, color, [x, y], self.grid_size // 2)
+						color = (200, 200, 200)
+						x = self.start_x + c * self.grid_size
+						y = self.start_y + r * self.grid_size
+						pygame.draw.circle(screen, color, [x, y], self.grid_size // 2)
+						pygame.draw.circle(screen, (210,210,210), [x-1, y-1], self.grid_size // 2-1)
+						pygame.draw.circle(screen, (220,220,220), [x-2, y-2], self.grid_size // 2-2)				
+						pygame.draw.circle(screen, (230,230,230), [x-3, y-3], self.grid_size // 2-3)
+						pygame.draw.circle(screen, (240,240,240), [x-3, y-3], self.grid_size // 2-4)
+						pygame.draw.circle(screen, (250,250,250), [x-3, y-3], self.grid_size // 2-5)
+						pygame.draw.circle(screen, (255,255,255), [x-3, y-3], self.grid_size // 2-6)
 
 
 
