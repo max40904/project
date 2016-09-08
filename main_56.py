@@ -9,19 +9,20 @@ import numpy as np
 import Referee
 import AI
 
-learning_rate = 0.003
+learning_rate = 0.003 / 2
 input_stack = 56
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
 k_filter = input_stack * 2
-training_iters = 540001
-seed = 30
+training_iters = 540002
+seed = 23
 
+openfile = 510000
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
-ai = AI.Ai(Cnn,input_stack)
+
 judge = Referee.referee()
 
 
@@ -52,7 +53,7 @@ elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
     restore_loc = raw_input()
-    Cnn.restore("./Neural_network_save/save_net530000.ckpt")
+    Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
     if check =="1":
@@ -75,6 +76,7 @@ elif choose =='2':
 
     if check =="2":
         game.show_game(np.reshape(set,[225,1]))
+        ai = AI.Ai(Cnn,input_stack,1)
         while True:
             print "Your turn"
             print "Please input : "
@@ -98,6 +100,7 @@ elif choose =='2':
             game.show_game_pos(y_estimate)
 
     if check =="3":
+        ai = AI.Ai(Cnn,input_stack,0.5)
         set[7][7] = 1
         game.show_game(np.reshape(set,[225,1]))
         step = 7*15+7

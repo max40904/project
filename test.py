@@ -1,27 +1,63 @@
 from MongoDB import DataCenter 
 from gameinfo import policy_analysis
 from gameinfo import game
+from cnn import Policy
 import numpy as np
 import time
 import Referee
-judge = Referee.referee()
-str = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
-print str
-Data = DataCenter.MongoDB()
-for i in range(10000):
-	set_x = Data.SGFReturnSet_Win_three()
-	print Data.ReturnWin()
-	set_x = Data.SGFReturnSet_Win_three()
-	print Data.ReturnWin()
-	set_x = Data.SGFReturnSet_Win_three()
-	print Data.ReturnWin()
+import AI
+import math
 
-	set_y = Data.SGFReturnAnw()
+print math.sqrt(10)
+learning_rate = 0.003 / 2
+input_stack = 56
+step_save = 10000
+step_draw = 100
+step_check_crossenropy = 100
+k_filter = input_stack * 2
+training_iters = 540002
+seed = 23
+class node:
+	def __init__(self):
+		self.list = []
+		self.num = 0
+
+Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
+ai = AI.Ai(Cnn,input_stack,1)
+top = node()
+for i in range(5):
+	left = node()
+	left.num = 25 + i
+	top.list.append(left)
+
+
+top.list.append(left)
+
+top.list.append(left)
+
+for i in range(len(top.list)):
+	print top.list[i].num
+	
+	
+
+# judge = Referee.referee()
+# str = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
+# print str
+# Data = DataCenter.MongoDB()
+# for i in range(10000):
+# 	set_x = Data.SGFReturnSet_Win_three()
+# 	print Data.ReturnWin()
+# 	set_x = Data.SGFReturnSet_Win_three()
+# 	print Data.ReturnWin()
+# 	set_x = Data.SGFReturnSet_Win_three()
+# 	print Data.ReturnWin()
+
+# 	set_y = Data.SGFReturnAnw()
 
 
 
-game.show_game(np.reshape(set_x,[225]))
-game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
+# game.show_game(np.reshape(set_x,[225]))
+# game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
 # set_x = Data.SGFReturnSet()
 # set_x = Data.SGFReturnSet()
 
