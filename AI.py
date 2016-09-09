@@ -10,13 +10,15 @@ class Ai:
 		self.input_stack = input_stack
 		self.root = Ai.node()
 		self.color = color
+		self.dfscount = 0
+
+
+
 
 	def ReturnAIAnw_beforeeight(self,set,color,beforeeight):
 
 		x_48_stack = np.reshape(game.ReturnAllInfo_before (set, color,beforeeight),[1,15,15,self.input_stack])
 		y_stack = np.reshape([[0 for i in range(15)] for j in range(15)],[1,225])
-
-
 
 		Opennetcolor = 0.5
 		if color == 0.5:
@@ -27,13 +29,6 @@ class Ai:
 
 		if self.__checkzero(policy_analysis.evaluate_five (set,Opennetcolor))==1:
 			return np.argmax(policy_analysis.evaluate_five (set,Opennetcolor))
-
-		if self.__checkzero(policy_analysis.evaluate_dead_four (set,color,2))==1:
-			return np.argmax(policy_analysis.evaluate_dead_four (set,color,2))
-
-		if self.__checkzero(policy_analysis.evaluate_alive_three_dead_four (set,color))==1:
-			return np.argmax(policy_analysis.evaluate_alive_three_dead_four (set,color))
-
 		if self.__checkzero(policy_analysis.evaluate_alive_four (set,color,1))==1:
 			
 			check = policy_analysis.evaluate_alive_four (set,color,1)
@@ -44,6 +39,14 @@ class Ai:
 						anw.append(i*15+j)
 			
 			return anw[0]
+
+		if self.__checkzero(policy_analysis.evaluate_dead_four (set,color,2))==1:
+			return np.argmax(policy_analysis.evaluate_dead_four (set,color,2))
+
+		if self.__checkzero(policy_analysis.evaluate_alive_three_dead_four (set,color))==1:
+			return np.argmax(policy_analysis.evaluate_alive_three_dead_four (set,color))
+
+		
 
 		y_estimate = self.policy.Return_prediction( x_48_stack, y_stack )
 
@@ -100,18 +103,18 @@ class Ai:
 			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 			return self.filter(y_estimate,check)
 
-		y_estimate = self.policy.Return_softmax( x_48_stack, y_stack )
-		check = policy_analysis.evaluate_self (set,color)
-
+		y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
+		check = policy_analysis.evaluate_self (set,0)
 		return self.filter(y_estimate,check)
 
-	def filter (set,check):
-		anw = [[0 for i in range(15)] for j in range(15)]
+	def filter (self, set,check):
+		anw = [[0. for i in range(15)] for j in range(15)]
 		for i in range(15):
 			for j in range(15):
 				if check[i][j] == 1:
-					anw = set[i][j]
 
+					anw[i][j] =set[i][j]
+					
 		return anw
 
 
@@ -158,14 +161,139 @@ class Ai:
 					return 1
 		return -1
 
-	def run(self, set, color, beforeeight,time):
-		pass
+	def firststep(self, set, color,  beforeeight,step): 
+		#(always black )first step can't be here ,default is black [7][7]
+		#second or third start
+		self.root.step = step
+		self.root.color = color
+		self.root.beforeeight = beforeeight
+		self.root.setprob = self.ReturnAIAnw_beforeeight_prob(set, color, beforeeight)
+		self.root.set = set
+		self.root.totalmatch = 1
+		self.root.value = 0
+		self.root.totalvalue = 0
+		self.root.problist = game.Return_Sort(np.reshape(self.root.setprob, [225]), 225 )
+
+
+	def run(self, set, color, beforeeight, time):
+		for i in range(time):
+			self.MontneCarlo(self.root, color, beforeeight, 0)
+
+	def OppentChoose(self,set ,color,beforeeight ,step):
+		flag = 0
+		print "OppentChoose" 
+		for i in range(len(self.root.linklist)):
+			print "loop"
+
+			if self.root.linklist[i].step == step:
+				print "oppent"
+				game.show_game_pos(self.root.linklist[i].step)
+				flag = 1
+				self.root = self.root.linklist[i]
+				return 0
+				break
+
+		if flag ==0:
+			print "nothing"
+			self.root = Ai.node()
+			self.firststep( set, color,  beforeeight,step)
+
+		return 0
+
+
+
+
+				
+				
+	def ReturnMonteCarlorun(self, set, color, beforeeight):
+		print "ReturnMonteCarlorun"
+		self.run(set, color, beforeeight, 300)
+		
+		maxvalue = -999999999
+		maxvalue_num = 0
+		#self.dfsreview()
+
+		maxrate =-1.0 
+		maxrate_num =  0
+		print "\n\nall choise"
+		print len(self.root.linklist)
+		record = 0.
+		for i in range(len(self.root.linklist)):
+			print self.root.linklist[i].step,"step!!"
+			print self.root.linklist[i].totalvalue,"value!!\n"
+			print self.root.linklist[i].totalwin," win!!"
+			print self.root.linklist[i].totalloss," loss!!"
+			print self.root.linklist[i].totalmatch," total!!"
+
+			game.show_game_pos(self.root.linklist[i].step)
+
+			total = self.root.linklist[i].totalmatch
+			winrate = float(self.root.linklist[i].totalwin) / float(self.root.linklist[i].totalmatch) 
+			loss = float(self.root.linklist[i].totalloss) /float(self.root.linklist[i].totalmatch)
+			print "winrate",winrate
+			print "lossrate",loss
+
+			if  (winrate  - loss )>maxrate + self.root.linklist[i].prob and  total >=5 :
+				
+				record = winrate
+				maxrate = (winrate-loss)*3
+				maxrate_num = i
+
+			if maxvalue < self.root.linklist[i].totalvalue:
+				maxvalue = self.root.linklist[i].totalvalue
+				maxvalue_num = i
+		print "final",maxvalue
+		print "winrate ",winrate
+				
+
+		self.root = self.root.linklist[maxrate_num]
+		
+		
+		
+		return self.root.step
+	def dfsreview(self):
+		print "dfs"
+		
+		self.dfscount = 0
+		self.dfs(self.root)
+		print "dfsallcount"
+		print self.dfscount
+
+
+
+	def dfs(self,node):
+		for i in range(len(node.linklist)):
+			self.dfs(node.linklist[i])
+		print "step "
+		game.show_game_pos(node.step),node.step
+
+		print "value",node.value
+		print "totalvalue",node.totalvalue
+		print "allmatchcount",node.totalmatch
+		print "allwin",node.totalwin
+		print "alllose",node.totalloss
+		self.dfscount = self.dfscount + 1
+
+
+	
 
 	def MontneCarlo(self, node , color , beforeeight, depth):
-		
+		node.totalvalue = node.value
 		if node.win == 1:
+			node.totalmatch = 1
+			node.totalwin = 1
+			
+			print "win"
 			return 1
-		elif depte == 20:
+		elif node.loss ==1:
+			node.totalmatch = 1
+			node.totalloss = 1
+			
+			print "loss"
+			return -1
+		elif depth == 11:
+			node.totalmatch = 1
+			print "end"
 			return 0
 
 		ocolor = 0.5
@@ -175,33 +303,256 @@ class Ai:
 
 		selectpath = 0
 		selvalue = 0.0
-		for i in range(node.problist):
-			temp = node.problist[i][1] + math.sqrt(math.log(node.num_match))/(1 +node.problist[i][2]) 
+		nextprob = 0
+		for i in range(len(node.problist)):
+			temp = node.problist[i][1] +  0.466*(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 			if selvalue < temp:
-				temp =selvalue
+				selvalue = temp
 				selectpath = node.problist[i][0]
+				nextprob = node.problist[i][1]
 		flag = 0
-		for i in range(len(node.nodelist)):
-			if node.nodelist[i].step == selectpath:
+
+		for i in range(len(node.linklist)):
+			if node.linklist[i].step == selectpath:
+
+
+				node.count[i] = node.count[i] + 1
 				flag = 1
-				self.MontneCarlo (node.nodelist[i],ocolor,beforeeight,depth+1)
+				self.MontneCarlo (node.linklist[i],ocolor,beforeeight,depth+1)
 
 		if flag ==0:
-			 new = Ai.node()
-			 newset = set.copy()
-			 newset = game.StepGame(selectpath,newset,color)
+			#create new node
+
+			new = Ai.node()
+
+			
+			newset = game.StepGame(selectpath,node.set,color)
+
+
+			new_beforeeight = [0 for i in range(8)]
+			for j in range(len(beforeeight)):
+
+				new_beforeeight.append(beforeeight[j])
+
+
+			new_beforeeight.append(node.step)
+			new.prob = nextprob
+
+			new.color = color
+			new.step = selectpath
+			new.setprob =self.ReturnAIAnw_beforeeight_prob(newset, color, new_beforeeight)
+			new.set = newset
+			new.beforeeight = new_beforeeight
+			new.totalmatch = 0
+			new.value = self.evaluete_value(node.set , color, selectpath)
+			new.totalvalue = new.value
+			if new.value ==9000000 and self.color ==color:
+				new.win = 1
+			if new.value ==-9000000 and self.color != color:
+				new.loss = 1
 
 
 
 
-			#newnode
-			#self.MontneCarlo (node.nodelist[i],ocolor,beforeeight,depth+1)
-			pass
+			new.problist = game.Return_Sort(np.reshape(new.setprob,[225]),225)
+			
+			#add to orighinal list
+			node.linklist.append(new)
+			self.MontneCarlo (node.linklist[len(node.linklist)-1],ocolor,beforeeight,depth+1)
+			
 
-		maxvalue = 
-		allstep = 
-		for i in range(len(node.nodelist)):
-			pass
+		select_value = 0
+		tempvalue = 0
+
+		count_step = 0 
+		count_win = 0
+		count_loss = 0
+		for i in range(len(node.linklist)):
+
+			if abs(node.linklist[i].totalvalue) >= tempvalue:
+				tempvalue = abs(node.linklist[i].totalvalue)
+				select_value = node.linklist[i].totalvalue
+
+			count_step = count_step + node.linklist[i].totalmatch
+			count_win = count_win +  node.linklist[i].totalwin
+			count_loss = count_loss + node.linklist[i].totalloss
+
+		node.totalvalue = node.totalvalue  +  select_value 
+		node.totalmatch = count_step
+		node.totalwin = count_win
+		node.totalloss = count_loss
+
+
+
+		return 0		
+
+
+	class node:
+		def __init__(self):
+			self.color = 0  #
+			self.linklist = [] #
+			self.count = [0 for i in range(225)]
+			self.prob = 0.0
+			self.value = 0  
+			self.totalvalue = 0 #
+			self.win = 0 #
+			self.loss = 0#
+			self.totalwin = 0 #
+			self.totalloss = 0 #
+
+			self.totalmatch = 0 # 
+			self.set = [[0 for i in range(15)] for j in range(15)] #
+			self.setprob = [[0.0 for i in range(15)] for j in range(15)] #
+			self.beforeeight = [0 for i in range(8)] #
+			self.problist = [] #
+			self.step = 0 #
+
+
+
+	def evaluete_value(self,set,color,step):
+		y_loc = step/15
+		x_loc = step%15
+		if self.color==1:
+			if color==1:
+				check  = policy_analysis.evaluate_five(set,color)
+				if check[y_loc][x_loc]==1:
+					return 9000000
+
+				check = policy_analysis.evaluate_alive_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 5000000
+				check = policy_analysis.evaluate_dead_four (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return 15000
+				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
+				if  check[y_loc][x_loc]==1:
+					return 10000
+				check = policy_analysis.evaluate_dead_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 150
+				check = policy_analysis.evaluate_alive_three (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return 0
+
+				check = policy_analysis.evaluate_alive_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 100
+				check = policy_analysis.evaluate_dead_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 5
+				check = policy_analysis.evaluate_alive_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 10
+				check = policy_analysis.evaluate_dead_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 5
+
+
+			elif color ==0.5:
+				check  = policy_analysis.evaluate_five(set,color)
+				if check[y_loc][x_loc]==1:
+					return -9000000
+
+				check = policy_analysis.evaluate_alive_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -5000000
+				check = policy_analysis.evaluate_dead_four (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return -150000
+				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
+				if  check[y_loc][x_loc]==1:
+					return -100000
+				check = policy_analysis.evaluate_dead_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -12000
+				check = policy_analysis.evaluate_alive_three (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return -80000
+				check = policy_analysis.evaluate_alive_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -1000
+				check = policy_analysis.evaluate_dead_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -5
+				check = policy_analysis.evaluate_alive_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -10
+				check = policy_analysis.evaluate_dead_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -5
+
+		elif self.color ==0.5:
+			if color==0.5:
+				check  = policy_analysis.evaluate_five(set,color)
+				if check[y_loc][x_loc]==1:
+					return 9000000
+
+				check = policy_analysis.evaluate_alive_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 5000000
+				check = policy_analysis.evaluate_dead_four (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return 15000
+				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
+				if  check[y_loc][x_loc]==1:
+					return 10000
+				check = policy_analysis.evaluate_dead_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 150
+				check = policy_analysis.evaluate_alive_three (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return 80000
+
+				check = policy_analysis.evaluate_alive_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 100
+				check = policy_analysis.evaluate_dead_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 5
+				check = policy_analysis.evaluate_alive_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 10
+				check = policy_analysis.evaluate_dead_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return 5
+
+
+			elif color ==1:
+				check  = policy_analysis.evaluate_five(set,color)
+				if check[y_loc][x_loc]==1:
+					return -9000000
+
+				check = policy_analysis.evaluate_alive_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -5000000
+				check = policy_analysis.evaluate_dead_four (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return -150000
+				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
+				if  check[y_loc][x_loc]==1:
+					return -100000
+				check = policy_analysis.evaluate_dead_four (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -12000
+				check = policy_analysis.evaluate_alive_three (set,color,2)
+				if check[y_loc][x_loc]==1:
+					return  0
+				check = policy_analysis.evaluate_alive_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -1000
+				check = policy_analysis.evaluate_dead_three (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -5
+				check = policy_analysis.evaluate_alive_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -10
+				check = policy_analysis.evaluate_dead_two (set,color,1)
+				if check[y_loc][x_loc]==1:
+					return -5
+
+		return 0
+
+
 
 
 			
@@ -231,18 +582,7 @@ class Ai:
 
 
 
-	class node:
-		def __init__(self):
-			self.nodelist = []
-			self.nprob = 0.0
-			self.value = 0
-			self.totalvalue = 0
-			self.win = 0
-			self.num_match = 0
-			self.set = [[0 for i in range(15)] for j in range(15)]
-			self.setprob = [[0.0 for i in range(15)] for j in range(15)]
-			self.problist = []
-			self.step = 0
+
 		
 
 		

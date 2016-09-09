@@ -9,7 +9,7 @@ import numpy as np
 import Referee
 import AI
 
-learning_rate = 0.003 / 30.0
+learning_rate = 0.003 / 2
 input_stack = 56
 step_save = 10000
 step_draw = 100
@@ -18,7 +18,7 @@ k_filter = input_stack * 2
 training_iters = 540002
 seed = 23
 
-openfile = 510000
+openfile = 530000
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
@@ -75,6 +75,7 @@ elif choose =='2':
                 print count,  count/i
 
     if check =="2":
+        time = 0
         game.show_game(np.reshape(set,[225,1]))
         ai = AI.Ai(Cnn,input_stack,0.5)
         while True:
@@ -87,12 +88,17 @@ elif choose =='2':
             set = game.StepGame(step, set, 1)
             judge.input(set,step)
             before_eight = judge.Before_Eight()
+            if time ==0:
+                ai.firststep(set, 1, before_eight,step)
+                time = 1
+            else :
+                ai.OppentChoose(set,1,before_eight,step)
+
             x_8_24_stack =np.reshape(game.ReturnAllInfo_before(set,0.5,before_eight),[1,15,15,input_stack])
             y_8_stack = np.reshape(set,[1,225])
 
-            y_prob = Cnn.Return_softmax( x_8_24_stack, y_8_stack )
             #print game.Return_Sort(np.reshape(y_prob,[225]),225)
-            y_estimate = ai.ReturnAIAnw_beforeeight(set, 0.5,before_eight)
+            y_estimate = ai.ReturnMonteCarlorun(set, 0.5,before_eight)
             judge.input(set,y_estimate)
             set =game.StepGame(y_estimate, set, 0.5)
             game.show_game_set(y_estimate)

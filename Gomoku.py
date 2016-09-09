@@ -29,7 +29,9 @@ class Gomoku():
 			self.update()
 			self.draw()
 			self.clock.tick(60)
-
+			if self.chessboard.game_over:
+				print '><'
+				return 0
 		pygame.quit()
 
 	def update(self):
@@ -40,7 +42,24 @@ class Gomoku():
 			for e in pygame.event.get():
 				if e.type == pygame.QUIT:
 					self.going = False
-				elif e.type == pygame.MOUSEBUTTONDOWN:
+				elif e.type == pygame.MOUSEBUTTONDOWN and e.button == 1:
+					origin_x = self.chessboard.start_x - self.chessboard.edge_size
+					origin_y = self.chessboard.start_y - self.chessboard.edge_size
+					size = (self.chessboard.grid_count - 1) * self.chessboard.grid_size + self.chessboard.edge_size * 2
+					pos = e.pos
+					if origin_x <= pos[0] <= origin_x + size and origin_y <= pos[1] <= origin_y + size:
+						if not self.chessboard.game_over:
+							x = pos[0] - origin_x
+							y = pos[1] - origin_y
+							r = int(y // self.chessboard.grid_size)
+							c = int(x // self.chessboard.grid_size)
+							if self.chessboard.grid[r][c] != 0:
+								print 123
+								break
+					else:
+						print 456
+						break
+
 					self.chessboard.handle_key_event(e)
 					
 					print self.chessboard.grid
@@ -63,8 +82,26 @@ class Gomoku():
 				for e in pygame.event.get():
 					if e.type == pygame.QUIT:
 						self.going = False
-					elif e.type == pygame.MOUSEBUTTONDOWN:
+					elif e.type == pygame.MOUSEBUTTONDOWN and e.button == 1:
+						origin_x = self.chessboard.start_x - self.chessboard.edge_size
+						origin_y = self.chessboard.start_y - self.chessboard.edge_size
+						size = (self.chessboard.grid_count - 1) * self.chessboard.grid_size + self.chessboard.edge_size * 2
+						pos = e.pos
+						if origin_x <= pos[0] <= origin_x + size and origin_y <= pos[1] <= origin_y + size:
+							if not self.chessboard.game_over:
+								x = pos[0] - origin_x
+								y = pos[1] - origin_y
+								r = int(y // self.chessboard.grid_size)
+								c = int(x // self.chessboard.grid_size)
+								if self.chessboard.grid[r][c] != 0:
+									print 123
+									break
+						else:
+							print 456
+							break
+
 						self.chessboard.handle_key_event(e)
+
 						print self.chessboard.grid
 						judge.input(self.chessboard.grid,self.chessboard.nowstep)
 						self.draw()
@@ -97,117 +134,65 @@ class Gomoku():
 		if self.chessboard.game_over:
 			self.screen.blit(self.font.render("{0} Win".format("Black" if self.chessboard.winner == 1 else "White"), True, (0, 0, 0)), (500, 10))
 			pygame.display.update()
+			print "XD"
+			global appx
+			global i2
+			global endbutton
 			def end():
-				endbutton.close()
-				pygame.quit()
-				sys.exit()
+				print '@@'
+				endbutton[i2].close()
+				win2=1
+
 			if(self.chessboard.winner==1 and win==0):
 				if(self.chessboard.winner==1 and color==0.5):
-					app2 = QApplication(sys.argv)
-					endbutton = QPushButton()
-					endbutton.resize(200,200)
-					endbutton.setText("Black Win!!!")
-					endbutton.setWindowTitle("You Lose!!!")
-					endbutton.show()
-					endbutton.clicked.connect(end)
-					app2.exec_()
+					appx[i2] = QApplication(sys.argv)
+					endbutton[i2] = QPushButton()
+					endbutton[i2].resize(200,200)
+					endbutton[i2].setText("Black Win!!!")
+					endbutton[i2].setWindowTitle("You Lose!!!")
+					endbutton[i2].show()
+					endbutton[i2].clicked.connect(end)
+					appx[i2].exec_()
 				else:
-					app2 = QApplication(sys.argv)
-					endbutton = QPushButton()
-					endbutton.resize(200,200)
-					endbutton.setText("Black Win!!!")
-					endbutton.setWindowTitle("You Win!!!")
-					endbutton.show()
-					endbutton.clicked.connect(end)
-					app2.exec_()
+					appx[i2] = QApplication(sys.argv)
+					endbutton[i2] = QPushButton()
+					endbutton[i2].resize(200,200)
+					endbutton[i2].setText("Black Win!!!")
+					endbutton[i2].setWindowTitle("You Win!!!")
+					endbutton[i2].show()
+					endbutton[i2].clicked.connect(end)
+					appx[i2].exec_()
 			elif(self.chessboard.winner==0.5 and win==0):
 				if(self.chessboard.winner==0.5 and color==1):
-					app2 = QApplication(sys.argv)
-					endbutton = QPushButton()
-					endbutton.resize(200,200)
-					endbutton.setText("White Win!!!")
-					endbutton.setWindowTitle("You Lose!!!")
-					endbutton.show()
-					endbutton.clicked.connect(end)
-					app2.exec_()
+					appx[i2] = QApplication(sys.argv)
+					endbutton[i2] = QPushButton()
+					endbutton[i2].resize(200,200)
+					endbutton[i2].setText("White Win!!!")
+					endbutton[i2].setWindowTitle("You Lose!!!")
+					endbutton[i2].show()
+					endbutton[i2].clicked.connect(end)
+					appx[i2].exec_()
 				else:
-					app2 = QApplication(sys.argv)
-					endbutton = QPushButton()
-					endbutton.resize(200,200)
-					endbutton.setText("White Win!!!")
-					endbutton.setWindowTitle("You Win!!!")
-					endbutton.show()
-					endbutton.clicked.connect(end)
-					app2.exec_()
+					appx[i2] = QApplication(sys.argv)
+					endbutton[i2] = QPushButton()
+					endbutton[i2].resize(200,200)
+					endbutton[i2].setText("White Win!!!")
+					endbutton[i2].setWindowTitle("You Win!!!")
+					endbutton[i2].show()
+					endbutton[i2].clicked.connect(end)
+					appx[i2].exec_()
 
 			win=win+1
-		
-		'''			
-			def buttonClicked2():
-				if(radiobutton2.isChecked()):
-					color = 1
-				else:
-					color = 0
-				widget2.close()
-
-			app3 = QApplication(sys.argv)
-			widget2 = QWidget()
-			widget2.resize(400, 200)
-			widget2.move(400, 150)
-			widget2.setWindowTitle("Choose your color!")
-			radiobutton2_1 = QRadioButton(widget2)
-			radiobutton2_2 = QRadioButton(widget2)
-			radiobutton2_1.setText("Black")
-			radiobutton2_2.setText("white")
-			radiobutton2_1.move(80,50)
-			radiobutton2_2.move(250,50)
-			radiobutton2_1.setChecked(True)
-			button2 = QPushButton(widget2)
-			button2.setText("Let's   Restart   The   Game!!!")
-			button2.move(110,120)
-			button2.clicked.connect(buttonClicked2)
-			widget2.show()
-			app3.exec_()
-		'''
-
-			
-
-		
+			i2=i2+1		
 
 
 if __name__ == '__main__':
-	color = 1
-	win = 0
-	time = 0
-	def buttonClicked():
-		global color
-		if(radiobutton1.isChecked()):
-			color = 1
-			print 123
-		elif(radiobutton2.isChecked()):
-			color = 0.5
-			print 123
-		widget.close()
-
-	app = QApplication(sys.argv)
-	widget = QWidget()
-	widget.resize(400, 200)
-	widget.move(400, 150)
-	widget.setWindowTitle("Choose your color!")
-	radiobutton1 = QRadioButton(widget)
-	radiobutton2 = QRadioButton(widget)
-	radiobutton1.setText("Black")
-	radiobutton2.setText("white")
-	radiobutton1.move(80,50)
-	radiobutton2.move(250,50)
-	radiobutton1.setChecked(True)
-	button = QPushButton(widget)
-	button.setText("Let's   Start   The   Game!!!")
-	button.move(110,120)
-	button.clicked.connect(buttonClicked)
-	widget.show()
-	app.exec_()
-
+	win2 = 0
+	i=0
+	app={}
+	i2=0
+	appx={}
+	endbutton={}
 	learning_rate = 0.0003
 	input_stack = 56
 	step_check_crossenropy = 100
@@ -220,11 +205,59 @@ if __name__ == '__main__':
 	ai = AI.Ai(Cnn,input_stack)
 	Cnn.restore("./Neural_network_save/save_net530000.ckpt")
 	judge = Referee.referee()
-	game = Gomoku()
-	game.loop()
+	
+	def buttonClicked():
+		global color
+		if(radiobutton1.isChecked()):
+			color = 1
+			print 123
+		elif(radiobutton2.isChecked()):
+			color = 0.5
+			print 123
+		widget.close()
 
+	def buttonClicked2():
+		widget.close()
+		sys.exit()
+		pygame.quit()
+		
 
+	while win2 == 0:	
+		color = 1
+		win = 0
+		time = 0
+		app[i] = QApplication(sys.argv)
+		widget = QWidget()
+		widget.resize(400, 200)
+		widget.move(400, 150)
+		widget.setWindowTitle("Choose your color!")
+		radiobutton1 = QRadioButton(widget)
+		radiobutton2 = QRadioButton(widget)
+		radiobutton1.setText("Black")
+		radiobutton2.setText("white")
+		radiobutton1.move(80,50)
+		radiobutton2.move(250,50)
+		radiobutton1.setChecked(True)
+		button = QPushButton(widget)
+		button.setText("Let's   Start   The   Game!!!")
+		button.move(110,120)
+		button.clicked.connect(buttonClicked)
+		button2 = QPushButton(widget)
+		button2.setText("Finish Game")
+		button2.move(150,160)
+		button2.clicked.connect(buttonClicked2)
+		widget.show()
+		app[i].exec_()
 
+		
+		game = Gomoku()
+		game.loop()
+
+		if game.loop() == 0:
+			print 123
+			#game.pygame.quit()
+			win2=0
+			i=i+1
 
 
 
