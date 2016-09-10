@@ -93,6 +93,8 @@ elif choose =='2':
             y_prob = Cnn.Return_softmax( x_8_24_stack, y_8_stack )
             #print game.Return_Sort(np.reshape(y_prob,[225]),225)
             y_estimate = ai.ReturnAIAnw_beforeeight(set, 0.5,before_eight)
+            y_estimate_prbo = ai.ReturnAIAnw_beforeeight_prob(set, 0.5,before_eight)
+            print "prob_argmax", np.argmax(y_estimate_prbo)
             judge.input(set,y_estimate)
             set =game.StepGame(y_estimate, set, 0.5)
             game.show_game_set(y_estimate)

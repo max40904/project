@@ -164,10 +164,13 @@ class Ai:
 	def firststep(self, set, color,  beforeeight,step): 
 		#(always black )first step can't be here ,default is black [7][7]
 		#second or third start
+		ocolor = 1
+		if color ==1:
+			ocolor = 0.5
 		self.root.step = step
 		self.root.color = color
 		self.root.beforeeight = beforeeight
-		self.root.setprob = self.ReturnAIAnw_beforeeight_prob(set, color, beforeeight)
+		self.root.setprob = self.ReturnAIAnw_beforeeight_prob(set, ocolor, beforeeight)
 		self.root.set = set
 		self.root.totalmatch = 1
 		self.root.value = 0
@@ -186,7 +189,7 @@ class Ai:
 			print "loop"
 
 			if self.root.linklist[i].step == step:
-				print "oppent"
+				print "haved"
 				game.show_game_pos(self.root.linklist[i].step)
 				flag = 1
 				self.root = self.root.linklist[i]
@@ -207,11 +210,13 @@ class Ai:
 				
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
-		self.run(set, color, beforeeight, 300)
+		self.run(set, color, beforeeight, 1000)
 		
 		maxvalue = -999999999
 		maxvalue_num = 0
-		#self.dfsreview()
+		self.dfsreview()
+		maxvalue_2 = -999999999
+		maxvalue_num_2 = 0
 
 		maxrate =-1.0 
 		maxrate_num =  0
@@ -220,7 +225,7 @@ class Ai:
 		record = 0.
 		for i in range(len(self.root.linklist)):
 			print self.root.linklist[i].step,"step!!"
-			print self.root.linklist[i].totalvalue,"value!!\n"
+			print self.root.linklist[i].totalvalue,"value!!"
 			print self.root.linklist[i].totalwin," win!!"
 			print self.root.linklist[i].totalloss," loss!!"
 			print self.root.linklist[i].totalmatch," total!!"
@@ -233,20 +238,26 @@ class Ai:
 			print "winrate",winrate
 			print "lossrate",loss
 
-			if  (winrate  - loss )>maxrate + self.root.linklist[i].prob and  total >=5 :
+			if  (winrate  - loss ) > ( maxrate + self.root.linklist[i].prob) and  total >=5 :
 				
 				record = winrate
 				maxrate = (winrate-loss)*3
 				maxrate_num = i
 
-			if maxvalue < self.root.linklist[i].totalvalue:
+			if maxvalue_2 < self.root.linklist[i].totalvalue  :
+				maxvalue_2 = self.root.linklist[i].totalvalue
+				maxvalue_num_2 = i
+
+			if maxvalue < self.root.linklist[i].totalvalue and self.root.linklist[i].totalmatch >= 7  :
 				maxvalue = self.root.linklist[i].totalvalue
 				maxvalue_num = i
 		print "final",maxvalue
 		print "winrate ",winrate
 				
-
-		self.root = self.root.linklist[maxrate_num]
+		if maxvalue_num!=0:
+			self.root = self.root.linklist[maxvalue_num]
+		else :
+			self.root = self.root.linklist[maxvalue_num_2]
 		
 		
 		
@@ -255,24 +266,26 @@ class Ai:
 		print "dfs"
 		
 		self.dfscount = 0
-		self.dfs(self.root)
+		self.dfs(self.root,1)
 		print "dfsallcount"
 		print self.dfscount
 
 
 
-	def dfs(self,node):
+	def dfs(self,node,depth):
 		for i in range(len(node.linklist)):
-			self.dfs(node.linklist[i])
-		print "step "
-		game.show_game_pos(node.step),node.step
-
-		print "value",node.value
-		print "totalvalue",node.totalvalue
-		print "allmatchcount",node.totalmatch
-		print "allwin",node.totalwin
-		print "alllose",node.totalloss
+			self.dfs(node.linklist[i],depth+1)
+		if depth ==3:
+			game.show_game_pos(node.step),node.step
+			print "color", node.color
+			print "value",node.value
+			print "totalvalue",node.totalvalue
+			print "allmatchcount",node.totalmatch
+			print "all win",node.totalwin
+			print "all lose",node.totalloss
+			print ""
 		self.dfscount = self.dfscount + 1
+		
 
 
 	
@@ -283,17 +296,14 @@ class Ai:
 			node.totalmatch = 1
 			node.totalwin = 1
 			
-			print "win"
 			return 1
 		elif node.loss ==1:
 			node.totalmatch = 1
 			node.totalloss = 1
 			
-			print "loss"
 			return -1
-		elif depth == 11:
+		elif depth == 7:
 			node.totalmatch = 1
-			print "end"
 			return 0
 
 		ocolor = 0.5
@@ -305,7 +315,11 @@ class Ai:
 		selvalue = 0.0
 		nextprob = 0
 		for i in range(len(node.problist)):
-			temp = node.problist[i][1] +  0.466*(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+			if node.color !=self.color :
+				temp = node.problist[i][1] +  0.05/0.466 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+			elif node.color ==self.color :
+				temp = node.problist[i][1] +  node.problist[i][1] *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+
 			if selvalue < temp:
 				selvalue = temp
 				selectpath = node.problist[i][0]
@@ -340,15 +354,15 @@ class Ai:
 
 			new.color = color
 			new.step = selectpath
-			new.setprob =self.ReturnAIAnw_beforeeight_prob(newset, color, new_beforeeight)
+			new.setprob =self.ReturnAIAnw_beforeeight_prob(newset, ocolor, new_beforeeight)
 			new.set = newset
 			new.beforeeight = new_beforeeight
 			new.totalmatch = 0
 			new.value = self.evaluete_value(node.set , color, selectpath)
 			new.totalvalue = new.value
-			if new.value ==9000000 and self.color ==color:
+			if new.value ==90000000000 and self.color ==color:
 				new.win = 1
-			if new.value ==-9000000 and self.color != color:
+			if new.value ==-90000000 and self.color != color:
 				new.loss = 1
 
 
@@ -416,17 +430,17 @@ class Ai:
 			if color==1:
 				check  = policy_analysis.evaluate_five(set,color)
 				if check[y_loc][x_loc]==1:
-					return 9000000
+					return 90000000000
 
 				check = policy_analysis.evaluate_alive_four (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return 5000000
+					return 50000000
 				check = policy_analysis.evaluate_dead_four (set,color,2)
 				if check[y_loc][x_loc]==1:
-					return 15000
+					return 15000000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return 10000
+					return 10000000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return 150
@@ -446,62 +460,64 @@ class Ai:
 				check = policy_analysis.evaluate_dead_two (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return 5
+				return 1
 
 
 			elif color ==0.5:
 				check  = policy_analysis.evaluate_five(set,color)
 				if check[y_loc][x_loc]==1:
-					return -9000000
+					return -90000000
 
 				check = policy_analysis.evaluate_alive_four (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -5000000
+					return -50000000
 				check = policy_analysis.evaluate_dead_four (set,color,2)
 				if check[y_loc][x_loc]==1:
-					return -150000
+					return -1500000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return -100000
+					return -1000000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -12000
+					return -120000
 				check = policy_analysis.evaluate_alive_three (set,color,2)
 				if check[y_loc][x_loc]==1:
-					return -80000
+					return -800000
 				check = policy_analysis.evaluate_alive_three (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -1000
+					return -10000
 				check = policy_analysis.evaluate_dead_three (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -5
+					return -500
 				check = policy_analysis.evaluate_alive_two (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -10
+					return -1000
 				check = policy_analysis.evaluate_dead_two (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -5
+					return -500
+				return -200
 
 		elif self.color ==0.5:
 			if color==0.5:
 				check  = policy_analysis.evaluate_five(set,color)
 				if check[y_loc][x_loc]==1:
-					return 9000000
+					return 90000000000
 
 				check = policy_analysis.evaluate_alive_four (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return 5000000
+					return 50000000000
 				check = policy_analysis.evaluate_dead_four (set,color,2)
 				if check[y_loc][x_loc]==1:
-					return 15000
+					return 1500000000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return 10000
+					return 1000000000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return 150
 				check = policy_analysis.evaluate_alive_three (set,color,2)
 				if check[y_loc][x_loc]==1:
-					return 80000
+					return 8000000000
 
 				check = policy_analysis.evaluate_alive_three (set,color,1)
 				if check[y_loc][x_loc]==1:
@@ -515,40 +531,42 @@ class Ai:
 				check = policy_analysis.evaluate_dead_two (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return 5
+				return 1
 
 
 			elif color ==1:
 				check  = policy_analysis.evaluate_five(set,color)
 				if check[y_loc][x_loc]==1:
-					return -9000000
+					return -90000000
 
 				check = policy_analysis.evaluate_alive_four (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -5000000
+					return -50000000
 				check = policy_analysis.evaluate_dead_four (set,color,2)
 				if check[y_loc][x_loc]==1:
-					return -150000
+					return -1500000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return -100000
+					return -1000000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -12000
+					return -120000
 				check = policy_analysis.evaluate_alive_three (set,color,2)
 				if check[y_loc][x_loc]==1:
 					return  0
 				check = policy_analysis.evaluate_alive_three (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -1000
+					return -10000
 				check = policy_analysis.evaluate_dead_three (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -5
+					return -500
 				check = policy_analysis.evaluate_alive_two (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -10
+					return -1000
 				check = policy_analysis.evaluate_dead_two (set,color,1)
 				if check[y_loc][x_loc]==1:
-					return -5
+					return -500
+				return -200
 
 		return 0
 
