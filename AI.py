@@ -210,7 +210,7 @@ class Ai:
 				
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
-		self.run(set, color, beforeeight, 1000)
+		self.run(set, color, beforeeight, 200)
 		
 		maxvalue = -999999999
 		maxvalue_num = 0
@@ -224,40 +224,42 @@ class Ai:
 		print len(self.root.linklist)
 		record = 0.
 		for i in range(len(self.root.linklist)):
-			print self.root.linklist[i].step,"step!!"
-			print self.root.linklist[i].totalvalue,"value!!"
-			print self.root.linklist[i].totalwin," win!!"
-			print self.root.linklist[i].totalloss," loss!!"
-			print self.root.linklist[i].totalmatch," total!!"
-
-			game.show_game_pos(self.root.linklist[i].step)
-
 			total = self.root.linklist[i].totalmatch
+			if total >=0:
+				print self.root.linklist[i].step,"step!!"
+				print self.root.linklist[i].totalvalue,"value!!"
+				print self.root.linklist[i].totalwin," win!!"
+				print self.root.linklist[i].totalloss," loss!!"
+				print self.root.linklist[i].totalmatch," total!!"
+			
+
+				game.show_game_pos(self.root.linklist[i].step)
+
+
+				
 			winrate = float(self.root.linklist[i].totalwin) / float(self.root.linklist[i].totalmatch) 
 			loss = float(self.root.linklist[i].totalloss) /float(self.root.linklist[i].totalmatch)
-			print "winrate",winrate
-			print "lossrate",loss
-
-			if  (winrate  - loss ) > ( maxrate + self.root.linklist[i].prob) and  total >=5 :
+			
+			if  (winrate * 2  - loss ) > ( maxrate )  :
 				
 				record = winrate
-				maxrate = (winrate-loss)*3
+				maxrate = (winrate*2-loss)
 				maxrate_num = i
 
 			if maxvalue_2 < self.root.linklist[i].totalvalue  :
 				maxvalue_2 = self.root.linklist[i].totalvalue
 				maxvalue_num_2 = i
 
-			if maxvalue < self.root.linklist[i].totalvalue and self.root.linklist[i].totalmatch >= 7  :
+			if maxvalue < self.root.linklist[i].totalvalue  :
 				maxvalue = self.root.linklist[i].totalvalue
 				maxvalue_num = i
 		print "final",maxvalue
 		print "winrate ",winrate
-				
-		if maxvalue_num!=0:
-			self.root = self.root.linklist[maxvalue_num]
-		else :
-			self.root = self.root.linklist[maxvalue_num_2]
+		self.root = self.root.linklist[maxrate_num]
+		# if maxvalue_num!=0:
+		# 	self.root = self.root.linklist[maxvalue_num]
+		# else :
+		# 	self.root = self.root.linklist[maxvalue_num_2]
 		
 		
 		
@@ -302,7 +304,7 @@ class Ai:
 			node.totalloss = 1
 			
 			return -1
-		elif depth == 7:
+		elif depth == 15:
 			node.totalmatch = 1
 			return 0
 
@@ -314,11 +316,16 @@ class Ai:
 		selectpath = 0
 		selvalue = 0.0
 		nextprob = 0
-		for i in range(len(node.problist)):
+		limit = len(node.problist)
+		if limit>6:
+			limit = 6
+	
+
+		for i in range(limit):
 			if node.color !=self.color :
-				temp = node.problist[i][1] +  0.05/0.466 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] + 1 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 			elif node.color ==self.color :
-				temp = node.problist[i][1] +  node.problist[i][1] *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] + node.problist[i][1] *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 
 			if selvalue < temp:
 				selvalue = temp
@@ -381,15 +388,30 @@ class Ai:
 		count_step = 0 
 		count_win = 0
 		count_loss = 0
-		for i in range(len(node.linklist)):
 
-			if abs(node.linklist[i].totalvalue) >= tempvalue:
-				tempvalue = abs(node.linklist[i].totalvalue)
-				select_value = node.linklist[i].totalvalue
+		if node.color !=self.color: 
+			#player1
+			tempvalue =  -922337203685477580
 
-			count_step = count_step + node.linklist[i].totalmatch
-			count_win = count_win +  node.linklist[i].totalwin
-			count_loss = count_loss + node.linklist[i].totalloss
+			for i in range(len(node.linklist)):
+				if node.linklist[i].totalvalue > tempvalue:
+					tempvalue = node.linklist[i].totalvalue
+					select_value = node.linklist[i].totalvalue
+
+				count_step = count_step + node.linklist[i].totalmatch
+				count_win = count_win +  node.linklist[i].totalwin
+				count_loss = count_loss + node.linklist[i].totalloss
+		elif node.color ==self.color:
+			#player2
+			tempvalue = 922337203685477580
+			for i in range(len(node.linklist)):
+				if node.linklist[i].totalvalue < tempvalue:
+					tempvalue = node.linklist[i].totalvalue
+					select_value = node.linklist[i].totalvalue
+
+				count_step = count_step + node.linklist[i].totalmatch
+				count_win = count_win +  node.linklist[i].totalwin
+				count_loss = count_loss + node.linklist[i].totalloss
 
 		node.totalvalue = node.totalvalue  +  select_value 
 		node.totalmatch = count_step
@@ -440,7 +462,7 @@ class Ai:
 					return 15000000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return 10000000
+					return 15000000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return 150
@@ -476,7 +498,7 @@ class Ai:
 					return -1500000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return -1000000
+					return -1500000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return -120000
@@ -511,7 +533,7 @@ class Ai:
 					return 1500000000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return 1000000000
+					return 1500000000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return 150
@@ -547,7 +569,7 @@ class Ai:
 					return -1500000
 				check =policy_analysis.evaluate_alive_three_dead_four (set,color)
 				if  check[y_loc][x_loc]==1:
-					return -1000000
+					return -1500000
 				check = policy_analysis.evaluate_dead_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return -120000
@@ -569,6 +591,8 @@ class Ai:
 				return -200
 
 		return 0
+
+
 
 
 

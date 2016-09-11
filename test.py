@@ -21,27 +21,21 @@ class node:
 	def __init__(self):
 		self.list = []
 		self.num = 0
-
+Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 ai = AI.Ai(Cnn,input_stack,1)
-top = node()
-for i in range(5):
-	left = node()
-	left.num = 25 + i
-	top.list.append(left)
-
-
-top.list.append(left)
-
-top.list.append(left)
-
-for i in range(len(top.list)):
-	print top.list[i].num
-	
+set_x = Data.SGFReturnSet()
+set_x[7][6] = 1
+set_x[6][6] = 1
+set_x[10][6] = 1
+set_x[9][6] = 1
+game.show_game(np.reshape(set_x,[225]))
+game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
 	
 
 # judge = Referee.referee()
-# str = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
+# str = tim
+e.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
 # print str
 # Data = DataCenter.MongoDB()
 # for i in range(10000):

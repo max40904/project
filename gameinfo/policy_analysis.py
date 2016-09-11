@@ -678,7 +678,7 @@ def evaluate_five (set_x,color):
 					re_set[x-2][y+2] += 1
 				elif x+4 < 15 and y-4 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color:
 					re_set[x+2][y-2] += 1
-	return re_set
+	return Return_Num_Filter(re_set,1)
 
 def evaluate_alive_three_dead_four(set , color):
 	three = evaluate_alive_three(set,color,1)

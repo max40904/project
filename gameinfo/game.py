@@ -8,7 +8,8 @@ from operator import itemgetter, attrgetter
 def Return_Sort(set,num):
 	list = []
 	for i  in range(num):
-		list.append((i,set[i]))
+		if set[i]!=0:
+			list.append((i,set[i],0))
 
 
 	return (sorted(list,key=itemgetter(1),reverse=True))
@@ -347,10 +348,15 @@ def ConvertToNum(step):
 	return num
 
 def StepGame(step ,set,color ):
+	
+	anw =[[0 for i in range(15)] for j in range(15)]
+	for i in range(15):
+		for j in range(15):
+			anw[i][j] =set[i][j]
 	y = step /15
 	x = step %15
-	set[y][x] = color
-	return set
+	anw[y][x] = color
+	return anw
 
 def Retrun_fif_to_nine_set(set,out):
 	check =Return_nine_can_use(set,out)
