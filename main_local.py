@@ -11,7 +11,7 @@ import numpy as np
 learning_rate = 0.0003
 input_stack = 49
 step_save = 1000
-step_draw = 1000
+step_draw = 5000
 step_check_crossenropy = 500
 k_filter = input_stack * 2 
 training_iters = 540002
@@ -39,8 +39,12 @@ if choose =='1':
 	    	LocalCnn.train(input,y_real)
 	    	
 	    	LocalCnn.draw(input,y_real,count)
-	    	result = LocalCnn.Return_cross_entropy(input,y_real)
-	    	print result
+	    	if  count%step_check_crossenropy==1:
+	    		result = LocalCnn.Return_cross_entropy(input,y_real)
+	    		print result
+	    	if  count%step_draw==1:
+	    		result = LocalCnn.Return_cross_entropy(input,y_real)
+	    		print result
 	    	count = count +1
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")

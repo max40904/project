@@ -73,29 +73,72 @@ class LocalPolicy:
 		
 		with tf.name_scope('layer_6'):
 			with tf.name_scope('weighs'):
-				self.W_conv6 = self.__weight_variable([1, 1, k_filter, 3],'W_conv6')
+				self.W_conv6 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv6')
 				tf.histogram_summary('layer_6' + '/weights', self.W_conv6)
 			with tf.name_scope('biases'):
-				self.b_conv6 = self.__bias_variable([3],'b_conv6')
+				self.b_conv6 = self.__bias_variable([k_filter],'b_conv6')
 				tf.histogram_summary('layer_6'  + '/biases', self.b_conv6)
 			with tf.name_scope('h_conv6'):
 				self.h_conv6 = tf.nn.relu(self.__conv2d(self.h_conv5, self.W_conv6) + self.b_conv6)
 			tf.histogram_summary('layer_6' + '/outputs', self.h_conv6)
 
-
-		with tf.name_scope('h_conv_flat'):
-			self.h_conv_flat = tf.reshape(self.h_conv6, [-1, 9*9*3])
-
 		with tf.name_scope('layer_7'):
 			with tf.name_scope('weighs'):
+				self.W_conv7 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv7')
+				tf.histogram_summary('layer_7' + '/weights', self.W_conv7)
+			with tf.name_scope('biases'):
+				self.b_conv7 = self.__bias_variable([k_filter],'b_conv7')
+				tf.histogram_summary('layer_7'  + '/biases', self.b_conv7)
+			with tf.name_scope('h_conv7'):
+				self.h_conv7 = tf.nn.relu(self.__conv2d(self.h_conv6, self.W_conv7) + self.b_conv7)
+			tf.histogram_summary('layer_7' + '/outputs', self.h_conv7)
+		with tf.name_scope('layer_8'):
+			with tf.name_scope('weighs'):
+				self.W_conv8 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv8')
+				tf.histogram_summary('layer_8' + '/weights', self.W_conv8)
+			with tf.name_scope('biases'):
+				self.b_conv8 = self.__bias_variable([k_filter],'b_conv8')
+				tf.histogram_summary('layer_8'  + '/biases', self.b_conv8)
+			with tf.name_scope('h_conv8'):
+				self.h_conv8 = tf.nn.relu(self.__conv2d(self.h_conv7, self.W_conv8) + self.b_conv8)
+			tf.histogram_summary('layer_8' + '/outputs', self.h_conv8)
+
+		with tf.name_scope('layer_9'):
+			with tf.name_scope('weighs'):
+				self.W_conv9 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv9')
+				tf.histogram_summary('layer_9' + '/weights', self.W_conv9)
+			with tf.name_scope('biases'):
+				self.b_conv9 = self.__bias_variable([k_filter],'b_conv9')
+				tf.histogram_summary('layer_9'  + '/biases', self.b_conv9)
+			with tf.name_scope('h_conv9'):
+				self.h_conv9 = tf.nn.relu(self.__conv2d(self.h_conv8, self.W_conv9) + self.b_conv9)
+			tf.histogram_summary('layer_9' + '/outputs', self.h_conv9)
+		
+		with tf.name_scope('layer_10'):
+			with tf.name_scope('weighs'):
+				self.W_conv10 = self.__weight_variable([1, 1, k_filter, 3],'W_conv10')
+				tf.histogram_summary('layer_10' + '/weights', self.W_conv10)
+			with tf.name_scope('biases'):
+				self.b_conv10 = self.__bias_variable([3],'b_conv10')
+				tf.histogram_summary('layer_10'  + '/biases', self.b_conv10)
+			with tf.name_scope('h_conv10'):
+				self.h_conv10 = tf.nn.relu(self.__conv2d(self.h_conv9, self.W_conv10) + self.b_conv10)
+			tf.histogram_summary('layer_10' + '/outputs', self.h_conv10)
+
+
+		with tf.name_scope('h_conv_flat'):
+			self.h_conv_flat = tf.reshape(self.h_conv10, [-1, 9*9*3])
+
+		with tf.name_scope('layer_11'):
+			with tf.name_scope('weighs'):
 				self.W_fc1 = self.__weight_variable([9*9*3, 3],'W_fc1')
-				tf.histogram_summary('layer_7' + '/weights', self.W_fc1)
+				tf.histogram_summary('layer_11' + '/weights', self.W_fc1)
 			with tf.name_scope('biases'):
 				self.b_fc1 = self.__bias_variable([3],'b_fc1')
-				tf.histogram_summary('layer_7'  + '/biases', self.b_fc1)
+				tf.histogram_summary('layer_11'  + '/biases', self.b_fc1)
 			with tf.name_scope('h_fc1'):
 				self.h_fc1 = tf.matmul(self.h_conv_flat, self.W_fc1) + self.b_fc1
-			tf.histogram_summary('layer_7' + '/outputs', self.h_fc1)
+			tf.histogram_summary('layer_11' + '/outputs', self.h_fc1)
 		
 
 		with tf.name_scope('prediction_softmax'):
