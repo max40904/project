@@ -14,7 +14,7 @@ step_save = 1000
 step_draw = 1000
 step_check_crossenropy = 500
 k_filter = input_stack * 2 
-training_iters = 1600001
+training_iters = 540002
 seed = 13
 
 
