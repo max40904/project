@@ -24,7 +24,13 @@ def ReturnFiftoEight(set, x , y):
 
 	return anw
 
-
+def Return_nine_Num_Filter(set, limit):
+	anws = [[0 for i in range(9)] for j in range(9)]
+	for i in range(9):
+		for j in range(9):
+			if set[i][j]>=limit:
+				anws[i][j] = 1
+	return anws
 def evaluate_nine_self(set,flag):
 	anw = [[0 for i in range(9)] for j in range(9)]
 	for y in range(9):
