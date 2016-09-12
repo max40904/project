@@ -43,8 +43,7 @@ if choose =='1':
 	    		result = LocalCnn.Return_cross_entropy(input,y_real)
 	    		print result
 	    	if  count%step_draw==1:
-	    		result = LocalCnn.Return_cross_entropy(input,y_real)
-	    		print result
+	    		LocalCnn.draw(input,y_real,count)
 	    	count = count +1
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")

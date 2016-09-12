@@ -129,16 +129,16 @@ class LocalPolicy:
 		with tf.name_scope('h_conv_flat'):
 			self.h_conv_flat = tf.reshape(self.h_conv10, [-1, 9*9*3])
 
-		with tf.name_scope('layer_11'):
+		with tf.name_scope('layer_fc'):
 			with tf.name_scope('weighs'):
 				self.W_fc1 = self.__weight_variable([9*9*3, 3],'W_fc1')
-				tf.histogram_summary('layer_11' + '/weights', self.W_fc1)
+				tf.histogram_summary('layer_fc' + '/weights', self.W_fc1)
 			with tf.name_scope('biases'):
 				self.b_fc1 = self.__bias_variable([3],'b_fc1')
-				tf.histogram_summary('layer_11'  + '/biases', self.b_fc1)
+				tf.histogram_summary('layer_fc'  + '/biases', self.b_fc1)
 			with tf.name_scope('h_fc1'):
 				self.h_fc1 = tf.matmul(self.h_conv_flat, self.W_fc1) + self.b_fc1
-			tf.histogram_summary('layer_11' + '/outputs', self.h_fc1)
+			tf.histogram_summary('layer_fc' + '/outputs', self.h_fc1)
 		
 
 		with tf.name_scope('prediction_softmax'):
