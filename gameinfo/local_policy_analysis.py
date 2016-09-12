@@ -50,6 +50,41 @@ def evaluate_nine_square_three(set,flag):
 
 
 	return anw
+def evaluate_nine_square_two(set,flag):
+	highedge = 9
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	anw = [[0 for i in range(highedge)] for j in range(highedge)]
+	for y in range(highedge):
+		for x in range(highedge):
+			if set[y][x] == flag:
+				for i in range(-1,2):
+					for j in range(-1,2):
+						if x + j <=highedge - 1 and x + j >=0 and y + i >= 0 and y + i <= highedge -1 and set [ y + i ][ x + j ]==0:
+							anw [ y + i ][ x + j ] = 1  
+
+
+
+	return anw
+
+def evaluate_nine_square_four(set,flag):
+	highedge = 9
+	rflag = 0.5
+	if flag == 0.5:
+		rflag = 1
+	anw = [[0 for i in range(highedge)] for j in range(highedge)]
+	for y in range(highedge):
+		for x in range(highedge):
+			if set[y][x] == flag:
+				for i in range(-3,4):
+					for j in range(-3,4):
+						if x + j <=highedge - 1 and x + j >=0 and y + i >= 0 and y + i <= highedge -1 and set [ y + i ][ x + j ]==0:
+							anw [ y + i ][ x + j ] = 1  
+
+
+
+	return anw
 
 def evaluate_nine_lib_five(set,flag):
 	rflag = 0.5
