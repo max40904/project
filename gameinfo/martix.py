@@ -41,20 +41,20 @@ def reflection_fif(set):
 	return anw
 
 def rotate90_nine(set):
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for i in range( 0 , 9 ) :
-		for j in range( 0 , 9 ):
-			anw [i] [j]=  set[8 - j][ i ]
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for i in range( 0 , 11 ) :
+		for j in range( 0 , 11 ):
+			anw [i] [j]=  set[10 - j][ i ]
 
 
 
 	return anw
 
 def reflection_nine(set):
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for i in range( 0 , 9 ) :
-		for j in range( 0 , 9 ):
-			anw [i] [j]=  set[ i ][ 8 - j ]
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for i in range( 0 , 11 ) :
+		for j in range( 0 , 11 ):
+			anw [i] [j]=  set[ i ][ 10 - j ]
 
 
 

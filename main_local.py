@@ -15,7 +15,7 @@ step_draw = 5000
 step_check_crossenropy = 500
 k_filter = input_stack * 2 
 training_iters = 540002
-seed = 13
+seed = 18
 
 
 
@@ -67,10 +67,10 @@ if choose =='2':
 					input = game.ReturnAllInfo_nine(game.ReturnFif_to_Nine(x,i,j), cut_color)
 					output = [[0 for sss in range(3)] for jjjj in range(1)]
 					if cut_color == 1:
-						prob[i][j] = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,9,9,25]), output)
+						prob[i][j] = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,11,11,input_stack]), output)
 
 					if cut_color == 0.5:
-						prob[i][j] = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,9,9,25]), output)
+						prob[i][j] = LocalCnn.Return_prediction_prob_black(np.reshape(input,[1,11,11,input_stack]), output)
 		prob_flat = np.reshape(prob,[225])
 		test = game.Return_Biggest_Five_Loc(prob_flat)
 		test2 = game.Return_Biggest_Five_Prob(prob_flat)

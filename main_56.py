@@ -9,16 +9,17 @@ import numpy as np
 import Referee
 import AI
 
-learning_rate = 0.003 / 30.0
+
+learning_rate = 0.003 /2
 input_stack = 56
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
 k_filter = input_stack * 2
 training_iters = 540002
-seed = 23
+seed = 26
 
-openfile = 510000
+openfile = 520000
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 

@@ -14,33 +14,27 @@ def evaluate_square_five_check(set):
 	return anw
 
 def ReturnFiftoEight(set, x , y):
-	anw = [[0 for i in range(9)] for h in range(9)]
+	anw = [[0 for i in range(11)] for h in range(11)]
 	for i in range(-4,5):
 		for j in range(-4, 5):
 			if x + i >=0 and x + i <= 14 and y + j >=0 and y + j <=14 :
 				anw [ i + 4 ][ j + 4 ] =set [ x + i ][ y + j ]
 			else:
-				anw [ i + 4 ][ j + 4 ] =9999
+				anw [ i + 4 ][ j + 4 ] =11111111
 
 	return anw
 
-def Return_nine_Num_Filter(set, limit):
-	anws = [[0 for i in range(9)] for j in range(9)]
-	for i in range(9):
-		for j in range(9):
-			if set[i][j]>=limit:
-				anws[i][j] = 1
-	return anws
+
 def evaluate_nine_self(set,flag):
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for y in range(9):
-		for x in range(9):
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set[y][x] == flag:
 				anw[y][x] = 1
 	return anw
 
 def evaluate_nine_square_three(set,flag):
-	highedge = 9
+	highedge = 11
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
@@ -57,7 +51,7 @@ def evaluate_nine_square_three(set,flag):
 
 	return anw
 def evaluate_nine_square_two(set,flag):
-	highedge = 9
+	highedge = 11
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
@@ -73,9 +67,8 @@ def evaluate_nine_square_two(set,flag):
 
 
 	return anw
-
 def evaluate_nine_square_four(set,flag):
-	highedge = 9
+	highedge = 11
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
@@ -96,9 +89,9 @@ def evaluate_nine_lib_five(set,flag):
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for y in range(9):
-		for x in range(9):
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set[y][x] == flag :
 				for i in range(1,5):
 					if y - i >= 0 and set[y - i][ x ] ==0:
@@ -106,12 +99,12 @@ def evaluate_nine_lib_five(set,flag):
 					else:
 						break
 				for i in range(1,5):
-					if y + i <=8 and set[y + i][ x ] ==0:
+					if y + i <=10 and set[y + i][ x ] ==0:
 						anw [ y + i ][ x ] = 1
 					else:
 						break
 				for i in range(1,5):
-					if x + i <= 8 and set[y ][ x + i ] ==0:
+					if x + i <= 10 and set[y ][ x + i ] ==0:
 						anw [ y ][ x + i ] = 1
 					else:
 						break
@@ -126,17 +119,17 @@ def evaluate_nine_lib_five(set,flag):
 					else:
 						break
 				for i in range(1,5):
-					if x + i <= 8 and y - i >=0  and set[y - i][ x + i ] ==0:
+					if x + i <= 10 and y - i >=0  and set[y - i][ x + i ] ==0:
 						anw [ y - i] [x + i] =1
 					else:
 						break
 				for i in range(1,5):
-					if x -i >= 0 and y + i <= 8 and set[y + i][ x - i ] ==0:
+					if x -i >= 0 and y + i <= 10 and set[y + i][ x - i ] ==0:
 						anw [y + i][ x - i ] = 1
 					else:
 						break
 				for i in range(1,5):
-					if x + i <= 8 and y +i <= 8  and set[y + i][ x + i ] ==0:
+					if x + i <= 10 and y +i <= 10  and set[y + i][ x + i ] ==0:
 						anw [ y + i] [x + i] = 1
 					else:
 						break
@@ -147,11 +140,11 @@ def evaluate_nine_dead_two(set, flag , filter):
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
-	high_edge = 7
+	high_edge = 9
 	low_edge = 1
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for y in range(9):
-		for x in range(9):
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set[ y ][ x ] == flag :
 				#right
 				if x - 1 >= low_edge -1 and set [ y ][ x - 1 ] == rflag :  
@@ -227,11 +220,11 @@ def evaluate_nine_alive_two(set,flag,filter):
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
-	high_edge = 7
+	high_edge = 9
 	low_edge = 1
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for y in range(9):
-		for x in range(9):
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set[ y ][ x ] == flag :
 				#right
 				if x - 1 >= low_edge -1 and set [ y ][ x - 1 ] == 0 :  
@@ -310,11 +303,11 @@ def evaluate_nine_dead_three(set,flag,filter):
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
-	high_edge = 7
+	high_edge = 9
 	low_edge = 1
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for y in range(9):
-		for x in range(9):
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set[ y ][ x ] == flag :
 				#right
 				if x - 1 >= low_edge -1 and set [ y ][ x - 1 ] == rflag :  
@@ -401,11 +394,11 @@ def evaluate_nine_alive_three(set,flag,filter):
 	rflag = 0.5
 	if flag == 0.5:
 		rflag = 1
-	high_edge = 7
+	high_edge = 9
 	low_edge = 1
-	anw = [[0 for i in range(9)] for j in range(9)]
-	for y in range(9):
-		for x in range(9):
+	anw = [[0 for i in range(11)] for j in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set[ y ][ x ] == flag :
 				#right
 				if x - 1 >= low_edge -1 and set [ y ][ x - 1 ] == 0 :  
@@ -529,254 +522,262 @@ def evaluate_nine_alive_three(set,flag,filter):
 	return Return_nine_Num_Filter(anw,filter)
 
 def evaluate_nine_dead_four (set_x,color,filter):
-	re_set = [[0 for x in range(9)] for y in range(9)]
-	for y in range(9):
-		for x in range(9):
+	re_set = [[0 for x in range(11)] for y in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set_x[x][y] != 0 and set_x[x][y] != color:
 				#XOOOA_
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
 					re_set[x+4][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == 0 and set_x[x-5][y] == 0:
 					re_set[x-4][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
 					re_set[x][y+4] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == 0 and set_x[x][y-5] == 0:
 					re_set[x][y-4] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
 					re_set[x+4][y+4] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == 0 and set_x[x-5][y-5] == 0:
 					re_set[x-4][y-4] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
 					re_set[x-4][y+4] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
 					re_set[x+4][y-4] += 1
 				#XOOO_A
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
 					re_set[x+5][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == 0 and set_x[x-5][y] == 0:
 					re_set[x-5][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
 					re_set[x][y+5] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == 0 and set_x[x][y-5] == 0:
 					re_set[x][y-5] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
 					re_set[x+5][y+5] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == 0 and set_x[x-5][y-5] == 0:
 					re_set[x-5][y-5] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
 					re_set[x-5][y+5] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
 					re_set[x+5][y-5] += 1
 				#XOOAO_
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+3][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == 0 and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-3][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+3] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == 0 and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-3] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+3][y+3] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == 0 and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-3][y-3] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-3][y+3] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+3][y-3] += 1 
 				#XOO_OA
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+5][y] += 1 
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == 0 and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-5][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+5] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == 0 and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-5] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+5][y+5] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == 0 and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-5][y-5] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-5][y+5] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+5][y-5] += 1
 				#XAOOO_
-				if x+5 < 9 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+1][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == 0 and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-1][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+1] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == 0 and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-1] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+1][y+1] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == 0 and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-1][y-1] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-1][y+1] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+1][y-1] += 1
 				#X_OOOA
-				if x+5 < 9 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+5][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == 0 and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-5][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+5] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == 0 and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-5] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+5][y+5] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == 0 and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-5][y-5] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-5][y+5] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+5][y-5] += 1
 				#XOAOO_
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+2][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == 0 and set_x[x-3][y] == color and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-2][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+2] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == 0 and set_x[x][y-3] == color and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-2] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+2][y+2] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == 0 and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-2][y-2] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-2][y+2] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+2][y-2] += 1
 				#XO_OOA
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+5][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == 0 and set_x[x-3][y] == color and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-5][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+5] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == 0 and set_x[x][y-3] == color and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-5] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+5][y+5] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == 0 and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-5][y-5] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-5][y+5] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+5][y-5] += 1
 	return Return_nine_Num_Filter(re_set,filter)		
 
 def evaluate_nine_alive_four (set_x,color,filter) :
-	re_set = [[0 for x in range(9)] for y in range(9)]
-	for y in range(9):
-		for x in range(9):
+	re_set = [[0 for x in range(11)] for y in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set_x[x][y] == 0:
 				#_OOO__
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
 					re_set[x+4][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == 0 and set_x[x-5][y] == 0:
 					re_set[x-4][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
 					re_set[x][y+4] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == 0 and set_x[x][y-5] == 0:
 					re_set[x][y-4] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
 					re_set[x+4][y+4] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == 0 and set_x[x-5][y-5] == 0:
 					re_set[x-4][y-4] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
 					re_set[x-4][y+4] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
 					re_set[x+4][y-4] += 1
 				#_OO_O_
-				if x+5 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+				if x+5 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+3][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == 0 and set_x[x-4][y] == color and set_x[x-5][y] == 0:
 					re_set[x-3][y] += 1
-				elif y+5 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+				elif y+5 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
 					re_set[x][y+3] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == 0 and set_x[x][y-4] == color and set_x[x][y-5] == 0:
 					re_set[x][y-3] += 1
-				elif x+5 < 9 and y+5 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+				elif x+5 < 11 and y+5 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
 					re_set[x+3][y+3] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == 0 and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
 					re_set[x-3][y-3] += 1
-				elif x-5 >= 0 and y+5 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+				elif x-5 >= 0 and y+5 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
 					re_set[x-3][y+3] += 1
-				elif x+5 < 9 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+				elif x+5 < 11 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+3][y-3] += 1
 	return Return_nine_Num_Filter(re_set,filter)	
 
 def evaluate_nine_five (set_x,color):
-	re_set = [[0 for x in range(9)] for y in range(9)]
-	for y in range(9):
-		for x in range(9):
+	re_set = [[0 for x in range(11)] for y in range(11)]
+	for y in range(11):
+		for x in range(11):
 			if set_x[x][y] == color:
 				#OOOO_
-				if x+4 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0:
+				if x+4 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0:
 					re_set[x+4][y] += 1
 				elif x-4 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == 0:
 					re_set[x-4][y] += 1
-				elif y+4 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0:
+				elif y+4 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0:
 					re_set[x][y+4] += 1
 				elif y-4 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == 0:
 					re_set[x][y-4] += 1
-				elif x+4 < 9 and y+4 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0:
+				elif x+4 < 11 and y+4 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0:
 					re_set[x+4][y+4] += 1
 				elif x-4 >= 0 and y-4 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == 0:
 					re_set[x-4][y-4] += 1
-				elif x-4 >= 0 and y+4 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0:
+				elif x-4 >= 0 and y+4 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0:
 					re_set[x-4][y+4] += 1
-				elif x+4 < 9 and y-4 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0:
+				elif x+4 < 11 and y-4 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0:
 					re_set[x+4][y-4] += 1
 				#O_OOO
-				if x+4 < 9 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color:
+				if x+4 < 11 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == color:
 					re_set[x+1][y] += 1
 				elif x-4 >= 0 and set_x[x-1][y] == 0 and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == color:
 					re_set[x-1][y] += 1
-				elif y+4 < 9 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == color:
+				elif y+4 < 11 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == color:
 					re_set[x][y+1] += 1
 				elif y-4 >= 0 and set_x[x][y-1] == 0 and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == color:
 					re_set[x][y-1] += 1
-				elif x+4 < 9 and y+4 < 9 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color:
+				elif x+4 < 11 and y+4 < 11 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color:
 					re_set[x+1][y+1] += 1
 				elif x-4 >= 0 and y-4 >= 0 and set_x[x-1][y-1] == 0 and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color:
 					re_set[x-1][y-1] += 1
-				elif x-4 >= 0 and y+4 < 9 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color:
+				elif x-4 >= 0 and y+4 < 11 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color:
 					re_set[x-1][y+1] += 1
-				elif x+4 < 9 and y-4 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color:
+				elif x+4 < 11 and y-4 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color:
 					re_set[x+1][y-1] += 1
 				#OO_OO
-				if x+4 < 9 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color:
+				if x+4 < 11 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color:
 					re_set[x+2][y] += 1 
 				elif x-4 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == 0 and set_x[x-3][y] == color and set_x[x-4][y] == color:
 					re_set[x-2][y] += 1
-				elif y+4 < 9 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color:
+				elif y+4 < 11 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color:
 					re_set[x][y+2] += 1
 				elif y-4 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == 0 and set_x[x][y-3] == color and set_x[x][y-4] == color:
 					re_set[x][y-2] += 1
-				elif x+4 < 9 and y+4 < 9 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color:
+				elif x+4 < 11 and y+4 < 11 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color:
 					re_set[x+2][y+2] += 1
 				elif x-4 >= 0 and y-4 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == 0 and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color:
 					re_set[x-2][y-2] += 1
-				elif x-4 >= 0 and y+4 < 9 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color:
+				elif x-4 >= 0 and y+4 < 11 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color:
 					re_set[x-2][y+2] += 1
-				elif x+4 < 9 and y-4 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color:
+				elif x+4 < 11 and y-4 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color:
 					re_set[x+2][y-2] += 1
-	return  Return_nine_Num_Filter(re_set,1)
+	return Return_nine_Num_Filter(re_set,1)
 
 def evaluate_nine_alive_three_dead_four(set , color):
 	three = evaluate_nine_alive_three(set,color,1)
 	four = evaluate_nine_dead_four(set,color , 1)
-	anw = [[0 for x in range(9)] for y in range(9)]
-	for i in range(9):
-		for j in range(9):
+	anw = [[0 for x in range(11)] for y in range(11)]
+	for i in range(11):
+		for j in range(11):
 			if three[i][j]==1 and four[i][j]==1:
 				anw [i][j] =1
 
 	return anw
+
+def Return_nine_Num_Filter(set, limit):
+	anws = [[0 for i in range(11)] for j in range(11)]
+	for i in range(11):
+		for j in range(11):
+			if set[i][j]>=limit:
+				anws[i][j] = 1
+	return anws

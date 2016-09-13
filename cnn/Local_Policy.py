@@ -10,8 +10,9 @@ class LocalPolicy:
 		self.input_stack = input_stack
 		self.k_filter = k_filter
 		self.seed = seed
+		self.squre = 11
 		with tf.name_scope('input'):
-			self.xs = tf.placeholder(tf.float32, [None, 9,9,input_stack],name = 'x_input')
+			self.xs = tf.placeholder(tf.float32, [None, self.squre,self.squre,input_stack],name = 'x_input')
 			self.ys = tf.placeholder(tf.float32, [None, 3], name = 'y_input')
 
 
@@ -92,6 +93,7 @@ class LocalPolicy:
 			with tf.name_scope('h_conv7'):
 				self.h_conv7 = tf.nn.relu(self.__conv2d(self.h_conv6, self.W_conv7) + self.b_conv7)
 			tf.histogram_summary('layer_7' + '/outputs', self.h_conv7)
+		
 		with tf.name_scope('layer_8'):
 			with tf.name_scope('weighs'):
 				self.W_conv8 = self.__weight_variable([3, 3, k_filter, k_filter],'W_conv8')
@@ -127,11 +129,11 @@ class LocalPolicy:
 
 
 		with tf.name_scope('h_conv_flat'):
-			self.h_conv_flat = tf.reshape(self.h_conv10, [-1, 9*9*3])
+			self.h_conv_flat = tf.reshape(self.h_conv10, [-1, self.squre*self.squre*3])
 
 		with tf.name_scope('layer_fc'):
 			with tf.name_scope('weighs'):
-				self.W_fc1 = self.__weight_variable([9*9*3, 3],'W_fc1')
+				self.W_fc1 = self.__weight_variable([self.squre*self.squre*3, 3],'W_fc1')
 				tf.histogram_summary('layer_fc' + '/weights', self.W_fc1)
 			with tf.name_scope('biases'):
 				self.b_fc1 = self.__bias_variable([3],'b_fc1')
@@ -197,7 +199,7 @@ class LocalPolicy:
 
 
 	def __weight_variable(self,shape,names):
-		initial = tf.truncated_normal(shape,stddev =  0.1,name = names,seed = self.seed )
+		initial = tf.random_uniform(shape, minval=-0.1, maxval=0.1, dtype=tf.float32, seed=self.seed, name=names)
 		return tf.Variable(initial)
 
 	def __bias_variable(self,shape, names):

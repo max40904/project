@@ -429,7 +429,7 @@ def Show_game_nine(set):
 
 def Return_Eight_anw_nine(set,color):
 	all_anw = []
-	if set[4][4]==1:
+	if set[5][5]==1:
 		if color ==1:
 			all_anw = [[0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0], [0,1,0]]
 		if color ==0.5:
@@ -442,7 +442,7 @@ def Return_Eight_anw_nine(set,color):
 	return all_anw
 def Return__anw_nine(set,color):
 	all_anw = []
-	if set[4][4]==1:
+	if set[5][5]==1:
 		if color ==1:
 			all_anw = [0,1,0]
 		if color ==0.5:
@@ -466,9 +466,9 @@ def Return_Eight_Layer_nine(set):
 	ref_right =  martix.rotate90_nine(ref_up)
 	ref_down = martix.rotate90_nine(ref_right)
 
-	all_layer = [np.reshape(left,[81]), np.reshape(up,[81]) , np.reshape(right,[81]), 
-	np.reshape(down,[81]), np.reshape(ref_left,[81]), np.reshape(ref_up,[81]), 
-	np.reshape(ref_right,[81]), np.reshape(ref_down,[81])]
+	all_layer = [np.reshape(left,[121]), np.reshape(up,[121]) , np.reshape(right,[121]), 
+	np.reshape(down,[121]), np.reshape(ref_left,[121]), np.reshape(ref_up,[121]), 
+	np.reshape(ref_right,[121]), np.reshape(ref_down,[121])]
 	return all_layer
 
 def ReturnAllInfo_nine(set,color):
@@ -482,7 +482,7 @@ def ReturnAllInfo_nine(set,color):
 
 	layer_3 = local_policy_analysis.evaluate_nine_self(set,0)
 
-	layer_4 = [[1 for i in range(9)] for j in range(9)]
+	layer_4 = [[1 for i in range(11)] for j in range(11)]
 
 	# player
 	layer_5 = local_policy_analysis.evaluate_nine_lib_five(set,color)
@@ -528,7 +528,7 @@ def ReturnAllInfo_nine(set,color):
 
 	layer_25 = local_policy_analysis.evaluate_nine_five(set,color)
 
-	layer_26 = [[1 for i in range(9)] for j in range(9)]
+	layer_26 = [[1 for i in range(11)] for j in range(11)]
 
 	layer_27 = local_policy_analysis.evaluate_nine_lib_five(set,ocolor)
 
@@ -573,19 +573,19 @@ def ReturnAllInfo_nine(set,color):
 
 	layer_47 = local_policy_analysis.evaluate_nine_five(set,ocolor)
 
-	layer_48 = [[0 for i in range(9)] for j in range(9)]
+	layer_48 = [[0 for i in range(11)] for j in range(11)]
 
-	layer_49= [[1 for i in range(9)] for j in range(9)]
+	layer_49= [[1 for i in range(11)] for j in range(11)]
 	if color ==0.5:
-		layer_49= [[0 for i in range(9)] for j in range(9)]
+		layer_49= [[0 for i in range(11)] for j in range(11)]
 
 
 
 
-	all_layer = [[[0 for i in range(49)] for j in range(9)] for x in range(9)]
+	all_layer = [[[0 for i in range(49)] for j in range(11)] for x in range(11)]
 
-	for i in range(9):
-		for j in range(9):
+	for i in range(11):
+		for j in range(11):
 			all_layer[i][j][0] = layer_1[i][j]
 			all_layer[i][j][1] = layer_2[i][j]
 			all_layer[i][j][2] = layer_3[i][j]
