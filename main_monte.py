@@ -112,18 +112,24 @@ elif choose =='2':
         step = 7*15+7
         judge.input(set,step)
         before_eight = judge.Before_Eight()
+        time = 0
         while True:
             print "Your turn"
             print "Please input :"
             choose = raw_input()
             step = game.ConvertToNum(choose)
-            game.StepGame(step,set,0.5)
-            set = judge.input(set,step)
+            set = game.StepGame(step, set, 0.5)
+            judge.input(set,step)
             before_eight = judge.Before_Eight()
+            if time ==0:
+                ai.firststep(set, 0.5, before_eight,step)
+                time = 1
+            else :
+                ai.OppentChoose(set,0.5,before_eight,step)
             x_8_56_stack = np.reshape(game.ReturnAllInfo_before(set,1,before_eight),[1,15,15,input_stack])
             y_8_stack = np.reshape(set,[1,225])
             y_prob =  Cnn.Return_softmax(x_8_56_stack,y_8_stack)
-            y_estimate = ai.ReturnAIAnw_beforeeight(set, 1,before_eight)
+            y_estimate = ai.ReturnMonteCarlorun(set, 1,before_eight)
             judge.input(set,y_estimate)
             set = game.StepGame(y_estimate, set, 1)
             game.show_game_set(y_estimate)
