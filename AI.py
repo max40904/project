@@ -11,6 +11,8 @@ class Ai:
 		self.root = Ai.node()
 		self.color = color
 		self.dfscount = 0
+		self.winpath = []
+		self.maxdepth = 13
 
 
 
@@ -99,9 +101,17 @@ class Ai:
 
 		curset = policy_analysis.evaluate_alive_four (set,Opennetcolor,1)
 		if self.__checkzero(curset)==1:
+			check2 = policy_analysis.evaluate_dead_four (set,color,1)
 			check = curset
 			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
-			return self.filter(y_estimate,check)
+			anw = [[0 for i in range(15)] for j in range(15)]
+			for i in range(15):
+				for j in range(15):
+					if check[i][j]!=0 or check2[i][j]!=0:
+						anw[i][j] = 1
+			return self.filter(y_estimate,anw)
+
+
 
 		y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 		check = policy_analysis.evaluate_self (set,0)
@@ -180,15 +190,28 @@ class Ai:
 
 	def run(self, set, color, beforeeight, time):
 		for i in range(time):
-			self.MontneCarlo(self.root, color, beforeeight, 0)
+			self.TravelSearch(self.root, color, beforeeight, 0)
 
 	def OppentChoose(self,set ,color,beforeeight ,step):
+		
 		flag = 0
 		print "OppentChoose" 
 		for i in range(len(self.root.linklist)):
 			print "loop"
 
 			if self.root.linklist[i].step == step:
+				if len(self.winpath)!=0:
+					if self.winpath[1] == step:
+						self.maxdepth =self.maxdepth - 2 
+						self.winpath.remove(self.winpath[0])
+						self.winpath.remove(self.winpath[1])
+					else:
+						self.SerachWin(self.root.linklist[i])
+						if len(self.winpath) !=0:
+							self.winpath.remove(self.winpath[0])
+							self.maxdepth =self.maxdepth - 2 
+
+
 				print "haved"
 				game.show_game_pos(self.root.linklist[i].step)
 				flag = 1
@@ -200,8 +223,12 @@ class Ai:
 			print "nothing"
 			self.root = Ai.node()
 			self.firststep( set, color,  beforeeight,step)
+			del self.winpath[:]
+			self.maxdepth = 13
 
 		return 0
+
+
 
 
 
@@ -211,6 +238,8 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		self.run(set, color, beforeeight, 200)
+		if len(self.winpath)==0:
+			self.SerachWin(self.root)
 		
 		maxvalue = -999999999
 		maxvalue_num = 0
@@ -287,12 +316,14 @@ class Ai:
 			print "all lose",node.totalloss
 			print ""
 		self.dfscount = self.dfscount + 1
+
+		
 		
 
 
 	
 
-	def MontneCarlo(self, node , color , beforeeight, depth):
+	def TravelSearch(self, node , color , beforeeight, depth):
 		node.totalvalue = node.value
 		if node.win == 1:
 			node.totalmatch = 1
@@ -304,7 +335,7 @@ class Ai:
 			node.totalloss = 1
 			
 			return -1
-		elif depth == 15:
+		elif depth == self.maxdepth :
 			node.totalmatch = 1
 			return 0
 
@@ -339,7 +370,7 @@ class Ai:
 
 				node.count[i] = node.count[i] + 1
 				flag = 1
-				self.MontneCarlo (node.linklist[i],ocolor,beforeeight,depth+1)
+				self.TravelSearch (node.linklist[i],ocolor,beforeeight,depth+1)
 
 		if flag ==0:
 			#create new node
@@ -379,7 +410,7 @@ class Ai:
 			
 			#add to orighinal list
 			node.linklist.append(new)
-			self.MontneCarlo (node.linklist[len(node.linklist)-1],ocolor,beforeeight,depth+1)
+			self.TravelSearch (node.linklist[len(node.linklist)-1],ocolor,beforeeight,depth+1)
 			
 
 		select_value = 0
@@ -420,7 +451,43 @@ class Ai:
 
 
 
-		return 0		
+		return 0	
+	def SerachWin(self, node)	:
+		temp = node 
+		temppath = []
+		while temp.totalmatch !=1:
+			if temp.color ==self.color:
+				pass
+				tempvalue =  -922337203685477580
+				select_num= 0
+				for i in range(len(temp.linklist)):
+					if temp.linklist[i].totalvalue > tempvalue:
+						tempvalue = temp.linklist[i].totalvalue
+						select_num = i
+				temppath.append(temp.linklist[select_num].step)
+				temp = temp.linklist[select_num]
+				
+
+
+				
+			elif temp.color !=self.color:
+				pass
+				tempvalue = 922337203685477580
+				select_num= 0
+				for i in range(len(temp.linklist)):
+					if temp.linklist[i].totalvalue < tempvalue:
+						tempvalue = temp.linklist[i].totalvalue
+						select_num = i
+				temppath.append(temp.linklist[select_num].step)
+				temp = temp.linklist[select_num]
+		if temp.win == 1:
+			self.winpath = temppath
+		else:
+			if self.winpath!=0:
+				del self.winpath[:]
+
+
+
 
 
 	class node:
@@ -517,7 +584,7 @@ class Ai:
 				check = policy_analysis.evaluate_dead_two (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return -500
-				return -200
+				return -20
 
 		elif self.color ==0.5:
 			if color==0.5:
@@ -588,43 +655,7 @@ class Ai:
 				check = policy_analysis.evaluate_dead_two (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return -500
-				return -200
+				return -20
 
 		return 0
 
-
-
-
-
-
-			
-
-
-
-
-
-
-
-				
-
-			
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-		

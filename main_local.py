@@ -38,7 +38,6 @@ if choose =='1':
 	    	y_real = game.Return_Eight_anw_nine(all_anw_nine[j],cut_color)
 	    	LocalCnn.train(input,y_real)
 	    	
-	    	LocalCnn.draw(input,y_real,count)
 	    	if  count%step_check_crossenropy==1:
 	    		result = LocalCnn.Return_cross_entropy(input,y_real)
 	    		print result
@@ -83,11 +82,11 @@ if choose =='2':
 
 		a = raw_input()
 if choose =='3':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net411000.ckpt")
+	LocalCnn.restore("./Loc_Neural_network_save/save_net42000.ckpt")
 	print "where you want to start?"
-	aaa = raw_input()
+	aaa = "42001"
 	time = int(aaa)
-	count = time * 60
+	count = time * 75
 	for j in range(time):
 		x = Data.SGFReturnSet()
 
