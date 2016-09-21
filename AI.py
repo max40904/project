@@ -197,9 +197,9 @@ class Ai:
 		flag = 0
 		print "OppentChoose" 
 		for i in range(len(self.root.linklist)):
-			print "loop"
 
 			if self.root.linklist[i].step == step:
+				print "OppentChoose winpath length is ",len(self.winpath)
 				if len(self.winpath)!=0:
 					if self.winpath[1] == step:
 						self.maxdepth =self.maxdepth - 2 
@@ -237,8 +237,10 @@ class Ai:
 				
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
-		self.run(set, color, beforeeight, 200)
+		print "winpath length",len(self.winpath)
 		if len(self.winpath)==0:
+			print "SerachWin depth is ",self.maxdepth
+			self.run(set, color, beforeeight, 200)
 			self.SerachWin(self.root)
 		
 		maxvalue = -999999999
@@ -263,6 +265,7 @@ class Ai:
 			
 
 				game.show_game_pos(self.root.linklist[i].step)
+				print "\n"
 
 
 				
@@ -284,7 +287,7 @@ class Ai:
 				maxvalue_num = i
 		print "final",maxvalue
 		print "winrate ",winrate
-		self.root = self.root.linklist[maxrate_num]
+		self.root = self.root.linklist[maxvalue_num]
 		# if maxvalue_num!=0:
 		# 	self.root = self.root.linklist[maxvalue_num]
 		# else :
@@ -294,6 +297,7 @@ class Ai:
 		
 		return self.root.step
 	def dfsreview(self):
+		return 0
 		print "dfs"
 		
 		self.dfscount = 0
@@ -366,8 +370,6 @@ class Ai:
 
 		for i in range(len(node.linklist)):
 			if node.linklist[i].step == selectpath:
-
-
 				node.count[i] = node.count[i] + 1
 				flag = 1
 				self.TravelSearch (node.linklist[i],ocolor,beforeeight,depth+1)
@@ -455,9 +457,16 @@ class Ai:
 	def SerachWin(self, node)	:
 		temp = node 
 		temppath = []
-		while temp.totalmatch !=1:
-			if temp.color ==self.color:
-				pass
+		time = 0
+		while len(temp.linklist)!=0:
+			print "time ", time
+			print "SerachWin ",temp.totalmatch," ", temp.win
+			print "value", temp.value
+			print "color ",temp.color
+			game.show_game_pos(temp.step)
+			print ""
+			time = time + 1
+			if temp.color != self.color:
 				tempvalue =  -922337203685477580
 				select_num= 0
 				for i in range(len(temp.linklist)):
@@ -466,12 +475,8 @@ class Ai:
 						select_num = i
 				temppath.append(temp.linklist[select_num].step)
 				temp = temp.linklist[select_num]
-				
-
-
-				
-			elif temp.color !=self.color:
-				pass
+			
+			elif temp.color ==self.color:
 				tempvalue = 922337203685477580
 				select_num= 0
 				for i in range(len(temp.linklist)):
@@ -480,9 +485,18 @@ class Ai:
 						select_num = i
 				temppath.append(temp.linklist[select_num].step)
 				temp = temp.linklist[select_num]
+		print "time ", time
+		print "SerachWin ",temp.totalmatch," ", temp.win,temp.loss
+		print "value", temp.value
+		print "color ",temp.color
+		print ""
+			
+
 		if temp.win == 1:
+			print "SerachWin!!!"
 			self.winpath = temppath
 		else:
+			print "NO SerachWin!!!"
 			if self.winpath!=0:
 				del self.winpath[:]
 
@@ -556,7 +570,6 @@ class Ai:
 				check  = policy_analysis.evaluate_five(set,color)
 				if check[y_loc][x_loc]==1:
 					return -90000000
-
 				check = policy_analysis.evaluate_alive_four (set,color,1)
 				if check[y_loc][x_loc]==1:
 					return -50000000
