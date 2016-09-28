@@ -360,7 +360,7 @@ class Ai:
 			if node.color !=self.color :
 				temp = node.problist[i][1] + 1 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 			elif node.color ==self.color :
-				temp = node.problist[i][1] + node.problist[i][1] *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] +  1 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 
 			if selvalue < temp:
 				selvalue = temp
