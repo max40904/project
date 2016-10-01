@@ -12,7 +12,7 @@ class Ai:
 		self.color = color
 		self.dfscount = 0
 		self.winpath = []
-		self.maxdepth = 13
+		self.maxdepth = 175
 
 
 
@@ -99,7 +99,7 @@ class Ai:
 			return self.filter(y_estimate,check)
 
 
-		curset = policy_analysis.evaluate_alive_four (set,Opennetcolor,1)
+		curset = policy_analysis.evaluate_defense_four (set,Opennetcolor,1)
 		if self.__checkzero(curset)==1:
 			check2 = policy_analysis.evaluate_dead_four (set,color,1)
 			check = curset
@@ -200,16 +200,16 @@ class Ai:
 
 			if self.root.linklist[i].step == step:
 				print "OppentChoose winpath length is ",len(self.winpath)
-				if len(self.winpath)!=0:
-					if self.winpath[1] == step:
-						self.maxdepth =self.maxdepth - 2 
-						self.winpath.remove(self.winpath[0])
-						self.winpath.remove(self.winpath[1])
-					else:
-						self.SerachWin(self.root.linklist[i])
-						if len(self.winpath) !=0:
-							self.winpath.remove(self.winpath[0])
-							self.maxdepth =self.maxdepth - 2 
+				# if len(self.winpath)!=0:
+				# 	if self.winpath[1] == step:
+				# 		self.maxdepth =self.maxdepth - 2 
+				# 		self.winpath.remove(self.winpath[0])
+				# 		self.winpath.remove(self.winpath[1])
+				# 	else:
+				# 		self.SerachWin(self.root.linklist[i])
+				# 		if len(self.winpath) !=0:
+				# 			self.winpath.remove(self.winpath[0])
+				# 			self.maxdepth =self.maxdepth - 2 
 
 
 				print "haved"
@@ -223,8 +223,8 @@ class Ai:
 			print "nothing"
 			self.root = Ai.node()
 			self.firststep( set, color,  beforeeight,step)
-			del self.winpath[:]
-			self.maxdepth = 13
+			# del self.winpath[:]
+			# self.maxdepth = 175
 
 		return 0
 
@@ -238,10 +238,11 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		print "winpath length",len(self.winpath)
-		if len(self.winpath)==0:
-			print "SerachWin depth is ",self.maxdepth
-			self.run(set, color, beforeeight, 200)
-			self.SerachWin(self.root)
+		self.run(set, color, beforeeight, 40)
+		# if len(self.winpath)==0:
+		# 	print "SerachWin depth is ",self.maxdepth
+		# 	self.run(set, color, beforeeight, 40)
+		# 	self.SerachWin(self.root)
 		
 		maxvalue = -999999999
 		maxvalue_num = 0
@@ -272,10 +273,10 @@ class Ai:
 			winrate = float(self.root.linklist[i].totalwin) / float(self.root.linklist[i].totalmatch) 
 			loss = float(self.root.linklist[i].totalloss) /float(self.root.linklist[i].totalmatch)
 			
-			if  (winrate * 2  - loss ) > ( maxrate )  :
+			if  (winrate ) > ( maxrate )  :
 				
 				record = winrate
-				maxrate = (winrate*2-loss)
+				maxrate = (winrate)
 				maxrate_num = i
 
 			if maxvalue_2 < self.root.linklist[i].totalvalue  :
@@ -287,7 +288,7 @@ class Ai:
 				maxvalue_num = i
 		print "final",maxvalue
 		print "winrate ",winrate
-		self.root = self.root.linklist[maxvalue_num]
+		self.root = self.root.linklist[maxrate_num]
 		# if maxvalue_num!=0:
 		# 	self.root = self.root.linklist[maxvalue_num]
 		# else :
@@ -352,8 +353,8 @@ class Ai:
 		selvalue = 0.0
 		nextprob = 0
 		limit = len(node.problist)
-		if limit>6:
-			limit = 6
+		if limit>4:
+			limit = 4
 	
 
 		for i in range(limit):
@@ -455,6 +456,7 @@ class Ai:
 
 		return 0	
 	def SerachWin(self, node)	:
+		pass
 		temp = node 
 		temppath = []
 		time = 0

@@ -813,12 +813,11 @@ def ReturnAllInfo_before(set,color,beforestep):
 	
 	layer_53 = policy_analysis.evaluate_alive_three_dead_four(set,ocolor)
 
-	layer_54 = policy_analysis.evaluate_alive_four(set,ocolor,1)
+	layer_54 =  policy_analysis.evaluate_defense_four(set,ocolor,1)
 
 	layer_55 = policy_analysis.evaluate_five(set,ocolor)
 
 	layer_56 = [[0 for i in range(15)] for j in range(15)]
-
 
 
 

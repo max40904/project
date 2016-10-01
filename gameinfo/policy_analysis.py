@@ -439,6 +439,7 @@ def evaluate_alive_three(set,flag,filter):
 	return Return_Num_Filter(anw,filter)
 
 def evaluate_dead_four (set_x,color,filter):
+
 	re_set = [[0 for x in range(15)] for y in range(15)]
 	for y in range(15):
 		for x in range(15):
@@ -580,6 +581,87 @@ def evaluate_dead_four (set_x,color,filter):
 				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+5][y-5] += 1
 	return Return_Num_Filter(re_set,filter)		
+def evaluate_defense_four (set_x,color,filter):
+	re_set = [[0 for x in range(15)] for y in range(15)]
+	for y in range(1,14):
+		for x in range(1,14):
+
+			if set_x[x][y] == 0:
+				#_OOO__
+				if x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
+					re_set[x+4][y] += 1
+				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == 0 and set_x[x-5][y] == 0:
+					re_set[x-4][y] += 1
+				elif y+5 < 15 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
+					re_set[x][y+4] += 1
+				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == 0 and set_x[x][y-5] == 0:
+					re_set[x][y-4] += 1
+				elif x+5 < 15 and y+5 < 15 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
+					re_set[x+4][y+4] += 1
+				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == 0 and set_x[x-5][y-5] == 0:
+					re_set[x-4][y-4] += 1
+				elif x-5 >= 0 and y+5 < 15 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
+					re_set[x-4][y+4] += 1
+				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
+					re_set[x+4][y-4] += 1
+				#_OO_O_
+				if x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+					re_set[x+3][y] += 1
+					re_set[x][y] +=1
+				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == 0 and set_x[x-4][y] == color and set_x[x-5][y] == 0:
+					re_set[x-3][y] += 1
+					re_set[x][y] +=1
+				elif y+5 < 15 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+					re_set[x][y+3] += 1
+					re_set[x][y] +=1
+				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == 0 and set_x[x][y-4] == color and set_x[x][y-5] == 0:
+					re_set[x][y-3] += 1
+					re_set[x][y] +=1
+				elif x+5 < 15 and y+5 < 15 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+					re_set[x+3][y+3] += 1
+					re_set[x][y] +=1
+				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == 0 and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
+					re_set[x-3][y-3] += 1
+					re_set[x][y] +=1
+				elif x-5 >= 0 and y+5 < 15 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+					re_set[x-3][y+3] += 1
+					re_set[x][y] +=1
+				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+					re_set[x+3][y-3] += 1
+					re_set[x][y] +=1
+				#_O_0O_
+				if x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color and set_x[x+5][y] == 0:
+					re_set[x+2][y] += 1
+					re_set[x][y] +=1
+				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == 0 and set_x[x-3][y] == color and set_x[x-4][y] == color and set_x[x-5][y] == 0:
+					re_set[x-2][y] += 1
+					re_set[x][y] +=1
+				elif y+5 < 15 and set_x[x][y+1] == color and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color and set_x[x][y+5] == 0:
+					re_set[x][y+2] += 1
+					re_set[x][y] +=1
+				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == 0 and set_x[x][y-3] == color and set_x[x][y-4] == color and set_x[x][y-5] == 0:
+					re_set[x][y-2] += 1
+					re_set[x][y] +=1
+				elif x+5 < 15 and y+5 < 15 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color and set_x[x+5][y+5] == 0:
+					re_set[x+2][y+2] += 1
+					re_set[x][y] +=1
+				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == 0 and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color and set_x[x-5][y-5] == 0:
+					re_set[x-2][y-2] += 1
+					re_set[x][y] +=1
+				elif x-5 >= 0 and y+5 < 15 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color and set_x[x-5][y+5] == 0:
+					re_set[x-2][y+2] += 1
+					re_set[x][y] +=1
+				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
+					re_set[x+2][y-2] += 1
+					re_set[x][y] +=1
+	
+	
+	return Return_Num_Filter(re_set,filter)	
+
+
+
+
+
 
 def evaluate_alive_four (set_x,color,filter) :
 	re_set = [[0 for x in range(15)] for y in range(15)]
@@ -621,6 +703,7 @@ def evaluate_alive_four (set_x,color,filter) :
 				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+3][y-3] += 1
 	return Return_Num_Filter(re_set,filter)	
+
 
 def evaluate_five (set_x,color):
 	re_set = [[0 for x in range(15)] for y in range(15)]
