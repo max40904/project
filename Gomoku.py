@@ -9,7 +9,7 @@ from MongoDB import DataCenter
 from gameinfo import game
 import numpy as np
 import AI
-
+import thread
 
 class Gomoku():
 
@@ -24,7 +24,8 @@ class Gomoku():
 
 		self.chessboard = Chessboard.Chessboard()
 
-	def loop(self):
+	def loop(self):		
+		#thread.start_new_thread( self.draw_thread,() )
 		while self.going:
 			self.update()
 			self.draw()
@@ -38,7 +39,7 @@ class Gomoku():
 		global color
 		global ai
 		global time
-		if color == 1:
+		if color == 0.5:
 			for e in pygame.event.get():
 				if e.type == pygame.QUIT:
 					self.going = False
@@ -67,7 +68,14 @@ class Gomoku():
 					self.draw()			
 					if self.chessboard.winner ==None:
 						before_eight = judge.Before_Eight()
-						y_estimate = ai.ReturnAIAnw_beforeeight(self.chessboard.grid, 0.5,before_eight)
+
+						if time ==0:
+							ai.firststep(self.chessboard.grid, 1, before_eight,self.chessboard.nowstep)
+							time = 1
+						else :
+							ai.OppentChoose(self.chessboard.grid,1,before_eight,self.chessboard.nowstep)
+
+						y_estimate = ai.ReturnMonteCarlorun(self.chessboard.grid, 0.5,before_eight)
 						print y_estimate
 						self.chessboard.set_piece(y_estimate/15,y_estimate%15)
 						judge.input(self.chessboard.grid,self.chessboard.nowstep)
@@ -107,9 +115,16 @@ class Gomoku():
 						self.draw()
 						if self.chessboard.winner ==None:
 							before_eight = judge.Before_Eight()
-							y_estimate = ai.ReturnAIAnw_beforeeight(self.chessboard.grid, 1,before_eight)
+
+							if time == 1:
+								ai.firststep(self.chessboard.grid,0.5,before_eight,self.chessboard.nowstep)
+								time = 2
+							else :
+								ai.OppentChoose(self.chessboard.grid,0.5,before_eight,self.chessboard.nowstep)
+
+							y_estimate = ai.ReturnMonteCarlorun(self.chessboard.grid, 1,before_eight)
 							print y_estimate
-							
+
 							self.chessboard.set_piece(y_estimate/15,y_estimate%15)
 							judge.input(self.chessboard.grid,self.chessboard.nowstep)
 
@@ -183,7 +198,12 @@ class Gomoku():
 					appx[i2].exec_()
 
 			win=win+1
-			i2=i2+1		
+			i2=i2+1	
+	
+	#def draw_thread(self):
+	#	while 1:
+	#		self.clock.tick(60)
+	#		self.draw()
 
 
 if __name__ == '__main__':
@@ -193,26 +213,35 @@ if __name__ == '__main__':
 	i2=0
 	appx={}
 	endbutton={}
-	learning_rate = 0.0003
+	learning_rate = 0.003 / 2
 	input_stack = 56
+	step_save = 10000
+	step_draw = 100
 	step_check_crossenropy = 100
-	k_filter = input_stack * 3
-	seed = 30
+	k_filter = input_stack * 2
+	training_iters = 540002
+	seed = 23
+	ai=None
 
+	openfile = 520000
 
 	Data = DataCenter.MongoDB()
 	Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
-	ai = AI.Ai(Cnn,input_stack)
-	Cnn.restore("./Neural_network_save/save_net530000.ckpt")
+	
+
+	Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
 	judge = Referee.referee()
 	
 	def buttonClicked():
 		global color
+		global ai	
 		if(radiobutton1.isChecked()):
-			color = 1
+			color = 0.5
+			ai = AI.Ai(Cnn,input_stack,color)
 			print 123
 		elif(radiobutton2.isChecked()):
-			color = 0.5
+			color = 1
+			ai = AI.Ai(Cnn,input_stack,color)
 			print 123
 		widget.close()
 

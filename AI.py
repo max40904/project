@@ -12,7 +12,7 @@ class Ai:
 		self.color = color
 		self.dfscount = 0
 		self.winpath = []
-		self.maxdepth = 175
+		self.maxdepth = 220
 
 
 
@@ -97,6 +97,34 @@ class Ai:
 			check = curset
 			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 			return self.filter(y_estimate,check)
+
+
+		curset = policy_analysis.evaluate_dead_four (set,Opennetcolor,2)
+		if self.__checkzero(curset)==1:
+			check2 = policy_analysis.evaluate_dead_four (set,color,1)
+			check = curset
+			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
+			anw = [[0 for i in range(15)] for j in range(15)]
+			for i in range(15):
+				for j in range(15):
+					if check[i][j]!=0 or check2[i][j]!=0:
+						anw[i][j] = 1
+			return self.filter(y_estimate,anw)
+
+
+		curset = policy_analysis.evaluate_alive_three_dead_four (set,Opennetcolor)
+		if self.__checkzero(curset)==1:
+			check2 = policy_analysis.evaluate_dead_four (set,color,1)
+			check = curset
+			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
+			anw = [[0 for i in range(15)] for j in range(15)]
+			for i in range(15):
+				for j in range(15):
+					if check[i][j]!=0 or check2[i][j]!=0:
+						anw[i][j] = 1
+			return self.filter(y_estimate,anw)
+
+
 
 
 		curset = policy_analysis.evaluate_defense_four (set,Opennetcolor,1)
@@ -225,6 +253,7 @@ class Ai:
 			self.firststep( set, color,  beforeeight,step)
 			# del self.winpath[:]
 			# self.maxdepth = 175
+		self.maxdepth = self.maxdepth - 1
 
 		return 0
 
@@ -238,7 +267,7 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		print "winpath length",len(self.winpath)
-		self.run(set, color, beforeeight, 40)
+		self.run(set, color, beforeeight, 30)
 		# if len(self.winpath)==0:
 		# 	print "SerachWin depth is ",self.maxdepth
 		# 	self.run(set, color, beforeeight, 40)
@@ -287,8 +316,9 @@ class Ai:
 				maxvalue = self.root.linklist[i].totalvalue
 				maxvalue_num = i
 		print "final",maxvalue
-		print "winrate ",winrate
+		print "winrate ",maxrate
 		self.root = self.root.linklist[maxrate_num]
+		self.maxdepth = self.maxdepth - 1
 		# if maxvalue_num!=0:
 		# 	self.root = self.root.linklist[maxvalue_num]
 		# else :
@@ -331,17 +361,17 @@ class Ai:
 	def TravelSearch(self, node , color , beforeeight, depth):
 		node.totalvalue = node.value
 		if node.win == 1:
-			node.totalmatch = 1
-			node.totalwin = 1
+			node.totalmatch = node.totalmatch + 1
+			node.totalwin = node.totalwin  +1
 			
 			return 1
 		elif node.loss ==1:
-			node.totalmatch = 1
-			node.totalloss = 1
+			node.totalmatch =node.totalmatch +  1
+			node.totalloss =node.totalloss +  1
 			
 			return -1
 		elif depth == self.maxdepth :
-			node.totalmatch = 1
+			node.totalmatch = node.totalmatch +  1
 			return 0
 
 		ocolor = 0.5
@@ -359,9 +389,9 @@ class Ai:
 
 		for i in range(limit):
 			if node.color !=self.color :
-				temp = node.problist[i][1] + 1 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] + 2 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 			elif node.color ==self.color :
-				temp = node.problist[i][1] +  1 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] +  2 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
 
 			if selvalue < temp:
 				selvalue = temp

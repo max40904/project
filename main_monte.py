@@ -18,7 +18,7 @@ k_filter = input_stack * 2
 training_iters = 540002
 seed = 23
 
-openfile = 530000
+openfile = 520000
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
