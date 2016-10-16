@@ -21,13 +21,14 @@ class referee:
 		self.CurSet = set
 
 		self.step = self.step + 1
-		# if self.__CheckWin(j,i) ==1:
-		# 	self.writefile()
-		# 	self.step = 1
-		# 	self.winner = 0
-		# 	self.CurSet =  [[0 for i in range(15)] for j in range(15)]
-		# 	self.SetStep = [[0 for i in range(15)] for j in range(15)]
-		# 	self.Step_Rer = []
+		if self.__CheckWin(j,i) ==1:
+			self.writefile()
+			print "Referee"
+			self.step = 1
+			self.winner = 0
+			self.CurSet =  [[0 for i in range(15)] for j in range(15)]
+			self.SetStep = [[0 for i in range(15)] for j in range(15)]
+			self.Step_Rer = []
 
 	def Before_Eight(self):
 		num = []

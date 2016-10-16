@@ -72,7 +72,7 @@ elif choose =='2':
             if nownum.argmax()==y_estimate:
                 count = count + 1
             if i%10000 ==1:
-                print count,  count/i
+                print "Correct:",count, "\t\tPosition:",i, "\t\taccuracy",count/i 
 
     if check =="2":
         time = 0

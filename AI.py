@@ -55,83 +55,60 @@ class Ai:
 
 		return y_estimate
 
-	
+
 	def ReturnAIAnw_beforeeight_prob(self,set,color,beforeeight):
 
 		x_48_stack = np.reshape(game.ReturnAllInfo_before (set, color,beforeeight),[1,15,15,self.input_stack])
 		y_stack = np.reshape([[0 for i in range(15)] for j in range(15)],[1,225])
-
+		y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 		Opennetcolor = 0.5
 		if color == 0.5:
 			Opennetcolor = 1
 		check =[[0 for i in range(15)] for j in range(15)]
+		if color==1:
+			curset = policy_analysis.evaluate_alive_three (set,color,2)
+			if self.__checkzero(curset)==1:
+				for i in range(15):
+					for j in range(15):
+						if curset[i][j]==1:
+							y_estimate[i][j] =0
 		
 		curset = policy_analysis.evaluate_five (set,color)
 		if self.__checkzero(curset)==1:
 			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
+			
 			return self.filter(y_estimate,check)
 
 		curset = policy_analysis.evaluate_five (set,Opennetcolor)
 		if self.__checkzero(curset)==1:
 			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 			return self.filter(y_estimate,check)
+			
+		curset = policy_analysis.evaluate_alive_four (set,color,1)
+		if self.__checkzero(curset)==1:
+			check = curset
+			return self.filter(y_estimate,check)
+
 
 			
 		curset = policy_analysis.evaluate_dead_four (set,color,2)
 		if self.__checkzero(curset)==1:
 			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 			return self.filter(y_estimate,check)
+
 
 
 		curset = policy_analysis.evaluate_alive_three_dead_four (set,color)
 		if self.__checkzero(curset)==1:
 			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 			return self.filter(y_estimate,check)
 
-		curset = policy_analysis.evaluate_alive_four (set,color,1)
-		if self.__checkzero(curset)==1:
-			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
-			return self.filter(y_estimate,check)
-
-
-		curset = policy_analysis.evaluate_dead_four (set,Opennetcolor,2)
-		if self.__checkzero(curset)==1:
-			check2 = policy_analysis.evaluate_dead_four (set,color,1)
-			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
-			anw = [[0 for i in range(15)] for j in range(15)]
-			for i in range(15):
-				for j in range(15):
-					if check[i][j]!=0 or check2[i][j]!=0:
-						anw[i][j] = 1
-			return self.filter(y_estimate,anw)
-
-
-		curset = policy_analysis.evaluate_alive_three_dead_four (set,Opennetcolor)
-		if self.__checkzero(curset)==1:
-			check2 = policy_analysis.evaluate_dead_four (set,color,1)
-			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
-			anw = [[0 for i in range(15)] for j in range(15)]
-			for i in range(15):
-				for j in range(15):
-					if check[i][j]!=0 or check2[i][j]!=0:
-						anw[i][j] = 1
-			return self.filter(y_estimate,anw)
-
-
-
+		
 
 		curset = policy_analysis.evaluate_defense_four (set,Opennetcolor,1)
 		if self.__checkzero(curset)==1:
 			check2 = policy_analysis.evaluate_dead_four (set,color,1)
 			check = curset
-			y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 			anw = [[0 for i in range(15)] for j in range(15)]
 			for i in range(15):
 				for j in range(15):
@@ -141,7 +118,6 @@ class Ai:
 
 
 
-		y_estimate = np.reshape(self.policy.Return_softmax( x_48_stack, y_stack ),[15,15])
 		check = policy_analysis.evaluate_self (set,0)
 		return self.filter(y_estimate,check)
 
@@ -205,7 +181,7 @@ class Ai:
 		ocolor = 1
 		if color ==1:
 			ocolor = 0.5
-		self.root.step = step
+		self.root.step = 0
 		self.root.color = color
 		self.root.beforeeight = beforeeight
 		self.root.setprob = self.ReturnAIAnw_beforeeight_prob(set, ocolor, beforeeight)
@@ -267,7 +243,7 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		print "winpath length",len(self.winpath)
-		self.run(set, color, beforeeight, 30)
+		self.run(set, color, beforeeight, 40)
 		# if len(self.winpath)==0:
 		# 	print "SerachWin depth is ",self.maxdepth
 		# 	self.run(set, color, beforeeight, 40)
@@ -288,7 +264,7 @@ class Ai:
 			total = self.root.linklist[i].totalmatch
 			if total >=0:
 				print self.root.linklist[i].step,"step!!"
-				print self.root.linklist[i].totalvalue,"value!!"
+				# print self.root.linklist[i].totalvalue,"value!!"
 				print self.root.linklist[i].totalwin," win!!"
 				print self.root.linklist[i].totalloss," loss!!"
 				print self.root.linklist[i].totalmatch," total!!"
@@ -383,15 +359,15 @@ class Ai:
 		selvalue = 0.0
 		nextprob = 0
 		limit = len(node.problist)
-		if limit>4:
-			limit = 4
+		if limit>5:
+			limit = 5
 	
 
 		for i in range(limit):
 			if node.color !=self.color :
-				temp = node.problist[i][1] + 2 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] + 5 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
 			elif node.color ==self.color :
-				temp = node.problist[i][1] +  2 *(math.log(node.totalmatch+1))/(1 + node.count[i]) 
+				temp = node.problist[i][1] +  5 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
 
 			if selvalue < temp:
 				selvalue = temp
@@ -403,7 +379,7 @@ class Ai:
 			if node.linklist[i].step == selectpath:
 				node.count[i] = node.count[i] + 1
 				flag = 1
-				self.TravelSearch (node.linklist[i],ocolor,beforeeight,depth+1)
+				self.TravelSearch (node.linklist[i],ocolor,node.beforeeight,depth+1)
 
 		if flag ==0:
 			#create new node
@@ -414,16 +390,26 @@ class Ai:
 			newset = game.StepGame(selectpath,node.set,color)
 
 
-			new_beforeeight = [0 for i in range(8)]
+			new_beforeeight = [  ]
+
 			for j in range(len(beforeeight)):
-
+				if beforeeight[j]==0:
+					break
 				new_beforeeight.append(beforeeight[j])
-
-
 			new_beforeeight.append(node.step)
+			while(len(new_beforeeight)!=8):
+				if len(new_beforeeight) >8:
+					new_beforeeight.remove(new_beforeeight[0])
+
+				if len(new_beforeeight) <8:
+					new_beforeeight.append(0);
+
+
+
 			new.prob = nextprob
 
 			new.color = color
+			new.count[0] = 1
 			new.step = selectpath
 			new.setprob =self.ReturnAIAnw_beforeeight_prob(newset, ocolor, new_beforeeight)
 			new.set = newset
@@ -443,7 +429,7 @@ class Ai:
 			
 			#add to orighinal list
 			node.linklist.append(new)
-			self.TravelSearch (node.linklist[len(node.linklist)-1],ocolor,beforeeight,depth+1)
+			self.TravelSearch (node.linklist[len(node.linklist)-1],ocolor,new.beforeeight,depth+1)
 			
 
 		select_value = 0
