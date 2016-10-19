@@ -14,11 +14,11 @@ input_stack = 56
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 2
+k_filter = input_stack * 4
 training_iters = 540002
 seed = 23
 
-openfile = 520000
+openfile = 530000
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
@@ -52,7 +52,6 @@ if choose =='1':
 elif choose =='2':
     set = [[0 for i in range(15)] for j in range(15)]
     print "what file do you want to restore?"
-    restore_loc = raw_input()
     Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
     print "Please input 1. Test accuracy         2.Player Black     3. Player White "
     check = raw_input()
@@ -94,13 +93,17 @@ elif choose =='2':
             else :
                 ai.OppentChoose(set,1,before_eight,step)
 
+
             x_8_24_stack =np.reshape(game.ReturnAllInfo_before(set,0.5,before_eight),[1,15,15,input_stack])
             y_8_stack = np.reshape(set,[1,225])
 
             #print game.Return_Sort(np.reshape(y_prob,[225]),225)
+            test =  ai.ReturnSet_Result(set,0.5,before_eight)
+
             y_estimate = ai.ReturnMonteCarlorun(set, 0.5,before_eight)
             judge.input(set,y_estimate)
             set =game.StepGame(y_estimate, set, 0.5)
+            print "who win color ",test
             game.show_game_set(y_estimate)
             game.show_game(np.reshape(set,[225,1]))
             game.show_game_pos(y_estimate)
@@ -145,7 +148,7 @@ elif choose =='2':
 
 
 elif choose =='3':
-    Cnn.restore("./Neural_network_save/save_net39.ckpt")
+    Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
 
 
 
