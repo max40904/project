@@ -13,7 +13,6 @@ class referee:
 
 
 	def input(self,set,num):
-		print "input",num
 		self.Step_Rer.append(num)
 		j = num / 15
 		i = num % 15
@@ -22,36 +21,36 @@ class referee:
 
 		self.step = self.step + 1
 		if self.__CheckWin(j,i) ==1:
-			self.writefile()
-			print "Referee"
-			self.step = 1
-			self.winner = 0
-			self.CurSet =  [[0 for i in range(15)] for j in range(15)]
-			self.SetStep = [[0 for i in range(15)] for j in range(15)]
-			self.Step_Rer = []
+			self.writefile("./set_record/")
+	def pure_input(self,set,num):
+		self.Step_Rer.append(num)
+		j = num / 15
+		i = num % 15
+		self.SetStep[j][i] =  self.step
+
+		self.step = self.step + 1
+		
 
 	def Before_Eight(self):
 		num = []
 		for i in range(8):
 			if  self.step - 9  + i >=0:
-				print "eight",self.Step_Rer[self.step - 9  + i ]
 				num.append(self.Step_Rer[self.step - 9  + i ])
-
-
-
 		return num
-		
+	def Set_Win(self, win):
+		self.winner = win
 
 
 
-	def writefile(self):
+
+	def writefile(self,file_loc):
 		file = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
 		RE = "black"
 		if self.winner ==0.5:
 			RE = "white"
 		PB = "player1"
 		PW = "player2"
-		f_out = open("./set_record/"+file,"w")
+		f_out = open(file_loc+file,"w")
 		f_out.write("(;PB[")
 		f_out.write(PB)
 		f_out.write("]PW[")
@@ -71,6 +70,11 @@ class referee:
 			f_out.write("];")
 		f_out.write(")")
 		f_out.close()
+		self.step = 1
+		self.winner = 0
+		self.CurSet =  [[0 for i in range(15)] for j in range(15)]
+		self.SetStep = [[0 for i in range(15)] for j in range(15)]
+		self.Step_Rer = []
 
 
 

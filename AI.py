@@ -14,48 +14,7 @@ class Ai:
 		self.winpath = []
 		self.maxdepth = 223
 
-	def ReturnAIAnw_beforeeight(self,set,color,beforeeight):
-
-		x_48_stack = np.reshape(game.ReturnAllInfo_before (set, color,beforeeight),[1,15,15,self.input_stack])
-		y_stack = np.reshape([[0 for i in range(15)] for j in range(15)],[1,225])
-
-		
-
-
-		Opennetcolor = 0.5
-		if color == 0.5:
-			Opennetcolor = 1
-		curset = policy_analysis.evaluate_five (set,color)
-		if self.__checkzero(curset)==1:
-			return np.argmax(curset)
-
-		curset = policy_analysis.evaluate_five (set,Opennetcolor)
-		if self.__checkzero(curset)==1:
-			return np.argmax(curset)
-			
-		curset = policy_analysis.evaluate_alive_three_dead_four (set,color)
-		if self.__checkzero(curset)==1:
-			return np.argmax(curset)
-
-		if self.__checkzero(policy_analysis.evaluate_alive_four (set,color,1))==1:
-			check = policy_analysis.evaluate_alive_four (set,color,1)
-			anw = []
-			for i in range(15):
-				for j in range(15):
-					if check[i][j] ==1:
-						anw.append(i*15+j)
-			return anw[0]
-
-		curset = policy_analysis.evaluate_dead_four (set,color,2)
-		if self.__checkzero(curset)==1:
-			return np.argmax(curset)
-
-		curset = policy_analysis.evaluate_alive_three_dead_four (set,color)
-		if self.__checkzero(curset)==1:
-			return np.argmax(curset)
-
-		y_estimate = self.policy.Return_prediction( x_48_stack, y_stack )
-		return y_estimate
+	
 
 
 	def ReturnAIAnw_beforeeight_prob(self,set,color,beforeeight):
@@ -74,6 +33,12 @@ class Ai:
 					for j in range(15):
 						if curset[i][j]==1:
 							y_estimate[i][j] =0
+		curset = policy_analysis.evaluate_dead_four (set,Opennetcolor,2)
+		if self.__checkzero(curset)==1:
+			for i in range(15):
+				for j in range(15):
+					if curset[i][j] ==1:
+						y_estimate[i][j] = y_estimate[i][j] + 1
 		
 		curset = policy_analysis.evaluate_five (set,color)
 		if self.__checkzero(curset)==1:

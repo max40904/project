@@ -66,9 +66,7 @@ class MongoDB:
 		for i in range(8):
 			if self.curstep - 8  + i >= 0:
 				game = self.nowchess[self.curstep - 8  + i]
-				y_loc = int(ord(game[2])-ord('a'))
-				x_loc = int(ord(game[3])-ord('a'))
-				num = y_loc + x_loc*15
+				num = self.__convert_char_to_num(game)
 				anw.append(num)
 
 
@@ -110,44 +108,15 @@ class MongoDB:
 
 		curset[x_loc][y_loc] = 1
 		return curset
+	def ReturnBeforeStep(self):
+		gamestep = self.nowchess[:self.curstep]
+		record = []
+		for i in range(len(gamestep)):
+			record.append(self.__convert_char_to_num(gamestep[i]))
 
-	def SGFReturnSet(self):
-		self.curstep = self.curstep + 1
-		while self.curstep >= self.maxstep:
-			self.curseq =self.curseq + 1 
-			if self.curseq >= self.allset:
-				self.curseq = 1
-			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curseq)})[0]
-			self.nowchess = cursor["Set"]
-			self.maxstep = len(self.nowchess)
-			self.curstep = 1
-			self.playerA = cursor["PlayerA"]
-			self.playerB =  cursor["PlayerB"]
-			self.Win = cursor["Win"]
-			self.curset = [[0 for x in range(15)] for y in range(15)] 
-		
-		game = self.nowchess[self.curstep-1]
-		y_loc = int(ord(game[2])-ord('a'))
-		x_loc = int(ord(game[3])-ord('a'))
-
-		color = game[0]
-		if color == "B":
-			self.curset[x_loc][y_loc] = 1
-		else:
-			self.curset[x_loc][y_loc] = 0.5
-		return self.curset
-
-	def SGFReturnAnw(self):
-		game = self.nowchess[self.curstep]
-		y_loc = int(ord(game[2])-ord('a'))
-		x_loc = int(ord(game[3])-ord('a'))
-		curset = [[0 for x in range(15)] for y in range(15)]
-
-		curset[x_loc][y_loc] = 1
-		return curset
+		return record
 
 
-	
 	def ReturnPlayerA(self):
 		return self.playerA 
 	def ReturnPlayerA(self):
@@ -161,4 +130,9 @@ class MongoDB:
 		if step %2 == 0 :
 			color = 0.5
 		return color
+	def __convert_char_to_num(self,game):
+		y_loc = int(ord(game[2])-ord('a'))
+		x_loc = int(ord(game[3])-ord('a'))
+		num = y_loc + x_loc*15
+		return num
 

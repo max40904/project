@@ -14,7 +14,7 @@ input_stack = 56
 step_save = 10000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack * 2
+k_filter = input_stack * 4
 training_iters = 540002
 seed = 23
 class node:
@@ -25,10 +25,9 @@ Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 ai = AI.Ai(Cnn,input_stack,1)
 set_x = Data.SGFReturnSet()
-set_x[1][5] = 0.5
-set_x[5][9] = 1
-set_x[2][6] = 1
-set_x[3][7] = 1
+set_x = Data.SGFReturnSet()
+
+print Data.ReturnBeforeStep()
 game.show_game(np.reshape(set_x,[225]))
 game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
 game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,1),[225]))

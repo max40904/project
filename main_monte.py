@@ -1,7 +1,3 @@
-# View more python tutorial on my Youtube and Youku channel!!!
-
-# Youtube video tutorial: https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg
-# Youku video tutorial: http://i.youku.com/pythontutorial
 from cnn import Policy
 from MongoDB import DataCenter 
 from gameinfo import game
@@ -18,7 +14,7 @@ k_filter = input_stack * 4
 training_iters = 540002
 seed = 23
 
-openfile = 530000
+openfile = 520000
 
 Data = DataCenter.MongoDB()
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
@@ -26,7 +22,7 @@ Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed)
 judge = Referee.referee()
 
 
-print "please choose  1. train data   2.restore from save   3.restore and train data     "
+print "please choose  1. train data   2.restore from save   3.regression  "
 choose = raw_input()
 if choose =='1':
     Cnn.initialize()
@@ -148,7 +144,33 @@ elif choose =='2':
 
 
 elif choose =='3':
+    judge = Referee.referee()
     Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
+    ai = AI.Ai(Cnn,input_stack,0.5)
+    
+    for i in range(12000*3+1):
+
+        cur_set = Data.SGFReturnSet_Win_three()
+        cut_color = Data.ReturnColor()
+        before_eight = Data.SGFReturnBefore()
+        allstep = Data.ReturnBeforeStep()
+
+
+
+        result =  ai.ReturnSet_Result(cur_set,cut_color,before_eight)
+        print i,"result: ",result
+        empty_Set = [[0 for i in range(15)] for j in range(15)]
+        for i in range(len(allstep)):
+            judge.pure_input(empty_Set,allstep[i])
+        judge.Set_Win(result)
+        judge.writefile("./value_record/")
+
+
+
+
+
+    
+
 
 
 
