@@ -39,19 +39,19 @@ class Ai:
 				for i in range(15):
 					for j in range(15):
 						if curset[i][j]==1:
-							y_estimate[i][j] = y_estimate[i][j]  +0.5
-		curset = policy_analysis.evaluate_dead_four (set,Opennetcolor,2)
-		if self.__checkzero(curset)==1:
-			for i in range(15):
-				for j in range(15):
-					if curset[i][j] ==1:
-						y_estimate[i][j] = y_estimate[i][j] + 1
-		curset = policy_analysis.evaluate_alive_three_dead_four (set,Opennetcolor)
-		if self.__checkzero(curset)==1:
-			for i in range(15):
-				for j in range(15):
-					if curset[i][j] ==1:
-						y_estimate[i][j] = y_estimate[i][j] + 1
+							y_estimate[i][j] = y_estimate[i][j]  +0.3
+		# curset = policy_analysis.evaluate_dead_four (set,Opennetcolor,2)
+		# if self.__checkzero(curset)==1:
+		# 	for i in range(15):
+		# 		for j in range(15):
+		# 			if curset[i][j] ==1:
+		# 				y_estimate[i][j] = y_estimate[i][j] + 1
+		# curset = policy_analysis.evaluate_alive_three_dead_four (set,Opennetcolor)
+		# if self.__checkzero(curset)==1:
+		# 	for i in range(15):
+		# 		for j in range(15):
+		# 			if curset[i][j] ==1:
+		# 				y_estimate[i][j] = y_estimate[i][j] + 1
 		
 
 
