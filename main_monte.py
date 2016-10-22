@@ -148,7 +148,7 @@ elif choose =='3':
     Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
     ai = AI.Ai(Cnn,input_stack,0.5)
     
-    for i in range(12000*3+1):
+    for i in range(36001):
 
         cur_set = Data.SGFReturnSet_Win_three()
         cut_color = Data.ReturnColor()
@@ -159,9 +159,9 @@ elif choose =='3':
 
         result =  ai.ReturnSet_Result(cur_set,cut_color,before_eight)
         print i,"result: ",result
-        empty_Set = [[0 for i in range(15)] for j in range(15)]
-        for i in range(len(allstep)):
-            judge.pure_input(empty_Set,allstep[i])
+        empty_Set = [[0 for x in range(15)] for j in range(15)]
+        for x in range(len(allstep)):
+            judge.pure_input(empty_Set,allstep[x])
         judge.Set_Win(result)
         judge.writefile("./value_record/",str(i))
 
