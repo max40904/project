@@ -163,7 +163,7 @@ elif choose =='3':
         for i in range(len(allstep)):
             judge.pure_input(empty_Set,allstep[i])
         judge.Set_Win(result)
-        judge.writefile("./value_record/")
+        judge.writefile("./value_record/",str(i))
 
 
 

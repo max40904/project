@@ -21,7 +21,7 @@ class referee:
 
 		self.step = self.step + 1
 		if self.__CheckWin(j,i) ==1:
-			self.writefile("./set_record/")
+			self.writefile("./set_record/",input)
 	def pure_input(self,set,num):
 		self.Step_Rer.append(num)
 		j = num / 15
@@ -43,14 +43,14 @@ class referee:
 
 
 
-	def writefile(self,file_loc):
+	def writefile(self,file_loc,file_name):
 		file = time.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
 		RE = "black"
 		if self.winner ==0.5:
 			RE = "white"
 		PB = "player1"
 		PW = "player2"
-		f_out = open(file_loc+file,"w")
+		f_out = open(file_loc+file_name+file,"w")
 		f_out.write("(;PB[")
 		f_out.write(PB)
 		f_out.write("]PW[")
