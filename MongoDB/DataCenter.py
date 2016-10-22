@@ -1,13 +1,14 @@
 from pymongo import MongoClient
 import random
 class MongoDB:
-	def __init__(self):
+	def __init__(self, collections):
 		self.client =  MongoClient()
 		self.db = self.client.gomukuDB
+		self.coll = self.client.gomukuDB[collections]
 		self.curseq = 0
 		self.curstep = 1
 		self.curset = [[0 for x in range(15)] for y in range(15)] 
-		self.allset = self.db.Gamedata.count()
+		self.allset = self.coll.count()
 		self.maxstep  = 0
 		self.nowchess = "a"
 		self.playerA = "unknown"
@@ -31,36 +32,52 @@ class MongoDB:
 
 		
 		return self.SGFReturnSet()
+	def SGFReturnSet_End(self):
+
+		while self.curstep >= self.maxstep:
+			self.curseq =self.curseq + 1 
+			if self.curseq >= self.allset:
+				self.curseq = 1
+			cursor =self.coll.find({"SeqNumber" : str(self.curseq)})[0]
+			self.nowchess = cursor["Set"]
+			self.maxstep = len(self.nowchess)
+			self.curstep = 1
+			self.playerA = cursor["PlayerA"]
+			self.playerB =  cursor["PlayerB"]
+			self.Win = cursor["Win"]
+			self.curset = [[0 for x in range(15)] for y in range(15)] 
+		self.curstep =self.maxstep
+		return self.__CurSetGenerator()
 		
 
 	def Find(self,i):
-		Cursor =self.db.Gamedata.find({"SeqNumber" : str(i)})[0]
+		Cursor =self.coll.find({"SeqNumber" : str(i)})[0]
 		return Cursor
 
-	def SGFReturnSet_Random(self):
+	# def SGFReturnSet_Random(self):
 		
-		self.curseq =random.randint(1,self.allset)
-		if self.curseq >= self.allset:
-			self.curseq = 1
-		cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curseq)})[0]
-		self.nowchess = cursor["Set"]
-		self.maxstep = len(self.nowchess)
-		self.curstep = random.randint(0,self.maxstep-1)
-		self.playerA = cursor["PlayerA"]
-		self.playerB =  cursor["PlayerB"]
-		self.Win = cursor["Win"]
-		self.curset = [[0 for x in range(15)] for y in range(15)] 
-		for i in range(self.curstep):
-			game = self.nowchess[i]
-			y_loc = int(ord(game[2])-ord('a'))
-			x_loc = int(ord(game[3])-ord('a'))
+	# 	self.curseq =random.randint(1,self.allset)
+	# 	if self.curseq >= self.allset:
+	# 		self.curseq = 1
+	# 	cursor =self.coll.find({"SeqNumber" : str(self.curseq)})[0]
+	# 	self.nowchess = cursor["Set"]
+	# 	self.maxstep = len(self.nowchess)
+	# 	self.curstep = random.randint(0,self.maxstep-1)
+	# 	self.playerA = cursor["PlayerA"]
+	# 	self.playerB =  cursor["PlayerB"]
+	# 	self.Win = cursor["Win"]
+	# 	self.curset = [[0 for x in range(15)] for y in range(15)] 
+	# 	for i in range(self.curstep):
+	# 		game = self.nowchess[i]
+	# 		y_loc = int(ord(game[2])-ord('a'))
+	# 		x_loc = int(ord(game[3])-ord('a'))
 
-			color = game[0]
-			if color == "B":
-				self.curset[x_loc][y_loc] = 1
-			else:
-				self.curset[x_loc][y_loc] = 0.5
-		return self.curset
+	# 		color = game[0]
+	# 		if color == "B":
+	# 			self.curset[x_loc][y_loc] = 1
+	# 		else:
+	# 			self.curset[x_loc][y_loc] = 0.5
+	# 	return self.curset
 	def SGFReturnBefore(self):
 		anw = []
 		for i in range(8):
@@ -80,7 +97,7 @@ class MongoDB:
 			self.curseq =self.curseq + 1 
 			if self.curseq >= self.allset:
 				self.curseq = 1
-			cursor =self.db.Gamedata.find({"SeqNumber" : str(self.curseq)})[0]
+			cursor =self.coll.find({"SeqNumber" : str(self.curseq)})[0]
 			self.nowchess = cursor["Set"]
 			self.maxstep = len(self.nowchess)
 			self.curstep = 1
@@ -88,17 +105,21 @@ class MongoDB:
 			self.playerB =  cursor["PlayerB"]
 			self.Win = cursor["Win"]
 			self.curset = [[0 for x in range(15)] for y in range(15)] 
-		
-		game = self.nowchess[self.curstep-1]
-		y_loc = int(ord(game[2])-ord('a'))
-		x_loc = int(ord(game[3])-ord('a'))
+		return self.__CurSetGenerator()
 
-		color = game[0]
-		if color == "B":
-			self.curset[x_loc][y_loc] = 1
-		else:
-			self.curset[x_loc][y_loc] = 0.5
-		return self.curset
+	def __CurSetGenerator(self):
+		curset = [[0 for x in range(15)] for y in range(15)] 
+		for i in range(self.curstep):
+			game = self.nowchess[i]
+			y_loc = int(ord(game[2])-ord('a'))
+			x_loc = int(ord(game[3])-ord('a'))
+
+			color = game[0]
+			if color == "B":
+				curset[x_loc][y_loc] = 1
+			else:
+				curset[x_loc][y_loc] = 0.5
+		return curset
 
 	def SGFReturnAnw(self):
 		game = self.nowchess[self.curstep]

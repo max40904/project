@@ -11,14 +11,13 @@ input_stack = 57
 step_save = 12000
 step_draw = 100
 step_check_crossenropy = 100
-k_filter = input_stack *3
+k_filter = input_stack *4
 training_iters = 12000*3 + 1
 seed = 19
 
 
-Data = DataCenter.MongoDB()
+Data = DataCenter.MongoDB("value")
 Cnn =  Value.ValueNetwork(learning_rate, input_stack, k_filter,seed) 
-ai = AI.Ai(Cnn,input_stack)
 judge = Referee.referee()
 
 
@@ -29,7 +28,7 @@ if choose =='1':
     Cnn.initialize()
     for i in range(training_iters):
         
-        x = Data.SGFReturnSet_Win_three()
+        x = Data.SGFReturnSet_End()
         if Data.ReturnWin()=="black":
             y= [[1 for j in range(1)]for j in range(8)]
         elif Data.ReturnWin()=="draw":

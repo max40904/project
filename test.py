@@ -21,16 +21,17 @@ class node:
 	def __init__(self):
 		self.list = []
 		self.num = 0
-Data = DataCenter.MongoDB()
+Data = DataCenter.MongoDB("Gamedata")
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 ai = AI.Ai(Cnn,input_stack,1)
-set_x = Data.SGFReturnSet()
-set_x = Data.SGFReturnSet()
+for i in range(5):
+	set_x = Data.SGFReturnSet_End()
 
-print Data.ReturnBeforeStep()
-game.show_game(np.reshape(set_x,[225]))
-game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
-game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,1),[225]))
+
+	print Data.ReturnBeforeStep()
+	game.show_game(np.reshape(set_x,[225]))
+	game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
+	game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,1),[225]))
 
 	
 

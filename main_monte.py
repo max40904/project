@@ -16,7 +16,7 @@ seed = 23
 
 openfile = 520000
 
-Data = DataCenter.MongoDB()
+Data = DataCenter.MongoDB("Gamedata")
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 
 judge = Referee.referee()

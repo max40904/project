@@ -1,14 +1,15 @@
 import sys
 from pymongo import MongoClient
-def inputdata ():
+def inputdata (collections = None):
 	client = MongoClient()
 	db = client.gomukuDB
-	seqnumber = db.Gamedata.count() +1 
-	coll =  db.Gamedata
+	coll =  db[collections]
+	seqnumber = coll.count() +1 
 	
-	for i in range(len(sys.argv)-2):
-		print sys.argv[i+2]
-		f = open(sys.argv[i+2], 'r')
+
+	for i in range(len(sys.argv)-3):
+		print sys.argv[i+3]
+		f = open(sys.argv[i+3], 'r')
 		sgf = f.read()
 		nabw = sgf.split(";")[1].replace("[", " " ).replace("]"," ").split(" ")
 		win = nabw[nabw.index("RE")+1]
@@ -30,38 +31,18 @@ def inputdata ():
 
 
 		f.close()
-	
-	# for i in range(len(sys.argv)-2):
-	# 	f = open(sys.argv[i+2], 'r')
-	# 	while True:
-	# 		game = f.readline()
-	# 		if not game :break
-	# 		name = f.readline()
-	# 		Aname = name.split("[")[0].split("vs")[0]
-	# 		Bname = name.split("[")[0].split("vs")[1]
-	# 		Win = name.split("[")[1].replace("]","")[1]
-	# 		game =  game.split("=")[1].replace("\n","")
-	# 		result = coll.insert_one(
-	# 		    {
-	# 		    	"SeqNumber" : str(seqnumber),
-	# 		    	"PlayerA" : Aname,
-	# 		        "PlayerB" : Bname,
-	# 		        "Win"  : Win,
-	# 		        "Set" : game
-	# 		    }
-	# 	    )
-	# 		seqnumber = seqnumber + 1
-	# 	f.close()
+
 	print "success  database"
-def removedata():
+def removedata(colletions ):
 	client = MongoClient()
 	db = client.gomukuDB
-	db.Gamedata.drop()
+	coll = db[colletions]
+	coll.drop()
 	print "delete database"
 
 if sys.argv[1] is "i" :
-	inputdata()
+	inputdata(sys.argv[2])
 elif sys.argv[1] is "d":
-	removedata()
+	removedata(sys.argv[2])
 
 
