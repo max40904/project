@@ -430,6 +430,46 @@ def evaluate_alive_three(set,flag,filter):
 							anw [ y + 1 ][ x - 1 ] += 1
 
 
+	for y in range(15):
+		for x in range(15):
+			if set[x][y] != 0 and set[x][y] != flag:
+				
+				#XOAOO_
+				if x+5 < 15 and set[x+1][y] == flag and set[x+2][y] == 0 and set[x+3][y] == flag and set[x+4][y] == flag and set[x+5][y] == 0:
+					anw[x+2][y] -= 1
+				elif x-5 >= 0 and set[x-1][y] == flag and set[x-2][y] == 0 and set[x-3][y] == flag and set[x-4][y] == flag and set[x-5][y] == 0:
+					anw[x-2][y] -= 1
+				elif y+5 < 15 and set[x][y+1] == flag and set[x][y+2] == 0 and set[x][y+3] == flag and set[x][y+4] == flag and set[x][y+5] == 0:
+					anw[x][y+2] -= 1
+				elif y-5 >= 0 and set[x][y-1] == flag and set[x][y-2] == 0 and set[x][y-3] == flag and set[x][y-4] == flag and set[x][y-5] == 0:
+					anw[x][y-2] -= 1
+				elif x+5 < 15 and y+5 < 15 and set[x+1][y+1] == flag and set[x+2][y+2] == 0 and set[x+3][y+3] == flag and set[x+4][y+4] == flag and set[x+5][y+5] == 0:
+					anw[x+2][y+2] -= 1
+				elif x-5 >= 0 and y-5 >= 0 and set[x-1][y-1] == flag and set[x-2][y-2] == 0 and set[x-3][y-3] == flag and set[x-4][y-4] == flag and set[x-5][y-5] == 0:
+					anw[x-2][y-2] -= 1
+				elif x-5 >= 0 and y+5 < 15 and set[x-1][y+1] == flag and set[x-2][y+2] == 0 and set[x-3][y+3] == flag and set[x-4][y+4] == flag and set[x-5][y+5] == 0:
+					anw[x-2][y+2] -= 1
+				elif x+5 < 15 and y-5 >= 0 and set[x+1][y-1] == flag and set[x+2][y-2] == 0 and set[x+3][y-3] == flag and set[x+4][y-4] == flag and set[x+5][y-5] == 0:
+					anw[x+2][y-2] -= 1
+				#XO_OOA
+				if x+5 < 15 and set[x+1][y] == flag and set[x+2][y] == 0 and set[x+3][y] == flag and set[x+4][y] == flag and set[x+5][y] == 0:
+					anw[x+5][y] -= 1
+				elif x-5 >= 0 and set[x-1][y] == flag and set[x-2][y] == 0 and set[x-3][y] == flag and set[x-4][y] == flag and set[x-5][y] == 0:
+					anw[x-5][y] -= 1
+				elif y+5 < 15 and set[x][y+1] == flag and set[x][y+2] == 0 and set[x][y+3] == flag and set[x][y+4] == flag and set[x][y+5] == 0:
+					anw[x][y+5] -= 1
+				elif y-5 >= 0 and set[x][y-1] == flag and set[x][y-2] == 0 and set[x][y-3] == flag and set[x][y-4] == flag and set[x][y-5] == 0:
+					anw[x][y-5] -= 1
+				elif x+5 < 15 and y+5 < 15 and set[x+1][y+1] == flag and set[x+2][y+2] == 0 and set[x+3][y+3] == flag and set[x+4][y+4] == flag and set[x+5][y+5] == 0:
+					anw[x+5][y+5] -= 1
+				elif x-5 >= 0 and y-5 >= 0 and set[x-1][y-1] == flag and set[x-2][y-2] == 0 and set[x-3][y-3] == flag and set[x-4][y-4] == flag and set[x-5][y-5] == 0:
+					anw[x-5][y-5] -= 1
+				elif x-5 >= 0 and y+5 < 15 and set[x-1][y+1] == flag and set[x-2][y+2] == 0 and set[x-3][y+3] == flag and set[x-4][y+4] == flag and set[x-5][y+5] == 0:
+					anw[x-5][y+5] -= 1
+				elif x+5 < 15 and y-5 >= 0 and set[x+1][y-1] == flag and set[x+2][y-2] == 0 and set[x+3][y-3] == flag and set[x+4][y-4] == flag and set[x+5][y-5] == 0:
+					anw[x+5][y-5] -= 1
+
+
 			
 
 

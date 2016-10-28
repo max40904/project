@@ -39,7 +39,7 @@ class Gomoku():
 		global color
 		global ai
 		global time
-		if color == 0.5:
+		if color == 1:
 			for e in pygame.event.get():
 				if e.type == pygame.QUIT:
 					self.going = False
@@ -59,6 +59,12 @@ class Gomoku():
 								break
 					else:
 						print 456
+						break
+					
+					if self.chessboard.check_three(r,c)==False:
+						self.screen.blit(self.font.render(("You can not put here"), True, (0, 0, 0)), (120, 465))
+						pygame.display.update()
+						pygame.time.wait(1000)
 						break
 
 					self.chessboard.handle_key_event(e)
@@ -225,7 +231,7 @@ if __name__ == '__main__':
 
 	openfile = 520000
 
-	Data = DataCenter.MongoDB()
+	Data = DataCenter.MongoDB("Gamedata")
 	Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 	
 
@@ -236,12 +242,12 @@ if __name__ == '__main__':
 		global color
 		global ai	
 		if(radiobutton1.isChecked()):
-			color = 0.5
-			ai = AI.Ai(Cnn,input_stack,color)
+			color = 1
+			ai = AI.Ai(Cnn,input_stack,0.5)
 			print 123
 		elif(radiobutton2.isChecked()):
-			color = 1
-			ai = AI.Ai(Cnn,input_stack,color)
+			color = 0.5
+			ai = AI.Ai(Cnn,input_stack,1)
 			print 123
 		widget.close()
 

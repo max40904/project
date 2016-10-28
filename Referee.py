@@ -21,7 +21,7 @@ class referee:
 
 		self.step = self.step + 1
 		if self.__CheckWin(j,i) ==1:
-			self.writefile("./set_record/",input)
+			self.writefile("./set_record/","input")
 	def pure_input(self,set,num):
 		self.Step_Rer.append(num)
 		j = num / 15

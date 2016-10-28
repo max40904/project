@@ -217,7 +217,7 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		print "winpath length",len(self.winpath)
-		self.run(set, color, beforeeight, 1)
+		self.run(set, color, beforeeight, 40)
 		# if len(self.winpath)==0:
 		# 	print "SerachWin depth is ",self.maxdepth
 		# 	self.run(set, color, beforeeight, 40)

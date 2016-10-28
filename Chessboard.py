@@ -28,9 +28,9 @@ class Chessboard:
 				y = pos[1] - origin_y
 				r = int(y // self.grid_size)
 				c = int(x // self.grid_size)
-				if self.set_piece(r, c):
+				if self.set_piece(r,c):
 					self.check_win(r, c)
-
+	
 	def set_piece(self, r, c):
 		if self.grid[r][c] == 0:
 			self.grid[r][c] = self.piece
@@ -60,8 +60,74 @@ class Chessboard:
 		if (n_count + s_count + 1 >= 5) or (e_count + w_count + 1 >= 5) or (se_count + nw_count + 1 >= 5) or (ne_count + sw_count + 1 >= 5):
 			self.winner = self.grid[r][c]
 			self.game_over = True
+	
+	def check_three(self,r,c):
+		if self.grid[r][c] != 0:
+			return False
 
+		self.grid[r][c] = 1
+		piece = 1
+		count = 0
+		print piece
+		print count
+		for i in range (5):
+			if r-i>=0 and r-i+4<15 and c>=0 and c<15:
+				if self.grid[r-i][c]==0  and self.grid[r-i+1][c]==piece and self.grid[r-i+2][c]==piece and self.grid[r-i+3][c]==piece and self.grid[r-i+4][c]==0:
+					count += 1
+		print count			
+		for i in range (5):
+			if r-i>=0 and r-i+4<15 and c-i>=0 and c-i+4<15:
+				if self.grid[r-i][c-i]==0  and self.grid[r-i+1][c-i+1]==piece and self.grid[r-i+2][c-i+2]==piece and self.grid[r-i+3][c-i+3]==piece and self.grid[r-i+4][c-i+4]==0:
+					count += 1
+		print count			
+		for i in range (5):
+			if r>=0 and r<15 and c-i>=0 and c-i+4<15:
+				if self.grid[r][c-i]==0  and self.grid[r][c-i+1]==piece and self.grid[r][c-i+2]==piece and self.grid[r][c-i+3]==piece and self.grid[r][c-i+4]==0:
+					count += 1
+		print count			
+		for i in range (5):
+			if r+i-4>=0 and r+i<15 and c-i>=0 and c-i+4<15:
+				if self.grid[r+i][c-i]==0  and self.grid[r+i-1][c-i+1]==piece and self.grid[r+i-2][c-i+2]==piece and self.grid[r+i-3][c-i+3]==piece and self.grid[r+i-4][c-i+4]==0:
+					count += 1
+		
+		print count
+		
+		for i in range (4):
+			if r-i-1>=0 and r-i+4<15 and c>=0 and c<15:
+				if self.grid[r-i-1][c]==0  and self.grid[r-i][c]==piece and self.grid[r-i+1][c]==piece and self.grid[r-i+2][c]==0 and self.grid[r-i+3][c]==piece and self.grid[r-i+4][c]==0:
+					count += 1
+				if self.grid[r-i-1][c]==0  and self.grid[r-i][c]==piece and self.grid[r-i+1][c]==0 and self.grid[r-i+2][c]==piece and self.grid[r-i+3][c]==piece and self.grid[r-i+4][c]==0:
+					count += 1
+		print count			
+		for i in range (4):
+			if r-i-1>=0 and r-i+4<15 and c-i-1>=0 and c-i+4<15:
+				if self.grid[r-i-1][c-i-1]==0  and self.grid[r-i][c-i]==piece and self.grid[r-i+1][c-i+1]==piece and self.grid[r-i+2][c-i+2]==0 and self.grid[r-i+3][c-i+3]==piece and self.grid[r-i+4][c-i+4]==0:
+					count += 1
+				if self.grid[r-i-1][c-i-1]==0  and self.grid[r-i][c-i]==piece and self.grid[r-i+1][c-i+1]==0 and self.grid[r-i+2][c-i+2]==piece and self.grid[r-i+3][c-i+3]==piece and self.grid[r-i+4][c-i+4]==0:
+					count += 1
+		print count			
+		for i in range (4):
+			if r>=0 and r<15 and c-i-1>=0 and c-i+4<15:
+				if self.grid[r][c-i-1]==0 and self.grid[r][c-i]==piece  and self.grid[r][c-i+1]==piece and self.grid[r][c-i+2]==0 and self.grid[r][c-i+3]==piece and self.grid[r][c-i+4]==0:
+					count += 1
+				if self.grid[r][c-i-1]==0 and self.grid[r][c-i]==piece  and self.grid[r][c-i+1]==0 and self.grid[r][c-i+2]==piece and self.grid[r][c-i+3]==piece and self.grid[r][c-i+4]==0:
+					count += 1
+		print count			
+		for i in range (4):
+			if r+i-4>=0 and r+i+1<15 and c-i-1>=0 and c-i+4<15:
+				if self.grid[r+i+1][c-i-1]==0  and self.grid[r+i][c-i]==piece  and self.grid[r+i-1][c-i+1]==piece and self.grid[r+i-2][c-i+2]==0 and self.grid[r+i-3][c-i+3]==piece and self.grid[r+i-4][c-i+4]==0:
+					count += 1
+				if self.grid[r+i+1][c-i-1]==0  and self.grid[r+i][c-i]==piece  and self.grid[r+i-1][c-i+1]==0 and self.grid[r+i-2][c-i+2]==piece and self.grid[r+i-3][c-i+3]==piece and self.grid[r+i-4][c-i+4]==0:
+					count += 1	
 
+		print count
+		self.grid[r][c] = 0
+		if count > 1:
+			print 789
+			return False
+
+		return True
+					
 	def get_continuous_count(self, r, c, dr, dc):
 		piece = self.grid[r][c]
 		result = 0
@@ -98,6 +164,7 @@ class Chessboard:
 				#print r,c,self.grid[r][c]
 				piece = self.grid[r][c]
 				if piece == 0:
+					#print "@@"
 					x = self.start_x + c * self.grid_size
 					y = self.start_y + r * self.grid_size
 					if r==3 and c==3:
@@ -128,11 +195,14 @@ class Chessboard:
 						y = self.start_y + r * self.grid_size
 						pygame.draw.circle(screen, color, [x, y], self.grid_size // 2)
 						pygame.draw.circle(screen, (210,210,210), [x-1, y-1], self.grid_size // 2-1)
-						pygame.draw.circle(screen, (220,220,220), [x-2, y-2], self.grid_size // 2-2)				
+						pygame.draw.circle(screen, (220,220,220), [x-2, y-2], self.grid_size // 2-2)
 						pygame.draw.circle(screen, (230,230,230), [x-3, y-3], self.grid_size // 2-3)
 						pygame.draw.circle(screen, (240,240,240), [x-3, y-3], self.grid_size // 2-4)
 						pygame.draw.circle(screen, (250,250,250), [x-3, y-3], self.grid_size // 2-5)
 						pygame.draw.circle(screen, (255,255,255), [x-3, y-3], self.grid_size // 2-6)
+
+					
+
 
 
 
