@@ -25,22 +25,22 @@ Data = DataCenter.MongoDB("Gamedata")
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 ai = AI.Ai(Cnn,input_stack,1)
 set_x = Data.SGFReturnSet()
-set_x[7][7]= 0.5
+set_x[2][7]= 0.5
 set_x[6][7]= 1
-set_x[4][7]= 1
-set_x[3][7]= 1
+set_x[5][7]= 1
 
-set_x[4][6]= 1
+set_x[6][6]= 1
 set_x[6][8]= 1
 set_x[8][10]= 0.5
 
+set_x[6][4]= 0.5
 
 
 print Data.ReturnBeforeStep()
 game.show_game(np.reshape(set_x,[225]))
 game.show_game(np.reshape(policy_analysis.evaluate_alive_three_dead_four(set_x,1),[225]))
-game.show_game(np.reshape(policy_analysis.evaluate_alive_three(set_x,1,1),[225]))
 game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,1),[225]))
+game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,2),[225]))
 
 	
 

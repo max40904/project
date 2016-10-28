@@ -330,8 +330,8 @@ class Ai:
 		selvalue = 0.0
 		nextprob = 0
 		limit = len(node.problist)
-		if limit>5:
-			limit = 5
+		if limit>4:
+			limit = 4
 	
 
 		for i in range(limit):

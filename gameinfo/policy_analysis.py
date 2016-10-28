@@ -630,20 +630,28 @@ def evaluate_defense_four (set_x,color,filter):
 				#_OOO__
 				if x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == color and set_x[x+4][y] == 0 and set_x[x+5][y] == 0:
 					re_set[x+4][y] += 1
+					re_set[x][y] += 1
 				elif x-5 >= 0 and set_x[x-1][y] == color and set_x[x-2][y] == color and set_x[x-3][y] == color and set_x[x-4][y] == 0 and set_x[x-5][y] == 0:
 					re_set[x-4][y] += 1
+					re_set[x][y] += 1
 				elif y+5 < 15 and set_x[x][y+1] == color and set_x[x][y+2] == color and set_x[x][y+3] == color and set_x[x][y+4] == 0 and set_x[x][y+5] == 0:
 					re_set[x][y+4] += 1
+					re_set[x][y] += 1
 				elif y-5 >= 0 and set_x[x][y-1] == color and set_x[x][y-2] == color and set_x[x][y-3] == color and set_x[x][y-4] == 0 and set_x[x][y-5] == 0:
 					re_set[x][y-4] += 1
+					re_set[x][y] += 1
 				elif x+5 < 15 and y+5 < 15 and set_x[x+1][y+1] == color and set_x[x+2][y+2] == color and set_x[x+3][y+3] == color and set_x[x+4][y+4] == 0 and set_x[x+5][y+5] == 0:
 					re_set[x+4][y+4] += 1
+					re_set[x][y] += 1
 				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == color and set_x[x-2][y-2] == color and set_x[x-3][y-3] == color and set_x[x-4][y-4] == 0 and set_x[x-5][y-5] == 0:
 					re_set[x-4][y-4] += 1
+					re_set[x][y] += 1
 				elif x-5 >= 0 and y+5 < 15 and set_x[x-1][y+1] == color and set_x[x-2][y+2] == color and set_x[x-3][y+3] == color and set_x[x-4][y+4] == 0 and set_x[x-5][y+5] == 0:
 					re_set[x-4][y+4] += 1
+					re_set[x][y] += 1
 				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == color and set_x[x+3][y-3] == color and set_x[x+4][y-4] == 0 and set_x[x+5][y-5] == 0:
 					re_set[x+4][y-4] += 1
+					re_set[x][y] += 1
 				#_OO_O_
 				if x+5 < 15 and set_x[x+1][y] == color and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color and set_x[x+5][y] == 0:
 					re_set[x+3][y] += 1
