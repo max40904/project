@@ -217,7 +217,7 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		print "winpath length",len(self.winpath)
-		self.run(set, color, beforeeight, 40)
+		self.run(set, color, beforeeight, 40 )
 		# if len(self.winpath)==0:
 		# 	print "SerachWin depth is ",self.maxdepth
 		# 	self.run(set, color, beforeeight, 40)
@@ -233,18 +233,18 @@ class Ai:
 		maxrate_num =  0
 		print "\n\nall choise"
 		print len(self.root.linklist)
+		print "\n"
 		record = 0.
 		for i in range(len(self.root.linklist)):
 			total = self.root.linklist[i].totalmatch
 			if total >=0:
-				print self.root.linklist[i].step,"step!!"
-				# print self.root.linklist[i].totalvalue,"value!!"
-				print self.root.linklist[i].totalwin," win!!"
-				print self.root.linklist[i].totalloss," loss!!"
-				print self.root.linklist[i].totalmatch," total!!"
-			
-
+				print "now_loc:\t"
 				game.show_game_pos(self.root.linklist[i].step)
+				print "step:\t",self.root.linklist[i].step
+				print "win:\t",self.root.linklist[i].totalwin
+				print "loss:\t",self.root.linklist[i].totalloss
+				print "total:\t",self.root.linklist[i].totalmatch
+
 				print "\n"
 
 
@@ -336,9 +336,9 @@ class Ai:
 
 		for i in range(limit):
 			if node.color !=self.color :
-				temp = node.problist[i][1] + 5 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
+				temp = node.problist[i][1] + 0.8 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
 			elif node.color ==self.color :
-				temp = node.problist[i][1] +  5 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
+				temp = node.problist[i][1] +  0.8 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
 
 			if selvalue < temp:
 				selvalue = temp

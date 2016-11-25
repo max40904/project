@@ -16,7 +16,7 @@ class Chessboard:
 		self.nowstep = 0
 
 		self.grid = [[0 for i in range(15)] for j in range(15)]
-
+	
 	def handle_key_event(self, e):
 		origin_x = self.start_x - self.edge_size
 		origin_y = self.start_y - self.edge_size
@@ -145,7 +145,7 @@ class Chessboard:
 			i += 1
 		return result
 
-	def draw(self, screen):
+	def draw(self,screen,first_R,first_C):
 		# 棋盤底色
 		pygame.draw.rect(screen, (185, 122, 87),
 						 [self.start_x - self.edge_size, self.start_y - self.edge_size,
@@ -201,6 +201,8 @@ class Chessboard:
 						pygame.draw.circle(screen, (250,250,250), [x-3, y-3], self.grid_size // 2-5)
 						pygame.draw.circle(screen, (255,255,255), [x-3, y-3], self.grid_size // 2-6)
 
+					if r==first_R and c==first_C:
+						pygame.draw.circle(screen, (53,255,53), [x, y], self.grid_size // 8)
 					
 
 

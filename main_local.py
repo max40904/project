@@ -16,7 +16,7 @@ seed = 18
 
 
 
-Data = DataCenter.MongoDB()
+Data = DataCenter.MongoDB("Gamedata")
 LocalCnn =  Local_Policy.LocalPolicy(learning_rate, input_stack, k_filter,seed) 
 print "1. train 2. restoredata    3.restore data and then train"
 choose = raw_input()
@@ -44,7 +44,7 @@ if choose =='1':
 	    if i %step_save ==0:
 	    	LocalCnn.savedata("Loc_Neural_network_save/save_net"+str(i)+".ckpt")
 if choose =='2':
-	LocalCnn.restore("./Loc_Neural_network_save/save_net411000.ckpt")
+	LocalCnn.restore("./Loc_Neural_network_save/save_net582000.ckpt")
 	for i in range(200000 ):
 		x = Data.SGFReturnSet()
 		y = Data.SGFReturnAnw()

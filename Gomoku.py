@@ -21,6 +21,8 @@ class Gomoku():
 		self.clock = pygame.time.Clock()
 		self.font = pygame.font.SysFont("monospace", 15)
 		self.going = True
+		self.first_R=-1
+		self.first_C=-1
 
 		self.chessboard = Chessboard.Chessboard()
 
@@ -28,7 +30,7 @@ class Gomoku():
 		#thread.start_new_thread( self.draw_thread,() )
 		while self.going:
 			self.update()
-			self.draw()
+			self.draw(self.first_R,self.first_C)
 			self.clock.tick(60)
 			if self.chessboard.game_over:
 				print '><'
@@ -71,7 +73,9 @@ class Gomoku():
 					
 					print self.chessboard.grid
 					judge.input(self.chessboard.grid,self.chessboard.nowstep)
-					self.draw()			
+					self.first_R=r
+					self.first_C=c
+					self.draw(self.first_R,self.first_C)			
 					if self.chessboard.winner ==None:
 						before_eight = judge.Before_Eight()
 
@@ -86,11 +90,14 @@ class Gomoku():
 						self.chessboard.set_piece(y_estimate/15,y_estimate%15)
 						judge.input(self.chessboard.grid,self.chessboard.nowstep)
 						self.chessboard.check_win(y_estimate/15,y_estimate%15)
+						self.first_R=y_estimate/15
+						self.first_C=y_estimate%15
 		else:
 			if time == 0:
 				self.chessboard.set_piece(7,7)
 				judge.input(self.chessboard.grid,self.chessboard.nowstep)
-
+				self.first_R=7
+				self.first_C=7
 				time = 1
 			else:
 				for e in pygame.event.get():
@@ -118,7 +125,9 @@ class Gomoku():
 
 						print self.chessboard.grid
 						judge.input(self.chessboard.grid,self.chessboard.nowstep)
-						self.draw()
+						self.first_R=r
+						self.first_C=c
+						self.draw(self.first_R,self.first_C)	
 						if self.chessboard.winner ==None:
 							before_eight = judge.Before_Eight()
 
@@ -135,13 +144,15 @@ class Gomoku():
 							judge.input(self.chessboard.grid,self.chessboard.nowstep)
 
 							self.chessboard.check_win(y_estimate/15,y_estimate%15)
+							self.first_R=y_estimate/15
+							self.first_C=y_estimate%15
 
-	def draw(self):
+	def draw(self,r,c):
 		global win
 		global color
 		self.screen.fill((255, 255, 255))
 		self.screen.blit(self.font.render("FPS: {0:.2F}".format(self.clock.get_fps()), True, (0, 0, 0)), (10, 10))	
-		self.chessboard.draw(self.screen)
+		self.chessboard.draw(self.screen,r,c)
 
 		for i in range (15):
 			x = i+1

@@ -14,7 +14,7 @@ k_filter = input_stack * 4
 training_iters = 540002
 seed = 23
 
-openfile = 540000
+openfile = 520000
 
 Data = DataCenter.MongoDB("Gamedata")
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
