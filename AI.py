@@ -3,6 +3,8 @@ from gameinfo import game
 from cnn import Policy
 import numpy as np
 import math
+import  threading
+import time
 
 class Ai:
 	def __init__(self, policy , input_stack, color):
@@ -13,9 +15,24 @@ class Ai:
 		self.dfscount = 0
 		self.winpath = []
 		self.maxdepth = 223
+		self.Gameover = False
+		self.Lock =  threading.Lock() 
+
+	def AiSet(self, policy , color):
+		self.maxdepth = 223
+		self.policy = policy
+		self.color = color
+		self.Gameover = False
+
+	def Clear(self):
+		self.Gameover = True
+
+
+
 
 	
-
+	def ReturnAIAnw_beforeeight(self,set,color,beforeeight):
+		return np.argmax(self.ReturnAIAnw_beforeeight_prob(set,color,beforeeight))
 
 	def ReturnAIAnw_beforeeight_prob(self,set,color,beforeeight):
 
@@ -152,9 +169,28 @@ class Ai:
 					return 1
 		return -1
 
+	def thread(self):
+		while(self.Gameover == False):
+			self.Lock.acquire()
+			color = 1
+			if self.root.color==1:
+				color =0.5
+			self.run(self.root.set,color,self.root.beforeeight,1)
+			self.Lock.release()
+			time.sleep(0.01)
+
 	def firststep(self, set, color,  beforeeight,step): 
 		#(always black )first step can't be here ,default is black [7][7]
 		#second or third start
+		self.Lock.acquire()
+
+		self.setroot(set,color,beforeeight,step)
+
+		self.Lock.release()
+		threading.Thread(target = self.thread, args = (), name =  'thread1').start() 
+		
+	def setroot(self, set, color,  beforeeight,step): 
+		
 		ocolor = 1
 		if color ==1:
 			ocolor = 0.5
@@ -170,29 +206,19 @@ class Ai:
 
 
 	def run(self, set, color, beforeeight, time):
+		
 		for i in range(time):
 			self.TravelSearch(self.root, color, beforeeight, 0)
+		
 
 	def OppentChoose(self,set ,color,beforeeight ,step):
-		
+		self.Lock.acquire()
 		flag = 0
 		print "OppentChoose" 
 		for i in range(len(self.root.linklist)):
 
 			if self.root.linklist[i].step == step:
 				print "OppentChoose winpath length is ",len(self.winpath)
-				# if len(self.winpath)!=0:
-				# 	if self.winpath[1] == step:
-				# 		self.maxdepth =self.maxdepth - 2 
-				# 		self.winpath.remove(self.winpath[0])
-				# 		self.winpath.remove(self.winpath[1])
-				# 	else:
-				# 		self.SerachWin(self.root.linklist[i])
-				# 		if len(self.winpath) !=0:
-				# 			self.winpath.remove(self.winpath[0])
-				# 			self.maxdepth =self.maxdepth - 2 
-
-
 				print "haved"
 				game.show_game_pos(self.root.linklist[i].step)
 				flag = 1
@@ -202,11 +228,12 @@ class Ai:
 		if flag ==0:
 			print "nothing"
 			self.root = Ai.node()
-			self.firststep( set, color,  beforeeight,step)
+			self.setroot( set, color,  beforeeight,step)
 			# del self.winpath[:]
 			# self.maxdepth = 175
 		self.maxdepth = self.maxdepth - 1
 		print "maxpath : ",self.maxdepth
+		self.Lock.release()
 
 		return 0
 
@@ -217,7 +244,8 @@ class Ai:
 	def ReturnMonteCarlorun(self, set, color, beforeeight):
 		print "ReturnMonteCarlorun"
 		print "winpath length",len(self.winpath)
-		self.run(set, color, beforeeight, 40 )
+		self.Lock.acquire()
+		self.run(set, color, beforeeight, 30 )
 		# if len(self.winpath)==0:
 		# 	print "SerachWin depth is ",self.maxdepth
 		# 	self.run(set, color, beforeeight, 40)
@@ -252,7 +280,7 @@ class Ai:
 			winrate = float(self.root.linklist[i].totalwin) / float(self.root.linklist[i].totalmatch) 
 			loss = float(self.root.linklist[i].totalloss) /float(self.root.linklist[i].totalmatch)
 			
-			if  (winrate ) > ( maxrate )  :
+			if  (winrate ) > ( maxrate ) and self.root.linklist[i].totalmatch > 5 :
 				
 				record = winrate
 				maxrate = (winrate)
@@ -274,9 +302,10 @@ class Ai:
 		# else :
 		# 	self.root = self.root.linklist[maxvalue_num_2]
 		
-		
-		
-		return self.root.step
+		anw = self.root.step
+		self.Lock.release()
+
+		return anw
 
 	def dfsreview(self):
 		return 0
@@ -336,9 +365,9 @@ class Ai:
 
 		for i in range(limit):
 			if node.color !=self.color :
-				temp = node.problist[i][1] + 0.8 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
+				temp = node.problist[i][1] + 3 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
 			elif node.color ==self.color :
-				temp = node.problist[i][1] +  0.8 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
+				temp = node.problist[i][1] +  3 *(math.sqrt(math.log(node.totalmatch+1)))/(1 + node.count[i]) 
 
 			if selvalue < temp:
 				selvalue = temp

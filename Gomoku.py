@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*- 
 import sys
 from PyQt4.QtGui import *
+from PyQt4 import QtCore, QtGui
 import pygame
 import Chessboard
 import Referee
@@ -33,6 +34,8 @@ class Gomoku():
 			self.draw(self.first_R,self.first_C)
 			self.clock.tick(60)
 			if self.chessboard.game_over:
+				global ai
+				ai.Clear()
 				print '><'
 				return 0
 		pygame.quit()
@@ -41,6 +44,7 @@ class Gomoku():
 		global color
 		global ai
 		global time
+		global level
 		if color == 1:
 			for e in pygame.event.get():
 				if e.type == pygame.QUIT:
@@ -84,8 +88,10 @@ class Gomoku():
 							time = 1
 						else :
 							ai.OppentChoose(self.chessboard.grid,1,before_eight,self.chessboard.nowstep)
-
-						y_estimate = ai.ReturnMonteCarlorun(self.chessboard.grid, 0.5,before_eight)
+						if level==3:
+							y_estimate = ai.ReturnMonteCarlorun(self.chessboard.grid, 0.5,before_eight)
+						else:
+							y_estimate = ai.ReturnAIAnw_beforeeight(self.chessboard.grid, 0.5,before_eight)
 						print y_estimate
 						self.chessboard.set_piece(y_estimate/15,y_estimate%15)
 						judge.input(self.chessboard.grid,self.chessboard.nowstep)
@@ -125,8 +131,10 @@ class Gomoku():
 
 						print self.chessboard.grid
 						judge.input(self.chessboard.grid,self.chessboard.nowstep)
+
 						self.first_R=r
 						self.first_C=c
+
 						self.draw(self.first_R,self.first_C)	
 						if self.chessboard.winner ==None:
 							before_eight = judge.Before_Eight()
@@ -136,14 +144,17 @@ class Gomoku():
 								time = 2
 							else :
 								ai.OppentChoose(self.chessboard.grid,0.5,before_eight,self.chessboard.nowstep)
-
-							y_estimate = ai.ReturnMonteCarlorun(self.chessboard.grid, 1,before_eight)
+							if level==3:
+								y_estimate = ai.ReturnMonteCarlorun(self.chessboard.grid, 1,before_eight)
+							else:
+								y_estimate = ai.ReturnAIAnw_beforeeight(self.chessboard.grid, 1,before_eight)
 							print y_estimate
 
 							self.chessboard.set_piece(y_estimate/15,y_estimate%15)
 							judge.input(self.chessboard.grid,self.chessboard.nowstep)
 
 							self.chessboard.check_win(y_estimate/15,y_estimate%15)
+
 							self.first_R=y_estimate/15
 							self.first_C=y_estimate%15
 
@@ -225,6 +236,7 @@ class Gomoku():
 
 if __name__ == '__main__':
 	win2 = 0
+	level = 1
 	i=0
 	app={}
 	i2=0
@@ -246,20 +258,46 @@ if __name__ == '__main__':
 	Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 	
 
-	Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
+	
 	judge = Referee.referee()
 	
 	def buttonClicked():
 		global color
-		global ai	
+		global ai
+		global level
+		global openfile	
 		if(radiobutton1.isChecked()):
 			color = 1
+			if(lvradiobutton1.isChecked()):
+				openfile = 100000
+				level = 1
+				
+			elif(lvradiobutton2.isChecked()):
+				openfile = 520000
+				level = 2
+
+			elif(lvradiobutton3.isChecked()):
+				openfile = 520000
+				level = 3
+			Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
 			ai = AI.Ai(Cnn,input_stack,0.5)
-			print 123
+			print level
 		elif(radiobutton2.isChecked()):
 			color = 0.5
+			if(lvradiobutton1.isChecked()):
+				openfile = 100000
+				level = 1
+			elif(lvradiobutton2.isChecked()):
+				openfile = 520000
+				level = 2
+			elif(lvradiobutton3.isChecked()):
+				openfile = 520000
+				level = 3
+			Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
 			ai = AI.Ai(Cnn,input_stack,1)
-			print 123
+			print level
+		if level!=3:
+			ai.Clear()
 		widget.close()
 
 	def buttonClicked2():
@@ -273,24 +311,40 @@ if __name__ == '__main__':
 		win = 0
 		time = 0
 		app[i] = QApplication(sys.argv)
-		widget = QWidget()
-		widget.resize(400, 200)
+		layout=QtGui.QGridLayout()
+		widget=QtGui.QWidget()
+		widget.setLayout(layout)
+		widget.resize(500, 200)
 		widget.move(400, 150)
 		widget.setWindowTitle("Choose your color!")
-		radiobutton1 = QRadioButton(widget)
-		radiobutton2 = QRadioButton(widget)
-		radiobutton1.setText("Black")
-		radiobutton2.setText("white")
-		radiobutton1.move(80,50)
-		radiobutton2.move(250,50)
+		color_group=QtGui.QButtonGroup(widget)
+		radiobutton1 = QtGui.QRadioButton("Black")
+		radiobutton2 = QtGui.QRadioButton("white")
 		radiobutton1.setChecked(True)
+		color_group.addButton(radiobutton1)
+		color_group.addButton(radiobutton2)
+		layout.addWidget(radiobutton1,0,0)
+		layout.addWidget(radiobutton2,0,1)
+
+		lv_group=QtGui.QButtonGroup(widget)
+		lvradiobutton1 = QtGui.QRadioButton("Normal")
+		lvradiobutton2 = QtGui.QRadioButton("Hard")
+		lvradiobutton3 = QtGui.QRadioButton("Chaos")
+		lvradiobutton1.setChecked(True)
+		lv_group.addButton(lvradiobutton1)
+		lv_group.addButton(lvradiobutton2)
+		lv_group.addButton(lvradiobutton3)
+		layout.addWidget(lvradiobutton1,1,0)
+		layout.addWidget(lvradiobutton2,1,1)
+		layout.addWidget(lvradiobutton3,1,2)
+
 		button = QPushButton(widget)
-		button.setText("Let's   Start   The   Game!!!")
-		button.move(110,120)
+		button.setText("Start!!!")
+		layout.addWidget(button,2,1)
 		button.clicked.connect(buttonClicked)
 		button2 = QPushButton(widget)
 		button2.setText("Finish Game")
-		button2.move(150,160)
+		layout.addWidget(button2,3,1)
 		button2.clicked.connect(buttonClicked2)
 		widget.show()
 		app[i].exec_()
@@ -304,7 +358,6 @@ if __name__ == '__main__':
 			#game.pygame.quit()
 			win2=0
 			i=i+1
-
 
 
 

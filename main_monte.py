@@ -169,6 +169,9 @@ elif choose =='3':
 
 
 
+
+
+
     
 
 
@@ -176,6 +179,10 @@ elif choose =='3':
 
 
 elif choose =='4':
+    Cnn.restore("./Neural_network_save/save_net"+str(openfile)+".ckpt")
+    ai = AI.Ai(Cnn,input_stack,0.5)
+    Cnn.restore("./Neural_network_save/save_net"+str(openfile-10000)+".ckpt")
+
     print '4'
 
 
