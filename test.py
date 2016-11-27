@@ -25,117 +25,21 @@ Data = DataCenter.MongoDB("Gamedata")
 Cnn =  Policy.PolicyNetwork(learning_rate, input_stack, k_filter,seed) 
 ai = AI.Ai(Cnn,input_stack,1)
 set_x = Data.SGFReturnSet()
+
+set_x[7][7]= 0
+set_x[6][11]= 1
+set_x[7][12]= 1
+set_x[8][13]= 1
+
+set_x[7][7]= 0
+set_x[1][8]= 0.5
 set_x[2][7]= 0.5
-set_x[6][7]= 1
-set_x[5][7]= 1
+set_x[3][6]= 0.5
 
-set_x[6][6]= 1
-set_x[6][8]= 1
-set_x[8][10]= 0.5
-
-set_x[6][4]= 0.5
 
 
 print Data.ReturnBeforeStep()
 game.show_game(np.reshape(set_x,[225]))
-game.show_game(np.reshape(policy_analysis.evaluate_alive_three_dead_four(set_x,1),[225]))
+game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
+game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,0.5,1),[225]))
 game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,1),[225]))
-game.show_game(np.reshape(policy_analysis.evaluate_defense_four(set_x,1,2),[225]))
-
-	
-
-# judge = Referee.referee()
-# str = tim
-# e.strftime("%Y_%m_%d_%H_%M_%S", time.localtime()) + ".sgf"
-# print str
-# Data = DataCenter.MongoDB()
-# for i in range(10000):
-# 	set_x = Data.SGFReturnSet_Win_three()
-# 	print Data.ReturnWin()
-# 	set_x = Data.SGFReturnSet_Win_three()
-# 	print Data.ReturnWin()
-# 	set_x = Data.SGFReturnSet_Win_three()
-# 	print Data.ReturnWin()
-
-# 	set_y = Data.SGFReturnAnw()
-
-
-
-# game.show_game(np.reshape(set_x,[225]))
-# game.show_game(np.reshape(policy_analysis.evaluate_five(set_x,1),[225]))
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-# set_x = Data.SGFReturnSet()
-
-# set_x = Data.SGFReturnSet()
-
-
-
-
-
-# all_layer = game.ReturnAllInfo(set_x,1)
-# game.show_all_info_game(all_layer,24)
-# print "   \n\n\n"
-# print set_x[1][1]
-# out_y = Data.SGFReturnAnw()
-# x = [0 for i in range(225)]
-# x[0]=0.5
-# x[2+14]= 1
-# x[4+14+14+14 +2]=1
-# x[5+14+1+14+14+14 +2]=1
-# # x[6+14+14+1+1+14]=1
-
-# y = np.reshape(x,[225,1])
-# game.show_game(y)
-# y = np.reshape(symmetric.evaluate_alive_four(np.reshape(x,[15,15]),1),[225,1])
-
-# game.show_game(y)
