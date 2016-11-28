@@ -2,6 +2,7 @@
 import pygame
 import sys
 from PyQt4.QtGui import *
+from gameinfo import policy_analysis
 
 class Chessboard:
 
@@ -70,6 +71,12 @@ class Chessboard:
 		count = 0
 		print piece
 		print count
+
+		temp = [[0 for i in range(15)] for j in range(15)]
+		temp=policy_analysis.evaluate_dead_four(self.grid,count,2)
+		if temp[r][c]==1:
+			return False
+
 		for i in range (5):
 			if r-i>=0 and r-i+4<15 and c>=0 and c<15:
 				if self.grid[r-i][c]==0  and self.grid[r-i+1][c]==piece and self.grid[r-i+2][c]==piece and self.grid[r-i+3][c]==piece and self.grid[r-i+4][c]==0:
@@ -125,7 +132,6 @@ class Chessboard:
 		if count > 1:
 			print 789
 			return False
-
 		return True
 					
 	def get_continuous_count(self, r, c, dr, dc):

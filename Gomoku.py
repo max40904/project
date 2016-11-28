@@ -24,7 +24,7 @@ class Gomoku():
 		self.going = True
 		self.first_R=-1
 		self.first_C=-1
-
+		
 		self.chessboard = Chessboard.Chessboard()
 
 	def loop(self):		
@@ -338,13 +338,26 @@ if __name__ == '__main__':
 		layout.addWidget(lvradiobutton2,1,1)
 		layout.addWidget(lvradiobutton3,1,2)
 
+		label1=QLabel(widget)
+		label1.setText("Rules for Black:")
+		label2=QLabel(widget)
+		label2.setText("1.three and three")		
+		label3=QLabel(widget)
+		label3.setText("2.four and four")		
+		label4=QLabel(widget)
+		label4.setText("3.overlines")
+		layout.addWidget(label1,2,0)
+		layout.addWidget(label2,3,0)
+		layout.addWidget(label3,3,1)
+		layout.addWidget(label4,3,2)
+
 		button = QPushButton(widget)
 		button.setText("Start!!!")
-		layout.addWidget(button,2,1)
+		layout.addWidget(button,4,1)
 		button.clicked.connect(buttonClicked)
 		button2 = QPushButton(widget)
 		button2.setText("Finish Game")
-		layout.addWidget(button2,3,1)
+		layout.addWidget(button2,4,2)
 		button2.clicked.connect(buttonClicked2)
 		widget.show()
 		app[i].exec_()

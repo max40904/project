@@ -620,6 +620,49 @@ def evaluate_dead_four (set_x,color,filter):
 					re_set[x-5][y+5] += 1
 				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == color and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color and set_x[x+5][y-5] == 0:
 					re_set[x+5][y-5] += 1
+			if set_x[x][y] == color:
+				#0_OA0
+				if x+5 < 15 and set_x[x+1][y] == 0 and set_x[x+2][y] == color and set_x[x+3][y] == 0 and set_x[x+4][y] == color :
+					re_set[x+3][y] += 1
+				elif x-5 >= 0 and set_x[x-1][y] == 0 and set_x[x-2][y] == color and set_x[x-3][y] == 0 and set_x[x-4][y] == color:
+					re_set[x-3][y] += 1
+				elif y+5 < 15 and set_x[x][y+1] == 0 and set_x[x][y+2] == color and set_x[x][y+3] == 0 and set_x[x][y+4] == color:
+					re_set[x][y+3] += 1
+				elif y-5 >= 0 and set_x[x][y-1] == 0 and set_x[x][y-2] == color and set_x[x][y-3] == 0 and set_x[x][y-4] == color:
+					re_set[x][y-3] += 1
+				elif x+5 < 15 and y+5 < 15 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == color and set_x[x+3][y+3] == 0 and set_x[x+4][y+4] == color:
+					re_set[x+3][y+3] += 1
+				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == 0 and set_x[x-2][y-2] == color and set_x[x-3][y-3] == 0 and set_x[x-4][y-4] == color :
+					re_set[x-3][y-3] += 1
+				elif x-5 >= 0 and y+5 < 15 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == color and set_x[x-3][y+3] == 0 and set_x[x-4][y+4] == color :
+					re_set[x-3][y+3] += 1
+				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == color and set_x[x+3][y-3] == 0 and set_x[x+4][y-4] == color :
+					re_set[x+3][y-3] += 1
+				#0__O0
+				if x+5 < 15 and set_x[x+1][y] == 0 and set_x[x+2][y] == 0 and set_x[x+3][y] == color and set_x[x+4][y] == color :
+					re_set[x+2][y] += 1
+					re_set[x+1][y] += 1
+				elif x-5 >= 0 and set_x[x-1][y] == 0 and set_x[x-2][y] == 0 and set_x[x-3][y] == color and set_x[x-4][y] == color:
+					re_set[x-2][y] += 1
+					re_set[x-1][y] += 1
+				elif y+5 < 15 and set_x[x][y+1] == 0 and set_x[x][y+2] == 0 and set_x[x][y+3] == color and set_x[x][y+4] == color:
+					re_set[x][y+2] += 1
+					re_set[x][y+1] += 1
+				elif y-5 >= 0 and set_x[x][y-1] == 0 and set_x[x][y-2] == 0 and set_x[x][y-3] == color and set_x[x][y-4] == color:
+					re_set[x][y-2] += 1
+					re_set[x][y-1] += 1
+				elif x+5 < 15 and y+5 < 15 and set_x[x+1][y+1] == 0 and set_x[x+2][y+2] == 0 and set_x[x+3][y+3] == color and set_x[x+4][y+4] == color:
+					re_set[x+1][y+1] += 1
+					re_set[x+2][y+2] += 1
+				elif x-5 >= 0 and y-5 >= 0 and set_x[x-1][y-1] == 0 and set_x[x-2][y-2] == 0 and set_x[x-3][y-3] == color and set_x[x-4][y-4] == color :
+					re_set[x-2][y-2] += 1
+					re_set[x-1][y-1] += 1
+				elif x-5 >= 0 and y+5 < 15 and set_x[x-1][y+1] == 0 and set_x[x-2][y+2] == 0 and set_x[x-3][y+3] == color and set_x[x-4][y+4] == color :
+					re_set[x-1][y+1] += 1
+					re_set[x-2][y+2] += 1
+				elif x+5 < 15 and y-5 >= 0 and set_x[x+1][y-1] == 0 and set_x[x+2][y-2] == 0 and set_x[x+3][y-3] == color and set_x[x+4][y-4] == color :
+					re_set[x+1][y-1] += 1
+					re_set[x+2][y-2] += 1
 	return Return_Num_Filter(re_set,filter)		
 def evaluate_defense_four (set_x,color,filter):
 	re_set = [[0 for x in range(15)] for y in range(15)]
@@ -820,6 +863,56 @@ def evaluate_alive_three_dead_four(set , color):
 		for j in range(15):
 			if three[i][j]==1 and four[i][j]==1:
 				anw [i][j] =1
+
+
+	for x in range(15):
+		for y in range(15):
+			if set[x][y] == color:
+				#0_OA0
+				if x+5 < 15 and set[x+1][y] == 0 and set[x+2][y] == color and set[x+3][y] == 0 and set[x+4][y] == color and set[x+5][y] == 0  :
+					anw[x+3][y] = 0
+				elif x-5 >= 0 and set[x-1][y] == 0 and set[x-2][y] == color and set[x-3][y] == 0 and set[x-4][y] == color and set[x-5][y] == 0:
+	
+					anw[x-3][y] = 0
+				elif y+5 < 15 and set[x][y+1] == 0 and set[x][y+2] == color and set[x][y+3] == 0 and set[x][y+4] == color and set[x][y+5] == 0:
+					anw[x][y+3] = 0
+				elif y-5 >= 0 and set[x][y-1] == 0 and set[x][y-2] == color and set[x][y-3] == 0 and set[x][y-4] == color and set[x][y-5] == 0:
+					anw[x][y-3]= 0
+				elif x+5 < 15 and y+5 < 15 and set[x+1][y+1] == 0 and set[x+2][y+2] == color and set[x+3][y+3] == 0 and set[x+4][y+4] == color and set[x+5][y+5] == 0:
+					anw[x+3][y+3] = 0
+				elif x-5 >= 0 and y-5 >= 0 and set[x-1][y-1] == 0 and set[x-2][y-2] == color and set[x-3][y-3] == 0 and set[x-4][y-4] == color  and set[x-5][y-5] == 0:
+					anw[x-3][y-3] = 0
+				elif x-5 >= 0 and y+5 < 15 and set[x-1][y+1] == 0 and set[x-2][y+2] == color and set[x-3][y+3] == 0 and set[x-4][y+4] == color and set[x-5][y+5] == 0:
+					anw[x-3][y+3] = 0
+				elif x+5 < 15 and y-5 >= 0 and set[x+1][y-1] == 0 and set[x+2][y-2] == color and set[x+3][y-3] == 0 and set[x+4][y-4] == color and set[x+5][y-5] == 0:
+					anw[x+3][y-3] = 0
+				#0__O0
+				if x+5 < 15 and set[x+1][y] == 0 and set[x+2][y] == 0 and set[x+3][y] == color and set[x+4][y] == color and set[x+5][y] == 0 :
+					anw[x+2][y] = 0
+	
+				elif x-5 >= 0 and set[x-1][y] == 0 and set[x-2][y] == 0 and set[x-3][y] == color and set[x-4][y] == color and set[x-5][y] == 0:
+					anw[x-2][y] = 0
+
+				elif y+5 < 15 and set[x][y+1] == 0 and set[x][y+2] == 0 and set[x][y+3] == color and set[x][y+4] == color and set[x][y+5] == 0:
+					anw[x][y+2]= 0
+				elif y-5 >= 0 and set[x][y-1] == 0 and set[x][y-2] == 0 and set[x][y-3] == color and set[x][y-4] == color and set[x][y-5] ==0:
+					anw[x][y-2] = 0
+	
+				elif x+5 < 15 and y+5 < 15 and set[x+1][y+1] == 0 and set[x+2][y+2] == 0 and set[x+3][y+3] == color and set[x+4][y+4] == color and set[x+5][y+5] == 0:
+		
+					anw[x+2][y+2] = 0
+				elif x-5 >= 0 and y-5 >= 0 and set[x-1][y-1] == 0 and set[x-2][y-2] == 0 and set[x-3][y-3] == color and set[x-4][y-4] == color and set[x-5][y-5] == 0:
+					anw[x-2][y-2] = 0
+
+				elif x-5 >= 0 and y+5 < 15 and set[x-1][y+1] == 0 and set[x-2][y+2] == 0 and set[x-3][y+3] == color and set[x-4][y+4] == color and set[x-5][y+5] == 0:
+			
+					anw[x-2][y+2] = 0
+				elif x+5 < 15 and y-5 >= 0 and set[x+1][y-1] == 0 and set[x+2][y-2] == 0 and set[x+3][y-3] == color and set[x+4][y-4] == color and set[x+5][y-5] == 0:
+				
+					anw[x+2][y-2] = 0
+	
+
+
 
 	return anw
 
