@@ -66,16 +66,25 @@ class Chessboard:
 		if self.grid[r][c] != 0:
 			return False
 
-		self.grid[r][c] = 1
 		piece = 1
+		
+		print "@@"
+		print self.grid
+		print "@@"
+		temp = [[0 for i in range(15)] for j in range(15)]
+		temp=policy_analysis.evaluate_dead_four(self.grid,piece,2)
+		print "@@"
+		print temp
+		print "@@"
+		if temp[r][c]==1:
+			return False
+
+		self.grid[r][c] = 1
 		count = 0
 		print piece
 		print count
 
-		temp = [[0 for i in range(15)] for j in range(15)]
-		temp=policy_analysis.evaluate_dead_four(self.grid,count,2)
-		if temp[r][c]==1:
-			return False
+		
 
 		for i in range (5):
 			if r-i>=0 and r-i+4<15 and c>=0 and c<15:

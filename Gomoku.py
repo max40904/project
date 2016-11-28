@@ -17,7 +17,7 @@ class Gomoku():
 	def __init__(self):
 		pygame.init()
 
-		self.screen = pygame.display.set_mode((600, 500))
+		self.screen = pygame.display.set_mode((650, 500))
 		pygame.display.set_caption("五子棋")
 		self.clock = pygame.time.Clock()
 		self.font = pygame.font.SysFont("monospace", 15)
@@ -171,7 +171,11 @@ class Gomoku():
 			game.screen.blit(font.render(str(x), True, (0,128,255)), (410,i*26+46))
 			y = i+97	
 			game.screen.blit(font.render(chr(y), True, (255,0,0)), (i*26+26,430))
-
+		
+		game.screen.blit(font.render("The black player can", True, (0,0,0)), (450,120))
+		game.screen.blit(font.render("not play three to three,", True, (0,0,0)), (450,170))
+		game.screen.blit(font.render("and four to four.", True, (0,0,0)), (450,220))
+		
 		pygame.display.update()
 
 		if self.chessboard.game_over:
@@ -339,25 +343,22 @@ if __name__ == '__main__':
 		layout.addWidget(lvradiobutton3,1,2)
 
 		label1=QLabel(widget)
-		label1.setText("Rules for Black:")
+		label1.setText("The Black can't put in")
 		label2=QLabel(widget)
 		label2.setText("1.three and three")		
 		label3=QLabel(widget)
 		label3.setText("2.four and four")		
-		label4=QLabel(widget)
-		label4.setText("3.overlines")
 		layout.addWidget(label1,2,0)
-		layout.addWidget(label2,3,0)
-		layout.addWidget(label3,3,1)
-		layout.addWidget(label4,3,2)
+		layout.addWidget(label2,2,1)
+		layout.addWidget(label3,2,2)
 
 		button = QPushButton(widget)
 		button.setText("Start!!!")
-		layout.addWidget(button,4,1)
+		layout.addWidget(button,3,1)
 		button.clicked.connect(buttonClicked)
 		button2 = QPushButton(widget)
 		button2.setText("Finish Game")
-		layout.addWidget(button2,4,2)
+		layout.addWidget(button2,3,2)
 		button2.clicked.connect(buttonClicked2)
 		widget.show()
 		app[i].exec_()
