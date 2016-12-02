@@ -760,7 +760,7 @@ def ReturnAllInfo_before(set,color,beforestep):
 	
 	layer_27 = policy_analysis.evaluate_alive_three(set,color,1)
 
-	layer_28 = policy_analysis.evaluate_alive_three(set,color,2)
+	layer_28 = policy_analysis.evaluate_double_three(set,color)
 
 	layer_29 = policy_analysis.evaluate_dead_four(set,color,1)
 
@@ -804,7 +804,7 @@ def ReturnAllInfo_before(set,color,beforestep):
 	
 	layer_49 = policy_analysis.evaluate_alive_three(set,ocolor,1)
 
-	layer_50 = policy_analysis.evaluate_alive_three(set,ocolor,2)
+	layer_50 = policy_analysis.evaluate_double_three(set,ocolor)
 
 	layer_51 = policy_analysis.evaluate_dead_four(set,ocolor,1)
 

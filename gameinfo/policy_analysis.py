@@ -984,3 +984,81 @@ def Return_Num_Filter(set, limit):
 				anws[i][j] = 1
 	return anws
 
+def check_three(array,r,c,piece):
+	if array[r][c] != 0:
+		return False
+
+	array[r][c] = piece
+	count = 0
+
+
+
+	
+
+	for i in range (5):
+		if r-i>=0 and r-i+4<15 and c>=0 and c<15:
+			if array[r-i][c]==0  and array[r-i+1][c]==piece and array[r-i+2][c]==piece and array[r-i+3][c]==piece and array[r-i+4][c]==0:
+				count += 1
+
+	for i in range (5):
+		if r-i>=0 and r-i+4<15 and c-i>=0 and c-i+4<15:
+			if array[r-i][c-i]==0  and array[r-i+1][c-i+1]==piece and array[r-i+2][c-i+2]==piece and array[r-i+3][c-i+3]==piece and array[r-i+4][c-i+4]==0:
+				count += 1
+
+	for i in range (5):
+		if r>=0 and r<15 and c-i>=0 and c-i+4<15:
+			if array[r][c-i]==0  and array[r][c-i+1]==piece and array[r][c-i+2]==piece and array[r][c-i+3]==piece and array[r][c-i+4]==0:
+				count += 1
+
+	for i in range (5):
+		if r+i-4>=0 and r+i<15 and c-i>=0 and c-i+4<15:
+			if array[r+i][c-i]==0  and array[r+i-1][c-i+1]==piece and array[r+i-2][c-i+2]==piece and array[r+i-3][c-i+3]==piece and array[r+i-4][c-i+4]==0:
+				count += 1
+	
+
+	
+	for i in range (4):
+		if r-i-1>=0 and r-i+4<15 and c>=0 and c<15:
+			if array[r-i-1][c]==0  and array[r-i][c]==piece and array[r-i+1][c]==piece and array[r-i+2][c]==0 and array[r-i+3][c]==piece and array[r-i+4][c]==0:
+				count += 1
+			if array[r-i-1][c]==0  and array[r-i][c]==piece and array[r-i+1][c]==0 and array[r-i+2][c]==piece and array[r-i+3][c]==piece and array[r-i+4][c]==0:
+				count += 1
+
+	for i in range (4):
+		if r-i-1>=0 and r-i+4<15 and c-i-1>=0 and c-i+4<15:
+			if array[r-i-1][c-i-1]==0  and array[r-i][c-i]==piece and array[r-i+1][c-i+1]==piece and array[r-i+2][c-i+2]==0 and array[r-i+3][c-i+3]==piece and array[r-i+4][c-i+4]==0:
+				count += 1
+			if array[r-i-1][c-i-1]==0  and array[r-i][c-i]==piece and array[r-i+1][c-i+1]==0 and array[r-i+2][c-i+2]==piece and array[r-i+3][c-i+3]==piece and array[r-i+4][c-i+4]==0:
+				count += 1
+
+	for i in range (4):
+		if r>=0 and r<15 and c-i-1>=0 and c-i+4<15:
+			if array[r][c-i-1]==0 and array[r][c-i]==piece  and array[r][c-i+1]==piece and array[r][c-i+2]==0 and array[r][c-i+3]==piece and array[r][c-i+4]==0:
+				count += 1
+			if array[r][c-i-1]==0 and array[r][c-i]==piece  and array[r][c-i+1]==0 and array[r][c-i+2]==piece and array[r][c-i+3]==piece and array[r][c-i+4]==0:
+				count += 1
+
+	for i in range (4):
+		if r+i-4>=0 and r+i+1<15 and c-i-1>=0 and c-i+4<15:
+			if array[r+i+1][c-i-1]==0  and array[r+i][c-i]==piece  and array[r+i-1][c-i+1]==piece and array[r+i-2][c-i+2]==0 and array[r+i-3][c-i+3]==piece and array[r+i-4][c-i+4]==0:
+				count += 1
+			if array[r+i+1][c-i-1]==0  and array[r+i][c-i]==piece  and array[r+i-1][c-i+1]==0 and array[r+i-2][c-i+2]==piece and array[r+i-3][c-i+3]==piece and array[r+i-4][c-i+4]==0:
+				count += 1	
+
+
+	array[r][c] = 0
+	if count > 1:
+
+		return False
+	return True
+
+
+def evaluate_double_three(set,color):
+	anw =  [[0 for i in range(15)] for j in range(15)]
+	for i in range(15):
+		for j in range(15):
+			if (set[i][j]==0 and check_three(set,i,j,color)==False):
+				anw [i][j] = 1
+
+	return anw
+
